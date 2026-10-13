@@ -1,0 +1,34 @@
+name: flight-watch
+
+on:
+  schedule:
+    - cron: "0 4 * * *"   # 04:00 UTC = 05:00/06:00 Prague
+  workflow_dispatch: {}   # "Run workflow" button for manual runs
+
+permissions:
+  contents: write
+
+concurrency:
+  group: flight-watch
+  cancel-in-progress: false
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -r requirements.txt
+      - name: Search flights
+        env:
+          SERPAPI_KEY: ${{ secrets.SERPAPI_KEY }}
+        run: python flight_watch.py
+      - name: Commit results
+        run: |
+          git config user.name "flight-watch-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add data REPORT.md
+          git diff --cached --quiet || git commit -m "flight-watch $(date -u +%F)"
+          git push
