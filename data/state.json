@@ -1,0 +1,112 @@
+{
+ "units": {
+  "2026-11-26_2026-12-12_g0": {
+   "dep": "2026-11-26",
+   "ret": "2026-12-12",
+   "stay": 16,
+   "away": 18,
+   "leave": 12,
+   "group": 0,
+   "last_checked": "2026-10-13",
+   "best_price": null,
+   "offers": [],
+   "url": null,
+   "history": [
+    [
+     "2026-10-13",
+     null
+    ]
+   ]
+  },
+  "2026-11-27_2026-12-13_g0": {
+   "dep": "2026-11-27",
+   "ret": "2026-12-13",
+   "stay": 16,
+   "away": 18,
+   "leave": 12,
+   "group": 0,
+   "last_checked": "2026-10-13",
+   "best_price": null,
+   "offers": [],
+   "url": null,
+   "history": [
+    [
+     "2026-10-13",
+     null
+    ]
+   ]
+  },
+  "2026-11-28_2026-12-14_g0": {
+   "dep": "2026-11-28",
+   "ret": "2026-12-14",
+   "stay": 16,
+   "away": 18,
+   "leave": 12,
+   "group": 0,
+   "last_checked": "2026-10-13",
+   "best_price": null,
+   "offers": [],
+   "url": null,
+   "history": [
+    [
+     "2026-10-13",
+     null
+    ]
+   ]
+  },
+  "2026-12-03_2026-12-19_g0": {
+   "dep": "2026-12-03",
+   "ret": "2026-12-19",
+   "stay": 16,
+   "away": 18,
+   "leave": 12,
+   "group": 0,
+   "last_checked": "2026-10-13",
+   "best_price": null,
+   "offers": [],
+   "url": null,
+   "history": [
+    [
+     "2026-10-13",
+     null
+    ]
+   ]
+  },
+  "2026-12-04_2026-12-20_g0": {
+   "dep": "2026-12-04",
+   "ret": "2026-12-20",
+   "stay": 16,
+   "away": 18,
+   "leave": 12,
+   "group": 0,
+   "last_checked": "2026-10-13",
+   "best_price": null,
+   "offers": [],
+   "url": null,
+   "history": [
+    [
+     "2026-10-13",
+     null
+    ]
+   ]
+  },
+  "2026-11-26_2026-12-12_g1": {
+   "dep": "2026-11-26",
+   "ret": "2026-12-12",
+   "stay": 16,
+   "away": 18,
+   "leave": 12,
+   "group": 1,
+   "last_checked": "2026-10-13",
+   "best_price": null,
+   "offers": [],
+   "url": null,
+   "history": [
+    [
+     "2026-10-13",
+     null
+    ]
+   ]
+  }
+ }
+}
