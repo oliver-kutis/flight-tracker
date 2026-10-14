@@ -35,7 +35,7 @@ def save_raw(today: str, source: str, params: dict, raw) -> str:
     p.parent.mkdir(parents=True, exist_ok=True)
     with gzip.open(p, "wt") as f:
         f.write(dumps({"query_params": params, "response": raw}))
-    return str(p.relative_to(ROOT))
+    return str(p)
 
 
 def prune_raw(today: dt.date, keep_days: int) -> int:

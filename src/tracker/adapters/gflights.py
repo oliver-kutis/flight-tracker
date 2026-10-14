@@ -273,7 +273,7 @@ class FastFlightsFork(Adapter):
         if "error" in r:
             status = CONSENT if "consent" in r["error"].lower() else ERROR
             res = _result(self.name, self.version(), status, None, r["error"], tq, tfs, cfg, None, 2)
-            res.retryable = "timeout" in r["error"].lower()  # parse/refusal errors repeat on retry
+            res.retryable = False  # the fork already retries its follow-up request internally
             return res
         res = _result(self.name, self.version(), OK, r["payload"], None, tq, tfs, cfg,
                       r["complete"], r.get("http_calls", 2))

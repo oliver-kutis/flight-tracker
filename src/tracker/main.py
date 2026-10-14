@@ -60,6 +60,7 @@ class Runner:
         self.errors: list[dict] = []
         self.sources_used = Counter()
         self.planned = self.succeeded = 0
+        self.skipped = Counter()
         self.t0 = time.monotonic()
         self.out_of_time = False
 
@@ -90,7 +91,9 @@ class Runner:
         best: SearchResult | None = None
         for i, name in enumerate(chain):
             ad = self.adapters.get(name)
-            if ad is None or name in self.breaker_open:
+            # Multi-city has its own breaker: open-jaw failures must not take round trips down.
+            bk = f"{name}:multicity" if task.kind == "multicity" else name
+            if ad is None or bk in self.breaker_open:
                 continue
             if not ad.free and not self._paid_allowed(task):
                 continue
@@ -111,16 +114,16 @@ class Runner:
                 log.warning("%s %s attempt %d: %s", name, task.id, attempt + 1, res.error)
                 self._sleep(lim.backoff_base_s * 2 ** attempt)
             if res.status == OK:
-                self.fail_streak[name] = 0
-            elif res.complete is False:
-                pass  # route-specific truncation (slow search, follow-up refused): not a dead source
+                self.fail_streak[bk] = 0
+            elif res.status == EMPTY or res.complete is False:
+                pass  # no flights / route-specific truncation: not a dead source
             else:
                 # A consent/CAPTCHA page will not go away within this run from the same IP.
-                self.fail_streak[name] += lim.circuit_breaker_consecutive_failures if res.status in (CONSENT, CAPTCHA) else 1
-                if self.fail_streak[name] >= lim.circuit_breaker_consecutive_failures:
-                    self.breaker_open.add(name)
-                    self.degraded[name] = f"circuit breaker open after {self.fail_streak[name]} failures"
-                    log.error("circuit breaker open for %s", name)
+                self.fail_streak[bk] += lim.circuit_breaker_consecutive_failures if res.status in (CONSENT, CAPTCHA) else 1
+                if self.fail_streak[bk] >= lim.circuit_breaker_consecutive_failures:
+                    self.breaker_open.add(bk)
+                    self.degraded[bk] = f"circuit breaker open after {self.fail_streak[bk]} failures"
+                    log.error("circuit breaker open for %s", bk)
             # Prefer more offers; with none anywhere, report a failure over an "empty" page
             # (an empty page from a page-only source may just be a truncated slow search).
             if best is None or len(res.offers) > len(best.offers) or (
@@ -138,8 +141,12 @@ class Runner:
             return []
         self.planned += 1
         res = self.execute(task)
-        if res is None:
-            task.status, task.error = "skipped", "runtime limit reached" if self.out_of_time else "request budget exhausted"
+        if res is None:  # not attempted: doesn't count towards the success rate
+            self.planned -= 1
+            task.status = "skipped"
+            task.error = ("runtime limit reached" if self.out_of_time else "request budget exhausted"
+                          if self.free_used >= self.budget else "no source available (circuit breaker open)")
+            self.skipped[task.error] += 1
             return []
         task.source_used = res.source
         self.sources_used[res.source] += 1
@@ -248,13 +255,16 @@ def main(argv=None) -> int:
     reserve = _scaled_reserve(cfg, budget)
     excess_budget = budget - sum(reserve.values())
     kept, reserve_after, shed_counts = shed(cfg, a_tasks, budget)
+    # Same-day rerun: queries finished earlier today don't count against this run's budget.
+    done_today = {d["id"] for d in storage.load_queue(t)["tasks"] if d["status"] == "done"}
+    kept = [x for x in kept if x.id not in done_today]
     if len(kept) > excess_budget:  # small manual runs: runtime budget cuts stage A, B/D keep their share
         kept = order_stage_a(kept, pairs)[:max(0, excess_budget)]
     kept = order_stage_a(kept, pairs)
     plan = {"date": t, "budget": budget, "date_pairs": len(pairs),
             "longest_pairs": sum(p.pair_tier == "longest" for p in pairs),
             "stage_a_full": plan_counts(a_tasks), "stage_a_after_shedding": plan_counts(kept),
-            "shed": shed_counts, "reserved_dynamic": reserve if budget < cfg.limits.max_requests_per_run else reserve_after,
+            "shed": shed_counts, "already_done_today": len(done_today), "reserved_dynamic": reserve if budget < cfg.limits.max_requests_per_run else reserve_after,
             "stages": stages}
 
     run = Runner(cfg, today, budget, a.dry_run, chain)
@@ -329,20 +339,11 @@ def main(argv=None) -> int:
     sb = cfg.stages.stage_b
     if "B" in stages and store:
         ranked = preliminary_rank(cfg, list(store.values()))
-        best_origins = list(dict.fromkeys(r["origin"] for r in ranked))[: sb.openjaw_origins]
-        pair_by_key = {p.key: p for p in pairs}
-        top_pairs = [pair_by_key[k] for k in dict.fromkeys(r["pair_key"] for r in ranked) if k in pair_by_key][: sb.openjaw_pairs]
-        cap = min(sb.openjaw_cap, reserve_after["stage_b_openjaw"] if budget >= cfg.limits.max_requests_per_run
-                  else reserve["stage_b_openjaw"])
-        for task in enqueue(openjaw_tasks(cfg, best_origins, top_pairs, cap)):
-            run.run_task(task, ctx, store)
-
-        ranked = preliminary_rank(cfg, list(store.values()))
         seen, cands = set(), []
         n_top = min(sb.top_candidates, reserve["return_options"])
         for r in ranked:
             k = (r["itinerary_id"], r["provenance"]["source"])
-            if not r["inbound_known"] and k not in seen and r["provenance"]["source"].startswith("fast_flights"):
+            if not r["inbound_known"] and k not in seen and r["provenance"]["source"] not in ("searchapi", "serpapi"):
                 seen.add(k)
                 cands.append(r)
             if len(cands) >= n_top:
@@ -384,6 +385,16 @@ def main(argv=None) -> int:
             std = {tuple(segment_key(of["legs"][0])): of for of in res.offers}
             for r in rs:
                 apply_standard_fare(cfg, fx, r, std.get(tuple(segment_key(r["legs"]["outbound"]["segments"]))))
+
+        # open-jaw last: least reliable via free sources (multi-city pages carry no results), first to be shed
+        ranked = preliminary_rank(cfg, list(store.values()))
+        best_origins = list(dict.fromkeys(r["origin"] for r in ranked))[: sb.openjaw_origins]
+        pair_by_key = {p.key: p for p in pairs}
+        top_pairs = [pair_by_key[k] for k in dict.fromkeys(r["pair_key"] for r in ranked) if k in pair_by_key][: sb.openjaw_pairs]
+        cap = min(sb.openjaw_cap, reserve_after["stage_b_openjaw"] if budget >= cfg.limits.max_requests_per_run
+                  else reserve["stage_b_openjaw"])
+        for task in enqueue(openjaw_tasks(cfg, best_origins, top_pairs, cap)):
+            run.run_task(task, ctx, store)
 
     # ---------------- stage C (paid validation)
     if "C" in stages and store:
@@ -473,7 +484,8 @@ def main(argv=None) -> int:
                      "by_source_and_stage": {k: dict(v) for k, v in run.requests.items()},
                      "outcomes_by_source": {k: dict(v) for k, v in run.outcomes.items()}},
         "queries": {"planned": run.planned, "succeeded": run.succeeded, "success_rate": round(success_rate, 3),
-                    "runtime_min": round((time.monotonic() - run.t0) / 60, 1), "runtime_limit_hit": run.out_of_time},
+                    "runtime_min": round((time.monotonic() - run.t0) / 60, 1), "runtime_limit_hit": run.out_of_time,
+                    "skipped": dict(run.skipped)},
         "sources_used_for_results": dict(run.sources_used), "source_chain": run.chain,
         "degraded": run.degraded, "circuit_breakers_open": sorted(run.breaker_open),
         "capability_report": caps, "bag_filter_effective": meta_extra["bag_filter_effective"],

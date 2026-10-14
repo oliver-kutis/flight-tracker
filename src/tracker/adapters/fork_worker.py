@@ -65,8 +65,10 @@ def main() -> None:
     try:
         res = fetcher.get_flights(TfsQuery(req["tfs"], req["hl"], req["curr"], req.get("gl", "")))
         print(json.dumps({"payload": res[0], "complete": res.complete}))
-    except Exception as e:  # noqa: BLE001 - reported to the parent
-        print(json.dumps({"error": f"{type(e).__name__}: {e}"[:400]}))
+    except Exception as e:  # noqa: BLE001 - reported to the parent, with where it failed
+        import traceback
+        where = " <- ".join(f"{f.name}:{f.lineno}" for f in reversed(traceback.extract_tb(e.__traceback__)[-3:]))
+        print(json.dumps({"error": f"{type(e).__name__}: {e} @ {where}"[:500]}))
 
 
 if __name__ == "__main__":
