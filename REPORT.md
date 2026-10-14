@@ -1,20 +1,54 @@
-# ✈️ Brno & okolie → Kalifornia · ut 13.10.2026
+# ✈️ Brno & okolie → Kalifornia · st 14.10.2026
 
-Strop 600 € · 1 os. · max 2 prestupy · max 20 h · SerpApi zostáva: ?
+Strop 600 € · 1 os. · max 2 prestupy · max 20 h
 
-_Zatiaľ žiadne dáta._
+## Nič pod 600 € – najbližšie k stropu
+
+| Trasa | Dátumy | Preč / dovolenka | Cena | Dopravca | Tam | Späť | Batožina | Overené |
+|---|---|---|---|---|---|---|---|---|
+| PRG→LAX | št 26.11. – so 12.12. | 18 dní / 12 dov. | **641 €** | British Airways | 15h50, 1 prest. (LHR) | 12-12 20:40 LAX→PRG, British Airways, 17h15, 1 prest. (LHR) | 501 € + 140 € odhad za batožinu | 2026-10-14 |
+| PRG→LAX | st 25.11. – st 9.12. | 16 dní / 12 dov. | **641 €** | British Airways | 15h35, 1 prest. (LHR) | 12-09 20:40 LAX→PRG, British Airways, 17h10, 1 prest. (LHR) | 501 € + 140 € odhad za batožinu | 2026-10-14 |
+| PRG→SFO | pi 27.11. – ne 13.12. | 18 dní / 12 dov. | **683 €** | Lufthansa, United | 14h20, 1 prest. (FRA) | 12-13 21:40 SFO→PRG, Lufthansa, 16h00, 1 prest. (MUC) | 543 € + 140 € odhad za batožinu | 2026-10-14 |
+| BER→LAX | ut 1.12. – ut 15.12. | 16 dní / 12 dov. | **770 €** | British Airways, American | 18h30, 1 prest. (LHR) | 12-15 18:50 LAX→BER, Finnair, 14h55, 1 prest. (HEL) | 630 € + 140 € odhad za batožinu | 2026-10-14 |
+| BER→LAX | pi 4.12. – ne 20.12. | 18 dní / 12 dov. | **784 €** | Aer Lingus | 17h25, 1 prest. (DUB) | 12-20 20:25 LAX→BER, Aer Lingus, 13h50, 1 prest. (DUB) | 644 € + 140 € odhad za batožinu | 2026-10-14 |
+
+**Najlacnejšia:** PRG→LAX, št 26.11. – so 12.12., 641 €
 
 ## Zmeny od posledného overenia
 
 - žiadne
 
-## Chyby
+_Ceny sú z Google Flights pre 1 osobu, spiatočná letenka spolu. Google už nevie započítať odbavenú batožinu, preto je k cene pripočítaný odhad 140 € (okrem dopravcov s batožinou v cene); presnú sumu over pri rezervácii. Cesta vlakom na letisko nie je započítaná._
 
-- št 26.11. – so 12.12. (VIE/PRG/BTS/BUD/MUC): Invalid API key. Your API key should be here: https://serpapi.com/manage-api-key
-- pi 27.11. – ne 13.12. (VIE/PRG/BTS/BUD/MUC): Invalid API key. Your API key should be here: https://serpapi.com/manage-api-key
-- so 28.11. – po 14.12. (VIE/PRG/BTS/BUD/MUC): Invalid API key. Your API key should be here: https://serpapi.com/manage-api-key
-- št 3.12. – so 19.12. (VIE/PRG/BTS/BUD/MUC): Invalid API key. Your API key should be here: https://serpapi.com/manage-api-key
-- pi 4.12. – ne 20.12. (VIE/PRG/BTS/BUD/MUC): Invalid API key. Your API key should be here: https://serpapi.com/manage-api-key
-- št 26.11. – so 12.12. (FRA/BER/WAW/KRK/KTW): Invalid API key. Your API key should be here: https://serpapi.com/manage-api-key
+<details><summary>Odkazy na Google Flights</summary>
 
-_Ceny sú z Google Flights pre 1 osobu; odbavenú batožinu over pri rezervácii (stĺpec Batožina ukazuje, čo hlási Google). Cesta vlakom na letisko nie je započítaná._
+- [st 25.11. – st 9.12. z FRA/BER/WAW/KRK/KTW](https://www.google.com/travel/flights/search?tfs=GlcSCjIwMjYtMTEtMjUoAmCwCWoFEgNGUkFqBRIDQkVSagUSA1dBV2oFEgNLUktqBRIDS1RXcgUSA0xBWHIFEgNTRk9yBRIDU0FOcgUSA1NKQ3IFEgNPQUsaVxIKMjAyNi0xMi0wOSgCYLAJagUSA0xBWGoFEgNTRk9qBRIDU0FOagUSA1NKQ2oFEgNPQUtyBRIDRlJBcgUSA0JFUnIFEgNXQVdyBRIDS1JLcgUSA0tUV0IBAUgBmAEB&hl=en&curr=EUR)
+- [st 25.11. – st 9.12. z VIE/PRG/BTS/BUD/MUC](https://www.google.com/travel/flights/search?tfs=GlcSCjIwMjYtMTEtMjUoAmCwCWoFEgNWSUVqBRIDUFJHagUSA0JUU2oFEgNCVURqBRIDTVVDcgUSA0xBWHIFEgNTRk9yBRIDU0FOcgUSA1NKQ3IFEgNPQUsaVxIKMjAyNi0xMi0wOSgCYLAJagUSA0xBWGoFEgNTRk9qBRIDU0FOagUSA1NKQ2oFEgNPQUtyBRIDVklFcgUSA1BSR3IFEgNCVFNyBRIDQlVEcgUSA01VQ0IBAUgBmAEB&hl=en&curr=EUR)
+- [št 26.11. – so 12.12. z FRA/BER/WAW/KRK/KTW](https://www.google.com/travel/flights/search?tfs=GlcSCjIwMjYtMTEtMjYoAmCwCWoFEgNGUkFqBRIDQkVSagUSA1dBV2oFEgNLUktqBRIDS1RXcgUSA0xBWHIFEgNTRk9yBRIDU0FOcgUSA1NKQ3IFEgNPQUsaVxIKMjAyNi0xMi0xMigCYLAJagUSA0xBWGoFEgNTRk9qBRIDU0FOagUSA1NKQ2oFEgNPQUtyBRIDRlJBcgUSA0JFUnIFEgNXQVdyBRIDS1JLcgUSA0tUV0IBAUgBmAEB&hl=en&curr=EUR)
+- [št 26.11. – so 12.12. z VIE/PRG/BTS/BUD/MUC](https://www.google.com/travel/flights/search?tfs=GlcSCjIwMjYtMTEtMjYoAmCwCWoFEgNWSUVqBRIDUFJHagUSA0JUU2oFEgNCVURqBRIDTVVDcgUSA0xBWHIFEgNTRk9yBRIDU0FOcgUSA1NKQ3IFEgNPQUsaVxIKMjAyNi0xMi0xMigCYLAJagUSA0xBWGoFEgNTRk9qBRIDU0FOagUSA1NKQ2oFEgNPQUtyBRIDVklFcgUSA1BSR3IFEgNCVFNyBRIDQlVEcgUSA01VQ0IBAUgBmAEB&hl=en&curr=EUR)
+- [pi 27.11. – ne 13.12. z FRA/BER/WAW/KRK/KTW](https://www.google.com/travel/flights/search?tfs=GlcSCjIwMjYtMTEtMjcoAmCwCWoFEgNGUkFqBRIDQkVSagUSA1dBV2oFEgNLUktqBRIDS1RXcgUSA0xBWHIFEgNTRk9yBRIDU0FOcgUSA1NKQ3IFEgNPQUsaVxIKMjAyNi0xMi0xMygCYLAJagUSA0xBWGoFEgNTRk9qBRIDU0FOagUSA1NKQ2oFEgNPQUtyBRIDRlJBcgUSA0JFUnIFEgNXQVdyBRIDS1JLcgUSA0tUV0IBAUgBmAEB&hl=en&curr=EUR)
+- [pi 27.11. – ne 13.12. z VIE/PRG/BTS/BUD/MUC](https://www.google.com/travel/flights/search?tfs=GlcSCjIwMjYtMTEtMjcoAmCwCWoFEgNWSUVqBRIDUFJHagUSA0JUU2oFEgNCVURqBRIDTVVDcgUSA0xBWHIFEgNTRk9yBRIDU0FOcgUSA1NKQ3IFEgNPQUsaVxIKMjAyNi0xMi0xMygCYLAJagUSA0xBWGoFEgNTRk9qBRIDU0FOagUSA1NKQ2oFEgNPQUtyBRIDVklFcgUSA1BSR3IFEgNCVFNyBRIDQlVEcgUSA01VQ0IBAUgBmAEB&hl=en&curr=EUR)
+- [so 28.11. – po 14.12. z FRA/BER/WAW/KRK/KTW](https://www.google.com/travel/flights/search?tfs=GlcSCjIwMjYtMTEtMjgoAmCwCWoFEgNGUkFqBRIDQkVSagUSA1dBV2oFEgNLUktqBRIDS1RXcgUSA0xBWHIFEgNTRk9yBRIDU0FOcgUSA1NKQ3IFEgNPQUsaVxIKMjAyNi0xMi0xNCgCYLAJagUSA0xBWGoFEgNTRk9qBRIDU0FOagUSA1NKQ2oFEgNPQUtyBRIDRlJBcgUSA0JFUnIFEgNXQVdyBRIDS1JLcgUSA0tUV0IBAUgBmAEB&hl=en&curr=EUR)
+- [so 28.11. – po 14.12. z VIE/PRG/BTS/BUD/MUC](https://www.google.com/travel/flights/search?tfs=GlcSCjIwMjYtMTEtMjgoAmCwCWoFEgNWSUVqBRIDUFJHagUSA0JUU2oFEgNCVURqBRIDTVVDcgUSA0xBWHIFEgNTRk9yBRIDU0FOcgUSA1NKQ3IFEgNPQUsaVxIKMjAyNi0xMi0xNCgCYLAJagUSA0xBWGoFEgNTRk9qBRIDU0FOagUSA1NKQ2oFEgNPQUtyBRIDVklFcgUSA1BSR3IFEgNCVFNyBRIDQlVEcgUSA01VQ0IBAUgBmAEB&hl=en&curr=EUR)
+- [ne 29.11. – po 14.12. z FRA/BER/WAW/KRK/KTW](https://www.google.com/travel/flights/search?tfs=GlcSCjIwMjYtMTEtMjkoAmCwCWoFEgNGUkFqBRIDQkVSagUSA1dBV2oFEgNLUktqBRIDS1RXcgUSA0xBWHIFEgNTRk9yBRIDU0FOcgUSA1NKQ3IFEgNPQUsaVxIKMjAyNi0xMi0xNCgCYLAJagUSA0xBWGoFEgNTRk9qBRIDU0FOagUSA1NKQ2oFEgNPQUtyBRIDRlJBcgUSA0JFUnIFEgNXQVdyBRIDS1JLcgUSA0tUV0IBAUgBmAEB&hl=en&curr=EUR)
+- [ne 29.11. – po 14.12. z VIE/PRG/BTS/BUD/MUC](https://www.google.com/travel/flights/search?tfs=GlcSCjIwMjYtMTEtMjkoAmCwCWoFEgNWSUVqBRIDUFJHagUSA0JUU2oFEgNCVURqBRIDTVVDcgUSA0xBWHIFEgNTRk9yBRIDU0FOcgUSA1NKQ3IFEgNPQUsaVxIKMjAyNi0xMi0xNCgCYLAJagUSA0xBWGoFEgNTRk9qBRIDU0FOagUSA1NKQ2oFEgNPQUtyBRIDVklFcgUSA1BSR3IFEgNCVFNyBRIDQlVEcgUSA01VQ0IBAUgBmAEB&hl=en&curr=EUR)
+- [po 30.11. – po 14.12. z FRA/BER/WAW/KRK/KTW](https://www.google.com/travel/flights/search?tfs=GlcSCjIwMjYtMTEtMzAoAmCwCWoFEgNGUkFqBRIDQkVSagUSA1dBV2oFEgNLUktqBRIDS1RXcgUSA0xBWHIFEgNTRk9yBRIDU0FOcgUSA1NKQ3IFEgNPQUsaVxIKMjAyNi0xMi0xNCgCYLAJagUSA0xBWGoFEgNTRk9qBRIDU0FOagUSA1NKQ2oFEgNPQUtyBRIDRlJBcgUSA0JFUnIFEgNXQVdyBRIDS1JLcgUSA0tUV0IBAUgBmAEB&hl=en&curr=EUR)
+- [po 30.11. – po 14.12. z VIE/PRG/BTS/BUD/MUC](https://www.google.com/travel/flights/search?tfs=GlcSCjIwMjYtMTEtMzAoAmCwCWoFEgNWSUVqBRIDUFJHagUSA0JUU2oFEgNCVURqBRIDTVVDcgUSA0xBWHIFEgNTRk9yBRIDU0FOcgUSA1NKQ3IFEgNPQUsaVxIKMjAyNi0xMi0xNCgCYLAJagUSA0xBWGoFEgNTRk9qBRIDU0FOagUSA1NKQ2oFEgNPQUtyBRIDVklFcgUSA1BSR3IFEgNCVFNyBRIDQlVEcgUSA01VQ0IBAUgBmAEB&hl=en&curr=EUR)
+- [ut 1.12. – ut 15.12. z FRA/BER/WAW/KRK/KTW](https://www.google.com/travel/flights/search?tfs=GlcSCjIwMjYtMTItMDEoAmCwCWoFEgNGUkFqBRIDQkVSagUSA1dBV2oFEgNLUktqBRIDS1RXcgUSA0xBWHIFEgNTRk9yBRIDU0FOcgUSA1NKQ3IFEgNPQUsaVxIKMjAyNi0xMi0xNSgCYLAJagUSA0xBWGoFEgNTRk9qBRIDU0FOagUSA1NKQ2oFEgNPQUtyBRIDRlJBcgUSA0JFUnIFEgNXQVdyBRIDS1JLcgUSA0tUV0IBAUgBmAEB&hl=en&curr=EUR)
+- [ut 1.12. – ut 15.12. z VIE/PRG/BTS/BUD/MUC](https://www.google.com/travel/flights/search?tfs=GlcSCjIwMjYtMTItMDEoAmCwCWoFEgNWSUVqBRIDUFJHagUSA0JUU2oFEgNCVURqBRIDTVVDcgUSA0xBWHIFEgNTRk9yBRIDU0FOcgUSA1NKQ3IFEgNPQUsaVxIKMjAyNi0xMi0xNSgCYLAJagUSA0xBWGoFEgNTRk9qBRIDU0FOagUSA1NKQ2oFEgNPQUtyBRIDVklFcgUSA1BSR3IFEgNCVFNyBRIDQlVEcgUSA01VQ0IBAUgBmAEB&hl=en&curr=EUR)
+- [st 2.12. – st 16.12. z FRA/BER/WAW/KRK/KTW](https://www.google.com/travel/flights/search?tfs=GlcSCjIwMjYtMTItMDIoAmCwCWoFEgNGUkFqBRIDQkVSagUSA1dBV2oFEgNLUktqBRIDS1RXcgUSA0xBWHIFEgNTRk9yBRIDU0FOcgUSA1NKQ3IFEgNPQUsaVxIKMjAyNi0xMi0xNigCYLAJagUSA0xBWGoFEgNTRk9qBRIDU0FOagUSA1NKQ2oFEgNPQUtyBRIDRlJBcgUSA0JFUnIFEgNXQVdyBRIDS1JLcgUSA0tUV0IBAUgBmAEB&hl=en&curr=EUR)
+- [st 2.12. – st 16.12. z VIE/PRG/BTS/BUD/MUC](https://www.google.com/travel/flights/search?tfs=GlcSCjIwMjYtMTItMDIoAmCwCWoFEgNWSUVqBRIDUFJHagUSA0JUU2oFEgNCVURqBRIDTVVDcgUSA0xBWHIFEgNTRk9yBRIDU0FOcgUSA1NKQ3IFEgNPQUsaVxIKMjAyNi0xMi0xNigCYLAJagUSA0xBWGoFEgNTRk9qBRIDU0FOagUSA1NKQ2oFEgNPQUtyBRIDVklFcgUSA1BSR3IFEgNCVFNyBRIDQlVEcgUSA01VQ0IBAUgBmAEB&hl=en&curr=EUR)
+- [št 3.12. – so 19.12. z FRA/BER/WAW/KRK/KTW](https://www.google.com/travel/flights/search?tfs=GlcSCjIwMjYtMTItMDMoAmCwCWoFEgNGUkFqBRIDQkVSagUSA1dBV2oFEgNLUktqBRIDS1RXcgUSA0xBWHIFEgNTRk9yBRIDU0FOcgUSA1NKQ3IFEgNPQUsaVxIKMjAyNi0xMi0xOSgCYLAJagUSA0xBWGoFEgNTRk9qBRIDU0FOagUSA1NKQ2oFEgNPQUtyBRIDRlJBcgUSA0JFUnIFEgNXQVdyBRIDS1JLcgUSA0tUV0IBAUgBmAEB&hl=en&curr=EUR)
+- [št 3.12. – so 19.12. z VIE/PRG/BTS/BUD/MUC](https://www.google.com/travel/flights/search?tfs=GlcSCjIwMjYtMTItMDMoAmCwCWoFEgNWSUVqBRIDUFJHagUSA0JUU2oFEgNCVURqBRIDTVVDcgUSA0xBWHIFEgNTRk9yBRIDU0FOcgUSA1NKQ3IFEgNPQUsaVxIKMjAyNi0xMi0xOSgCYLAJagUSA0xBWGoFEgNTRk9qBRIDU0FOagUSA1NKQ2oFEgNPQUtyBRIDVklFcgUSA1BSR3IFEgNCVFNyBRIDQlVEcgUSA01VQ0IBAUgBmAEB&hl=en&curr=EUR)
+- [pi 4.12. – ne 20.12. z FRA/BER/WAW/KRK/KTW](https://www.google.com/travel/flights/search?tfs=GlcSCjIwMjYtMTItMDQoAmCwCWoFEgNGUkFqBRIDQkVSagUSA1dBV2oFEgNLUktqBRIDS1RXcgUSA0xBWHIFEgNTRk9yBRIDU0FOcgUSA1NKQ3IFEgNPQUsaVxIKMjAyNi0xMi0yMCgCYLAJagUSA0xBWGoFEgNTRk9qBRIDU0FOagUSA1NKQ2oFEgNPQUtyBRIDRlJBcgUSA0JFUnIFEgNXQVdyBRIDS1JLcgUSA0tUV0IBAUgBmAEB&hl=en&curr=EUR)
+- [pi 4.12. – ne 20.12. z VIE/PRG/BTS/BUD/MUC](https://www.google.com/travel/flights/search?tfs=GlcSCjIwMjYtMTItMDQoAmCwCWoFEgNWSUVqBRIDUFJHagUSA0JUU2oFEgNCVURqBRIDTVVDcgUSA0xBWHIFEgNTRk9yBRIDU0FOcgUSA1NKQ3IFEgNPQUsaVxIKMjAyNi0xMi0yMCgCYLAJagUSA0xBWGoFEgNTRk9qBRIDU0FOagUSA1NKQ2oFEgNPQUtyBRIDVklFcgUSA1BSR3IFEgNCVFNyBRIDQlVEcgUSA01VQ0IBAUgBmAEB&hl=en&curr=EUR)
+- [so 5.12. – ne 20.12. z FRA/BER/WAW/KRK/KTW](https://www.google.com/travel/flights/search?tfs=GlcSCjIwMjYtMTItMDUoAmCwCWoFEgNGUkFqBRIDQkVSagUSA1dBV2oFEgNLUktqBRIDS1RXcgUSA0xBWHIFEgNTRk9yBRIDU0FOcgUSA1NKQ3IFEgNPQUsaVxIKMjAyNi0xMi0yMCgCYLAJagUSA0xBWGoFEgNTRk9qBRIDU0FOagUSA1NKQ2oFEgNPQUtyBRIDRlJBcgUSA0JFUnIFEgNXQVdyBRIDS1JLcgUSA0tUV0IBAUgBmAEB&hl=en&curr=EUR)
+- [so 5.12. – ne 20.12. z VIE/PRG/BTS/BUD/MUC](https://www.google.com/travel/flights/search?tfs=GlcSCjIwMjYtMTItMDUoAmCwCWoFEgNWSUVqBRIDUFJHagUSA0JUU2oFEgNCVURqBRIDTVVDcgUSA0xBWHIFEgNTRk9yBRIDU0FOcgUSA1NKQ3IFEgNPQUsaVxIKMjAyNi0xMi0yMCgCYLAJagUSA0xBWGoFEgNTRk9qBRIDU0FOagUSA1NKQ2oFEgNPQUtyBRIDVklFcgUSA1BSR3IFEgNCVFNyBRIDQlVEcgUSA01VQ0IBAUgBmAEB&hl=en&curr=EUR)
+- [ne 6.12. – ne 20.12. z FRA/BER/WAW/KRK/KTW](https://www.google.com/travel/flights/search?tfs=GlcSCjIwMjYtMTItMDYoAmCwCWoFEgNGUkFqBRIDQkVSagUSA1dBV2oFEgNLUktqBRIDS1RXcgUSA0xBWHIFEgNTRk9yBRIDU0FOcgUSA1NKQ3IFEgNPQUsaVxIKMjAyNi0xMi0yMCgCYLAJagUSA0xBWGoFEgNTRk9qBRIDU0FOagUSA1NKQ2oFEgNPQUtyBRIDRlJBcgUSA0JFUnIFEgNXQVdyBRIDS1JLcgUSA0tUV0IBAUgBmAEB&hl=en&curr=EUR)
+- [ne 6.12. – ne 20.12. z VIE/PRG/BTS/BUD/MUC](https://www.google.com/travel/flights/search?tfs=GlcSCjIwMjYtMTItMDYoAmCwCWoFEgNWSUVqBRIDUFJHagUSA0JUU2oFEgNCVURqBRIDTVVDcgUSA0xBWHIFEgNTRk9yBRIDU0FOcgUSA1NKQ3IFEgNPQUsaVxIKMjAyNi0xMi0yMCgCYLAJagUSA0xBWGoFEgNTRk9qBRIDU0FOagUSA1NKQ2oFEgNPQUtyBRIDVklFcgUSA1BSR3IFEgNCVFNyBRIDQlVEcgUSA01VQ0IBAUgBmAEB&hl=en&curr=EUR)
+- [po 7.12. – ne 20.12. z FRA/BER/WAW/KRK/KTW](https://www.google.com/travel/flights/search?tfs=GlcSCjIwMjYtMTItMDcoAmCwCWoFEgNGUkFqBRIDQkVSagUSA1dBV2oFEgNLUktqBRIDS1RXcgUSA0xBWHIFEgNTRk9yBRIDU0FOcgUSA1NKQ3IFEgNPQUsaVxIKMjAyNi0xMi0yMCgCYLAJagUSA0xBWGoFEgNTRk9qBRIDU0FOagUSA1NKQ2oFEgNPQUtyBRIDRlJBcgUSA0JFUnIFEgNXQVdyBRIDS1JLcgUSA0tUV0IBAUgBmAEB&hl=en&curr=EUR)
+- [po 7.12. – ne 20.12. z VIE/PRG/BTS/BUD/MUC](https://www.google.com/travel/flights/search?tfs=GlcSCjIwMjYtMTItMDcoAmCwCWoFEgNWSUVqBRIDUFJHagUSA0JUU2oFEgNCVURqBRIDTVVDcgUSA0xBWHIFEgNTRk9yBRIDU0FOcgUSA1NKQ3IFEgNPQUsaVxIKMjAyNi0xMi0yMCgCYLAJagUSA0xBWGoFEgNTRk9qBRIDU0FOagUSA1NKQ2oFEgNPQUtyBRIDVklFcgUSA1BSR3IFEgNCVFNyBRIDQlVEcgUSA01VQ0IBAUgBmAEB&hl=en&curr=EUR)
+- [ut 8.12. – ne 20.12. z FRA/BER/WAW/KRK/KTW](https://www.google.com/travel/flights/search?tfs=GlcSCjIwMjYtMTItMDgoAmCwCWoFEgNGUkFqBRIDQkVSagUSA1dBV2oFEgNLUktqBRIDS1RXcgUSA0xBWHIFEgNTRk9yBRIDU0FOcgUSA1NKQ3IFEgNPQUsaVxIKMjAyNi0xMi0yMCgCYLAJagUSA0xBWGoFEgNTRk9qBRIDU0FOagUSA1NKQ2oFEgNPQUtyBRIDRlJBcgUSA0JFUnIFEgNXQVdyBRIDS1JLcgUSA0tUV0IBAUgBmAEB&hl=en&curr=EUR)
+- [ut 8.12. – ne 20.12. z VIE/PRG/BTS/BUD/MUC](https://www.google.com/travel/flights/search?tfs=GlcSCjIwMjYtMTItMDgoAmCwCWoFEgNWSUVqBRIDUFJHagUSA0JUU2oFEgNCVURqBRIDTVVDcgUSA0xBWHIFEgNTRk9yBRIDU0FOcgUSA1NKQ3IFEgNPQUsaVxIKMjAyNi0xMi0yMCgCYLAJagUSA0xBWGoFEgNTRk9qBRIDU0FOagUSA1NKQ2oFEgNPQUtyBRIDVklFcgUSA1BSR3IFEgNCVFNyBRIDQlVEcgUSA01VQ0IBAUgBmAEB&hl=en&curr=EUR)
+
+</details>

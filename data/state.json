@@ -7,14 +7,231 @@
    "away": 18,
    "leave": 12,
    "group": 0,
-   "last_checked": "2026-10-13",
-   "best_price": null,
-   "offers": [],
-   "url": null,
+   "last_checked": "2026-10-14",
+   "best_price": 641,
+   "offers": [
+    {
+     "origin": "PRG",
+     "dest": "LAX",
+     "dep_time": "2026-11-26 06:35",
+     "arr_time": "2026-11-26 13:25",
+     "price": 641,
+     "duration_min": 950,
+     "stops": 1,
+     "via": [
+      "LHR"
+     ],
+     "airlines": [
+      "British Airways"
+     ],
+     "segments": [
+      [
+       "PRG",
+       "2026-11-26",
+       "LHR",
+       "BA",
+       "865"
+      ],
+      [
+       "LHR",
+       "2026-11-26",
+       "LAX",
+       "BA",
+       "283"
+      ]
+     ],
+     "dep": "2026-11-26",
+     "ret": "2026-12-12",
+     "stay": 16,
+     "away": 18,
+     "leave": 12,
+     "price_google": 501,
+     "bag_info": [
+      "501 € + 140 € odhad za batožinu"
+     ],
+     "return": {
+      "origin": "LAX",
+      "dest": "PRG",
+      "dep_time": "2026-12-12 20:40",
+      "arr_time": "2026-12-13 22:55",
+      "duration_min": 1035,
+      "stops": 1,
+      "via": [
+       "LHR"
+      ],
+      "airlines": [
+       "British Airways"
+      ],
+      "price": 501
+     },
+     "return_checked": "2026-10-14"
+    },
+    {
+     "origin": "PRG",
+     "dest": "LAX",
+     "dep_time": "2026-11-26 10:25",
+     "arr_time": "2026-11-26 18:35",
+     "price": 641,
+     "duration_min": 1030,
+     "stops": 1,
+     "via": [
+      "LHR"
+     ],
+     "airlines": [
+      "British Airways"
+     ],
+     "segments": [
+      [
+       "PRG",
+       "2026-11-26",
+       "LHR",
+       "BA",
+       "853"
+      ],
+      [
+       "LHR",
+       "2026-11-26",
+       "LAX",
+       "BA",
+       "269"
+      ]
+     ],
+     "dep": "2026-11-26",
+     "ret": "2026-12-12",
+     "stay": 16,
+     "away": 18,
+     "leave": 12,
+     "price_google": 501,
+     "bag_info": [
+      "501 € + 140 € odhad za batožinu"
+     ]
+    },
+    {
+     "origin": "MUC",
+     "dest": "LAX",
+     "dep_time": "2026-11-26 07:00",
+     "arr_time": "2026-11-26 11:45",
+     "price": 718,
+     "duration_min": 825,
+     "stops": 1,
+     "via": [
+      "AMS"
+     ],
+     "airlines": [
+      "KLM"
+     ],
+     "segments": [
+      [
+       "MUC",
+       "2026-11-26",
+       "AMS",
+       "KL",
+       "1848"
+      ],
+      [
+       "AMS",
+       "2026-11-26",
+       "LAX",
+       "KL",
+       "601"
+      ]
+     ],
+     "dep": "2026-11-26",
+     "ret": "2026-12-12",
+     "stay": 16,
+     "away": 18,
+     "leave": 12,
+     "price_google": 578,
+     "bag_info": [
+      "578 € + 140 € odhad za batožinu"
+     ]
+    },
+    {
+     "origin": "MUC",
+     "dest": "LAX",
+     "dep_time": "2026-11-26 07:05",
+     "arr_time": "2026-11-26 13:00",
+     "price": 724,
+     "duration_min": 895,
+     "stops": 1,
+     "via": [
+      "CDG"
+     ],
+     "airlines": [
+      "Air France"
+     ],
+     "segments": [
+      [
+       "MUC",
+       "2026-11-26",
+       "CDG",
+       "AF",
+       "1123"
+      ],
+      [
+       "CDG",
+       "2026-11-26",
+       "LAX",
+       "AF",
+       "22"
+      ]
+     ],
+     "dep": "2026-11-26",
+     "ret": "2026-12-12",
+     "stay": 16,
+     "away": 18,
+     "leave": 12,
+     "price_google": 584,
+     "bag_info": [
+      "584 € + 140 € odhad za batožinu"
+     ]
+    },
+    {
+     "origin": "BUD",
+     "dest": "LAX",
+     "dep_time": "2026-11-26 07:35",
+     "arr_time": "2026-11-26 18:35",
+     "price": 687,
+     "duration_min": 1200,
+     "stops": 1,
+     "via": [
+      "LHR"
+     ],
+     "airlines": [
+      "British Airways"
+     ],
+     "segments": [
+      [
+       "BUD",
+       "2026-11-26",
+       "LHR",
+       "BA",
+       "871"
+      ],
+      [
+       "LHR",
+       "2026-11-26",
+       "LAX",
+       "BA",
+       "269"
+      ]
+     ],
+     "dep": "2026-11-26",
+     "ret": "2026-12-12",
+     "stay": 16,
+     "away": 18,
+     "leave": 12,
+     "price_google": 547,
+     "bag_info": [
+      "547 € + 140 € odhad za batožinu"
+     ]
+    }
+   ],
+   "url": "https://www.google.com/travel/flights/search?tfs=GlcSCjIwMjYtMTEtMjYoAmCwCWoFEgNWSUVqBRIDUFJHagUSA0JUU2oFEgNCVURqBRIDTVVDcgUSA0xBWHIFEgNTRk9yBRIDU0FOcgUSA1NKQ3IFEgNPQUsaVxIKMjAyNi0xMi0xMigCYLAJagUSA0xBWGoFEgNTRk9qBRIDU0FOagUSA1NKQ2oFEgNPQUtyBRIDVklFcgUSA1BSR3IFEgNCVFNyBRIDQlVEcgUSA01VQ0IBAUgBmAEB&hl=en&curr=EUR",
    "history": [
     [
-     "2026-10-13",
-     null
+     "2026-10-14",
+     641
     ]
    ]
   },
@@ -25,14 +242,244 @@
    "away": 18,
    "leave": 12,
    "group": 0,
-   "last_checked": "2026-10-13",
-   "best_price": null,
-   "offers": [],
-   "url": null,
+   "last_checked": "2026-10-14",
+   "best_price": 683,
+   "offers": [
+    {
+     "origin": "PRG",
+     "dest": "SFO",
+     "dep_time": "2026-11-27 14:50",
+     "arr_time": "2026-11-27 20:10",
+     "price": 683,
+     "duration_min": 860,
+     "stops": 1,
+     "via": [
+      "FRA"
+     ],
+     "airlines": [
+      "Lufthansa",
+      "United"
+     ],
+     "segments": [
+      [
+       "PRG",
+       "2026-11-27",
+       "FRA",
+       "LH",
+       "1397"
+      ],
+      [
+       "FRA",
+       "2026-11-27",
+       "SFO",
+       "UA",
+       "927"
+      ]
+     ],
+     "dep": "2026-11-27",
+     "ret": "2026-12-13",
+     "stay": 16,
+     "away": 18,
+     "leave": 12,
+     "price_google": 543,
+     "bag_info": [
+      "543 € + 140 € odhad za batožinu"
+     ],
+     "return": {
+      "origin": "SFO",
+      "dest": "PRG",
+      "dep_time": "2026-12-13 21:40",
+      "arr_time": "2026-12-14 22:40",
+      "duration_min": 960,
+      "stops": 1,
+      "via": [
+       "MUC"
+      ],
+      "airlines": [
+       "Lufthansa"
+      ],
+      "price": 543
+     },
+     "return_checked": "2026-10-14"
+    },
+    {
+     "origin": "VIE",
+     "dest": "SFO",
+     "dep_time": "2026-11-27 13:55",
+     "arr_time": "2026-11-27 20:10",
+     "price": 693,
+     "duration_min": 915,
+     "stops": 1,
+     "via": [
+      "FRA"
+     ],
+     "airlines": [
+      "Austrian",
+      "United"
+     ],
+     "segments": [
+      [
+       "VIE",
+       "2026-11-27",
+       "FRA",
+       "OS",
+       "211"
+      ],
+      [
+       "FRA",
+       "2026-11-27",
+       "SFO",
+       "UA",
+       "927"
+      ]
+     ],
+     "dep": "2026-11-27",
+     "ret": "2026-12-13",
+     "stay": 16,
+     "away": 18,
+     "leave": 12,
+     "price_google": 553,
+     "bag_info": [
+      "553 € + 140 € odhad za batožinu"
+     ]
+    },
+    {
+     "origin": "VIE",
+     "dest": "SFO",
+     "dep_time": "2026-11-27 10:30",
+     "arr_time": "2026-11-27 16:05",
+     "price": 729,
+     "duration_min": 875,
+     "stops": 1,
+     "via": [
+      "FRA"
+     ],
+     "airlines": [
+      "Austrian",
+      "United"
+     ],
+     "segments": [
+      [
+       "VIE",
+       "2026-11-27",
+       "FRA",
+       "OS",
+       "207"
+      ],
+      [
+       "FRA",
+       "2026-11-27",
+       "SFO",
+       "UA",
+       "59"
+      ]
+     ],
+     "dep": "2026-11-27",
+     "ret": "2026-12-13",
+     "stay": 16,
+     "away": 18,
+     "leave": 12,
+     "price_google": 589,
+     "bag_info": [
+      "589 € + 140 € odhad za batožinu"
+     ]
+    },
+    {
+     "origin": "PRG",
+     "dest": "SFO",
+     "dep_time": "2026-11-27 06:10",
+     "arr_time": "2026-11-27 14:50",
+     "price": 730,
+     "duration_min": 1060,
+     "stops": 1,
+     "via": [
+      "MUC"
+     ],
+     "airlines": [
+      "Lufthansa",
+      "United"
+     ],
+     "segments": [
+      [
+       "PRG",
+       "2026-11-27",
+       "MUC",
+       "LH",
+       "1695"
+      ],
+      [
+       "MUC",
+       "2026-11-27",
+       "SFO",
+       "UA",
+       "195"
+      ]
+     ],
+     "dep": "2026-11-27",
+     "ret": "2026-12-13",
+     "stay": 16,
+     "away": 18,
+     "leave": 12,
+     "price_google": 590,
+     "bag_info": [
+      "590 € + 140 € odhad za batožinu"
+     ]
+    },
+    {
+     "origin": "BUD",
+     "dest": "LAX",
+     "dep_time": "2026-11-27 14:25",
+     "arr_time": "2026-11-28 00:21",
+     "price": 721,
+     "duration_min": 1136,
+     "stops": 2,
+     "via": [
+      "FRA",
+      "SFO"
+     ],
+     "airlines": [
+      "Lufthansa",
+      "United"
+     ],
+     "segments": [
+      [
+       "BUD",
+       "2026-11-27",
+       "FRA",
+       "LH",
+       "1337"
+      ],
+      [
+       "FRA",
+       "2026-11-27",
+       "SFO",
+       "UA",
+       "927"
+      ],
+      [
+       "SFO",
+       "2026-11-27",
+       "LAX",
+       "UA",
+       "2179"
+      ]
+     ],
+     "dep": "2026-11-27",
+     "ret": "2026-12-13",
+     "stay": 16,
+     "away": 18,
+     "leave": 12,
+     "price_google": 581,
+     "bag_info": [
+      "581 € + 140 € odhad za batožinu"
+     ]
+    }
+   ],
+   "url": "https://www.google.com/travel/flights/search?tfs=GlcSCjIwMjYtMTEtMjcoAmCwCWoFEgNWSUVqBRIDUFJHagUSA0JUU2oFEgNCVURqBRIDTVVDcgUSA0xBWHIFEgNTRk9yBRIDU0FOcgUSA1NKQ3IFEgNPQUsaVxIKMjAyNi0xMi0xMygCYLAJagUSA0xBWGoFEgNTRk9qBRIDU0FOagUSA1NKQ2oFEgNPQUtyBRIDVklFcgUSA1BSR3IFEgNCVFNyBRIDQlVEcgUSA01VQ0IBAUgBmAEB&hl=en&curr=EUR",
    "history": [
     [
-     "2026-10-13",
-     null
+     "2026-10-14",
+     683
     ]
    ]
   },
@@ -43,14 +490,216 @@
    "away": 18,
    "leave": 12,
    "group": 0,
-   "last_checked": "2026-10-13",
-   "best_price": null,
-   "offers": [],
-   "url": null,
+   "last_checked": "2026-10-14",
+   "best_price": 1075,
+   "offers": [
+    {
+     "origin": "BUD",
+     "dest": "LAX",
+     "dep_time": "2026-11-28 06:40",
+     "arr_time": "2026-11-28 16:41",
+     "price": 1075,
+     "duration_min": 1141,
+     "stops": 2,
+     "via": [
+      "FRA",
+      "YVR"
+     ],
+     "airlines": [
+      "Lufthansa",
+      "Air Canada"
+     ],
+     "segments": [
+      [
+       "BUD",
+       "2026-11-28",
+       "FRA",
+       "LH",
+       "1341"
+      ],
+      [
+       "FRA",
+       "2026-11-28",
+       "YVR",
+       "LH",
+       "492"
+      ],
+      [
+       "YVR",
+       "2026-11-28",
+       "LAX",
+       "AC",
+       "554"
+      ]
+     ],
+     "dep": "2026-11-28",
+     "ret": "2026-12-14",
+     "stay": 16,
+     "away": 18,
+     "leave": 12,
+     "price_google": 935,
+     "bag_info": [
+      "935 € + 140 € odhad za batožinu"
+     ]
+    },
+    {
+     "origin": "VIE",
+     "dest": "LAX",
+     "dep_time": "2026-11-28 10:35",
+     "arr_time": "2026-11-28 20:04",
+     "price": 1095,
+     "duration_min": 1109,
+     "stops": 1,
+     "via": [
+      "YYZ"
+     ],
+     "airlines": [
+      "Air Canada"
+     ],
+     "segments": [
+      [
+       "VIE",
+       "2026-11-28",
+       "YYZ",
+       "AC",
+       "887"
+      ],
+      [
+       "YYZ",
+       "2026-11-28",
+       "LAX",
+       "AC",
+       "791"
+      ]
+     ],
+     "dep": "2026-11-28",
+     "ret": "2026-12-14",
+     "stay": 16,
+     "away": 18,
+     "leave": 12,
+     "price_google": 955,
+     "bag_info": [
+      "955 € + 140 € odhad za batožinu"
+     ]
+    },
+    {
+     "origin": "PRG",
+     "dest": "SFO",
+     "dep_time": "2026-11-28 06:10",
+     "arr_time": "2026-11-28 14:50",
+     "price": 1112,
+     "duration_min": 1060,
+     "stops": 1,
+     "via": [
+      "MUC"
+     ],
+     "airlines": [
+      "Lufthansa",
+      "United"
+     ],
+     "segments": [
+      [
+       "PRG",
+       "2026-11-28",
+       "MUC",
+       "LH",
+       "1695"
+      ],
+      [
+       "MUC",
+       "2026-11-28",
+       "SFO",
+       "UA",
+       "195"
+      ]
+     ],
+     "dep": "2026-11-28",
+     "ret": "2026-12-14",
+     "stay": 16,
+     "away": 18,
+     "leave": 12,
+     "price_google": 972,
+     "bag_info": [
+      "972 € + 140 € odhad za batožinu"
+     ]
+    },
+    {
+     "origin": "MUC",
+     "dest": "LAX",
+     "dep_time": "2026-11-28 07:40",
+     "arr_time": "2026-11-28 13:25",
+     "price": 1154,
+     "duration_min": 885,
+     "stops": 1,
+     "via": [
+      "LHR"
+     ],
+     "airlines": [
+      "British Airways"
+     ],
+     "segments": [
+      [
+       "MUC",
+       "2026-11-28",
+       "LHR",
+       "BA",
+       "957"
+      ],
+      [
+       "LHR",
+       "2026-11-28",
+       "LAX",
+       "BA",
+       "283"
+      ]
+     ],
+     "dep": "2026-11-28",
+     "ret": "2026-12-14",
+     "stay": 16,
+     "away": 18,
+     "leave": 12,
+     "price_google": 1014,
+     "bag_info": [
+      "1014 € + 140 € odhad za batožinu"
+     ]
+    },
+    {
+     "origin": "MUC",
+     "dest": "SFO",
+     "dep_time": "2026-11-28 11:50",
+     "arr_time": "2026-11-28 14:50",
+     "price": 1177,
+     "duration_min": 720,
+     "stops": 0,
+     "via": [],
+     "airlines": [
+      "United"
+     ],
+     "segments": [
+      [
+       "MUC",
+       "2026-11-28",
+       "SFO",
+       "UA",
+       "195"
+      ]
+     ],
+     "dep": "2026-11-28",
+     "ret": "2026-12-14",
+     "stay": 16,
+     "away": 18,
+     "leave": 12,
+     "price_google": 1037,
+     "bag_info": [
+      "1037 € + 140 € odhad za batožinu"
+     ]
+    }
+   ],
+   "url": "https://www.google.com/travel/flights/search?tfs=GlcSCjIwMjYtMTEtMjgoAmCwCWoFEgNWSUVqBRIDUFJHagUSA0JUU2oFEgNCVURqBRIDTVVDcgUSA0xBWHIFEgNTRk9yBRIDU0FOcgUSA1NKQ3IFEgNPQUsaVxIKMjAyNi0xMi0xNCgCYLAJagUSA0xBWGoFEgNTRk9qBRIDU0FOagUSA1NKQ2oFEgNPQUtyBRIDVklFcgUSA1BSR3IFEgNCVFNyBRIDQlVEcgUSA01VQ0IBAUgBmAEB&hl=en&curr=EUR",
    "history": [
     [
-     "2026-10-13",
-     null
+     "2026-10-14",
+     1075
     ]
    ]
   },
@@ -61,14 +710,208 @@
    "away": 18,
    "leave": 12,
    "group": 0,
-   "last_checked": "2026-10-13",
-   "best_price": null,
-   "offers": [],
-   "url": null,
+   "last_checked": "2026-10-14",
+   "best_price": 1196,
+   "offers": [
+    {
+     "origin": "VIE",
+     "dest": "LAX",
+     "dep_time": "2026-12-03 07:15",
+     "arr_time": "2026-12-03 16:35",
+     "price": 1196,
+     "duration_min": 1100,
+     "stops": 1,
+     "via": [
+      "IST"
+     ],
+     "airlines": [
+      "Turkish Airlines"
+     ],
+     "segments": [
+      [
+       "VIE",
+       "2026-12-03",
+       "IST",
+       "TK",
+       "1890"
+      ],
+      [
+       "IST",
+       "2026-12-03",
+       "LAX",
+       "TK",
+       "9"
+      ]
+     ],
+     "dep": "2026-12-03",
+     "ret": "2026-12-19",
+     "stay": 16,
+     "away": 18,
+     "leave": 12,
+     "price_google": 1196,
+     "bag_info": [
+      "batožina v cene (dopravca)"
+     ]
+    },
+    {
+     "origin": "PRG",
+     "dest": "LAX",
+     "dep_time": "2026-12-03 06:35",
+     "arr_time": "2026-12-03 15:20",
+     "price": 1257,
+     "duration_min": 1065,
+     "stops": 1,
+     "via": [
+      "LHR"
+     ],
+     "airlines": [
+      "British Airways",
+      "American"
+     ],
+     "segments": [
+      [
+       "PRG",
+       "2026-12-03",
+       "LHR",
+       "BA",
+       "865"
+      ],
+      [
+       "LHR",
+       "2026-12-03",
+       "LAX",
+       "AA",
+       "137"
+      ]
+     ],
+     "dep": "2026-12-03",
+     "ret": "2026-12-19",
+     "stay": 16,
+     "away": 18,
+     "leave": 12,
+     "price_google": 1117,
+     "bag_info": [
+      "1117 € + 140 € odhad za batožinu"
+     ]
+    },
+    {
+     "origin": "BUD",
+     "dest": "LAX",
+     "dep_time": "2026-12-03 07:35",
+     "arr_time": "2026-12-03 15:20",
+     "price": 1341,
+     "duration_min": 1005,
+     "stops": 1,
+     "via": [
+      "LHR"
+     ],
+     "airlines": [
+      "British Airways",
+      "American"
+     ],
+     "segments": [
+      [
+       "BUD",
+       "2026-12-03",
+       "LHR",
+       "BA",
+       "871"
+      ],
+      [
+       "LHR",
+       "2026-12-03",
+       "LAX",
+       "AA",
+       "137"
+      ]
+     ],
+     "dep": "2026-12-03",
+     "ret": "2026-12-19",
+     "stay": 16,
+     "away": 18,
+     "leave": 12,
+     "price_google": 1201,
+     "bag_info": [
+      "1201 € + 140 € odhad za batožinu"
+     ]
+    },
+    {
+     "origin": "PRG",
+     "dest": "SFO",
+     "dep_time": "2026-12-03 06:35",
+     "arr_time": "2026-12-03 14:55",
+     "price": 1347,
+     "duration_min": 1040,
+     "stops": 1,
+     "via": [
+      "LHR"
+     ],
+     "airlines": [
+      "British Airways"
+     ],
+     "segments": [
+      [
+       "PRG",
+       "2026-12-03",
+       "LHR",
+       "BA",
+       "865"
+      ],
+      [
+       "LHR",
+       "2026-12-03",
+       "SFO",
+       "BA",
+       "285"
+      ]
+     ],
+     "dep": "2026-12-03",
+     "ret": "2026-12-19",
+     "stay": 16,
+     "away": 18,
+     "leave": 12,
+     "price_google": 1207,
+     "bag_info": [
+      "1207 € + 140 € odhad za batožinu"
+     ]
+    },
+    {
+     "origin": "MUC",
+     "dest": "LAX",
+     "dep_time": "2026-12-03 12:20",
+     "arr_time": "2026-12-03 15:15",
+     "price": 1477,
+     "duration_min": 715,
+     "stops": 0,
+     "via": [],
+     "airlines": [
+      "Lufthansa"
+     ],
+     "segments": [
+      [
+       "MUC",
+       "2026-12-03",
+       "LAX",
+       "LH",
+       "452"
+      ]
+     ],
+     "dep": "2026-12-03",
+     "ret": "2026-12-19",
+     "stay": 16,
+     "away": 18,
+     "leave": 12,
+     "price_google": 1337,
+     "bag_info": [
+      "1337 € + 140 € odhad za batožinu"
+     ]
+    }
+   ],
+   "url": "https://www.google.com/travel/flights/search?tfs=GlcSCjIwMjYtMTItMDMoAmCwCWoFEgNWSUVqBRIDUFJHagUSA0JUU2oFEgNCVURqBRIDTVVDcgUSA0xBWHIFEgNTRk9yBRIDU0FOcgUSA1NKQ3IFEgNPQUsaVxIKMjAyNi0xMi0xOSgCYLAJagUSA0xBWGoFEgNTRk9qBRIDU0FOagUSA1NKQ2oFEgNPQUtyBRIDVklFcgUSA1BSR3IFEgNCVFNyBRIDQlVEcgUSA01VQ0IBAUgBmAEB&hl=en&curr=EUR",
    "history": [
     [
-     "2026-10-13",
-     null
+     "2026-10-14",
+     1196
     ]
    ]
   },
@@ -79,14 +922,216 @@
    "away": 18,
    "leave": 12,
    "group": 0,
-   "last_checked": "2026-10-13",
-   "best_price": null,
-   "offers": [],
-   "url": null,
+   "last_checked": "2026-10-14",
+   "best_price": 953,
+   "offers": [
+    {
+     "origin": "VIE",
+     "dest": "LAX",
+     "dep_time": "2026-12-04 11:40",
+     "arr_time": "2026-12-04 17:05",
+     "price": 953,
+     "duration_min": 865,
+     "stops": 1,
+     "via": [
+      "HEL"
+     ],
+     "airlines": [
+      "Finnair"
+     ],
+     "segments": [
+      [
+       "VIE",
+       "2026-12-04",
+       "HEL",
+       "AY",
+       "1472"
+      ],
+      [
+       "HEL",
+       "2026-12-04",
+       "LAX",
+       "AY",
+       "1"
+      ]
+     ],
+     "dep": "2026-12-04",
+     "ret": "2026-12-20",
+     "stay": 16,
+     "away": 18,
+     "leave": 12,
+     "price_google": 813,
+     "bag_info": [
+      "813 € + 140 € odhad za batožinu"
+     ]
+    },
+    {
+     "origin": "MUC",
+     "dest": "LAX",
+     "dep_time": "2026-12-04 10:50",
+     "arr_time": "2026-12-04 18:40",
+     "price": 968,
+     "duration_min": 1010,
+     "stops": 1,
+     "via": [
+      "DUB"
+     ],
+     "airlines": [
+      "Aer Lingus"
+     ],
+     "segments": [
+      [
+       "MUC",
+       "2026-12-04",
+       "DUB",
+       "EI",
+       "353"
+      ],
+      [
+       "DUB",
+       "2026-12-04",
+       "LAX",
+       "EI",
+       "69"
+      ]
+     ],
+     "dep": "2026-12-04",
+     "ret": "2026-12-20",
+     "stay": 16,
+     "away": 18,
+     "leave": 12,
+     "price_google": 828,
+     "bag_info": [
+      "828 € + 140 € odhad za batožinu"
+     ]
+    },
+    {
+     "origin": "PRG",
+     "dest": "LAX",
+     "dep_time": "2026-12-04 11:40",
+     "arr_time": "2026-12-04 17:05",
+     "price": 1060,
+     "duration_min": 865,
+     "stops": 1,
+     "via": [
+      "HEL"
+     ],
+     "airlines": [
+      "Finnair"
+     ],
+     "segments": [
+      [
+       "PRG",
+       "2026-12-04",
+       "HEL",
+       "AY",
+       "1222"
+      ],
+      [
+       "HEL",
+       "2026-12-04",
+       "LAX",
+       "AY",
+       "1"
+      ]
+     ],
+     "dep": "2026-12-04",
+     "ret": "2026-12-20",
+     "stay": 16,
+     "away": 18,
+     "leave": 12,
+     "price_google": 920,
+     "bag_info": [
+      "920 € + 140 € odhad za batožinu"
+     ]
+    },
+    {
+     "origin": "MUC",
+     "dest": "LAX",
+     "dep_time": "2026-12-04 07:35",
+     "arr_time": "2026-12-04 15:20",
+     "price": 1078,
+     "duration_min": 1005,
+     "stops": 1,
+     "via": [
+      "LHR"
+     ],
+     "airlines": [
+      "British Airways",
+      "American"
+     ],
+     "segments": [
+      [
+       "MUC",
+       "2026-12-04",
+       "LHR",
+       "BA",
+       "957"
+      ],
+      [
+       "LHR",
+       "2026-12-04",
+       "LAX",
+       "AA",
+       "137"
+      ]
+     ],
+     "dep": "2026-12-04",
+     "ret": "2026-12-20",
+     "stay": 16,
+     "away": 18,
+     "leave": 12,
+     "price_google": 938,
+     "bag_info": [
+      "938 € + 140 € odhad za batožinu"
+     ]
+    },
+    {
+     "origin": "MUC",
+     "dest": "SFO",
+     "dep_time": "2026-12-04 06:55",
+     "arr_time": "2026-12-04 16:30",
+     "price": 1150,
+     "duration_min": 1115,
+     "stops": 1,
+     "via": [
+      "IST"
+     ],
+     "airlines": [
+      "Turkish Airlines"
+     ],
+     "segments": [
+      [
+       "MUC",
+       "2026-12-04",
+       "IST",
+       "TK",
+       "1638"
+      ],
+      [
+       "IST",
+       "2026-12-04",
+       "SFO",
+       "TK",
+       "79"
+      ]
+     ],
+     "dep": "2026-12-04",
+     "ret": "2026-12-20",
+     "stay": 16,
+     "away": 18,
+     "leave": 12,
+     "price_google": 1150,
+     "bag_info": [
+      "batožina v cene (dopravca)"
+     ]
+    }
+   ],
+   "url": "https://www.google.com/travel/flights/search?tfs=GlcSCjIwMjYtMTItMDQoAmCwCWoFEgNWSUVqBRIDUFJHagUSA0JUU2oFEgNCVURqBRIDTVVDcgUSA0xBWHIFEgNTRk9yBRIDU0FOcgUSA1NKQ3IFEgNPQUsaVxIKMjAyNi0xMi0yMCgCYLAJagUSA0xBWGoFEgNTRk9qBRIDU0FOagUSA1NKQ2oFEgNPQUtyBRIDVklFcgUSA1BSR3IFEgNCVFNyBRIDQlVEcgUSA01VQ0IBAUgBmAEB&hl=en&curr=EUR",
    "history": [
     [
-     "2026-10-13",
-     null
+     "2026-10-14",
+     953
     ]
    ]
   },
@@ -97,14 +1142,5105 @@
    "away": 18,
    "leave": 12,
    "group": 1,
-   "last_checked": "2026-10-13",
-   "best_price": null,
-   "offers": [],
-   "url": null,
+   "last_checked": "2026-10-14",
+   "best_price": 731,
+   "offers": [
+    {
+     "origin": "FRA",
+     "dest": "LAX",
+     "dep_time": "2026-11-26 10:25",
+     "arr_time": "2026-11-26 13:05",
+     "price": 742,
+     "duration_min": 700,
+     "stops": 0,
+     "via": [],
+     "airlines": [
+      "Lufthansa"
+     ],
+     "segments": [
+      [
+       "FRA",
+       "2026-11-26",
+       "LAX",
+       "LH",
+       "456"
+      ]
+     ],
+     "dep": "2026-11-26",
+     "ret": "2026-12-12",
+     "stay": 16,
+     "away": 18,
+     "leave": 12,
+     "price_google": 602,
+     "bag_info": [
+      "602 € + 140 € odhad za batožinu"
+     ]
+    },
+    {
+     "origin": "FRA",
+     "dest": "LAX",
+     "dep_time": "2026-11-26 06:50",
+     "arr_time": "2026-11-26 11:45",
+     "price": 731,
+     "duration_min": 835,
+     "stops": 1,
+     "via": [
+      "AMS"
+     ],
+     "airlines": [
+      "KLM"
+     ],
+     "segments": [
+      [
+       "FRA",
+       "2026-11-26",
+       "AMS",
+       "KL",
+       "1814"
+      ],
+      [
+       "AMS",
+       "2026-11-26",
+       "LAX",
+       "KL",
+       "601"
+      ]
+     ],
+     "dep": "2026-11-26",
+     "ret": "2026-12-12",
+     "stay": 16,
+     "away": 18,
+     "leave": 12,
+     "price_google": 591,
+     "bag_info": [
+      "591 € + 140 € odhad za batožinu"
+     ]
+    },
+    {
+     "origin": "FRA",
+     "dest": "LAX",
+     "dep_time": "2026-11-26 10:15",
+     "arr_time": "2026-11-26 15:15",
+     "price": 739,
+     "duration_min": 840,
+     "stops": 1,
+     "via": [
+      "MUC"
+     ],
+     "airlines": [
+      "Lufthansa"
+     ],
+     "segments": [
+      [
+       "FRA",
+       "2026-11-26",
+       "MUC",
+       "LH",
+       "102"
+      ],
+      [
+       "MUC",
+       "2026-11-26",
+       "LAX",
+       "LH",
+       "452"
+      ]
+     ],
+     "dep": "2026-11-26",
+     "ret": "2026-12-12",
+     "stay": 16,
+     "away": 18,
+     "leave": 12,
+     "price_google": 599,
+     "bag_info": [
+      "599 € + 140 € odhad za batožinu"
+     ]
+    },
+    {
+     "origin": "FRA",
+     "dest": "LAX",
+     "dep_time": "2026-11-26 07:05",
+     "arr_time": "2026-11-26 13:00",
+     "price": 737,
+     "duration_min": 895,
+     "stops": 1,
+     "via": [
+      "CDG"
+     ],
+     "airlines": [
+      "Air France"
+     ],
+     "segments": [
+      [
+       "FRA",
+       "2026-11-26",
+       "CDG",
+       "AF",
+       "1019"
+      ],
+      [
+       "CDG",
+       "2026-11-26",
+       "LAX",
+       "AF",
+       "22"
+      ]
+     ],
+     "dep": "2026-11-26",
+     "ret": "2026-12-12",
+     "stay": 16,
+     "away": 18,
+     "leave": 12,
+     "price_google": 597,
+     "bag_info": [
+      "597 € + 140 € odhad za batožinu"
+     ]
+    },
+    {
+     "origin": "BER",
+     "dest": "LAX",
+     "dep_time": "2026-11-26 06:15",
+     "arr_time": "2026-11-26 13:25",
+     "price": 773,
+     "duration_min": 970,
+     "stops": 1,
+     "via": [
+      "LHR"
+     ],
+     "airlines": [
+      "British Airways"
+     ],
+     "segments": [
+      [
+       "BER",
+       "2026-11-26",
+       "LHR",
+       "BA",
+       "993"
+      ],
+      [
+       "LHR",
+       "2026-11-26",
+       "LAX",
+       "BA",
+       "283"
+      ]
+     ],
+     "dep": "2026-11-26",
+     "ret": "2026-12-12",
+     "stay": 16,
+     "away": 18,
+     "leave": 12,
+     "price_google": 633,
+     "bag_info": [
+      "633 € + 140 € odhad za batožinu"
+     ]
+    }
+   ],
+   "url": "https://www.google.com/travel/flights/search?tfs=GlcSCjIwMjYtMTEtMjYoAmCwCWoFEgNGUkFqBRIDQkVSagUSA1dBV2oFEgNLUktqBRIDS1RXcgUSA0xBWHIFEgNTRk9yBRIDU0FOcgUSA1NKQ3IFEgNPQUsaVxIKMjAyNi0xMi0xMigCYLAJagUSA0xBWGoFEgNTRk9qBRIDU0FOagUSA1NKQ2oFEgNPQUtyBRIDRlJBcgUSA0JFUnIFEgNXQVdyBRIDS1JLcgUSA0tUV0IBAUgBmAEB&hl=en&curr=EUR",
    "history": [
     [
-     "2026-10-13",
-     null
+     "2026-10-14",
+     731
+    ]
+   ]
+  },
+  "2026-11-27_2026-12-13_g1": {
+   "dep": "2026-11-27",
+   "ret": "2026-12-13",
+   "stay": 16,
+   "away": 18,
+   "leave": 12,
+   "group": 1,
+   "last_checked": "2026-10-14",
+   "best_price": 739,
+   "offers": [
+    {
+     "origin": "FRA",
+     "dest": "LAX",
+     "dep_time": "2026-11-27 10:15",
+     "arr_time": "2026-11-27 15:15",
+     "price": 739,
+     "duration_min": 840,
+     "stops": 1,
+     "via": [
+      "MUC"
+     ],
+     "airlines": [
+      "Lufthansa"
+     ],
+     "segments": [
+      [
+       "FRA",
+       "2026-11-27",
+       "MUC",
+       "LH",
+       "102"
+      ],
+      [
+       "MUC",
+       "2026-11-27",
+       "LAX",
+       "LH",
+       "452"
+      ]
+     ],
+     "dep": "2026-11-27",
+     "ret": "2026-12-13",
+     "stay": 16,
+     "away": 18,
+     "leave": 12,
+     "price_google": 599,
+     "bag_info": [
+      "599 € + 140 € odhad za batožinu"
+     ]
+    },
+    {
+     "origin": "BER",
+     "dest": "SFO",
+     "dep_time": "2026-11-27 14:40",
+     "arr_time": "2026-11-27 20:10",
+     "price": 749,
+     "duration_min": 870,
+     "stops": 1,
+     "via": [
+      "FRA"
+     ],
+     "airlines": [
+      "Lufthansa",
+      "United"
+     ],
+     "segments": [
+      [
+       "BER",
+       "2026-11-27",
+       "FRA",
+       "LH",
+       "187"
+      ],
+      [
+       "FRA",
+       "2026-11-27",
+       "SFO",
+       "UA",
+       "927"
+      ]
+     ],
+     "dep": "2026-11-27",
+     "ret": "2026-12-13",
+     "stay": 16,
+     "away": 18,
+     "leave": 12,
+     "price_google": 609,
+     "bag_info": [
+      "609 € + 140 € odhad za batožinu"
+     ]
+    },
+    {
+     "origin": "FRA",
+     "dest": "LAX",
+     "dep_time": "2026-11-27 08:40",
+     "arr_time": "2026-11-27 15:29",
+     "price": 747,
+     "duration_min": 949,
+     "stops": 1,
+     "via": [
+      "ORD"
+     ],
+     "airlines": [
+      "United"
+     ],
+     "segments": [
+      [
+       "FRA",
+       "2026-11-27",
+       "ORD",
+       "UA",
+       "945"
+      ],
+      [
+       "ORD",
+       "2026-11-27",
+       "LAX",
+       "UA",
+       "1363"
+      ]
+     ],
+     "dep": "2026-11-27",
+     "ret": "2026-12-13",
+     "stay": 16,
+     "away": 18,
+     "leave": 12,
+     "price_google": 607,
+     "bag_info": [
+      "607 € + 140 € odhad za batožinu"
+     ]
+    },
+    {
+     "origin": "BER",
+     "dest": "SFO",
+     "dep_time": "2026-11-27 06:40",
+     "arr_time": "2026-11-27 12:35",
+     "price": 803,
+     "duration_min": 895,
+     "stops": 1,
+     "via": [
+      "FRA"
+     ],
+     "airlines": [
+      "Lufthansa"
+     ],
+     "segments": [
+      [
+       "BER",
+       "2026-11-27",
+       "FRA",
+       "LH",
+       "203"
+      ],
+      [
+       "FRA",
+       "2026-11-27",
+       "SFO",
+       "LH",
+       "454"
+      ]
+     ],
+     "dep": "2026-11-27",
+     "ret": "2026-12-13",
+     "stay": 16,
+     "away": 18,
+     "leave": 12,
+     "price_google": 663,
+     "bag_info": [
+      "663 € + 140 € odhad za batožinu"
+     ]
+    },
+    {
+     "origin": "BER",
+     "dest": "SFO",
+     "dep_time": "2026-11-27 14:15",
+     "arr_time": "2026-11-27 19:35",
+     "price": 813,
+     "duration_min": 860,
+     "stops": 1,
+     "via": [
+      "MUC"
+     ],
+     "airlines": [
+      "Lufthansa"
+     ],
+     "segments": [
+      [
+       "BER",
+       "2026-11-27",
+       "MUC",
+       "LH",
+       "1955"
+      ],
+      [
+       "MUC",
+       "2026-11-27",
+       "SFO",
+       "LH",
+       "458"
+      ]
+     ],
+     "dep": "2026-11-27",
+     "ret": "2026-12-13",
+     "stay": 16,
+     "away": 18,
+     "leave": 12,
+     "price_google": 673,
+     "bag_info": [
+      "673 € + 140 € odhad za batožinu"
+     ]
+    }
+   ],
+   "url": "https://www.google.com/travel/flights/search?tfs=GlcSCjIwMjYtMTEtMjcoAmCwCWoFEgNGUkFqBRIDQkVSagUSA1dBV2oFEgNLUktqBRIDS1RXcgUSA0xBWHIFEgNTRk9yBRIDU0FOcgUSA1NKQ3IFEgNPQUsaVxIKMjAyNi0xMi0xMygCYLAJagUSA0xBWGoFEgNTRk9qBRIDU0FOagUSA1NKQ2oFEgNPQUtyBRIDRlJBcgUSA0JFUnIFEgNXQVdyBRIDS1JLcgUSA0tUV0IBAUgBmAEB&hl=en&curr=EUR",
+   "history": [
+    [
+     "2026-10-14",
+     739
+    ]
+   ]
+  },
+  "2026-11-28_2026-12-14_g1": {
+   "dep": "2026-11-28",
+   "ret": "2026-12-14",
+   "stay": 16,
+   "away": 18,
+   "leave": 12,
+   "group": 1,
+   "last_checked": "2026-10-14",
+   "best_price": 1012,
+   "offers": [
+    {
+     "origin": "FRA",
+     "dest": "LAX",
+     "dep_time": "2026-11-28 10:05",
+     "arr_time": "2026-11-28 20:04",
+     "price": 1012,
+     "duration_min": 1139,
+     "stops": 1,
+     "via": [
+      "YYZ"
+     ],
+     "airlines": [
+      "Air Canada"
+     ],
+     "segments": [
+      [
+       "FRA",
+       "2026-11-28",
+       "YYZ",
+       "AC",
+       "841"
+      ],
+      [
+       "YYZ",
+       "2026-11-28",
+       "LAX",
+       "AC",
+       "791"
+      ]
+     ],
+     "dep": "2026-11-28",
+     "ret": "2026-12-14",
+     "stay": 16,
+     "away": 18,
+     "leave": 12,
+     "price_google": 872,
+     "bag_info": [
+      "872 € + 140 € odhad za batožinu"
+     ]
+    },
+    {
+     "origin": "FRA",
+     "dest": "LAX",
+     "dep_time": "2026-11-28 10:40",
+     "arr_time": "2026-11-28 16:41",
+     "price": 1086,
+     "duration_min": 901,
+     "stops": 1,
+     "via": [
+      "YVR"
+     ],
+     "airlines": [
+      "Lufthansa",
+      "Air Canada"
+     ],
+     "segments": [
+      [
+       "FRA",
+       "2026-11-28",
+       "YVR",
+       "LH",
+       "492"
+      ],
+      [
+       "YVR",
+       "2026-11-28",
+       "LAX",
+       "AC",
+       "554"
+      ]
+     ],
+     "dep": "2026-11-28",
+     "ret": "2026-12-14",
+     "stay": 16,
+     "away": 18,
+     "leave": 12,
+     "price_google": 946,
+     "bag_info": [
+      "946 € + 140 € odhad za batožinu"
+     ]
+    },
+    {
+     "origin": "BER",
+     "dest": "LAX",
+     "dep_time": "2026-11-28 06:35",
+     "arr_time": "2026-11-28 13:25",
+     "price": 1093,
+     "duration_min": 950,
+     "stops": 1,
+     "via": [
+      "LHR"
+     ],
+     "airlines": [
+      "British Airways"
+     ],
+     "segments": [
+      [
+       "BER",
+       "2026-11-28",
+       "LHR",
+       "BA",
+       "993"
+      ],
+      [
+       "LHR",
+       "2026-11-28",
+       "LAX",
+       "BA",
+       "283"
+      ]
+     ],
+     "dep": "2026-11-28",
+     "ret": "2026-12-14",
+     "stay": 16,
+     "away": 18,
+     "leave": 12,
+     "price_google": 953,
+     "bag_info": [
+      "953 € + 140 € odhad za batožinu"
+     ]
+    },
+    {
+     "origin": "BER",
+     "dest": "SAN",
+     "dep_time": "2026-11-28 09:50",
+     "arr_time": "2026-11-28 16:10",
+     "price": 1135,
+     "duration_min": 920,
+     "stops": 1,
+     "via": [
+      "LHR"
+     ],
+     "airlines": [
+      "British Airways"
+     ],
+     "segments": [
+      [
+       "BER",
+       "2026-11-28",
+       "LHR",
+       "BA",
+       "973"
+      ],
+      [
+       "LHR",
+       "2026-11-28",
+       "SAN",
+       "BA",
+       "273"
+      ]
+     ],
+     "dep": "2026-11-28",
+     "ret": "2026-12-14",
+     "stay": 16,
+     "away": 18,
+     "leave": 12,
+     "price_google": 995,
+     "bag_info": [
+      "995 € + 140 € odhad za batožinu"
+     ]
+    },
+    {
+     "origin": "BER",
+     "dest": "SFO",
+     "dep_time": "2026-11-28 06:35",
+     "arr_time": "2026-11-28 14:55",
+     "price": 1140,
+     "duration_min": 1040,
+     "stops": 1,
+     "via": [
+      "LHR"
+     ],
+     "airlines": [
+      "British Airways"
+     ],
+     "segments": [
+      [
+       "BER",
+       "2026-11-28",
+       "LHR",
+       "BA",
+       "993"
+      ],
+      [
+       "LHR",
+       "2026-11-28",
+       "SFO",
+       "BA",
+       "285"
+      ]
+     ],
+     "dep": "2026-11-28",
+     "ret": "2026-12-14",
+     "stay": 16,
+     "away": 18,
+     "leave": 12,
+     "price_google": 1000,
+     "bag_info": [
+      "1000 € + 140 € odhad za batožinu"
+     ]
+    }
+   ],
+   "url": "https://www.google.com/travel/flights/search?tfs=GlcSCjIwMjYtMTEtMjgoAmCwCWoFEgNGUkFqBRIDQkVSagUSA1dBV2oFEgNLUktqBRIDS1RXcgUSA0xBWHIFEgNTRk9yBRIDU0FOcgUSA1NKQ3IFEgNPQUsaVxIKMjAyNi0xMi0xNCgCYLAJagUSA0xBWGoFEgNTRk9qBRIDU0FOagUSA1NKQ2oFEgNPQUtyBRIDRlJBcgUSA0JFUnIFEgNXQVdyBRIDS1JLcgUSA0tUV0IBAUgBmAEB&hl=en&curr=EUR",
+   "history": [
+    [
+     "2026-10-14",
+     1012
+    ]
+   ]
+  },
+  "2026-12-03_2026-12-19_g1": {
+   "dep": "2026-12-03",
+   "ret": "2026-12-19",
+   "stay": 16,
+   "away": 18,
+   "leave": 12,
+   "group": 1,
+   "last_checked": "2026-10-14",
+   "best_price": 949,
+   "offers": [
+    {
+     "origin": "BER",
+     "dest": "LAX",
+     "dep_time": "2026-12-03 10:15",
+     "arr_time": "2026-12-03 18:40",
+     "price": 949,
+     "duration_min": 1045,
+     "stops": 1,
+     "via": [
+      "DUB"
+     ],
+     "airlines": [
+      "Aer Lingus"
+     ],
+     "segments": [
+      [
+       "BER",
+       "2026-12-03",
+       "DUB",
+       "EI",
+       "333"
+      ],
+      [
+       "DUB",
+       "2026-12-03",
+       "LAX",
+       "EI",
+       "69"
+      ]
+     ],
+     "dep": "2026-12-03",
+     "ret": "2026-12-19",
+     "stay": 16,
+     "away": 18,
+     "leave": 12,
+     "price_google": 809,
+     "bag_info": [
+      "809 € + 140 € odhad za batožinu"
+     ]
+    },
+    {
+     "origin": "BER",
+     "dest": "LAX",
+     "dep_time": "2026-12-03 12:15",
+     "arr_time": "2026-12-03 18:35",
+     "price": 1253,
+     "duration_min": 920,
+     "stops": 1,
+     "via": [
+      "LHR"
+     ],
+     "airlines": [
+      "British Airways"
+     ],
+     "segments": [
+      [
+       "BER",
+       "2026-12-03",
+       "LHR",
+       "BA",
+       "977"
+      ],
+      [
+       "LHR",
+       "2026-12-03",
+       "LAX",
+       "BA",
+       "269"
+      ]
+     ],
+     "dep": "2026-12-03",
+     "ret": "2026-12-19",
+     "stay": 16,
+     "away": 18,
+     "leave": 12,
+     "price_google": 1113,
+     "bag_info": [
+      "1113 € + 140 € odhad za batožinu"
+     ]
+    },
+    {
+     "origin": "BER",
+     "dest": "LAX",
+     "dep_time": "2026-12-03 06:15",
+     "arr_time": "2026-12-03 15:20",
+     "price": 1232,
+     "duration_min": 1085,
+     "stops": 1,
+     "via": [
+      "LHR"
+     ],
+     "airlines": [
+      "British Airways",
+      "American"
+     ],
+     "segments": [
+      [
+       "BER",
+       "2026-12-03",
+       "LHR",
+       "BA",
+       "993"
+      ],
+      [
+       "LHR",
+       "2026-12-03",
+       "LAX",
+       "AA",
+       "137"
+      ]
+     ],
+     "dep": "2026-12-03",
+     "ret": "2026-12-19",
+     "stay": 16,
+     "away": 18,
+     "leave": 12,
+     "price_google": 1092,
+     "bag_info": [
+      "1092 € + 140 € odhad za batožinu"
+     ]
+    },
+    {
+     "origin": "BER",
+     "dest": "LAX",
+     "dep_time": "2026-12-03 06:15",
+     "arr_time": "2026-12-03 13:25",
+     "price": 1253,
+     "duration_min": 970,
+     "stops": 1,
+     "via": [
+      "LHR"
+     ],
+     "airlines": [
+      "British Airways"
+     ],
+     "segments": [
+      [
+       "BER",
+       "2026-12-03",
+       "LHR",
+       "BA",
+       "993"
+      ],
+      [
+       "LHR",
+       "2026-12-03",
+       "LAX",
+       "BA",
+       "283"
+      ]
+     ],
+     "dep": "2026-12-03",
+     "ret": "2026-12-19",
+     "stay": 16,
+     "away": 18,
+     "leave": 12,
+     "price_google": 1113,
+     "bag_info": [
+      "1113 € + 140 € odhad za batožinu"
+     ]
+    },
+    {
+     "origin": "BER",
+     "dest": "SAN",
+     "dep_time": "2026-12-03 10:10",
+     "arr_time": "2026-12-03 20:24",
+     "price": 1385,
+     "duration_min": 1154,
+     "stops": 2,
+     "via": [
+      "AMS",
+      "MSP"
+     ],
+     "airlines": [
+      "KLM",
+      "Delta"
+     ],
+     "segments": [
+      [
+       "BER",
+       "2026-12-03",
+       "AMS",
+       "KL",
+       "1772"
+      ],
+      [
+       "AMS",
+       "2026-12-03",
+       "MSP",
+       "DL",
+       "163"
+      ],
+      [
+       "MSP",
+       "2026-12-03",
+       "SAN",
+       "DL",
+       "2145"
+      ]
+     ],
+     "dep": "2026-12-03",
+     "ret": "2026-12-19",
+     "stay": 16,
+     "away": 18,
+     "leave": 12,
+     "price_google": 1245,
+     "bag_info": [
+      "1245 € + 140 € odhad za batožinu"
+     ]
+    }
+   ],
+   "url": "https://www.google.com/travel/flights/search?tfs=GlcSCjIwMjYtMTItMDMoAmCwCWoFEgNGUkFqBRIDQkVSagUSA1dBV2oFEgNLUktqBRIDS1RXcgUSA0xBWHIFEgNTRk9yBRIDU0FOcgUSA1NKQ3IFEgNPQUsaVxIKMjAyNi0xMi0xOSgCYLAJagUSA0xBWGoFEgNTRk9qBRIDU0FOagUSA1NKQ2oFEgNPQUtyBRIDRlJBcgUSA0JFUnIFEgNXQVdyBRIDS1JLcgUSA0tUV0IBAUgBmAEB&hl=en&curr=EUR",
+   "history": [
+    [
+     "2026-10-14",
+     949
+    ]
+   ]
+  },
+  "2026-12-04_2026-12-20_g1": {
+   "dep": "2026-12-04",
+   "ret": "2026-12-20",
+   "stay": 16,
+   "away": 18,
+   "leave": 12,
+   "group": 1,
+   "last_checked": "2026-10-14",
+   "best_price": 784,
+   "offers": [
+    {
+     "origin": "BER",
+     "dest": "LAX",
+     "dep_time": "2026-12-04 10:15",
+     "arr_time": "2026-12-04 18:40",
+     "price": 784,
+     "duration_min": 1045,
+     "stops": 1,
+     "via": [
+      "DUB"
+     ],
+     "airlines": [
+      "Aer Lingus"
+     ],
+     "segments": [
+      [
+       "BER",
+       "2026-12-04",
+       "DUB",
+       "EI",
+       "333"
+      ],
+      [
+       "DUB",
+       "2026-12-04",
+       "LAX",
+       "EI",
+       "69"
+      ]
+     ],
+     "dep": "2026-12-04",
+     "ret": "2026-12-20",
+     "stay": 16,
+     "away": 18,
+     "leave": 12,
+     "price_google": 644,
+     "bag_info": [
+      "644 € + 140 € odhad za batožinu"
+     ],
+     "return": {
+      "origin": "LAX",
+      "dest": "BER",
+      "dep_time": "2026-12-20 20:25",
+      "arr_time": "2026-12-21 19:15",
+      "duration_min": 830,
+      "stops": 1,
+      "via": [
+       "DUB"
+      ],
+      "airlines": [
+       "Aer Lingus"
+      ],
+      "price": 644
+     },
+     "return_checked": "2026-10-14"
+    },
+    {
+     "origin": "BER",
+     "dest": "LAX",
+     "dep_time": "2026-12-04 14:05",
+     "arr_time": "2026-12-04 20:20",
+     "price": 985,
+     "duration_min": 915,
+     "stops": 1,
+     "via": [
+      "LHR"
+     ],
+     "airlines": [
+      "British Airways",
+      "American"
+     ],
+     "segments": [
+      [
+       "BER",
+       "2026-12-04",
+       "LHR",
+       "BA",
+       "979"
+      ],
+      [
+       "LHR",
+       "2026-12-04",
+       "LAX",
+       "AA",
+       "135"
+      ]
+     ],
+     "dep": "2026-12-04",
+     "ret": "2026-12-20",
+     "stay": 16,
+     "away": 18,
+     "leave": 12,
+     "price_google": 845,
+     "bag_info": [
+      "845 € + 140 € odhad za batožinu"
+     ]
+    },
+    {
+     "origin": "BER",
+     "dest": "LAX",
+     "dep_time": "2026-12-04 08:45",
+     "arr_time": "2026-12-04 17:05",
+     "price": 987,
+     "duration_min": 1040,
+     "stops": 1,
+     "via": [
+      "HEL"
+     ],
+     "airlines": [
+      "Finnair"
+     ],
+     "segments": [
+      [
+       "BER",
+       "2026-12-04",
+       "HEL",
+       "AY",
+       "1432"
+      ],
+      [
+       "HEL",
+       "2026-12-04",
+       "LAX",
+       "AY",
+       "1"
+      ]
+     ],
+     "dep": "2026-12-04",
+     "ret": "2026-12-20",
+     "stay": 16,
+     "away": 18,
+     "leave": 12,
+     "price_google": 847,
+     "bag_info": [
+      "847 € + 140 € odhad za batožinu"
+     ]
+    },
+    {
+     "origin": "BER",
+     "dest": "LAX",
+     "dep_time": "2026-12-04 06:30",
+     "arr_time": "2026-12-04 13:25",
+     "price": 1000,
+     "duration_min": 955,
+     "stops": 1,
+     "via": [
+      "LHR"
+     ],
+     "airlines": [
+      "British Airways"
+     ],
+     "segments": [
+      [
+       "BER",
+       "2026-12-04",
+       "LHR",
+       "BA",
+       "993"
+      ],
+      [
+       "LHR",
+       "2026-12-04",
+       "LAX",
+       "BA",
+       "283"
+      ]
+     ],
+     "dep": "2026-12-04",
+     "ret": "2026-12-20",
+     "stay": 16,
+     "away": 18,
+     "leave": 12,
+     "price_google": 860,
+     "bag_info": [
+      "860 € + 140 € odhad za batožinu"
+     ]
+    },
+    {
+     "origin": "BER",
+     "dest": "LAX",
+     "dep_time": "2026-12-04 11:05",
+     "arr_time": "2026-12-04 18:30",
+     "price": 1000,
+     "duration_min": 985,
+     "stops": 1,
+     "via": [
+      "LHR"
+     ],
+     "airlines": [
+      "British Airways"
+     ],
+     "segments": [
+      [
+       "BER",
+       "2026-12-04",
+       "LHR",
+       "BA",
+       "975"
+      ],
+      [
+       "LHR",
+       "2026-12-04",
+       "LAX",
+       "BA",
+       "269"
+      ]
+     ],
+     "dep": "2026-12-04",
+     "ret": "2026-12-20",
+     "stay": 16,
+     "away": 18,
+     "leave": 12,
+     "price_google": 860,
+     "bag_info": [
+      "860 € + 140 € odhad za batožinu"
+     ]
+    }
+   ],
+   "url": "https://www.google.com/travel/flights/search?tfs=GlcSCjIwMjYtMTItMDQoAmCwCWoFEgNGUkFqBRIDQkVSagUSA1dBV2oFEgNLUktqBRIDS1RXcgUSA0xBWHIFEgNTRk9yBRIDU0FOcgUSA1NKQ3IFEgNPQUsaVxIKMjAyNi0xMi0yMCgCYLAJagUSA0xBWGoFEgNTRk9qBRIDU0FOagUSA1NKQ2oFEgNPQUtyBRIDRlJBcgUSA0JFUnIFEgNXQVdyBRIDS1JLcgUSA0tUV0IBAUgBmAEB&hl=en&curr=EUR",
+   "history": [
+    [
+     "2026-10-14",
+     784
+    ]
+   ]
+  },
+  "2026-12-05_2026-12-20_g0": {
+   "dep": "2026-12-05",
+   "ret": "2026-12-20",
+   "stay": 15,
+   "away": 17,
+   "leave": 11,
+   "group": 0,
+   "last_checked": "2026-10-14",
+   "best_price": 968,
+   "offers": [
+    {
+     "origin": "MUC",
+     "dest": "LAX",
+     "dep_time": "2026-12-05 10:50",
+     "arr_time": "2026-12-05 18:45",
+     "price": 968,
+     "duration_min": 1015,
+     "stops": 1,
+     "via": [
+      "DUB"
+     ],
+     "airlines": [
+      "Aer Lingus"
+     ],
+     "segments": [
+      [
+       "MUC",
+       "2026-12-05",
+       "DUB",
+       "EI",
+       "353"
+      ],
+      [
+       "DUB",
+       "2026-12-05",
+       "LAX",
+       "EI",
+       "69"
+      ]
+     ],
+     "dep": "2026-12-05",
+     "ret": "2026-12-20",
+     "stay": 15,
+     "away": 17,
+     "leave": 11,
+     "price_google": 828,
+     "bag_info": [
+      "828 € + 140 € odhad za batožinu"
+     ]
+    },
+    {
+     "origin": "MUC",
+     "dest": "LAX",
+     "dep_time": "2026-12-05 07:40",
+     "arr_time": "2026-12-05 15:20",
+     "price": 1078,
+     "duration_min": 1000,
+     "stops": 1,
+     "via": [
+      "LHR"
+     ],
+     "airlines": [
+      "British Airways",
+      "American"
+     ],
+     "segments": [
+      [
+       "MUC",
+       "2026-12-05",
+       "LHR",
+       "BA",
+       "957"
+      ],
+      [
+       "LHR",
+       "2026-12-05",
+       "LAX",
+       "AA",
+       "137"
+      ]
+     ],
+     "dep": "2026-12-05",
+     "ret": "2026-12-20",
+     "stay": 15,
+     "away": 17,
+     "leave": 11,
+     "price_google": 938,
+     "bag_info": [
+      "938 € + 140 € odhad za batožinu"
+     ]
+    },
+    {
+     "origin": "VIE",
+     "dest": "LAX",
+     "dep_time": "2026-12-05 07:15",
+     "arr_time": "2026-12-05 16:35",
+     "price": 1121,
+     "duration_min": 1100,
+     "stops": 1,
+     "via": [
+      "IST"
+     ],
+     "airlines": [
+      "Turkish Airlines"
+     ],
+     "segments": [
+      [
+       "VIE",
+       "2026-12-05",
+       "IST",
+       "TK",
+       "1890"
+      ],
+      [
+       "IST",
+       "2026-12-05",
+       "LAX",
+       "TK",
+       "9"
+      ]
+     ],
+     "dep": "2026-12-05",
+     "ret": "2026-12-20",
+     "stay": 15,
+     "away": 17,
+     "leave": 11,
+     "price_google": 1121,
+     "bag_info": [
+      "batožina v cene (dopravca)"
+     ]
+    },
+    {
+     "origin": "MUC",
+     "dest": "SFO",
+     "dep_time": "2026-12-05 06:55",
+     "arr_time": "2026-12-05 16:30",
+     "price": 1155,
+     "duration_min": 1115,
+     "stops": 1,
+     "via": [
+      "IST"
+     ],
+     "airlines": [
+      "Turkish Airlines"
+     ],
+     "segments": [
+      [
+       "MUC",
+       "2026-12-05",
+       "IST",
+       "TK",
+       "1638"
+      ],
+      [
+       "IST",
+       "2026-12-05",
+       "SFO",
+       "TK",
+       "79"
+      ]
+     ],
+     "dep": "2026-12-05",
+     "ret": "2026-12-20",
+     "stay": 15,
+     "away": 17,
+     "leave": 11,
+     "price_google": 1155,
+     "bag_info": [
+      "batožina v cene (dopravca)"
+     ]
+    },
+    {
+     "origin": "MUC",
+     "dest": "LAX",
+     "dep_time": "2026-12-05 07:40",
+     "arr_time": "2026-12-05 13:25",
+     "price": 1219,
+     "duration_min": 885,
+     "stops": 1,
+     "via": [
+      "LHR"
+     ],
+     "airlines": [
+      "British Airways"
+     ],
+     "segments": [
+      [
+       "MUC",
+       "2026-12-05",
+       "LHR",
+       "BA",
+       "957"
+      ],
+      [
+       "LHR",
+       "2026-12-05",
+       "LAX",
+       "BA",
+       "283"
+      ]
+     ],
+     "dep": "2026-12-05",
+     "ret": "2026-12-20",
+     "stay": 15,
+     "away": 17,
+     "leave": 11,
+     "price_google": 1079,
+     "bag_info": [
+      "1079 € + 140 € odhad za batožinu"
+     ]
+    }
+   ],
+   "url": "https://www.google.com/travel/flights/search?tfs=GlcSCjIwMjYtMTItMDUoAmCwCWoFEgNWSUVqBRIDUFJHagUSA0JUU2oFEgNCVURqBRIDTVVDcgUSA0xBWHIFEgNTRk9yBRIDU0FOcgUSA1NKQ3IFEgNPQUsaVxIKMjAyNi0xMi0yMCgCYLAJagUSA0xBWGoFEgNTRk9qBRIDU0FOagUSA1NKQ2oFEgNPQUtyBRIDVklFcgUSA1BSR3IFEgNCVFNyBRIDQlVEcgUSA01VQ0IBAUgBmAEB&hl=en&curr=EUR",
+   "history": [
+    [
+     "2026-10-14",
+     968
+    ]
+   ]
+  },
+  "2026-11-29_2026-12-14_g0": {
+   "dep": "2026-11-29",
+   "ret": "2026-12-14",
+   "stay": 15,
+   "away": 17,
+   "leave": 12,
+   "group": 0,
+   "last_checked": "2026-10-14",
+   "best_price": 1112,
+   "offers": [
+    {
+     "origin": "VIE",
+     "dest": "LAX",
+     "dep_time": "2026-11-29 07:15",
+     "arr_time": "2026-11-29 16:35",
+     "price": 1112,
+     "duration_min": 1100,
+     "stops": 1,
+     "via": [
+      "IST"
+     ],
+     "airlines": [
+      "Turkish Airlines"
+     ],
+     "segments": [
+      [
+       "VIE",
+       "2026-11-29",
+       "IST",
+       "TK",
+       "1890"
+      ],
+      [
+       "IST",
+       "2026-11-29",
+       "LAX",
+       "TK",
+       "9"
+      ]
+     ],
+     "dep": "2026-11-29",
+     "ret": "2026-12-14",
+     "stay": 15,
+     "away": 17,
+     "leave": 12,
+     "price_google": 1112,
+     "bag_info": [
+      "batožina v cene (dopravca)"
+     ]
+    },
+    {
+     "origin": "PRG",
+     "dest": "SFO",
+     "dep_time": "2026-11-29 07:05",
+     "arr_time": "2026-11-29 16:05",
+     "price": 1240,
+     "duration_min": 1080,
+     "stops": 1,
+     "via": [
+      "FRA"
+     ],
+     "airlines": [
+      "Lufthansa",
+      "United"
+     ],
+     "segments": [
+      [
+       "PRG",
+       "2026-11-29",
+       "FRA",
+       "LH",
+       "1401"
+      ],
+      [
+       "FRA",
+       "2026-11-29",
+       "SFO",
+       "UA",
+       "59"
+      ]
+     ],
+     "dep": "2026-11-29",
+     "ret": "2026-12-14",
+     "stay": 15,
+     "away": 17,
+     "leave": 12,
+     "price_google": 1100,
+     "bag_info": [
+      "1100 € + 140 € odhad za batožinu"
+     ]
+    },
+    {
+     "origin": "VIE",
+     "dest": "SFO",
+     "dep_time": "2026-11-29 10:30",
+     "arr_time": "2026-11-29 16:05",
+     "price": 1303,
+     "duration_min": 875,
+     "stops": 1,
+     "via": [
+      "FRA"
+     ],
+     "airlines": [
+      "Austrian",
+      "United"
+     ],
+     "segments": [
+      [
+       "VIE",
+       "2026-11-29",
+       "FRA",
+       "OS",
+       "207"
+      ],
+      [
+       "FRA",
+       "2026-11-29",
+       "SFO",
+       "UA",
+       "59"
+      ]
+     ],
+     "dep": "2026-11-29",
+     "ret": "2026-12-14",
+     "stay": 15,
+     "away": 17,
+     "leave": 12,
+     "price_google": 1163,
+     "bag_info": [
+      "1163 € + 140 € odhad za batožinu"
+     ]
+    },
+    {
+     "origin": "BUD",
+     "dest": "LAX",
+     "dep_time": "2026-11-29 06:15",
+     "arr_time": "2026-11-29 16:35",
+     "price": 1268,
+     "duration_min": 1160,
+     "stops": 1,
+     "via": [
+      "ZRH"
+     ],
+     "airlines": [
+      "SWISS"
+     ],
+     "segments": [
+      [
+       "BUD",
+       "2026-11-29",
+       "ZRH",
+       "LX",
+       "2253"
+      ],
+      [
+       "ZRH",
+       "2026-11-29",
+       "LAX",
+       "LX",
+       "40"
+      ]
+     ],
+     "dep": "2026-11-29",
+     "ret": "2026-12-14",
+     "stay": 15,
+     "away": 17,
+     "leave": 12,
+     "price_google": 1128,
+     "bag_info": [
+      "1128 € + 140 € odhad za batožinu"
+     ]
+    },
+    {
+     "origin": "MUC",
+     "dest": "SFO",
+     "dep_time": "2026-11-29 11:50",
+     "arr_time": "2026-11-29 14:50",
+     "price": 1327,
+     "duration_min": 720,
+     "stops": 0,
+     "via": [],
+     "airlines": [
+      "United"
+     ],
+     "segments": [
+      [
+       "MUC",
+       "2026-11-29",
+       "SFO",
+       "UA",
+       "195"
+      ]
+     ],
+     "dep": "2026-11-29",
+     "ret": "2026-12-14",
+     "stay": 15,
+     "away": 17,
+     "leave": 12,
+     "price_google": 1187,
+     "bag_info": [
+      "1187 € + 140 € odhad za batožinu"
+     ]
+    }
+   ],
+   "url": "https://www.google.com/travel/flights/search?tfs=GlcSCjIwMjYtMTEtMjkoAmCwCWoFEgNWSUVqBRIDUFJHagUSA0JUU2oFEgNCVURqBRIDTVVDcgUSA0xBWHIFEgNTRk9yBRIDU0FOcgUSA1NKQ3IFEgNPQUsaVxIKMjAyNi0xMi0xNCgCYLAJagUSA0xBWGoFEgNTRk9qBRIDU0FOagUSA1NKQ2oFEgNPQUtyBRIDVklFcgUSA1BSR3IFEgNCVFNyBRIDQlVEcgUSA01VQ0IBAUgBmAEB&hl=en&curr=EUR",
+   "history": [
+    [
+     "2026-10-14",
+     1112
+    ]
+   ]
+  },
+  "2026-12-05_2026-12-20_g1": {
+   "dep": "2026-12-05",
+   "ret": "2026-12-20",
+   "stay": 15,
+   "away": 17,
+   "leave": 11,
+   "group": 1,
+   "last_checked": "2026-10-14",
+   "best_price": 935,
+   "offers": [
+    {
+     "origin": "BER",
+     "dest": "LAX",
+     "dep_time": "2026-12-05 10:15",
+     "arr_time": "2026-12-05 18:45",
+     "price": 935,
+     "duration_min": 1050,
+     "stops": 1,
+     "via": [
+      "DUB"
+     ],
+     "airlines": [
+      "Aer Lingus"
+     ],
+     "segments": [
+      [
+       "BER",
+       "2026-12-05",
+       "DUB",
+       "EI",
+       "333"
+      ],
+      [
+       "DUB",
+       "2026-12-05",
+       "LAX",
+       "EI",
+       "69"
+      ]
+     ],
+     "dep": "2026-12-05",
+     "ret": "2026-12-20",
+     "stay": 15,
+     "away": 17,
+     "leave": 11,
+     "price_google": 795,
+     "bag_info": [
+      "795 € + 140 € odhad za batožinu"
+     ]
+    },
+    {
+     "origin": "BER",
+     "dest": "LAX",
+     "dep_time": "2026-12-05 09:50",
+     "arr_time": "2026-12-05 15:50",
+     "price": 1000,
+     "duration_min": 900,
+     "stops": 1,
+     "via": [
+      "LHR"
+     ],
+     "airlines": [
+      "British Airways"
+     ],
+     "segments": [
+      [
+       "BER",
+       "2026-12-05",
+       "LHR",
+       "BA",
+       "973"
+      ],
+      [
+       "LHR",
+       "2026-12-05",
+       "LAX",
+       "BA",
+       "281"
+      ]
+     ],
+     "dep": "2026-12-05",
+     "ret": "2026-12-20",
+     "stay": 15,
+     "away": 17,
+     "leave": 11,
+     "price_google": 860,
+     "bag_info": [
+      "860 € + 140 € odhad za batožinu"
+     ]
+    },
+    {
+     "origin": "BER",
+     "dest": "LAX",
+     "dep_time": "2026-12-05 12:00",
+     "arr_time": "2026-12-05 18:35",
+     "price": 1000,
+     "duration_min": 935,
+     "stops": 1,
+     "via": [
+      "LHR"
+     ],
+     "airlines": [
+      "British Airways"
+     ],
+     "segments": [
+      [
+       "BER",
+       "2026-12-05",
+       "LHR",
+       "BA",
+       "975"
+      ],
+      [
+       "LHR",
+       "2026-12-05",
+       "LAX",
+       "BA",
+       "269"
+      ]
+     ],
+     "dep": "2026-12-05",
+     "ret": "2026-12-20",
+     "stay": 15,
+     "away": 17,
+     "leave": 11,
+     "price_google": 860,
+     "bag_info": [
+      "860 € + 140 € odhad za batožinu"
+     ]
+    },
+    {
+     "origin": "BER",
+     "dest": "LAX",
+     "dep_time": "2026-12-05 06:35",
+     "arr_time": "2026-12-05 13:25",
+     "price": 1000,
+     "duration_min": 950,
+     "stops": 1,
+     "via": [
+      "LHR"
+     ],
+     "airlines": [
+      "British Airways"
+     ],
+     "segments": [
+      [
+       "BER",
+       "2026-12-05",
+       "LHR",
+       "BA",
+       "993"
+      ],
+      [
+       "LHR",
+       "2026-12-05",
+       "LAX",
+       "BA",
+       "283"
+      ]
+     ],
+     "dep": "2026-12-05",
+     "ret": "2026-12-20",
+     "stay": 15,
+     "away": 17,
+     "leave": 11,
+     "price_google": 860,
+     "bag_info": [
+      "860 € + 140 € odhad za batožinu"
+     ]
+    },
+    {
+     "origin": "BER",
+     "dest": "LAX",
+     "dep_time": "2026-12-05 06:35",
+     "arr_time": "2026-12-05 15:20",
+     "price": 985,
+     "duration_min": 1065,
+     "stops": 1,
+     "via": [
+      "LHR"
+     ],
+     "airlines": [
+      "British Airways",
+      "American"
+     ],
+     "segments": [
+      [
+       "BER",
+       "2026-12-05",
+       "LHR",
+       "BA",
+       "993"
+      ],
+      [
+       "LHR",
+       "2026-12-05",
+       "LAX",
+       "AA",
+       "137"
+      ]
+     ],
+     "dep": "2026-12-05",
+     "ret": "2026-12-20",
+     "stay": 15,
+     "away": 17,
+     "leave": 11,
+     "price_google": 845,
+     "bag_info": [
+      "845 € + 140 € odhad za batožinu"
+     ]
+    }
+   ],
+   "url": "https://www.google.com/travel/flights/search?tfs=GlcSCjIwMjYtMTItMDUoAmCwCWoFEgNGUkFqBRIDQkVSagUSA1dBV2oFEgNLUktqBRIDS1RXcgUSA0xBWHIFEgNTRk9yBRIDU0FOcgUSA1NKQ3IFEgNPQUsaVxIKMjAyNi0xMi0yMCgCYLAJagUSA0xBWGoFEgNTRk9qBRIDU0FOagUSA1NKQ2oFEgNPQUtyBRIDRlJBcgUSA0JFUnIFEgNXQVdyBRIDS1JLcgUSA0tUV0IBAUgBmAEB&hl=en&curr=EUR",
+   "history": [
+    [
+     "2026-10-14",
+     935
+    ]
+   ]
+  },
+  "2026-11-29_2026-12-14_g1": {
+   "dep": "2026-11-29",
+   "ret": "2026-12-14",
+   "stay": 15,
+   "away": 17,
+   "leave": 12,
+   "group": 1,
+   "last_checked": "2026-10-14",
+   "best_price": 1084,
+   "offers": [
+    {
+     "origin": "BER",
+     "dest": "LAX",
+     "dep_time": "2026-11-29 06:35",
+     "arr_time": "2026-11-29 16:35",
+     "price": 1084,
+     "duration_min": 1140,
+     "stops": 1,
+     "via": [
+      "IST"
+     ],
+     "airlines": [
+      "Turkish Airlines"
+     ],
+     "segments": [
+      [
+       "BER",
+       "2026-11-29",
+       "IST",
+       "TK",
+       "1728"
+      ],
+      [
+       "IST",
+       "2026-11-29",
+       "LAX",
+       "TK",
+       "9"
+      ]
+     ],
+     "dep": "2026-11-29",
+     "ret": "2026-12-14",
+     "stay": 15,
+     "away": 17,
+     "leave": 12,
+     "price_google": 1084,
+     "bag_info": [
+      "batožina v cene (dopravca)"
+     ]
+    },
+    {
+     "origin": "FRA",
+     "dest": "SFO",
+     "dep_time": "2026-11-29 13:30",
+     "arr_time": "2026-11-29 16:05",
+     "price": 1207,
+     "duration_min": 695,
+     "stops": 0,
+     "via": [],
+     "airlines": [
+      "United"
+     ],
+     "segments": [
+      [
+       "FRA",
+       "2026-11-29",
+       "SFO",
+       "UA",
+       "59"
+      ]
+     ],
+     "dep": "2026-11-29",
+     "ret": "2026-12-14",
+     "stay": 15,
+     "away": 17,
+     "leave": 12,
+     "price_google": 1067,
+     "bag_info": [
+      "1067 € + 140 € odhad za batožinu"
+     ]
+    },
+    {
+     "origin": "FRA",
+     "dest": "LAX",
+     "dep_time": "2026-11-29 10:40",
+     "arr_time": "2026-11-29 16:41",
+     "price": 1195,
+     "duration_min": 901,
+     "stops": 1,
+     "via": [
+      "YVR"
+     ],
+     "airlines": [
+      "Lufthansa",
+      "Air Canada"
+     ],
+     "segments": [
+      [
+       "FRA",
+       "2026-11-29",
+       "YVR",
+       "LH",
+       "492"
+      ],
+      [
+       "YVR",
+       "2026-11-29",
+       "LAX",
+       "AC",
+       "554"
+      ]
+     ],
+     "dep": "2026-11-29",
+     "ret": "2026-12-14",
+     "stay": 15,
+     "away": 17,
+     "leave": 12,
+     "price_google": 1055,
+     "bag_info": [
+      "1055 € + 140 € odhad za batožinu"
+     ]
+    },
+    {
+     "origin": "FRA",
+     "dest": "SFO",
+     "dep_time": "2026-11-29 17:25",
+     "arr_time": "2026-11-29 20:10",
+     "price": 1247,
+     "duration_min": 705,
+     "stops": 0,
+     "via": [],
+     "airlines": [
+      "United"
+     ],
+     "segments": [
+      [
+       "FRA",
+       "2026-11-29",
+       "SFO",
+       "UA",
+       "927"
+      ]
+     ],
+     "dep": "2026-11-29",
+     "ret": "2026-12-14",
+     "stay": 15,
+     "away": 17,
+     "leave": 12,
+     "price_google": 1107,
+     "bag_info": [
+      "1107 € + 140 € odhad za batožinu"
+     ]
+    },
+    {
+     "origin": "FRA",
+     "dest": "SAN",
+     "dep_time": "2026-11-29 10:50",
+     "arr_time": "2026-11-29 21:43",
+     "price": 1209,
+     "duration_min": 1193,
+     "stops": 1,
+     "via": [
+      "CLT"
+     ],
+     "airlines": [
+      "American"
+     ],
+     "segments": [
+      [
+       "FRA",
+       "2026-11-29",
+       "CLT",
+       "AA",
+       "705"
+      ],
+      [
+       "CLT",
+       "2026-11-29",
+       "SAN",
+       "AA",
+       "3293"
+      ]
+     ],
+     "dep": "2026-11-29",
+     "ret": "2026-12-14",
+     "stay": 15,
+     "away": 17,
+     "leave": 12,
+     "price_google": 1069,
+     "bag_info": [
+      "1069 € + 140 € odhad za batožinu"
+     ]
+    }
+   ],
+   "url": "https://www.google.com/travel/flights/search?tfs=GlcSCjIwMjYtMTEtMjkoAmCwCWoFEgNGUkFqBRIDQkVSagUSA1dBV2oFEgNLUktqBRIDS1RXcgUSA0xBWHIFEgNTRk9yBRIDU0FOcgUSA1NKQ3IFEgNPQUsaVxIKMjAyNi0xMi0xNCgCYLAJagUSA0xBWGoFEgNTRk9qBRIDU0FOagUSA1NKQ2oFEgNPQUtyBRIDRlJBcgUSA0JFUnIFEgNXQVdyBRIDS1JLcgUSA0tUV0IBAUgBmAEB&hl=en&curr=EUR",
+   "history": [
+    [
+     "2026-10-14",
+     1084
+    ]
+   ]
+  },
+  "2026-12-06_2026-12-20_g0": {
+   "dep": "2026-12-06",
+   "ret": "2026-12-20",
+   "stay": 14,
+   "away": 16,
+   "leave": 11,
+   "group": 0,
+   "last_checked": "2026-10-14",
+   "best_price": 1042,
+   "offers": [
+    {
+     "origin": "VIE",
+     "dest": "LAX",
+     "dep_time": "2026-12-06 11:40",
+     "arr_time": "2026-12-06 17:05",
+     "price": 1042,
+     "duration_min": 865,
+     "stops": 1,
+     "via": [
+      "HEL"
+     ],
+     "airlines": [
+      "Finnair"
+     ],
+     "segments": [
+      [
+       "VIE",
+       "2026-12-06",
+       "HEL",
+       "AY",
+       "1472"
+      ],
+      [
+       "HEL",
+       "2026-12-06",
+       "LAX",
+       "AY",
+       "1"
+      ]
+     ],
+     "dep": "2026-12-06",
+     "ret": "2026-12-20",
+     "stay": 14,
+     "away": 16,
+     "leave": 11,
+     "price_google": 902,
+     "bag_info": [
+      "902 € + 140 € odhad za batožinu"
+     ]
+    },
+    {
+     "origin": "MUC",
+     "dest": "LAX",
+     "dep_time": "2026-12-06 10:30",
+     "arr_time": "2026-12-06 17:05",
+     "price": 1047,
+     "duration_min": 935,
+     "stops": 1,
+     "via": [
+      "HEL"
+     ],
+     "airlines": [
+      "Finnair"
+     ],
+     "segments": [
+      [
+       "MUC",
+       "2026-12-06",
+       "HEL",
+       "AY",
+       "1402"
+      ],
+      [
+       "HEL",
+       "2026-12-06",
+       "LAX",
+       "AY",
+       "1"
+      ]
+     ],
+     "dep": "2026-12-06",
+     "ret": "2026-12-20",
+     "stay": 14,
+     "away": 16,
+     "leave": 11,
+     "price_google": 907,
+     "bag_info": [
+      "907 € + 140 € odhad za batožinu"
+     ]
+    },
+    {
+     "origin": "PRG",
+     "dest": "LAX",
+     "dep_time": "2026-12-06 11:40",
+     "arr_time": "2026-12-06 17:05",
+     "price": 1060,
+     "duration_min": 865,
+     "stops": 1,
+     "via": [
+      "HEL"
+     ],
+     "airlines": [
+      "Finnair"
+     ],
+     "segments": [
+      [
+       "PRG",
+       "2026-12-06",
+       "HEL",
+       "AY",
+       "1222"
+      ],
+      [
+       "HEL",
+       "2026-12-06",
+       "LAX",
+       "AY",
+       "1"
+      ]
+     ],
+     "dep": "2026-12-06",
+     "ret": "2026-12-20",
+     "stay": 14,
+     "away": 16,
+     "leave": 11,
+     "price_google": 920,
+     "bag_info": [
+      "920 € + 140 € odhad za batožinu"
+     ]
+    },
+    {
+     "origin": "MUC",
+     "dest": "LAX",
+     "dep_time": "2026-12-06 10:50",
+     "arr_time": "2026-12-06 18:40",
+     "price": 1088,
+     "duration_min": 1010,
+     "stops": 1,
+     "via": [
+      "DUB"
+     ],
+     "airlines": [
+      "Aer Lingus"
+     ],
+     "segments": [
+      [
+       "MUC",
+       "2026-12-06",
+       "DUB",
+       "EI",
+       "353"
+      ],
+      [
+       "DUB",
+       "2026-12-06",
+       "LAX",
+       "EI",
+       "69"
+      ]
+     ],
+     "dep": "2026-12-06",
+     "ret": "2026-12-20",
+     "stay": 14,
+     "away": 16,
+     "leave": 11,
+     "price_google": 948,
+     "bag_info": [
+      "948 € + 140 € odhad za batožinu"
+     ]
+    },
+    {
+     "origin": "MUC",
+     "dest": "LAX",
+     "dep_time": "2026-12-06 07:15",
+     "arr_time": "2026-12-06 16:40",
+     "price": 1163,
+     "duration_min": 1105,
+     "stops": 1,
+     "via": [
+      "MAD"
+     ],
+     "airlines": [
+      "Iberia"
+     ],
+     "segments": [
+      [
+       "MUC",
+       "2026-12-06",
+       "MAD",
+       "IB",
+       "1316"
+      ],
+      [
+       "MAD",
+       "2026-12-06",
+       "LAX",
+       "IB",
+       "351"
+      ]
+     ],
+     "dep": "2026-12-06",
+     "ret": "2026-12-20",
+     "stay": 14,
+     "away": 16,
+     "leave": 11,
+     "price_google": 1023,
+     "bag_info": [
+      "1023 € + 140 € odhad za batožinu"
+     ]
+    }
+   ],
+   "url": "https://www.google.com/travel/flights/search?tfs=GlcSCjIwMjYtMTItMDYoAmCwCWoFEgNWSUVqBRIDUFJHagUSA0JUU2oFEgNCVURqBRIDTVVDcgUSA0xBWHIFEgNTRk9yBRIDU0FOcgUSA1NKQ3IFEgNPQUsaVxIKMjAyNi0xMi0yMCgCYLAJagUSA0xBWGoFEgNTRk9qBRIDU0FOagUSA1NKQ2oFEgNPQUtyBRIDVklFcgUSA1BSR3IFEgNCVFNyBRIDQlVEcgUSA01VQ0IBAUgBmAEB&hl=en&curr=EUR",
+   "history": [
+    [
+     "2026-10-14",
+     1042
+    ]
+   ]
+  },
+  "2026-11-25_2026-12-09_g0": {
+   "dep": "2026-11-25",
+   "ret": "2026-12-09",
+   "stay": 14,
+   "away": 16,
+   "leave": 12,
+   "group": 0,
+   "last_checked": "2026-10-14",
+   "best_price": 641,
+   "offers": [
+    {
+     "origin": "PRG",
+     "dest": "LAX",
+     "dep_time": "2026-11-25 06:50",
+     "arr_time": "2026-11-25 13:25",
+     "price": 641,
+     "duration_min": 935,
+     "stops": 1,
+     "via": [
+      "LHR"
+     ],
+     "airlines": [
+      "British Airways"
+     ],
+     "segments": [
+      [
+       "PRG",
+       "2026-11-25",
+       "LHR",
+       "BA",
+       "865"
+      ],
+      [
+       "LHR",
+       "2026-11-25",
+       "LAX",
+       "BA",
+       "283"
+      ]
+     ],
+     "dep": "2026-11-25",
+     "ret": "2026-12-09",
+     "stay": 14,
+     "away": 16,
+     "leave": 12,
+     "price_google": 501,
+     "bag_info": [
+      "501 € + 140 € odhad za batožinu"
+     ],
+     "return": {
+      "origin": "LAX",
+      "dest": "PRG",
+      "dep_time": "2026-12-09 20:40",
+      "arr_time": "2026-12-10 22:50",
+      "duration_min": 1030,
+      "stops": 1,
+      "via": [
+       "LHR"
+      ],
+      "airlines": [
+       "British Airways"
+      ],
+      "price": 501
+     },
+     "return_checked": "2026-10-14"
+    },
+    {
+     "origin": "PRG",
+     "dest": "SFO",
+     "dep_time": "2026-11-25 14:50",
+     "arr_time": "2026-11-25 20:10",
+     "price": 657,
+     "duration_min": 860,
+     "stops": 1,
+     "via": [
+      "FRA"
+     ],
+     "airlines": [
+      "Lufthansa",
+      "United"
+     ],
+     "segments": [
+      [
+       "PRG",
+       "2026-11-25",
+       "FRA",
+       "LH",
+       "1397"
+      ],
+      [
+       "FRA",
+       "2026-11-25",
+       "SFO",
+       "UA",
+       "927"
+      ]
+     ],
+     "dep": "2026-11-25",
+     "ret": "2026-12-09",
+     "stay": 14,
+     "away": 16,
+     "leave": 12,
+     "price_google": 517,
+     "bag_info": [
+      "517 € + 140 € odhad za batožinu"
+     ]
+    },
+    {
+     "origin": "PRG",
+     "dest": "LAX",
+     "dep_time": "2026-11-25 11:10",
+     "arr_time": "2026-11-25 18:35",
+     "price": 641,
+     "duration_min": 985,
+     "stops": 1,
+     "via": [
+      "LHR"
+     ],
+     "airlines": [
+      "British Airways"
+     ],
+     "segments": [
+      [
+       "PRG",
+       "2026-11-25",
+       "LHR",
+       "BA",
+       "853"
+      ],
+      [
+       "LHR",
+       "2026-11-25",
+       "LAX",
+       "BA",
+       "269"
+      ]
+     ],
+     "dep": "2026-11-25",
+     "ret": "2026-12-09",
+     "stay": 14,
+     "away": 16,
+     "leave": 12,
+     "price_google": 501,
+     "bag_info": [
+      "501 € + 140 € odhad za batožinu"
+     ]
+    },
+    {
+     "origin": "PRG",
+     "dest": "SFO",
+     "dep_time": "2026-11-25 07:05",
+     "arr_time": "2026-11-25 12:35",
+     "price": 657,
+     "duration_min": 870,
+     "stops": 1,
+     "via": [
+      "FRA"
+     ],
+     "airlines": [
+      "Lufthansa"
+     ],
+     "segments": [
+      [
+       "PRG",
+       "2026-11-25",
+       "FRA",
+       "LH",
+       "1401"
+      ],
+      [
+       "FRA",
+       "2026-11-25",
+       "SFO",
+       "LH",
+       "454"
+      ]
+     ],
+     "dep": "2026-11-25",
+     "ret": "2026-12-09",
+     "stay": 14,
+     "away": 16,
+     "leave": 12,
+     "price_google": 517,
+     "bag_info": [
+      "517 € + 140 € odhad za batožinu"
+     ]
+    },
+    {
+     "origin": "PRG",
+     "dest": "SFO",
+     "dep_time": "2026-11-25 10:20",
+     "arr_time": "2026-11-25 16:05",
+     "price": 657,
+     "duration_min": 885,
+     "stops": 1,
+     "via": [
+      "FRA"
+     ],
+     "airlines": [
+      "Lufthansa",
+      "United"
+     ],
+     "segments": [
+      [
+       "PRG",
+       "2026-11-25",
+       "FRA",
+       "LH",
+       "1393"
+      ],
+      [
+       "FRA",
+       "2026-11-25",
+       "SFO",
+       "UA",
+       "59"
+      ]
+     ],
+     "dep": "2026-11-25",
+     "ret": "2026-12-09",
+     "stay": 14,
+     "away": 16,
+     "leave": 12,
+     "price_google": 517,
+     "bag_info": [
+      "517 € + 140 € odhad za batožinu"
+     ]
+    }
+   ],
+   "url": "https://www.google.com/travel/flights/search?tfs=GlcSCjIwMjYtMTEtMjUoAmCwCWoFEgNWSUVqBRIDUFJHagUSA0JUU2oFEgNCVURqBRIDTVVDcgUSA0xBWHIFEgNTRk9yBRIDU0FOcgUSA1NKQ3IFEgNPQUsaVxIKMjAyNi0xMi0wOSgCYLAJagUSA0xBWGoFEgNTRk9qBRIDU0FOagUSA1NKQ2oFEgNPQUtyBRIDVklFcgUSA1BSR3IFEgNCVFNyBRIDQlVEcgUSA01VQ0IBAUgBmAEB&hl=en&curr=EUR",
+   "history": [
+    [
+     "2026-10-14",
+     641
+    ]
+   ]
+  },
+  "2026-11-30_2026-12-14_g0": {
+   "dep": "2026-11-30",
+   "ret": "2026-12-14",
+   "stay": 14,
+   "away": 16,
+   "leave": 12,
+   "group": 0,
+   "last_checked": "2026-10-14",
+   "best_price": 802,
+   "offers": [
+    {
+     "origin": "VIE",
+     "dest": "LAX",
+     "dep_time": "2026-11-30 07:15",
+     "arr_time": "2026-11-30 16:35",
+     "price": 802,
+     "duration_min": 1100,
+     "stops": 1,
+     "via": [
+      "IST"
+     ],
+     "airlines": [
+      "Turkish Airlines"
+     ],
+     "segments": [
+      [
+       "VIE",
+       "2026-11-30",
+       "IST",
+       "TK",
+       "1890"
+      ],
+      [
+       "IST",
+       "2026-11-30",
+       "LAX",
+       "TK",
+       "9"
+      ]
+     ],
+     "dep": "2026-11-30",
+     "ret": "2026-12-14",
+     "stay": 14,
+     "away": 16,
+     "leave": 12,
+     "price_google": 802,
+     "bag_info": [
+      "batožina v cene (dopravca)"
+     ]
+    },
+    {
+     "origin": "MUC",
+     "dest": "LAX",
+     "dep_time": "2026-11-30 11:50",
+     "arr_time": "2026-11-30 20:04",
+     "price": 828,
+     "duration_min": 1034,
+     "stops": 1,
+     "via": [
+      "YYZ"
+     ],
+     "airlines": [
+      "Air Canada"
+     ],
+     "segments": [
+      [
+       "MUC",
+       "2026-11-30",
+       "YYZ",
+       "AC",
+       "837"
+      ],
+      [
+       "YYZ",
+       "2026-11-30",
+       "LAX",
+       "AC",
+       "791"
+      ]
+     ],
+     "dep": "2026-11-30",
+     "ret": "2026-12-14",
+     "stay": 14,
+     "away": 16,
+     "leave": 12,
+     "price_google": 688,
+     "bag_info": [
+      "688 € + 140 € odhad za batožinu"
+     ]
+    },
+    {
+     "origin": "MUC",
+     "dest": "SFO",
+     "dep_time": "2026-11-30 11:50",
+     "arr_time": "2026-11-30 21:30",
+     "price": 823,
+     "duration_min": 1120,
+     "stops": 1,
+     "via": [
+      "YYZ"
+     ],
+     "airlines": [
+      "Air Canada"
+     ],
+     "segments": [
+      [
+       "MUC",
+       "2026-11-30",
+       "YYZ",
+       "AC",
+       "837"
+      ],
+      [
+       "YYZ",
+       "2026-11-30",
+       "SFO",
+       "AC",
+       "745"
+      ]
+     ],
+     "dep": "2026-11-30",
+     "ret": "2026-12-14",
+     "stay": 14,
+     "away": 16,
+     "leave": 12,
+     "price_google": 683,
+     "bag_info": [
+      "683 € + 140 € odhad za batožinu"
+     ]
+    },
+    {
+     "origin": "PRG",
+     "dest": "LAX",
+     "dep_time": "2026-11-30 06:50",
+     "arr_time": "2026-11-30 13:25",
+     "price": 996,
+     "duration_min": 935,
+     "stops": 1,
+     "via": [
+      "LHR"
+     ],
+     "airlines": [
+      "British Airways"
+     ],
+     "segments": [
+      [
+       "PRG",
+       "2026-11-30",
+       "LHR",
+       "BA",
+       "865"
+      ],
+      [
+       "LHR",
+       "2026-11-30",
+       "LAX",
+       "BA",
+       "283"
+      ]
+     ],
+     "dep": "2026-11-30",
+     "ret": "2026-12-14",
+     "stay": 14,
+     "away": 16,
+     "leave": 12,
+     "price_google": 856,
+     "bag_info": [
+      "856 € + 140 € odhad za batožinu"
+     ]
+    },
+    {
+     "origin": "PRG",
+     "dest": "LAX",
+     "dep_time": "2026-11-30 14:50",
+     "arr_time": "2026-12-01 00:21",
+     "price": 992,
+     "duration_min": 1111,
+     "stops": 2,
+     "via": [
+      "FRA",
+      "SFO"
+     ],
+     "airlines": [
+      "Lufthansa",
+      "United"
+     ],
+     "segments": [
+      [
+       "PRG",
+       "2026-11-30",
+       "FRA",
+       "LH",
+       "1397"
+      ],
+      [
+       "FRA",
+       "2026-11-30",
+       "SFO",
+       "UA",
+       "927"
+      ],
+      [
+       "SFO",
+       "2026-11-30",
+       "LAX",
+       "UA",
+       "2179"
+      ]
+     ],
+     "dep": "2026-11-30",
+     "ret": "2026-12-14",
+     "stay": 14,
+     "away": 16,
+     "leave": 12,
+     "price_google": 852,
+     "bag_info": [
+      "852 € + 140 € odhad za batožinu"
+     ]
+    }
+   ],
+   "url": "https://www.google.com/travel/flights/search?tfs=GlcSCjIwMjYtMTEtMzAoAmCwCWoFEgNWSUVqBRIDUFJHagUSA0JUU2oFEgNCVURqBRIDTVVDcgUSA0xBWHIFEgNTRk9yBRIDU0FOcgUSA1NKQ3IFEgNPQUsaVxIKMjAyNi0xMi0xNCgCYLAJagUSA0xBWGoFEgNTRk9qBRIDU0FOagUSA1NKQ2oFEgNPQUtyBRIDVklFcgUSA1BSR3IFEgNCVFNyBRIDQlVEcgUSA01VQ0IBAUgBmAEB&hl=en&curr=EUR",
+   "history": [
+    [
+     "2026-10-14",
+     802
+    ]
+   ]
+  },
+  "2026-12-01_2026-12-15_g0": {
+   "dep": "2026-12-01",
+   "ret": "2026-12-15",
+   "stay": 14,
+   "away": 16,
+   "leave": 12,
+   "group": 0,
+   "last_checked": "2026-10-14",
+   "best_price": 793,
+   "offers": [
+    {
+     "origin": "VIE",
+     "dest": "LAX",
+     "dep_time": "2026-12-01 11:40",
+     "arr_time": "2026-12-01 17:05",
+     "price": 793,
+     "duration_min": 865,
+     "stops": 1,
+     "via": [
+      "HEL"
+     ],
+     "airlines": [
+      "Finnair"
+     ],
+     "segments": [
+      [
+       "VIE",
+       "2026-12-01",
+       "HEL",
+       "AY",
+       "1472"
+      ],
+      [
+       "HEL",
+       "2026-12-01",
+       "LAX",
+       "AY",
+       "1"
+      ]
+     ],
+     "dep": "2026-12-01",
+     "ret": "2026-12-15",
+     "stay": 14,
+     "away": 16,
+     "leave": 12,
+     "price_google": 653,
+     "bag_info": [
+      "653 € + 140 € odhad za batožinu"
+     ]
+    },
+    {
+     "origin": "MUC",
+     "dest": "LAX",
+     "dep_time": "2026-12-01 10:30",
+     "arr_time": "2026-12-01 17:05",
+     "price": 832,
+     "duration_min": 935,
+     "stops": 1,
+     "via": [
+      "HEL"
+     ],
+     "airlines": [
+      "Finnair"
+     ],
+     "segments": [
+      [
+       "MUC",
+       "2026-12-01",
+       "HEL",
+       "AY",
+       "1402"
+      ],
+      [
+       "HEL",
+       "2026-12-01",
+       "LAX",
+       "AY",
+       "1"
+      ]
+     ],
+     "dep": "2026-12-01",
+     "ret": "2026-12-15",
+     "stay": 14,
+     "away": 16,
+     "leave": 12,
+     "price_google": 692,
+     "bag_info": [
+      "692 € + 140 € odhad za batožinu"
+     ]
+    },
+    {
+     "origin": "BUD",
+     "dest": "LAX",
+     "dep_time": "2026-12-01 11:35",
+     "arr_time": "2026-12-01 17:05",
+     "price": 861,
+     "duration_min": 870,
+     "stops": 1,
+     "via": [
+      "HEL"
+     ],
+     "airlines": [
+      "Finnair"
+     ],
+     "segments": [
+      [
+       "BUD",
+       "2026-12-01",
+       "HEL",
+       "AY",
+       "1252"
+      ],
+      [
+       "HEL",
+       "2026-12-01",
+       "LAX",
+       "AY",
+       "1"
+      ]
+     ],
+     "dep": "2026-12-01",
+     "ret": "2026-12-15",
+     "stay": 14,
+     "away": 16,
+     "leave": 12,
+     "price_google": 721,
+     "bag_info": [
+      "721 € + 140 € odhad za batožinu"
+     ]
+    },
+    {
+     "origin": "PRG",
+     "dest": "SFO",
+     "dep_time": "2026-12-01 14:50",
+     "arr_time": "2026-12-01 20:10",
+     "price": 916,
+     "duration_min": 860,
+     "stops": 1,
+     "via": [
+      "FRA"
+     ],
+     "airlines": [
+      "Lufthansa",
+      "United"
+     ],
+     "segments": [
+      [
+       "PRG",
+       "2026-12-01",
+       "FRA",
+       "LH",
+       "1397"
+      ],
+      [
+       "FRA",
+       "2026-12-01",
+       "SFO",
+       "UA",
+       "927"
+      ]
+     ],
+     "dep": "2026-12-01",
+     "ret": "2026-12-15",
+     "stay": 14,
+     "away": 16,
+     "leave": 12,
+     "price_google": 776,
+     "bag_info": [
+      "776 € + 140 € odhad za batožinu"
+     ]
+    },
+    {
+     "origin": "MUC",
+     "dest": "LAX",
+     "dep_time": "2026-12-01 12:10",
+     "arr_time": "2026-12-01 15:15",
+     "price": 938,
+     "duration_min": 725,
+     "stops": 0,
+     "via": [],
+     "airlines": [
+      "Lufthansa"
+     ],
+     "segments": [
+      [
+       "MUC",
+       "2026-12-01",
+       "LAX",
+       "LH",
+       "452"
+      ]
+     ],
+     "dep": "2026-12-01",
+     "ret": "2026-12-15",
+     "stay": 14,
+     "away": 16,
+     "leave": 12,
+     "price_google": 798,
+     "bag_info": [
+      "798 € + 140 € odhad za batožinu"
+     ]
+    }
+   ],
+   "url": "https://www.google.com/travel/flights/search?tfs=GlcSCjIwMjYtMTItMDEoAmCwCWoFEgNWSUVqBRIDUFJHagUSA0JUU2oFEgNCVURqBRIDTVVDcgUSA0xBWHIFEgNTRk9yBRIDU0FOcgUSA1NKQ3IFEgNPQUsaVxIKMjAyNi0xMi0xNSgCYLAJagUSA0xBWGoFEgNTRk9qBRIDU0FOagUSA1NKQ2oFEgNPQUtyBRIDVklFcgUSA1BSR3IFEgNCVFNyBRIDQlVEcgUSA01VQ0IBAUgBmAEB&hl=en&curr=EUR",
+   "history": [
+    [
+     "2026-10-14",
+     793
+    ]
+   ]
+  },
+  "2026-12-02_2026-12-16_g0": {
+   "dep": "2026-12-02",
+   "ret": "2026-12-16",
+   "stay": 14,
+   "away": 16,
+   "leave": 12,
+   "group": 0,
+   "last_checked": "2026-10-14",
+   "best_price": 829,
+   "offers": [
+    {
+     "origin": "VIE",
+     "dest": "LAX",
+     "dep_time": "2026-12-02 07:15",
+     "arr_time": "2026-12-02 16:35",
+     "price": 829,
+     "duration_min": 1100,
+     "stops": 1,
+     "via": [
+      "IST"
+     ],
+     "airlines": [
+      "Turkish Airlines"
+     ],
+     "segments": [
+      [
+       "VIE",
+       "2026-12-02",
+       "IST",
+       "TK",
+       "1890"
+      ],
+      [
+       "IST",
+       "2026-12-02",
+       "LAX",
+       "TK",
+       "9"
+      ]
+     ],
+     "dep": "2026-12-02",
+     "ret": "2026-12-16",
+     "stay": 14,
+     "away": 16,
+     "leave": 12,
+     "price_google": 829,
+     "bag_info": [
+      "batožina v cene (dopravca)"
+     ]
+    },
+    {
+     "origin": "MUC",
+     "dest": "LAX",
+     "dep_time": "2026-12-02 06:55",
+     "arr_time": "2026-12-02 16:35",
+     "price": 877,
+     "duration_min": 1120,
+     "stops": 1,
+     "via": [
+      "IST"
+     ],
+     "airlines": [
+      "Turkish Airlines"
+     ],
+     "segments": [
+      [
+       "MUC",
+       "2026-12-02",
+       "IST",
+       "TK",
+       "1638"
+      ],
+      [
+       "IST",
+       "2026-12-02",
+       "LAX",
+       "TK",
+       "9"
+      ]
+     ],
+     "dep": "2026-12-02",
+     "ret": "2026-12-16",
+     "stay": 14,
+     "away": 16,
+     "leave": 12,
+     "price_google": 877,
+     "bag_info": [
+      "batožina v cene (dopravca)"
+     ]
+    },
+    {
+     "origin": "PRG",
+     "dest": "SFO",
+     "dep_time": "2026-12-02 06:50",
+     "arr_time": "2026-12-02 14:55",
+     "price": 916,
+     "duration_min": 1025,
+     "stops": 1,
+     "via": [
+      "LHR"
+     ],
+     "airlines": [
+      "British Airways"
+     ],
+     "segments": [
+      [
+       "PRG",
+       "2026-12-02",
+       "LHR",
+       "BA",
+       "865"
+      ],
+      [
+       "LHR",
+       "2026-12-02",
+       "SFO",
+       "BA",
+       "285"
+      ]
+     ],
+     "dep": "2026-12-02",
+     "ret": "2026-12-16",
+     "stay": 14,
+     "away": 16,
+     "leave": 12,
+     "price_google": 776,
+     "bag_info": [
+      "776 € + 140 € odhad za batožinu"
+     ]
+    },
+    {
+     "origin": "PRG",
+     "dest": "LAX",
+     "dep_time": "2026-12-02 09:35",
+     "arr_time": "2026-12-02 20:10",
+     "price": 899,
+     "duration_min": 1175,
+     "stops": 1,
+     "via": [
+      "WAW"
+     ],
+     "airlines": [
+      "LOT"
+     ],
+     "segments": [
+      [
+       "PRG",
+       "2026-12-02",
+       "WAW",
+       "LO",
+       "524"
+      ],
+      [
+       "WAW",
+       "2026-12-02",
+       "LAX",
+       "LO",
+       "23"
+      ]
+     ],
+     "dep": "2026-12-02",
+     "ret": "2026-12-16",
+     "stay": 14,
+     "away": 16,
+     "leave": 12,
+     "price_google": 759,
+     "bag_info": [
+      "759 € + 140 € odhad za batožinu"
+     ]
+    },
+    {
+     "origin": "PRG",
+     "dest": "LAX",
+     "dep_time": "2026-12-02 12:55",
+     "arr_time": "2026-12-02 20:10",
+     "price": 962,
+     "duration_min": 975,
+     "stops": 1,
+     "via": [
+      "WAW"
+     ],
+     "airlines": [
+      "LOT"
+     ],
+     "segments": [
+      [
+       "PRG",
+       "2026-12-02",
+       "WAW",
+       "LO",
+       "528"
+      ],
+      [
+       "WAW",
+       "2026-12-02",
+       "LAX",
+       "LO",
+       "23"
+      ]
+     ],
+     "dep": "2026-12-02",
+     "ret": "2026-12-16",
+     "stay": 14,
+     "away": 16,
+     "leave": 12,
+     "price_google": 822,
+     "bag_info": [
+      "822 € + 140 € odhad za batožinu"
+     ]
+    }
+   ],
+   "url": "https://www.google.com/travel/flights/search?tfs=GlcSCjIwMjYtMTItMDIoAmCwCWoFEgNWSUVqBRIDUFJHagUSA0JUU2oFEgNCVURqBRIDTVVDcgUSA0xBWHIFEgNTRk9yBRIDU0FOcgUSA1NKQ3IFEgNPQUsaVxIKMjAyNi0xMi0xNigCYLAJagUSA0xBWGoFEgNTRk9qBRIDU0FOagUSA1NKQ2oFEgNPQUtyBRIDVklFcgUSA1BSR3IFEgNCVFNyBRIDQlVEcgUSA01VQ0IBAUgBmAEB&hl=en&curr=EUR",
+   "history": [
+    [
+     "2026-10-14",
+     829
+    ]
+   ]
+  },
+  "2026-12-06_2026-12-20_g1": {
+   "dep": "2026-12-06",
+   "ret": "2026-12-20",
+   "stay": 14,
+   "away": 16,
+   "leave": 11,
+   "group": 1,
+   "last_checked": "2026-10-14",
+   "best_price": 845,
+   "offers": [
+    {
+     "origin": "BER",
+     "dest": "LAX",
+     "dep_time": "2026-12-06 10:15",
+     "arr_time": "2026-12-06 18:40",
+     "price": 845,
+     "duration_min": 1045,
+     "stops": 1,
+     "via": [
+      "DUB"
+     ],
+     "airlines": [
+      "Aer Lingus"
+     ],
+     "segments": [
+      [
+       "BER",
+       "2026-12-06",
+       "DUB",
+       "EI",
+       "333"
+      ],
+      [
+       "DUB",
+       "2026-12-06",
+       "LAX",
+       "EI",
+       "69"
+      ]
+     ],
+     "dep": "2026-12-06",
+     "ret": "2026-12-20",
+     "stay": 14,
+     "away": 16,
+     "leave": 11,
+     "price_google": 705,
+     "bag_info": [
+      "705 € + 140 € odhad za batožinu"
+     ]
+    },
+    {
+     "origin": "BER",
+     "dest": "LAX",
+     "dep_time": "2026-12-06 08:45",
+     "arr_time": "2026-12-06 17:05",
+     "price": 987,
+     "duration_min": 1040,
+     "stops": 1,
+     "via": [
+      "HEL"
+     ],
+     "airlines": [
+      "Finnair"
+     ],
+     "segments": [
+      [
+       "BER",
+       "2026-12-06",
+       "HEL",
+       "AY",
+       "1432"
+      ],
+      [
+       "HEL",
+       "2026-12-06",
+       "LAX",
+       "AY",
+       "1"
+      ]
+     ],
+     "dep": "2026-12-06",
+     "ret": "2026-12-20",
+     "stay": 14,
+     "away": 16,
+     "leave": 11,
+     "price_google": 847,
+     "bag_info": [
+      "847 € + 140 € odhad za batožinu"
+     ]
+    },
+    {
+     "origin": "BER",
+     "dest": "LAX",
+     "dep_time": "2026-12-06 06:35",
+     "arr_time": "2026-12-06 13:25",
+     "price": 1000,
+     "duration_min": 950,
+     "stops": 1,
+     "via": [
+      "LHR"
+     ],
+     "airlines": [
+      "British Airways"
+     ],
+     "segments": [
+      [
+       "BER",
+       "2026-12-06",
+       "LHR",
+       "BA",
+       "993"
+      ],
+      [
+       "LHR",
+       "2026-12-06",
+       "LAX",
+       "BA",
+       "283"
+      ]
+     ],
+     "dep": "2026-12-06",
+     "ret": "2026-12-20",
+     "stay": 14,
+     "away": 16,
+     "leave": 11,
+     "price_google": 860,
+     "bag_info": [
+      "860 € + 140 € odhad za batožinu"
+     ]
+    },
+    {
+     "origin": "BER",
+     "dest": "LAX",
+     "dep_time": "2026-12-06 06:35",
+     "arr_time": "2026-12-06 15:20",
+     "price": 985,
+     "duration_min": 1065,
+     "stops": 1,
+     "via": [
+      "LHR"
+     ],
+     "airlines": [
+      "British Airways",
+      "American"
+     ],
+     "segments": [
+      [
+       "BER",
+       "2026-12-06",
+       "LHR",
+       "BA",
+       "993"
+      ],
+      [
+       "LHR",
+       "2026-12-06",
+       "LAX",
+       "AA",
+       "137"
+      ]
+     ],
+     "dep": "2026-12-06",
+     "ret": "2026-12-20",
+     "stay": 14,
+     "away": 16,
+     "leave": 11,
+     "price_google": 845,
+     "bag_info": [
+      "845 € + 140 € odhad za batožinu"
+     ]
+    },
+    {
+     "origin": "FRA",
+     "dest": "LAX",
+     "dep_time": "2026-12-06 11:30",
+     "arr_time": "2026-12-06 17:05",
+     "price": 1016,
+     "duration_min": 875,
+     "stops": 1,
+     "via": [
+      "HEL"
+     ],
+     "airlines": [
+      "Finnair"
+     ],
+     "segments": [
+      [
+       "FRA",
+       "2026-12-06",
+       "HEL",
+       "AY",
+       "1412"
+      ],
+      [
+       "HEL",
+       "2026-12-06",
+       "LAX",
+       "AY",
+       "1"
+      ]
+     ],
+     "dep": "2026-12-06",
+     "ret": "2026-12-20",
+     "stay": 14,
+     "away": 16,
+     "leave": 11,
+     "price_google": 876,
+     "bag_info": [
+      "876 € + 140 € odhad za batožinu"
+     ]
+    }
+   ],
+   "url": "https://www.google.com/travel/flights/search?tfs=GlcSCjIwMjYtMTItMDYoAmCwCWoFEgNGUkFqBRIDQkVSagUSA1dBV2oFEgNLUktqBRIDS1RXcgUSA0xBWHIFEgNTRk9yBRIDU0FOcgUSA1NKQ3IFEgNPQUsaVxIKMjAyNi0xMi0yMCgCYLAJagUSA0xBWGoFEgNTRk9qBRIDU0FOagUSA1NKQ2oFEgNPQUtyBRIDRlJBcgUSA0JFUnIFEgNXQVdyBRIDS1JLcgUSA0tUV0IBAUgBmAEB&hl=en&curr=EUR",
+   "history": [
+    [
+     "2026-10-14",
+     845
+    ]
+   ]
+  },
+  "2026-11-25_2026-12-09_g1": {
+   "dep": "2026-11-25",
+   "ret": "2026-12-09",
+   "stay": 14,
+   "away": 16,
+   "leave": 12,
+   "group": 1,
+   "last_checked": "2026-10-14",
+   "best_price": 690,
+   "offers": [
+    {
+     "origin": "BER",
+     "dest": "SFO",
+     "dep_time": "2026-11-25 06:00",
+     "arr_time": "2026-11-25 11:45",
+     "price": 690,
+     "duration_min": 885,
+     "stops": 1,
+     "via": [
+      "AMS"
+     ],
+     "airlines": [
+      "KLM"
+     ],
+     "segments": [
+      [
+       "BER",
+       "2026-11-25",
+       "AMS",
+       "KL",
+       "1770"
+      ],
+      [
+       "AMS",
+       "2026-11-25",
+       "SFO",
+       "KL",
+       "605"
+      ]
+     ],
+     "dep": "2026-11-25",
+     "ret": "2026-12-09",
+     "stay": 14,
+     "away": 16,
+     "leave": 12,
+     "price_google": 550,
+     "bag_info": [
+      "550 € + 140 € odhad za batožinu"
+     ]
+    },
+    {
+     "origin": "BER",
+     "dest": "LAX",
+     "dep_time": "2026-11-25 14:05",
+     "arr_time": "2026-11-25 20:20",
+     "price": 691,
+     "duration_min": 915,
+     "stops": 1,
+     "via": [
+      "LHR"
+     ],
+     "airlines": [
+      "British Airways",
+      "American"
+     ],
+     "segments": [
+      [
+       "BER",
+       "2026-11-25",
+       "LHR",
+       "BA",
+       "979"
+      ],
+      [
+       "LHR",
+       "2026-11-25",
+       "LAX",
+       "AA",
+       "135"
+      ]
+     ],
+     "dep": "2026-11-25",
+     "ret": "2026-12-09",
+     "stay": 14,
+     "away": 16,
+     "leave": 12,
+     "price_google": 551,
+     "bag_info": [
+      "551 € + 140 € odhad za batožinu"
+     ]
+    },
+    {
+     "origin": "BER",
+     "dest": "SFO",
+     "dep_time": "2026-11-25 07:40",
+     "arr_time": "2026-11-25 12:35",
+     "price": 704,
+     "duration_min": 835,
+     "stops": 1,
+     "via": [
+      "FRA"
+     ],
+     "airlines": [
+      "Lufthansa"
+     ],
+     "segments": [
+      [
+       "BER",
+       "2026-11-25",
+       "FRA",
+       "LH",
+       "207"
+      ],
+      [
+       "FRA",
+       "2026-11-25",
+       "SFO",
+       "LH",
+       "454"
+      ]
+     ],
+     "dep": "2026-11-25",
+     "ret": "2026-12-09",
+     "stay": 14,
+     "away": 16,
+     "leave": 12,
+     "price_google": 564,
+     "bag_info": [
+      "564 € + 140 € odhad za batožinu"
+     ]
+    },
+    {
+     "origin": "BER",
+     "dest": "SFO",
+     "dep_time": "2026-11-25 10:40",
+     "arr_time": "2026-11-25 16:05",
+     "price": 704,
+     "duration_min": 865,
+     "stops": 1,
+     "via": [
+      "FRA"
+     ],
+     "airlines": [
+      "Lufthansa",
+      "United"
+     ],
+     "segments": [
+      [
+       "BER",
+       "2026-11-25",
+       "FRA",
+       "LH",
+       "179"
+      ],
+      [
+       "FRA",
+       "2026-11-25",
+       "SFO",
+       "UA",
+       "59"
+      ]
+     ],
+     "dep": "2026-11-25",
+     "ret": "2026-12-09",
+     "stay": 14,
+     "away": 16,
+     "leave": 12,
+     "price_google": 564,
+     "bag_info": [
+      "564 € + 140 € odhad za batožinu"
+     ]
+    },
+    {
+     "origin": "BER",
+     "dest": "SFO",
+     "dep_time": "2026-11-25 14:15",
+     "arr_time": "2026-11-25 19:35",
+     "price": 714,
+     "duration_min": 860,
+     "stops": 1,
+     "via": [
+      "MUC"
+     ],
+     "airlines": [
+      "Lufthansa"
+     ],
+     "segments": [
+      [
+       "BER",
+       "2026-11-25",
+       "MUC",
+       "LH",
+       "1955"
+      ],
+      [
+       "MUC",
+       "2026-11-25",
+       "SFO",
+       "LH",
+       "458"
+      ]
+     ],
+     "dep": "2026-11-25",
+     "ret": "2026-12-09",
+     "stay": 14,
+     "away": 16,
+     "leave": 12,
+     "price_google": 574,
+     "bag_info": [
+      "574 € + 140 € odhad za batožinu"
+     ]
+    }
+   ],
+   "url": "https://www.google.com/travel/flights/search?tfs=GlcSCjIwMjYtMTEtMjUoAmCwCWoFEgNGUkFqBRIDQkVSagUSA1dBV2oFEgNLUktqBRIDS1RXcgUSA0xBWHIFEgNTRk9yBRIDU0FOcgUSA1NKQ3IFEgNPQUsaVxIKMjAyNi0xMi0wOSgCYLAJagUSA0xBWGoFEgNTRk9qBRIDU0FOagUSA1NKQ2oFEgNPQUtyBRIDRlJBcgUSA0JFUnIFEgNXQVdyBRIDS1JLcgUSA0tUV0IBAUgBmAEB&hl=en&curr=EUR",
+   "history": [
+    [
+     "2026-10-14",
+     690
+    ]
+   ]
+  },
+  "2026-11-30_2026-12-14_g1": {
+   "dep": "2026-11-30",
+   "ret": "2026-12-14",
+   "stay": 14,
+   "away": 16,
+   "leave": 12,
+   "group": 1,
+   "last_checked": "2026-10-14",
+   "best_price": 794,
+   "offers": [
+    {
+     "origin": "BER",
+     "dest": "LAX",
+     "dep_time": "2026-11-30 06:35",
+     "arr_time": "2026-11-30 16:35",
+     "price": 794,
+     "duration_min": 1140,
+     "stops": 1,
+     "via": [
+      "IST"
+     ],
+     "airlines": [
+      "Turkish Airlines"
+     ],
+     "segments": [
+      [
+       "BER",
+       "2026-11-30",
+       "IST",
+       "TK",
+       "1728"
+      ],
+      [
+       "IST",
+       "2026-11-30",
+       "LAX",
+       "TK",
+       "9"
+      ]
+     ],
+     "dep": "2026-11-30",
+     "ret": "2026-12-14",
+     "stay": 14,
+     "away": 16,
+     "leave": 12,
+     "price_google": 794,
+     "bag_info": [
+      "batožina v cene (dopravca)"
+     ]
+    },
+    {
+     "origin": "BER",
+     "dest": "SFO",
+     "dep_time": "2026-11-30 10:45",
+     "arr_time": "2026-11-30 21:30",
+     "price": 823,
+     "duration_min": 1185,
+     "stops": 2,
+     "via": [
+      "ZRH",
+      "YYZ"
+     ],
+     "airlines": [
+      "SWISS",
+      "Air Canada"
+     ],
+     "segments": [
+      [
+       "BER",
+       "2026-11-30",
+       "ZRH",
+       "LX",
+       "977"
+      ],
+      [
+       "ZRH",
+       "2026-11-30",
+       "YYZ",
+       "AC",
+       "881"
+      ],
+      [
+       "YYZ",
+       "2026-11-30",
+       "SFO",
+       "AC",
+       "745"
+      ]
+     ],
+     "dep": "2026-11-30",
+     "ret": "2026-12-14",
+     "stay": 14,
+     "away": 16,
+     "leave": 12,
+     "price_google": 683,
+     "bag_info": [
+      "683 € + 140 € odhad za batožinu"
+     ]
+    },
+    {
+     "origin": "FRA",
+     "dest": "LAX",
+     "dep_time": "2026-11-30 13:20",
+     "arr_time": "2026-11-30 21:34",
+     "price": 893,
+     "duration_min": 1034,
+     "stops": 1,
+     "via": [
+      "YYZ"
+     ],
+     "airlines": [
+      "Lufthansa",
+      "Air Canada"
+     ],
+     "segments": [
+      [
+       "FRA",
+       "2026-11-30",
+       "YYZ",
+       "LH",
+       "470"
+      ],
+      [
+       "YYZ",
+       "2026-11-30",
+       "LAX",
+       "AC",
+       "793"
+      ]
+     ],
+     "dep": "2026-11-30",
+     "ret": "2026-12-14",
+     "stay": 14,
+     "away": 16,
+     "leave": 12,
+     "price_google": 753,
+     "bag_info": [
+      "753 € + 140 € odhad za batožinu"
+     ]
+    },
+    {
+     "origin": "FRA",
+     "dest": "LAX",
+     "dep_time": "2026-11-30 10:20",
+     "arr_time": "2026-11-30 19:21",
+     "price": 933,
+     "duration_min": 1081,
+     "stops": 1,
+     "via": [
+      "SEA"
+     ],
+     "airlines": [
+      "Lufthansa",
+      "United"
+     ],
+     "segments": [
+      [
+       "FRA",
+       "2026-11-30",
+       "SEA",
+       "LH",
+       "490"
+      ],
+      [
+       "SEA",
+       "2026-11-30",
+       "LAX",
+       "UA",
+       "1730"
+      ]
+     ],
+     "dep": "2026-11-30",
+     "ret": "2026-12-14",
+     "stay": 14,
+     "away": 16,
+     "leave": 12,
+     "price_google": 793,
+     "bag_info": [
+      "793 € + 140 € odhad za batožinu"
+     ]
+    },
+    {
+     "origin": "BER",
+     "dest": "LAX",
+     "dep_time": "2026-11-30 14:15",
+     "arr_time": "2026-11-30 20:20",
+     "price": 978,
+     "duration_min": 905,
+     "stops": 1,
+     "via": [
+      "LHR"
+     ],
+     "airlines": [
+      "British Airways",
+      "American"
+     ],
+     "segments": [
+      [
+       "BER",
+       "2026-11-30",
+       "LHR",
+       "BA",
+       "979"
+      ],
+      [
+       "LHR",
+       "2026-11-30",
+       "LAX",
+       "AA",
+       "135"
+      ]
+     ],
+     "dep": "2026-11-30",
+     "ret": "2026-12-14",
+     "stay": 14,
+     "away": 16,
+     "leave": 12,
+     "price_google": 838,
+     "bag_info": [
+      "838 € + 140 € odhad za batožinu"
+     ]
+    }
+   ],
+   "url": "https://www.google.com/travel/flights/search?tfs=GlcSCjIwMjYtMTEtMzAoAmCwCWoFEgNGUkFqBRIDQkVSagUSA1dBV2oFEgNLUktqBRIDS1RXcgUSA0xBWHIFEgNTRk9yBRIDU0FOcgUSA1NKQ3IFEgNPQUsaVxIKMjAyNi0xMi0xNCgCYLAJagUSA0xBWGoFEgNTRk9qBRIDU0FOagUSA1NKQ2oFEgNPQUtyBRIDRlJBcgUSA0JFUnIFEgNXQVdyBRIDS1JLcgUSA0tUV0IBAUgBmAEB&hl=en&curr=EUR",
+   "history": [
+    [
+     "2026-10-14",
+     794
+    ]
+   ]
+  },
+  "2026-12-01_2026-12-15_g1": {
+   "dep": "2026-12-01",
+   "ret": "2026-12-15",
+   "stay": 14,
+   "away": 16,
+   "leave": 12,
+   "group": 1,
+   "last_checked": "2026-10-14",
+   "best_price": 770,
+   "offers": [
+    {
+     "origin": "BER",
+     "dest": "LAX",
+     "dep_time": "2026-12-01 08:45",
+     "arr_time": "2026-12-01 17:05",
+     "price": 772,
+     "duration_min": 1040,
+     "stops": 1,
+     "via": [
+      "HEL"
+     ],
+     "airlines": [
+      "Finnair"
+     ],
+     "segments": [
+      [
+       "BER",
+       "2026-12-01",
+       "HEL",
+       "AY",
+       "1432"
+      ],
+      [
+       "HEL",
+       "2026-12-01",
+       "LAX",
+       "AY",
+       "1"
+      ]
+     ],
+     "dep": "2026-12-01",
+     "ret": "2026-12-15",
+     "stay": 14,
+     "away": 16,
+     "leave": 12,
+     "price_google": 632,
+     "bag_info": [
+      "632 € + 140 € odhad za batožinu"
+     ]
+    },
+    {
+     "origin": "FRA",
+     "dest": "LAX",
+     "dep_time": "2026-12-01 11:30",
+     "arr_time": "2026-12-01 17:05",
+     "price": 801,
+     "duration_min": 875,
+     "stops": 1,
+     "via": [
+      "HEL"
+     ],
+     "airlines": [
+      "Finnair"
+     ],
+     "segments": [
+      [
+       "FRA",
+       "2026-12-01",
+       "HEL",
+       "AY",
+       "1412"
+      ],
+      [
+       "HEL",
+       "2026-12-01",
+       "LAX",
+       "AY",
+       "1"
+      ]
+     ],
+     "dep": "2026-12-01",
+     "ret": "2026-12-15",
+     "stay": 14,
+     "away": 16,
+     "leave": 12,
+     "price_google": 661,
+     "bag_info": [
+      "661 € + 140 € odhad za batožinu"
+     ]
+    },
+    {
+     "origin": "BER",
+     "dest": "LAX",
+     "dep_time": "2026-12-01 10:50",
+     "arr_time": "2026-12-01 20:20",
+     "price": 770,
+     "duration_min": 1110,
+     "stops": 1,
+     "via": [
+      "LHR"
+     ],
+     "airlines": [
+      "British Airways",
+      "American"
+     ],
+     "segments": [
+      [
+       "BER",
+       "2026-12-01",
+       "LHR",
+       "BA",
+       "977"
+      ],
+      [
+       "LHR",
+       "2026-12-01",
+       "LAX",
+       "AA",
+       "135"
+      ]
+     ],
+     "dep": "2026-12-01",
+     "ret": "2026-12-15",
+     "stay": 14,
+     "away": 16,
+     "leave": 12,
+     "price_google": 630,
+     "bag_info": [
+      "630 € + 140 € odhad za batožinu"
+     ],
+     "return": {
+      "origin": "LAX",
+      "dest": "BER",
+      "dep_time": "2026-12-15 18:50",
+      "arr_time": "2026-12-16 18:45",
+      "duration_min": 895,
+      "stops": 1,
+      "via": [
+       "HEL"
+      ],
+      "airlines": [
+       "Finnair"
+      ],
+      "price": 630
+     },
+     "return_checked": "2026-10-14"
+    },
+    {
+     "origin": "BER",
+     "dest": "SAN",
+     "dep_time": "2026-12-01 08:45",
+     "arr_time": "2026-12-01 18:01",
+     "price": 795,
+     "duration_min": 1096,
+     "stops": 2,
+     "via": [
+      "HEL",
+      "DFW"
+     ],
+     "airlines": [
+      "Finnair",
+      "American"
+     ],
+     "segments": [
+      [
+       "BER",
+       "2026-12-01",
+       "HEL",
+       "AY",
+       "1432"
+      ],
+      [
+       "HEL",
+       "2026-12-01",
+       "DFW",
+       "AY",
+       "19"
+      ],
+      [
+       "DFW",
+       "2026-12-01",
+       "SAN",
+       "AA",
+       "1948"
+      ]
+     ],
+     "dep": "2026-12-01",
+     "ret": "2026-12-15",
+     "stay": 14,
+     "away": 16,
+     "leave": 12,
+     "price_google": 655,
+     "bag_info": [
+      "655 € + 140 € odhad za batožinu"
+     ]
+    },
+    {
+     "origin": "BER",
+     "dest": "LAX",
+     "dep_time": "2026-12-01 06:20",
+     "arr_time": "2026-12-01 13:25",
+     "price": 867,
+     "duration_min": 965,
+     "stops": 1,
+     "via": [
+      "LHR"
+     ],
+     "airlines": [
+      "British Airways"
+     ],
+     "segments": [
+      [
+       "BER",
+       "2026-12-01",
+       "LHR",
+       "BA",
+       "993"
+      ],
+      [
+       "LHR",
+       "2026-12-01",
+       "LAX",
+       "BA",
+       "283"
+      ]
+     ],
+     "dep": "2026-12-01",
+     "ret": "2026-12-15",
+     "stay": 14,
+     "away": 16,
+     "leave": 12,
+     "price_google": 727,
+     "bag_info": [
+      "727 € + 140 € odhad za batožinu"
+     ]
+    }
+   ],
+   "url": "https://www.google.com/travel/flights/search?tfs=GlcSCjIwMjYtMTItMDEoAmCwCWoFEgNGUkFqBRIDQkVSagUSA1dBV2oFEgNLUktqBRIDS1RXcgUSA0xBWHIFEgNTRk9yBRIDU0FOcgUSA1NKQ3IFEgNPQUsaVxIKMjAyNi0xMi0xNSgCYLAJagUSA0xBWGoFEgNTRk9qBRIDU0FOagUSA1NKQ2oFEgNPQUtyBRIDRlJBcgUSA0JFUnIFEgNXQVdyBRIDS1JLcgUSA0tUV0IBAUgBmAEB&hl=en&curr=EUR",
+   "history": [
+    [
+     "2026-10-14",
+     770
+    ]
+   ]
+  },
+  "2026-12-02_2026-12-16_g1": {
+   "dep": "2026-12-02",
+   "ret": "2026-12-16",
+   "stay": 14,
+   "away": 16,
+   "leave": 12,
+   "group": 1,
+   "last_checked": "2026-10-14",
+   "best_price": 859,
+   "offers": [
+    {
+     "origin": "BER",
+     "dest": "LAX",
+     "dep_time": "2026-12-02 06:35",
+     "arr_time": "2026-12-02 16:35",
+     "price": 859,
+     "duration_min": 1140,
+     "stops": 1,
+     "via": [
+      "IST"
+     ],
+     "airlines": [
+      "Turkish Airlines"
+     ],
+     "segments": [
+      [
+       "BER",
+       "2026-12-02",
+       "IST",
+       "TK",
+       "1728"
+      ],
+      [
+       "IST",
+       "2026-12-02",
+       "LAX",
+       "TK",
+       "9"
+      ]
+     ],
+     "dep": "2026-12-02",
+     "ret": "2026-12-16",
+     "stay": 14,
+     "away": 16,
+     "leave": 12,
+     "price_google": 859,
+     "bag_info": [
+      "batožina v cene (dopravca)"
+     ]
+    },
+    {
+     "origin": "FRA",
+     "dest": "LAX",
+     "dep_time": "2026-12-02 06:50",
+     "arr_time": "2026-12-02 16:35",
+     "price": 897,
+     "duration_min": 1125,
+     "stops": 1,
+     "via": [
+      "IST"
+     ],
+     "airlines": [
+      "Turkish Airlines"
+     ],
+     "segments": [
+      [
+       "FRA",
+       "2026-12-02",
+       "IST",
+       "TK",
+       "1598"
+      ],
+      [
+       "IST",
+       "2026-12-02",
+       "LAX",
+       "TK",
+       "9"
+      ]
+     ],
+     "dep": "2026-12-02",
+     "ret": "2026-12-16",
+     "stay": 14,
+     "away": 16,
+     "leave": 12,
+     "price_google": 897,
+     "bag_info": [
+      "batožina v cene (dopravca)"
+     ]
+    },
+    {
+     "origin": "BER",
+     "dest": "LAX",
+     "dep_time": "2026-12-02 12:20",
+     "arr_time": "2026-12-02 18:35",
+     "price": 988,
+     "duration_min": 915,
+     "stops": 1,
+     "via": [
+      "LHR"
+     ],
+     "airlines": [
+      "British Airways"
+     ],
+     "segments": [
+      [
+       "BER",
+       "2026-12-02",
+       "LHR",
+       "BA",
+       "977"
+      ],
+      [
+       "LHR",
+       "2026-12-02",
+       "LAX",
+       "BA",
+       "269"
+      ]
+     ],
+     "dep": "2026-12-02",
+     "ret": "2026-12-16",
+     "stay": 14,
+     "away": 16,
+     "leave": 12,
+     "price_google": 848,
+     "bag_info": [
+      "848 € + 140 € odhad za batožinu"
+     ]
+    },
+    {
+     "origin": "BER",
+     "dest": "LAX",
+     "dep_time": "2026-12-02 06:35",
+     "arr_time": "2026-12-02 13:25",
+     "price": 988,
+     "duration_min": 950,
+     "stops": 1,
+     "via": [
+      "LHR"
+     ],
+     "airlines": [
+      "British Airways"
+     ],
+     "segments": [
+      [
+       "BER",
+       "2026-12-02",
+       "LHR",
+       "BA",
+       "993"
+      ],
+      [
+       "LHR",
+       "2026-12-02",
+       "LAX",
+       "BA",
+       "283"
+      ]
+     ],
+     "dep": "2026-12-02",
+     "ret": "2026-12-16",
+     "stay": 14,
+     "away": 16,
+     "leave": 12,
+     "price_google": 848,
+     "bag_info": [
+      "848 € + 140 € odhad za batožinu"
+     ]
+    },
+    {
+     "origin": "KRK",
+     "dest": "LAX",
+     "dep_time": "2026-12-02 13:30",
+     "arr_time": "2026-12-02 20:10",
+     "price": 1006,
+     "duration_min": 940,
+     "stops": 1,
+     "via": [
+      "WAW"
+     ],
+     "airlines": [
+      "LOT"
+     ],
+     "segments": [
+      [
+       "KRK",
+       "2026-12-02",
+       "WAW",
+       "LO",
+       "3920"
+      ],
+      [
+       "WAW",
+       "2026-12-02",
+       "LAX",
+       "LO",
+       "23"
+      ]
+     ],
+     "dep": "2026-12-02",
+     "ret": "2026-12-16",
+     "stay": 14,
+     "away": 16,
+     "leave": 12,
+     "price_google": 866,
+     "bag_info": [
+      "866 € + 140 € odhad za batožinu"
+     ]
+    }
+   ],
+   "url": "https://www.google.com/travel/flights/search?tfs=GlcSCjIwMjYtMTItMDIoAmCwCWoFEgNGUkFqBRIDQkVSagUSA1dBV2oFEgNLUktqBRIDS1RXcgUSA0xBWHIFEgNTRk9yBRIDU0FOcgUSA1NKQ3IFEgNPQUsaVxIKMjAyNi0xMi0xNigCYLAJagUSA0xBWGoFEgNTRk9qBRIDU0FOagUSA1NKQ2oFEgNPQUtyBRIDRlJBcgUSA0JFUnIFEgNXQVdyBRIDS1JLcgUSA0tUV0IBAUgBmAEB&hl=en&curr=EUR",
+   "history": [
+    [
+     "2026-10-14",
+     859
+    ]
+   ]
+  },
+  "2026-12-07_2026-12-20_g0": {
+   "dep": "2026-12-07",
+   "ret": "2026-12-20",
+   "stay": 13,
+   "away": 15,
+   "leave": 11,
+   "group": 0,
+   "last_checked": "2026-10-14",
+   "best_price": 907,
+   "offers": [
+    {
+     "origin": "MUC",
+     "dest": "LAX",
+     "dep_time": "2026-12-07 10:50",
+     "arr_time": "2026-12-07 18:40",
+     "price": 907,
+     "duration_min": 1010,
+     "stops": 1,
+     "via": [
+      "DUB"
+     ],
+     "airlines": [
+      "Aer Lingus"
+     ],
+     "segments": [
+      [
+       "MUC",
+       "2026-12-07",
+       "DUB",
+       "EI",
+       "353"
+      ],
+      [
+       "DUB",
+       "2026-12-07",
+       "LAX",
+       "EI",
+       "69"
+      ]
+     ],
+     "dep": "2026-12-07",
+     "ret": "2026-12-20",
+     "stay": 13,
+     "away": 15,
+     "leave": 11,
+     "price_google": 767,
+     "bag_info": [
+      "767 € + 140 € odhad za batožinu"
+     ]
+    },
+    {
+     "origin": "MUC",
+     "dest": "LAX",
+     "dep_time": "2026-12-07 10:20",
+     "arr_time": "2026-12-07 19:16",
+     "price": 1069,
+     "duration_min": 1076,
+     "stops": 1,
+     "via": [
+      "CLT"
+     ],
+     "airlines": [
+      "American"
+     ],
+     "segments": [
+      [
+       "MUC",
+       "2026-12-07",
+       "CLT",
+       "AA",
+       "763"
+      ],
+      [
+       "CLT",
+       "2026-12-07",
+       "LAX",
+       "AA",
+       "2775"
+      ]
+     ],
+     "dep": "2026-12-07",
+     "ret": "2026-12-20",
+     "stay": 13,
+     "away": 15,
+     "leave": 11,
+     "price_google": 929,
+     "bag_info": [
+      "929 € + 140 € odhad za batožinu"
+     ]
+    },
+    {
+     "origin": "MUC",
+     "dest": "LAX",
+     "dep_time": "2026-12-07 07:20",
+     "arr_time": "2026-12-07 15:20",
+     "price": 1078,
+     "duration_min": 1020,
+     "stops": 1,
+     "via": [
+      "LHR"
+     ],
+     "airlines": [
+      "British Airways",
+      "American"
+     ],
+     "segments": [
+      [
+       "MUC",
+       "2026-12-07",
+       "LHR",
+       "BA",
+       "957"
+      ],
+      [
+       "LHR",
+       "2026-12-07",
+       "LAX",
+       "AA",
+       "137"
+      ]
+     ],
+     "dep": "2026-12-07",
+     "ret": "2026-12-20",
+     "stay": 13,
+     "away": 15,
+     "leave": 11,
+     "price_google": 938,
+     "bag_info": [
+      "938 € + 140 € odhad za batožinu"
+     ]
+    },
+    {
+     "origin": "MUC",
+     "dest": "SFO",
+     "dep_time": "2026-12-07 06:55",
+     "arr_time": "2026-12-07 16:30",
+     "price": 1150,
+     "duration_min": 1115,
+     "stops": 1,
+     "via": [
+      "IST"
+     ],
+     "airlines": [
+      "Turkish Airlines"
+     ],
+     "segments": [
+      [
+       "MUC",
+       "2026-12-07",
+       "IST",
+       "TK",
+       "1638"
+      ],
+      [
+       "IST",
+       "2026-12-07",
+       "SFO",
+       "TK",
+       "79"
+      ]
+     ],
+     "dep": "2026-12-07",
+     "ret": "2026-12-20",
+     "stay": 13,
+     "away": 15,
+     "leave": 11,
+     "price_google": 1150,
+     "bag_info": [
+      "batožina v cene (dopravca)"
+     ]
+    },
+    {
+     "origin": "PRG",
+     "dest": "LAX",
+     "dep_time": "2026-12-07 06:50",
+     "arr_time": "2026-12-07 13:25",
+     "price": 1183,
+     "duration_min": 935,
+     "stops": 1,
+     "via": [
+      "LHR"
+     ],
+     "airlines": [
+      "British Airways"
+     ],
+     "segments": [
+      [
+       "PRG",
+       "2026-12-07",
+       "LHR",
+       "BA",
+       "865"
+      ],
+      [
+       "LHR",
+       "2026-12-07",
+       "LAX",
+       "BA",
+       "283"
+      ]
+     ],
+     "dep": "2026-12-07",
+     "ret": "2026-12-20",
+     "stay": 13,
+     "away": 15,
+     "leave": 11,
+     "price_google": 1043,
+     "bag_info": [
+      "1043 € + 140 € odhad za batožinu"
+     ]
+    }
+   ],
+   "url": "https://www.google.com/travel/flights/search?tfs=GlcSCjIwMjYtMTItMDcoAmCwCWoFEgNWSUVqBRIDUFJHagUSA0JUU2oFEgNCVURqBRIDTVVDcgUSA0xBWHIFEgNTRk9yBRIDU0FOcgUSA1NKQ3IFEgNPQUsaVxIKMjAyNi0xMi0yMCgCYLAJagUSA0xBWGoFEgNTRk9qBRIDU0FOagUSA1NKQ2oFEgNPQUtyBRIDVklFcgUSA1BSR3IFEgNCVFNyBRIDQlVEcgUSA01VQ0IBAUgBmAEB&hl=en&curr=EUR",
+   "history": [
+    [
+     "2026-10-14",
+     907
+    ]
+   ]
+  },
+  "2026-12-07_2026-12-20_g1": {
+   "dep": "2026-12-07",
+   "ret": "2026-12-20",
+   "stay": 13,
+   "away": 15,
+   "leave": 11,
+   "group": 1,
+   "last_checked": "2026-10-14",
+   "best_price": 814,
+   "offers": [
+    {
+     "origin": "BER",
+     "dest": "LAX",
+     "dep_time": "2026-12-07 10:15",
+     "arr_time": "2026-12-07 18:40",
+     "price": 814,
+     "duration_min": 1045,
+     "stops": 1,
+     "via": [
+      "DUB"
+     ],
+     "airlines": [
+      "Aer Lingus"
+     ],
+     "segments": [
+      [
+       "BER",
+       "2026-12-07",
+       "DUB",
+       "EI",
+       "333"
+      ],
+      [
+       "DUB",
+       "2026-12-07",
+       "LAX",
+       "EI",
+       "69"
+      ]
+     ],
+     "dep": "2026-12-07",
+     "ret": "2026-12-20",
+     "stay": 13,
+     "away": 15,
+     "leave": 11,
+     "price_google": 674,
+     "bag_info": [
+      "674 € + 140 € odhad za batožinu"
+     ]
+    },
+    {
+     "origin": "BER",
+     "dest": "LAX",
+     "dep_time": "2026-12-07 06:20",
+     "arr_time": "2026-12-07 13:25",
+     "price": 1000,
+     "duration_min": 965,
+     "stops": 1,
+     "via": [
+      "LHR"
+     ],
+     "airlines": [
+      "British Airways"
+     ],
+     "segments": [
+      [
+       "BER",
+       "2026-12-07",
+       "LHR",
+       "BA",
+       "993"
+      ],
+      [
+       "LHR",
+       "2026-12-07",
+       "LAX",
+       "BA",
+       "283"
+      ]
+     ],
+     "dep": "2026-12-07",
+     "ret": "2026-12-20",
+     "stay": 13,
+     "away": 15,
+     "leave": 11,
+     "price_google": 860,
+     "bag_info": [
+      "860 € + 140 € odhad za batožinu"
+     ]
+    },
+    {
+     "origin": "BER",
+     "dest": "LAX",
+     "dep_time": "2026-12-07 06:20",
+     "arr_time": "2026-12-07 15:20",
+     "price": 985,
+     "duration_min": 1080,
+     "stops": 1,
+     "via": [
+      "LHR"
+     ],
+     "airlines": [
+      "British Airways",
+      "American"
+     ],
+     "segments": [
+      [
+       "BER",
+       "2026-12-07",
+       "LHR",
+       "BA",
+       "993"
+      ],
+      [
+       "LHR",
+       "2026-12-07",
+       "LAX",
+       "AA",
+       "137"
+      ]
+     ],
+     "dep": "2026-12-07",
+     "ret": "2026-12-20",
+     "stay": 13,
+     "away": 15,
+     "leave": 11,
+     "price_google": 845,
+     "bag_info": [
+      "845 € + 140 € odhad za batožinu"
+     ]
+    },
+    {
+     "origin": "BER",
+     "dest": "LAX",
+     "dep_time": "2026-12-07 08:45",
+     "arr_time": "2026-12-07 19:11",
+     "price": 992,
+     "duration_min": 1166,
+     "stops": 2,
+     "via": [
+      "HEL",
+      "DFW"
+     ],
+     "airlines": [
+      "Finnair",
+      "American"
+     ],
+     "segments": [
+      [
+       "BER",
+       "2026-12-07",
+       "HEL",
+       "AY",
+       "1432"
+      ],
+      [
+       "HEL",
+       "2026-12-07",
+       "DFW",
+       "AY",
+       "19"
+      ],
+      [
+       "DFW",
+       "2026-12-07",
+       "LAX",
+       "AA",
+       "1526"
+      ]
+     ],
+     "dep": "2026-12-07",
+     "ret": "2026-12-20",
+     "stay": 13,
+     "away": 15,
+     "leave": 11,
+     "price_google": 852,
+     "bag_info": [
+      "852 € + 140 € odhad za batožinu"
+     ]
+    },
+    {
+     "origin": "FRA",
+     "dest": "LAX",
+     "dep_time": "2026-12-07 10:15",
+     "arr_time": "2026-12-07 19:11",
+     "price": 1023,
+     "duration_min": 1076,
+     "stops": 1,
+     "via": [
+      "DFW"
+     ],
+     "airlines": [
+      "American"
+     ],
+     "segments": [
+      [
+       "FRA",
+       "2026-12-07",
+       "DFW",
+       "AA",
+       "71"
+      ],
+      [
+       "DFW",
+       "2026-12-07",
+       "LAX",
+       "AA",
+       "1526"
+      ]
+     ],
+     "dep": "2026-12-07",
+     "ret": "2026-12-20",
+     "stay": 13,
+     "away": 15,
+     "leave": 11,
+     "price_google": 883,
+     "bag_info": [
+      "883 € + 140 € odhad za batožinu"
+     ]
+    }
+   ],
+   "url": "https://www.google.com/travel/flights/search?tfs=GlcSCjIwMjYtMTItMDcoAmCwCWoFEgNGUkFqBRIDQkVSagUSA1dBV2oFEgNLUktqBRIDS1RXcgUSA0xBWHIFEgNTRk9yBRIDU0FOcgUSA1NKQ3IFEgNPQUsaVxIKMjAyNi0xMi0yMCgCYLAJagUSA0xBWGoFEgNTRk9qBRIDU0FOagUSA1NKQ2oFEgNPQUtyBRIDRlJBcgUSA0JFUnIFEgNXQVdyBRIDS1JLcgUSA0tUV0IBAUgBmAEB&hl=en&curr=EUR",
+   "history": [
+    [
+     "2026-10-14",
+     814
+    ]
+   ]
+  },
+  "2026-12-08_2026-12-20_g0": {
+   "dep": "2026-12-08",
+   "ret": "2026-12-20",
+   "stay": 12,
+   "away": 14,
+   "leave": 10,
+   "group": 0,
+   "last_checked": "2026-10-14",
+   "best_price": 953,
+   "offers": [
+    {
+     "origin": "VIE",
+     "dest": "LAX",
+     "dep_time": "2026-12-08 11:40",
+     "arr_time": "2026-12-08 17:05",
+     "price": 953,
+     "duration_min": 865,
+     "stops": 1,
+     "via": [
+      "HEL"
+     ],
+     "airlines": [
+      "Finnair"
+     ],
+     "segments": [
+      [
+       "VIE",
+       "2026-12-08",
+       "HEL",
+       "AY",
+       "1472"
+      ],
+      [
+       "HEL",
+       "2026-12-08",
+       "LAX",
+       "AY",
+       "1"
+      ]
+     ],
+     "dep": "2026-12-08",
+     "ret": "2026-12-20",
+     "stay": 12,
+     "away": 14,
+     "leave": 10,
+     "price_google": 813,
+     "bag_info": [
+      "813 € + 140 € odhad za batožinu"
+     ]
+    },
+    {
+     "origin": "MUC",
+     "dest": "LAX",
+     "dep_time": "2026-12-08 10:30",
+     "arr_time": "2026-12-08 17:05",
+     "price": 1047,
+     "duration_min": 935,
+     "stops": 1,
+     "via": [
+      "HEL"
+     ],
+     "airlines": [
+      "Finnair"
+     ],
+     "segments": [
+      [
+       "MUC",
+       "2026-12-08",
+       "HEL",
+       "AY",
+       "1402"
+      ],
+      [
+       "HEL",
+       "2026-12-08",
+       "LAX",
+       "AY",
+       "1"
+      ]
+     ],
+     "dep": "2026-12-08",
+     "ret": "2026-12-20",
+     "stay": 12,
+     "away": 14,
+     "leave": 10,
+     "price_google": 907,
+     "bag_info": [
+      "907 € + 140 € odhad za batožinu"
+     ]
+    },
+    {
+     "origin": "PRG",
+     "dest": "LAX",
+     "dep_time": "2026-12-08 11:40",
+     "arr_time": "2026-12-08 17:05",
+     "price": 1060,
+     "duration_min": 865,
+     "stops": 1,
+     "via": [
+      "HEL"
+     ],
+     "airlines": [
+      "Finnair"
+     ],
+     "segments": [
+      [
+       "PRG",
+       "2026-12-08",
+       "HEL",
+       "AY",
+       "1222"
+      ],
+      [
+       "HEL",
+       "2026-12-08",
+       "LAX",
+       "AY",
+       "1"
+      ]
+     ],
+     "dep": "2026-12-08",
+     "ret": "2026-12-20",
+     "stay": 12,
+     "away": 14,
+     "leave": 10,
+     "price_google": 920,
+     "bag_info": [
+      "920 € + 140 € odhad za batožinu"
+     ]
+    },
+    {
+     "origin": "MUC",
+     "dest": "LAX",
+     "dep_time": "2026-12-08 07:35",
+     "arr_time": "2026-12-08 15:20",
+     "price": 1078,
+     "duration_min": 1005,
+     "stops": 1,
+     "via": [
+      "LHR"
+     ],
+     "airlines": [
+      "British Airways",
+      "American"
+     ],
+     "segments": [
+      [
+       "MUC",
+       "2026-12-08",
+       "LHR",
+       "BA",
+       "957"
+      ],
+      [
+       "LHR",
+       "2026-12-08",
+       "LAX",
+       "AA",
+       "137"
+      ]
+     ],
+     "dep": "2026-12-08",
+     "ret": "2026-12-20",
+     "stay": 12,
+     "away": 14,
+     "leave": 10,
+     "price_google": 938,
+     "bag_info": [
+      "938 € + 140 € odhad za batožinu"
+     ]
+    },
+    {
+     "origin": "BUD",
+     "dest": "LAX",
+     "dep_time": "2026-12-08 11:35",
+     "arr_time": "2026-12-08 17:05",
+     "price": 1113,
+     "duration_min": 870,
+     "stops": 1,
+     "via": [
+      "HEL"
+     ],
+     "airlines": [
+      "Finnair"
+     ],
+     "segments": [
+      [
+       "BUD",
+       "2026-12-08",
+       "HEL",
+       "AY",
+       "1252"
+      ],
+      [
+       "HEL",
+       "2026-12-08",
+       "LAX",
+       "AY",
+       "1"
+      ]
+     ],
+     "dep": "2026-12-08",
+     "ret": "2026-12-20",
+     "stay": 12,
+     "away": 14,
+     "leave": 10,
+     "price_google": 973,
+     "bag_info": [
+      "973 € + 140 € odhad za batožinu"
+     ]
+    }
+   ],
+   "url": "https://www.google.com/travel/flights/search?tfs=GlcSCjIwMjYtMTItMDgoAmCwCWoFEgNWSUVqBRIDUFJHagUSA0JUU2oFEgNCVURqBRIDTVVDcgUSA0xBWHIFEgNTRk9yBRIDU0FOcgUSA1NKQ3IFEgNPQUsaVxIKMjAyNi0xMi0yMCgCYLAJagUSA0xBWGoFEgNTRk9qBRIDU0FOagUSA1NKQ2oFEgNPQUtyBRIDVklFcgUSA1BSR3IFEgNCVFNyBRIDQlVEcgUSA01VQ0IBAUgBmAEB&hl=en&curr=EUR",
+   "history": [
+    [
+     "2026-10-14",
+     953
+    ]
+   ]
+  },
+  "2026-12-08_2026-12-20_g1": {
+   "dep": "2026-12-08",
+   "ret": "2026-12-20",
+   "stay": 12,
+   "away": 14,
+   "leave": 10,
+   "group": 1,
+   "last_checked": "2026-10-14",
+   "best_price": 985,
+   "offers": [
+    {
+     "origin": "BER",
+     "dest": "LAX",
+     "dep_time": "2026-12-08 08:45",
+     "arr_time": "2026-12-08 17:05",
+     "price": 986,
+     "duration_min": 1040,
+     "stops": 1,
+     "via": [
+      "HEL"
+     ],
+     "airlines": [
+      "Finnair"
+     ],
+     "segments": [
+      [
+       "BER",
+       "2026-12-08",
+       "HEL",
+       "AY",
+       "1432"
+      ],
+      [
+       "HEL",
+       "2026-12-08",
+       "LAX",
+       "AY",
+       "1"
+      ]
+     ],
+     "dep": "2026-12-08",
+     "ret": "2026-12-20",
+     "stay": 12,
+     "away": 14,
+     "leave": 10,
+     "price_google": 846,
+     "bag_info": [
+      "846 € + 140 € odhad za batožinu"
+     ]
+    },
+    {
+     "origin": "BER",
+     "dest": "LAX",
+     "dep_time": "2026-12-08 06:20",
+     "arr_time": "2026-12-08 13:25",
+     "price": 1000,
+     "duration_min": 965,
+     "stops": 1,
+     "via": [
+      "LHR"
+     ],
+     "airlines": [
+      "British Airways"
+     ],
+     "segments": [
+      [
+       "BER",
+       "2026-12-08",
+       "LHR",
+       "BA",
+       "993"
+      ],
+      [
+       "LHR",
+       "2026-12-08",
+       "LAX",
+       "BA",
+       "283"
+      ]
+     ],
+     "dep": "2026-12-08",
+     "ret": "2026-12-20",
+     "stay": 12,
+     "away": 14,
+     "leave": 10,
+     "price_google": 860,
+     "bag_info": [
+      "860 € + 140 € odhad za batožinu"
+     ]
+    },
+    {
+     "origin": "BER",
+     "dest": "LAX",
+     "dep_time": "2026-12-08 06:20",
+     "arr_time": "2026-12-08 15:20",
+     "price": 985,
+     "duration_min": 1080,
+     "stops": 1,
+     "via": [
+      "LHR"
+     ],
+     "airlines": [
+      "British Airways",
+      "American"
+     ],
+     "segments": [
+      [
+       "BER",
+       "2026-12-08",
+       "LHR",
+       "BA",
+       "993"
+      ],
+      [
+       "LHR",
+       "2026-12-08",
+       "LAX",
+       "AA",
+       "137"
+      ]
+     ],
+     "dep": "2026-12-08",
+     "ret": "2026-12-20",
+     "stay": 12,
+     "away": 14,
+     "leave": 10,
+     "price_google": 845,
+     "bag_info": [
+      "845 € + 140 € odhad za batožinu"
+     ]
+    },
+    {
+     "origin": "FRA",
+     "dest": "LAX",
+     "dep_time": "2026-12-08 11:30",
+     "arr_time": "2026-12-08 17:05",
+     "price": 1016,
+     "duration_min": 875,
+     "stops": 1,
+     "via": [
+      "HEL"
+     ],
+     "airlines": [
+      "Finnair"
+     ],
+     "segments": [
+      [
+       "FRA",
+       "2026-12-08",
+       "HEL",
+       "AY",
+       "1412"
+      ],
+      [
+       "HEL",
+       "2026-12-08",
+       "LAX",
+       "AY",
+       "1"
+      ]
+     ],
+     "dep": "2026-12-08",
+     "ret": "2026-12-20",
+     "stay": 12,
+     "away": 14,
+     "leave": 10,
+     "price_google": 876,
+     "bag_info": [
+      "876 € + 140 € odhad za batožinu"
+     ]
+    },
+    {
+     "origin": "BER",
+     "dest": "LAX",
+     "dep_time": "2026-12-08 10:50",
+     "arr_time": "2026-12-08 20:20",
+     "price": 985,
+     "duration_min": 1110,
+     "stops": 1,
+     "via": [
+      "LHR"
+     ],
+     "airlines": [
+      "British Airways",
+      "American"
+     ],
+     "segments": [
+      [
+       "BER",
+       "2026-12-08",
+       "LHR",
+       "BA",
+       "977"
+      ],
+      [
+       "LHR",
+       "2026-12-08",
+       "LAX",
+       "AA",
+       "135"
+      ]
+     ],
+     "dep": "2026-12-08",
+     "ret": "2026-12-20",
+     "stay": 12,
+     "away": 14,
+     "leave": 10,
+     "price_google": 845,
+     "bag_info": [
+      "845 € + 140 € odhad za batožinu"
+     ]
+    }
+   ],
+   "url": "https://www.google.com/travel/flights/search?tfs=GlcSCjIwMjYtMTItMDgoAmCwCWoFEgNGUkFqBRIDQkVSagUSA1dBV2oFEgNLUktqBRIDS1RXcgUSA0xBWHIFEgNTRk9yBRIDU0FOcgUSA1NKQ3IFEgNPQUsaVxIKMjAyNi0xMi0yMCgCYLAJagUSA0xBWGoFEgNTRk9qBRIDU0FOagUSA1NKQ2oFEgNPQUtyBRIDRlJBcgUSA0JFUnIFEgNXQVdyBRIDS1JLcgUSA0tUV0IBAUgBmAEB&hl=en&curr=EUR",
+   "history": [
+    [
+     "2026-10-14",
+     985
     ]
    ]
   }

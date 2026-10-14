@@ -1,6 +1,39 @@
-{"date": "2026-10-13", "unit": "2026-11-26_2026-12-12_g0", "n_offers": 0, "min_price": null, "error": "Invalid API key. Your API key should be here: https://serpapi.com/manage-api-key"}
-{"date": "2026-10-13", "unit": "2026-11-27_2026-12-13_g0", "n_offers": 0, "min_price": null, "error": "Invalid API key. Your API key should be here: https://serpapi.com/manage-api-key"}
-{"date": "2026-10-13", "unit": "2026-11-28_2026-12-14_g0", "n_offers": 0, "min_price": null, "error": "Invalid API key. Your API key should be here: https://serpapi.com/manage-api-key"}
-{"date": "2026-10-13", "unit": "2026-12-03_2026-12-19_g0", "n_offers": 0, "min_price": null, "error": "Invalid API key. Your API key should be here: https://serpapi.com/manage-api-key"}
-{"date": "2026-10-13", "unit": "2026-12-04_2026-12-20_g0", "n_offers": 0, "min_price": null, "error": "Invalid API key. Your API key should be here: https://serpapi.com/manage-api-key"}
-{"date": "2026-10-13", "unit": "2026-11-26_2026-12-12_g1", "n_offers": 0, "min_price": null, "error": "Invalid API key. Your API key should be here: https://serpapi.com/manage-api-key"}
+{"date": "2026-10-13", "source": "google", "unit": "2026-11-26_2026-12-12_g0", "n_offers": 11, "min_price": 641, "error": null}
+{"date": "2026-10-13", "source": "google", "unit": "2026-11-27_2026-12-13_g0", "n_offers": 10, "min_price": 683, "error": null}
+{"date": "2026-10-13", "source": "google", "unit": "2026-11-28_2026-12-14_g0", "n_offers": 11, "min_price": 1076, "error": null}
+{"date": "2026-10-13", "source": "google", "unit": "2026-12-03_2026-12-19_g0", "n_offers": 13, "min_price": 1196, "error": null}
+{"date": "2026-10-13", "source": "google", "unit": "2026-12-04_2026-12-20_g0", "n_offers": 8, "min_price": 893, "error": null}
+{"date": "2026-10-13", "source": "google", "unit": "2026-11-26_2026-12-12_g1", "n_offers": 14, "min_price": 733, "error": null}
+{"date": "2026-10-13", "source": "google", "unit": "2026-11-27_2026-12-13_g1", "n_offers": 16, "min_price": 739, "error": null}
+{"date": "2026-10-13", "source": "google", "unit": "2026-11-28_2026-12-14_g1", "n_offers": 15, "min_price": 1012, "error": null}
+{"date": "2026-10-13", "source": "google", "unit": "2026-12-03_2026-12-19_g1", "n_offers": 12, "min_price": 949, "error": null}
+{"date": "2026-10-13", "source": "google", "unit": "2026-12-04_2026-12-20_g1", "n_offers": 15, "min_price": 784, "error": null}
+{"date": "2026-10-13", "source": "google", "unit": "2026-12-05_2026-12-20_g0", "n_offers": 12, "min_price": 832, "error": null}
+{"date": "2026-10-14", "source": "google", "unit": "2026-11-26_2026-12-12_g0", "n_offers": 11, "min_price": 641, "error": null}
+{"date": "2026-10-14", "source": "google", "unit": "2026-11-27_2026-12-13_g0", "n_offers": 10, "min_price": 683, "error": null}
+{"date": "2026-10-14", "source": "google", "unit": "2026-11-28_2026-12-14_g0", "n_offers": 11, "min_price": 1075, "error": null}
+{"date": "2026-10-14", "source": "google", "unit": "2026-12-03_2026-12-19_g0", "n_offers": 12, "min_price": 1196, "error": null}
+{"date": "2026-10-14", "source": "google", "unit": "2026-12-04_2026-12-20_g0", "n_offers": 9, "min_price": 953, "error": null}
+{"date": "2026-10-14", "source": "google", "unit": "2026-11-26_2026-12-12_g1", "n_offers": 10, "min_price": 731, "error": null}
+{"date": "2026-10-14", "source": "google", "unit": "2026-11-27_2026-12-13_g1", "n_offers": 15, "min_price": 739, "error": null}
+{"date": "2026-10-14", "source": "google", "unit": "2026-11-28_2026-12-14_g1", "n_offers": 14, "min_price": 1012, "error": null}
+{"date": "2026-10-14", "source": "google", "unit": "2026-12-03_2026-12-19_g1", "n_offers": 12, "min_price": 949, "error": null}
+{"date": "2026-10-14", "source": "google", "unit": "2026-12-04_2026-12-20_g1", "n_offers": 14, "min_price": 784, "error": null}
+{"date": "2026-10-14", "source": "google", "unit": "2026-12-05_2026-12-20_g0", "n_offers": 12, "min_price": 968, "error": null}
+{"date": "2026-10-14", "source": "google", "unit": "2026-11-29_2026-12-14_g0", "n_offers": 11, "min_price": 1112, "error": null}
+{"date": "2026-10-14", "source": "google", "unit": "2026-12-05_2026-12-20_g1", "n_offers": 15, "min_price": 935, "error": null}
+{"date": "2026-10-14", "source": "google", "unit": "2026-11-29_2026-12-14_g1", "n_offers": 10, "min_price": 1084, "error": null}
+{"date": "2026-10-14", "source": "google", "unit": "2026-12-06_2026-12-20_g0", "n_offers": 10, "min_price": 1042, "error": null}
+{"date": "2026-10-14", "source": "google", "unit": "2026-11-25_2026-12-09_g0", "n_offers": 17, "min_price": 641, "error": null}
+{"date": "2026-10-14", "source": "google", "unit": "2026-11-30_2026-12-14_g0", "n_offers": 9, "min_price": 802, "error": null}
+{"date": "2026-10-14", "source": "google", "unit": "2026-12-01_2026-12-15_g0", "n_offers": 10, "min_price": 793, "error": null}
+{"date": "2026-10-14", "source": "google", "unit": "2026-12-02_2026-12-16_g0", "n_offers": 11, "min_price": 829, "error": null}
+{"date": "2026-10-14", "source": "google", "unit": "2026-12-06_2026-12-20_g1", "n_offers": 13, "min_price": 845, "error": null}
+{"date": "2026-10-14", "source": "google", "unit": "2026-11-25_2026-12-09_g1", "n_offers": 15, "min_price": 690, "error": null}
+{"date": "2026-10-14", "source": "google", "unit": "2026-11-30_2026-12-14_g1", "n_offers": 16, "min_price": 794, "error": null}
+{"date": "2026-10-14", "source": "google", "unit": "2026-12-01_2026-12-15_g1", "n_offers": 11, "min_price": 770, "error": null}
+{"date": "2026-10-14", "source": "google", "unit": "2026-12-02_2026-12-16_g1", "n_offers": 13, "min_price": 859, "error": null}
+{"date": "2026-10-14", "source": "google", "unit": "2026-12-07_2026-12-20_g0", "n_offers": 12, "min_price": 907, "error": null}
+{"date": "2026-10-14", "source": "google", "unit": "2026-12-07_2026-12-20_g1", "n_offers": 12, "min_price": 814, "error": null}
+{"date": "2026-10-14", "source": "google", "unit": "2026-12-08_2026-12-20_g0", "n_offers": 13, "min_price": 953, "error": null}
+{"date": "2026-10-14", "source": "google", "unit": "2026-12-08_2026-12-20_g1", "n_offers": 16, "min_price": 985, "error": null}
