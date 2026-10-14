@@ -91,6 +91,7 @@ limits:
   circuit_breaker_consecutive_failures: 8
   top_offers_per_query: 10
   min_offers_before_fallback: 3     # fewer offers from a free source = treat as truncated, try next source
+  max_runtime_min: 270              # job timeout is 300; stage A stops at 80 % of this, all queries at 100 %
 
 load_shedding_order: [tier3, sfo_sjc_oak, tier2, stage_b_openjaw]
 

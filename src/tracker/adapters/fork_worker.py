@@ -10,6 +10,16 @@ import json
 import sys
 
 
+class LenientJson:
+    """The fork json.loads()es each streamed line; on some IPs a line carries
+    trailing data after the first JSON value ("Extra data"). Parse the first value only."""
+    dumps = staticmethod(json.dumps)
+
+    @staticmethod
+    def loads(s):
+        return json.JSONDecoder().raw_decode(s.strip())[0]
+
+
 def main() -> None:
     req = json.load(sys.stdin)
     import fast_flights
@@ -34,6 +44,7 @@ def main() -> None:
             raise RuntimeError("EU consent page" if "consent" in head else "no ds:1 data in page")
         return Raw([json.loads(script.text().split("data:", 1)[1].rsplit(",", 1)[0])])
 
+    fetcher.json = LenientJson
     # Return Google's raw payload instead of the fork's parsed model.
     fetcher.parse_payload = lambda p: Raw([p])
     fetcher.parse = page_payload

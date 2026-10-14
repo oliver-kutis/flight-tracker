@@ -272,7 +272,9 @@ class FastFlightsFork(Adapter):
             r = {"error": "fork worker timeout"}
         if "error" in r:
             status = CONSENT if "consent" in r["error"].lower() else ERROR
-            return _result(self.name, self.version(), status, None, r["error"], tq, tfs, cfg, None, 2)
+            res = _result(self.name, self.version(), status, None, r["error"], tq, tfs, cfg, None, 2)
+            res.retryable = "timeout" in r["error"].lower()  # parse/refusal errors repeat on retry
+            return res
         res = _result(self.name, self.version(), OK, r["payload"], None, tq, tfs, cfg,
                       r["complete"], r.get("http_calls", 2))
         if res.status == EMPTY and r["complete"] is False:

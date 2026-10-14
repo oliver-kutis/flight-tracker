@@ -209,3 +209,33 @@ def test_cnb_parse():
     text = "13 Oct 2026 #197\nCountry|Currency|Amount|Code|Rate\nEMU|euro|1|EUR|24.320\nJapan|yen|100|JPY|15.500\n"
     date, rates = parse_cnb(text)
     assert date == "2026-10-13" and rates["EUR"] == 24.32 and rates["JPY"] == 0.155
+
+
+def test_fork_worker_lenient_json():
+    import importlib.util
+    from pathlib import Path
+    import tracker.adapters.gflights as g
+    spec = importlib.util.spec_from_file_location("fw", Path(g.__file__).with_name("fork_worker.py"))
+    fw = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(fw)
+    assert fw.LenientJson.loads('[["wrb.fr",null,"[1]"]]123\n') == [["wrb.fr", None, "[1]"]]
+
+
+def test_empty_then_failure_is_reported_as_failure(cfg):
+    from tracker.adapters import SearchResult
+    from tracker.main import Runner
+
+    class Fake:
+        def __init__(self, name, status, complete=None):
+            self.name, self.status, self.complete, self.free = name, status, complete, True
+
+        def available(self):
+            return True, ""
+
+        def run(self, task, cfg):
+            return SearchResult(self.name, self.status, complete=self.complete, retryable=False, error="x")
+
+    r = Runner(cfg, __import__("datetime").date(2026, 10, 14), 10, True, ["a", "b"])
+    r.adapters = {"a": Fake("a", "empty"), "b": Fake("b", "error", complete=False)}
+    res = r.execute(rt_task())
+    assert res.source == "b" and res.status == "error"

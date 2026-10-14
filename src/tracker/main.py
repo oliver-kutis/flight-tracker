@@ -60,7 +60,8 @@ class Runner:
         self.errors: list[dict] = []
         self.sources_used = Counter()
         self.planned = self.succeeded = 0
-        self.truncated_streak = 0
+        self.t0 = time.monotonic()
+        self.out_of_time = False
 
     # ------------------------------------------------------------ execution
 
@@ -79,6 +80,12 @@ class Runner:
     def execute(self, task: Task) -> SearchResult | None:
         """Try the source chain for one task. None = request budget exhausted."""
         lim = self.cfg.limits
+        share = 0.8 if task.stage == "A" else 1.0
+        if time.monotonic() - self.t0 > share * lim.max_runtime_min * 60:
+            if not self.out_of_time:
+                log.warning("runtime limit reached (stage %s); skipping remaining queries", task.stage)
+            self.out_of_time = True
+            return None
         chain = [task.opts["source"]] if task.opts.get("source") else self.chain
         best: SearchResult | None = None
         for i, name in enumerate(chain):
@@ -114,7 +121,10 @@ class Runner:
                     self.breaker_open.add(name)
                     self.degraded[name] = f"circuit breaker open after {self.fail_streak[name]} failures"
                     log.error("circuit breaker open for %s", name)
-            if best is None or len(res.offers) > len(best.offers):
+            # Prefer more offers; with none anywhere, report a failure over an "empty" page
+            # (an empty page from a page-only source may just be a truncated slow search).
+            if best is None or len(res.offers) > len(best.offers) or (
+                    not res.offers and not best.offers and best.status == EMPTY and res.status != EMPTY):
                 best = res
             last_free = not any(self.adapters[n].free for n in chain[i + 1:] if n in self.adapters)
             if res.status == OK and (len(res.offers) >= lim.min_offers_before_fallback or not ad.free or last_free):
@@ -129,7 +139,7 @@ class Runner:
         self.planned += 1
         res = self.execute(task)
         if res is None:
-            task.status, task.error = "skipped", "request budget exhausted"
+            task.status, task.error = "skipped", "runtime limit reached" if self.out_of_time else "request budget exhausted"
             return []
         task.source_used = res.source
         self.sources_used[res.source] += 1
@@ -462,7 +472,8 @@ def main(argv=None) -> int:
         "requests": {"free_budget": budget, "free_used": run.free_used,
                      "by_source_and_stage": {k: dict(v) for k, v in run.requests.items()},
                      "outcomes_by_source": {k: dict(v) for k, v in run.outcomes.items()}},
-        "queries": {"planned": run.planned, "succeeded": run.succeeded, "success_rate": round(success_rate, 3)},
+        "queries": {"planned": run.planned, "succeeded": run.succeeded, "success_rate": round(success_rate, 3),
+                    "runtime_min": round((time.monotonic() - run.t0) / 60, 1), "runtime_limit_hit": run.out_of_time},
         "sources_used_for_results": dict(run.sources_used), "source_chain": run.chain,
         "degraded": run.degraded, "circuit_breakers_open": sorted(run.breaker_open),
         "capability_report": caps, "bag_filter_effective": meta_extra["bag_filter_effective"],

@@ -98,6 +98,7 @@ class Limits(M):
     circuit_breaker_consecutive_failures: int = 8
     top_offers_per_query: int = 10
     min_offers_before_fallback: int = 3
+    max_runtime_min: float = 270  # stage A stops at 80 %, all querying at 100 %; outputs are still written
 
 
 class StageA(M):
