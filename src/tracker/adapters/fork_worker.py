@@ -45,6 +45,21 @@ def main() -> None:
         return Raw([json.loads(script.text().split("data:", 1)[1].rsplit(",", 1)[0])])
 
     fetcher.json = LenientJson
+    deferred_errors = []
+    deferred = fetcher._fetch_deferred_results
+
+    def safe_deferred(*a, **k):
+        """The follow-up step crashes on some page layouts (seen on GitHub runners);
+        treat that like a refusal so the fork falls back to the page's own results."""
+        try:
+            return deferred(*a, **k)
+        except fetcher.FlightsNotFound:
+            raise
+        except Exception as e:  # noqa: BLE001
+            deferred_errors.append(f"{type(e).__name__}: {e}"[:200])
+            raise fetcher.FlightsNotFound(deferred_errors[-1]) from e
+
+    fetcher._fetch_deferred_results = safe_deferred
     # Return Google's raw payload instead of the fork's parsed model.
     fetcher.parse_payload = lambda p: Raw([p])
     fetcher.parse = page_payload
@@ -64,7 +79,7 @@ def main() -> None:
 
     try:
         res = fetcher.get_flights(TfsQuery(req["tfs"], req["hl"], req["curr"], req.get("gl", "")))
-        print(json.dumps({"payload": res[0], "complete": res.complete}))
+        print(json.dumps({"payload": res[0], "complete": res.complete, "note": "; ".join(deferred_errors)}))
     except Exception as e:  # noqa: BLE001 - reported to the parent, with where it failed
         import traceback
         where = " <- ".join(f"{f.name}:{f.lineno}" for f in reversed(traceback.extract_tb(e.__traceback__)[-3:]))

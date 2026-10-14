@@ -277,6 +277,8 @@ class FastFlightsFork(Adapter):
             return res
         res = _result(self.name, self.version(), OK, r["payload"], None, tq, tfs, cfg,
                       r["complete"], r.get("http_calls", 2))
+        if r.get("note"):
+            res.error = f"follow-up failed, page results only: {r['note']}"
         if res.status == EMPTY and r["complete"] is False:
             # Page carried no results and Google refused the follow-up stream: not a real "no flights".
             res.status, res.error, res.retryable = ERROR, "truncated: page empty, follow-up results refused", False
