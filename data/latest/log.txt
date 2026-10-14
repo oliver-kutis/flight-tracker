@@ -1,32 +1,31 @@
-2026-10-14 13:18:49,644 INFO capability report: {"fast_flights": {"available": true, "reason": "", "checked_bags": true, "carry_on_bags": true, "exclude_basic_economy": true, "hide_separate_and_self_transfer": true, "currency": true, "max_stops": true, "max_duration_minutes": true, "min_layover_minutes": true, "max_layover_minutes": true, "multi_city": true, "return_options": "via tracker tfs extension (FlightData field 4); not native", "date_grid": false, "version": "3.1.0", "eu_consent_cookie": false, "streams_full_results": false, "parser": "tracker parse_payload (both buckets, flight numbers)"}, "fast_flights_fork": {"available": true, "reason": "", "checked_bags": true, "carry_on_bags": true, "exclude_basic_economy": true, "hide_separate_and_self_transfer": true, "currency": true, "max_stops": true, "max_duration_minutes": true, "min_layover_minutes": true, "max_layover_minutes": true, "multi_city": true, "return_options": "via tracker tfs extension (FlightData field 4); not native", "date_grid": false, "version": "fork@d162089", "eu_consent_cookie": true, "streams_full_results": true, "parser": "tracker parse_payload"}, "searchapi": {"available": true, "reason": "", "checked_bags": "accepted but no price effect observed", "carry_on_bags": true, "exclude_basic_economy": false, "hide_separate_and_self_transfer": false, "currency": true, "max_stops": true, "max_duration_minutes": false, "multi_city": true, "return_options": "departure_token", "date_grid": false}, "serpapi": {"available": true, "reason": "", "checked_bags": false, "carry_on_bags": true, "exclude_basic_economy": true, "hide_separate_and_self_transfer": false, "currency": true, "max_stops": true, "max_duration_minutes": true, "multi_city": true, "return_options": "departure_token", "date_grid": false}}
-2026-10-14 13:18:49,644 INFO plan: {"date": "2026-10-14", "budget": 50, "date_pairs": 67, "longest_pairs": 13, "stage_a_full": {"A:tier1": 402, "A:tier2": 132, "A:sfo_sjc_oak": 54, "A:tier3": 104}, "stage_a_after_shedding": {"A:tier1": 30}, "shed": {"tier3": 104, "sfo_sjc_oak": 54, "tier2": 132, "stage_b_openjaw": 200}, "reserved_dynamic": {"canary": 1, "return_options": 3, "exclude_basic": 3, "stage_b_openjaw": 11, "separate_probe": 2}, "stages": ["canary", "A", "B", "C", "D"]}
-2026-10-14 13:19:00,788 INFO canary ok via fast_flights (7 offers); checked-bag filter effective: False
-2026-10-14 13:19:13,279 INFO A tier1 VIE-SAN 2026-11-25: fast_flights empty (0 offers); trying next source
-2026-10-14 13:19:37,556 INFO A tier1 WAW-SAN 2026-11-26: fast_flights empty (0 offers); trying next source
-2026-10-14 13:20:46,284 INFO A tier1 WAW-SAN 2026-11-26: fast_flights_fork error (0 offers); trying next source
-2026-10-14 13:21:05,230 INFO A tier1 VIE-SAN 2026-11-26: fast_flights empty (0 offers); trying next source
-2026-10-14 13:22:17,128 INFO A tier1 VIE-SAN 2026-11-26: fast_flights_fork error (0 offers); trying next source
-2026-10-14 13:22:28,208 INFO A tier1 WAW-SAN 2026-11-27: fast_flights empty (0 offers); trying next source
-2026-10-14 13:22:59,838 INFO A tier1 VIE-SAN 2026-11-27: fast_flights empty (0 offers); trying next source
-2026-10-14 13:23:06,053 WARNING fast_flights_fork 37e57ebff635e95f attempt 1: JSONDecodeError: Extra data: line 1 column 236 (char 235)
-2026-10-14 13:23:39,623 WARNING fast_flights_fork 37e57ebff635e95f attempt 2: JSONDecodeError: Extra data: line 1 column 235 (char 234)
-2026-10-14 13:25:05,761 INFO A tier1 WAW-SAN 2026-11-28: fast_flights empty (0 offers); trying next source
-2026-10-14 13:25:10,032 WARNING fast_flights_fork 3b09f76f34cae7c2 attempt 1: JSONDecodeError: Extra data: line 1 column 236 (char 235)
-2026-10-14 13:25:44,835 WARNING fast_flights_fork 3b09f76f34cae7c2 attempt 2: JSONDecodeError: Extra data: line 1 column 234 (char 233)
-2026-10-14 13:26:50,652 WARNING fast_flights_fork 3b09f76f34cae7c2 attempt 3: JSONDecodeError: Extra data: line 1 column 235 (char 234)
-2026-10-14 13:28:50,652 INFO A tier1 WAW-SAN 2026-11-28: fast_flights_fork error (0 offers); trying next source
-2026-10-14 13:28:55,950 INFO A tier1 WAW-LAX 2026-11-28: fast_flights empty (0 offers); trying next source
-2026-10-14 13:29:02,001 WARNING fast_flights_fork ccc74a54bf5a2e1b attempt 1: JSONDecodeError: Extra data: line 1 column 235 (char 234)
-2026-10-14 13:29:36,489 WARNING fast_flights_fork ccc74a54bf5a2e1b attempt 2: JSONDecodeError: Extra data: line 1 column 236 (char 235)
-2026-10-14 13:31:05,227 INFO A tier1 VIE-SAN 2026-11-28: fast_flights empty (0 offers); trying next source
-2026-10-14 13:31:30,781 INFO A tier1 VIE-SAN 2026-11-28: fast_flights_fork error (0 offers); trying next source
-2026-10-14 13:31:42,432 INFO A tier1 WAW-SAN 2026-11-29: fast_flights empty (0 offers); trying next source
-2026-10-14 13:32:31,541 INFO A tier1 WAW-SAN 2026-11-29: fast_flights_fork error (0 offers); trying next source
-2026-10-14 13:32:40,116 INFO A tier1 MUC-SAN 2026-11-29: fast_flights empty (0 offers); trying next source
-2026-10-14 13:32:43,951 WARNING fast_flights_fork 0f9e613e053891ce attempt 1: JSONDecodeError: Extra data: line 1 column 235 (char 234)
-2026-10-14 13:33:18,100 WARNING fast_flights_fork 0f9e613e053891ce attempt 2: JSONDecodeError: Extra data: line 1 column 236 (char 235)
-2026-10-14 13:34:23,119 WARNING fast_flights_fork 0f9e613e053891ce attempt 3: JSONDecodeError: Extra data: line 1 column 234 (char 233)
-2026-10-14 13:36:23,119 INFO A tier1 MUC-SAN 2026-11-29: fast_flights_fork error (0 offers); trying next source
-2026-10-14 13:36:31,397 INFO A tier1 VIE-SAN 2026-11-29: fast_flights empty (0 offers); trying next source
-2026-10-14 13:37:40,615 INFO stage A done: 208 records, 50 free requests used
-2026-10-14 13:38:31,125 INFO done: 29/46 queries ok (63%), 208 records, free requests 50/50
+2026-10-14 14:29:44,658 INFO capability report: {"fast_flights": {"available": true, "reason": "", "checked_bags": true, "carry_on_bags": true, "exclude_basic_economy": true, "hide_separate_and_self_transfer": true, "currency": true, "max_stops": true, "max_duration_minutes": true, "min_layover_minutes": true, "max_layover_minutes": true, "multi_city": true, "return_options": "via tracker tfs extension (FlightData field 4); not native", "date_grid": false, "version": "3.1.0", "eu_consent_cookie": false, "streams_full_results": false, "parser": "tracker parse_payload (both buckets, flight numbers)"}, "fast_flights_fork": {"available": true, "reason": "", "checked_bags": true, "carry_on_bags": true, "exclude_basic_economy": true, "hide_separate_and_self_transfer": true, "currency": true, "max_stops": true, "max_duration_minutes": true, "min_layover_minutes": true, "max_layover_minutes": true, "multi_city": true, "return_options": "via tracker tfs extension (FlightData field 4); not native", "date_grid": false, "version": "fork@d162089", "eu_consent_cookie": true, "streams_full_results": true, "parser": "tracker parse_payload"}, "searchapi": {"available": true, "reason": "", "checked_bags": "accepted but no price effect observed", "carry_on_bags": true, "exclude_basic_economy": false, "hide_separate_and_self_transfer": false, "currency": true, "max_stops": true, "max_duration_minutes": false, "multi_city": true, "return_options": "departure_token", "date_grid": false}, "serpapi": {"available": true, "reason": "", "checked_bags": false, "carry_on_bags": true, "exclude_basic_economy": true, "hide_separate_and_self_transfer": false, "currency": true, "max_stops": true, "max_duration_minutes": true, "multi_city": true, "return_options": "departure_token", "date_grid": false}}
+2026-10-14 14:29:44,659 INFO plan: {"date": "2026-10-14", "budget": 50, "date_pairs": 67, "longest_pairs": 13, "stage_a_full": {"A:tier1": 402, "A:tier2": 132, "A:sfo_sjc_oak": 54, "A:tier3": 104}, "stage_a_after_shedding": {"A:tier1": 30}, "shed": {"tier3": 104, "sfo_sjc_oak": 54, "tier2": 132, "stage_b_openjaw": 200}, "reserved_dynamic": {"canary": 1, "return_options": 3, "exclude_basic": 3, "stage_b_openjaw": 11, "separate_probe": 2}, "stages": ["canary", "A", "B", "C", "D"]}
+2026-10-14 14:29:57,481 INFO canary canary MUC-SAN 2026-12-01: fast_flights empty (0 offers)
+2026-10-14 14:29:57,482 INFO canary ok via fast_flights (7 offers); checked-bag filter effective: None
+2026-10-14 14:30:03,442 INFO stage A done: 216 records, 3 free requests used
+2026-10-14 14:30:09,353 INFO B stage_b_openjaw VIE-SAN 2026-11-25: fast_flights empty (0 offers); trying next source
+2026-10-14 14:30:15,444 INFO B stage_b_openjaw VIE-SAN 2026-11-25: fast_flights_fork error (0 offers); trying next source
+2026-10-14 14:30:21,662 INFO B stage_b_openjaw VIE-LAX 2026-11-25: fast_flights empty (0 offers); trying next source
+2026-10-14 14:30:57,329 WARNING fast_flights_fork 144a227c7ec07ab5 attempt 1: TimeoutError: error sending request for url (https://www.google.com/_/FlightsFrontendUi/data/travel.frontend.flights.FlightsFrontendService/GetShoppingResults?hl=en&rt=c) > operation timed out
+2026-10-14 14:31:32,543 INFO B stage_b_openjaw VIE-LAX 2026-11-25: fast_flights_fork error (0 offers); trying next source
+2026-10-14 14:31:38,094 INFO B stage_b_openjaw VIE-SAN 2026-11-27: fast_flights empty (0 offers); trying next source
+2026-10-14 14:32:14,803 WARNING fast_flights_fork 2446006c454838ab attempt 1: TimeoutError: error sending request for url (https://www.google.com/_/FlightsFrontendUi/data/travel.frontend.flights.FlightsFrontendService/GetShoppingResults?hl=en&rt=c) > operation timed out
+2026-10-14 14:33:19,393 WARNING fast_flights_fork 2446006c454838ab attempt 2: TimeoutError: error sending request for url (https://www.google.com/_/FlightsFrontendUi/data/travel.frontend.flights.FlightsFrontendService/GetShoppingResults?hl=en&rt=c) > operation timed out
+2026-10-14 14:34:25,333 INFO B stage_b_openjaw VIE-SAN 2026-11-27: fast_flights_fork error (0 offers); trying next source
+2026-10-14 14:34:28,750 INFO B stage_b_openjaw VIE-LAX 2026-11-27: fast_flights empty (0 offers); trying next source
+2026-10-14 14:34:33,513 INFO B stage_b_openjaw VIE-LAX 2026-11-27: fast_flights_fork error (0 offers); trying next source
+2026-10-14 14:34:37,154 INFO B stage_b_openjaw VIE-SAN 2026-11-26: fast_flights empty (0 offers); trying next source
+2026-10-14 14:34:43,580 INFO B stage_b_openjaw VIE-SAN 2026-11-26: fast_flights_fork error (0 offers); trying next source
+2026-10-14 14:34:49,703 INFO B stage_b_openjaw VIE-LAX 2026-11-26: fast_flights empty (0 offers); trying next source
+2026-10-14 14:35:24,031 WARNING fast_flights_fork d657428da6062fc3 attempt 1: TimeoutError: error sending request for url (https://www.google.com/_/FlightsFrontendUi/data/travel.frontend.flights.FlightsFrontendService/GetShoppingResults?hl=en&rt=c) > operation timed out
+2026-10-14 14:35:59,620 INFO B stage_b_openjaw VIE-LAX 2026-11-26: fast_flights_fork error (0 offers); trying next source
+2026-10-14 14:36:03,618 INFO B stage_b_openjaw VIE-SAN 2026-11-28: fast_flights empty (0 offers); trying next source
+2026-10-14 14:36:09,763 INFO B stage_b_openjaw VIE-SAN 2026-11-28: fast_flights_fork error (0 offers); trying next source
+2026-10-14 14:36:14,379 ERROR circuit breaker open for fast_flights
+2026-10-14 14:36:14,379 INFO B stage_b_openjaw VIE-LAX 2026-11-28: fast_flights empty (0 offers); trying next source
+2026-10-14 14:36:50,128 WARNING fast_flights_fork 4ca737a2f6e71fef attempt 1: TimeoutError: error sending request for url (https://www.google.com/_/FlightsFrontendUi/data/travel.frontend.flights.FlightsFrontendService/GetShoppingResults?hl=en&rt=c) > operation timed out
+2026-10-14 14:37:54,214 WARNING fast_flights_fork 4ca737a2f6e71fef attempt 2: TimeoutError: error sending request for url (https://www.google.com/_/FlightsFrontendUi/data/travel.frontend.flights.FlightsFrontendService/GetShoppingResults?hl=en&rt=c) > operation timed out
+2026-10-14 14:39:00,581 INFO B stage_b_openjaw VIE-LAX 2026-11-28: fast_flights_fork error (0 offers); trying next source
+2026-10-14 14:39:04,528 ERROR circuit breaker open for fast_flights_fork
+2026-10-14 14:39:04,528 INFO B stage_b_openjaw VIE-SAN 2026-12-01: fast_flights_fork error (0 offers); trying next source
+2026-10-14 14:40:27,027 INFO done: 1/17 queries ok (6%), 216 records, free requests 26/50

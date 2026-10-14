@@ -207,3 +207,11 @@ date,itinerary_id,origin,destination,return_origin,return_destination,leave_home
 2026-10-14,6082ba1963b5e78f,WAW,SAN,SAN,WAW,2026-11-29,2026-12-17,36091,unknown,False,fast_flights
 2026-10-14,49d1c1a48ad8b08b,WAW,SAN,SAN,WAW,2026-11-29,2026-12-17,36892,unknown,False,fast_flights
 2026-10-14,52adf33d8cba566c,WAW,SAN,SAN,WAW,2026-11-29,2026-12-17,39024,unknown,False,fast_flights
+2026-10-14,2f736e91a1e636fc,WAW,LAX,LAX,WAW,2026-11-29,2026-12-17,31066,unknown,False,fast_flights
+2026-10-14,0f0b0206e036cf73,WAW,LAX,LAX,WAW,2026-11-29,2026-12-17,32574,unknown,False,fast_flights
+2026-10-14,ff4d19573ebb8300,WAW,LAX,LAX,WAW,2026-11-29,2026-12-17,33705,unknown,False,fast_flights
+2026-10-14,740fa2102b6e1e34,WAW,LAX,LAX,WAW,2026-11-29,2026-12-17,34642,unknown,False,fast_flights
+2026-10-14,8390ac199a9c484c,WAW,LAX,LAX,WAW,2026-11-29,2026-12-17,34701,unknown,False,fast_flights
+2026-10-14,b5aaee07fbaa9be6,WAW,LAX,LAX,WAW,2026-11-29,2026-12-17,34875,unknown,False,fast_flights
+2026-10-14,123f182d4baae3af,WAW,LAX,LAX,WAW,2026-11-29,2026-12-17,36293,unknown,False,fast_flights
+2026-10-14,6193d3cca70fdb73,WAW,LAX,LAX,WAW,2026-11-29,2026-12-17,37074,unknown,False,fast_flights

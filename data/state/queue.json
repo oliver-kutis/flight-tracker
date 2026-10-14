@@ -678,9 +678,9 @@
 "hide_separate_and_self_transfer": true,
 "exclude_basic_economy": false
 },
-"status": "skipped",
-"source_used": null,
-"n_offers": 0,
+"status": "done",
+"source_used": "fast_flights",
+"n_offers": 8,
 "error": "request budget exhausted"
 },
 {
@@ -700,10 +700,10 @@
 "hide_separate_and_self_transfer": true,
 "exclude_basic_economy": false
 },
-"status": "skipped",
-"source_used": null,
+"status": "failed",
+"source_used": "fast_flights_fork",
 "n_offers": 0,
-"error": "request budget exhausted"
+"error": "error: TypeError: 'int' object is not subscriptable"
 },
 {
 "id": "144a227c7ec07ab5",
@@ -722,10 +722,10 @@
 "hide_separate_and_self_transfer": true,
 "exclude_basic_economy": false
 },
-"status": "skipped",
-"source_used": null,
+"status": "failed",
+"source_used": "fast_flights_fork",
 "n_offers": 0,
-"error": "request budget exhausted"
+"error": "error: TypeError: 'int' object is not subscriptable"
 },
 {
 "id": "2446006c454838ab",
@@ -744,10 +744,10 @@
 "hide_separate_and_self_transfer": true,
 "exclude_basic_economy": false
 },
-"status": "skipped",
-"source_used": null,
+"status": "failed",
+"source_used": "fast_flights_fork",
 "n_offers": 0,
-"error": "request budget exhausted"
+"error": "error: truncated: page empty, follow-up results refused"
 },
 {
 "id": "79c75c2d01694625",
@@ -766,10 +766,10 @@
 "hide_separate_and_self_transfer": true,
 "exclude_basic_economy": false
 },
-"status": "skipped",
-"source_used": null,
+"status": "failed",
+"source_used": "fast_flights_fork",
 "n_offers": 0,
-"error": "request budget exhausted"
+"error": "error: TypeError: 'int' object is not subscriptable"
 },
 {
 "id": "94ee067a40054fa5",
@@ -788,10 +788,10 @@
 "hide_separate_and_self_transfer": true,
 "exclude_basic_economy": false
 },
-"status": "skipped",
-"source_used": null,
+"status": "failed",
+"source_used": "fast_flights_fork",
 "n_offers": 0,
-"error": "request budget exhausted"
+"error": "error: TypeError: 'int' object is not subscriptable"
 },
 {
 "id": "d657428da6062fc3",
@@ -810,10 +810,10 @@
 "hide_separate_and_self_transfer": true,
 "exclude_basic_economy": false
 },
-"status": "skipped",
-"source_used": null,
+"status": "failed",
+"source_used": "fast_flights_fork",
 "n_offers": 0,
-"error": "request budget exhausted"
+"error": "error: TypeError: 'int' object is not subscriptable"
 },
 {
 "id": "4df474d4ff3ee444",
@@ -832,10 +832,10 @@
 "hide_separate_and_self_transfer": true,
 "exclude_basic_economy": false
 },
-"status": "skipped",
-"source_used": null,
+"status": "failed",
+"source_used": "fast_flights_fork",
 "n_offers": 0,
-"error": "request budget exhausted"
+"error": "error: TypeError: 'int' object is not subscriptable"
 },
 {
 "id": "4ca737a2f6e71fef",
@@ -854,10 +854,10 @@
 "hide_separate_and_self_transfer": true,
 "exclude_basic_economy": false
 },
-"status": "skipped",
-"source_used": null,
+"status": "failed",
+"source_used": "fast_flights_fork",
 "n_offers": 0,
-"error": "request budget exhausted"
+"error": "error: TypeError: 'int' object is not subscriptable"
 },
 {
 "id": "5e8f109e1f3cdf58",
@@ -876,10 +876,10 @@
 "hide_separate_and_self_transfer": true,
 "exclude_basic_economy": false
 },
-"status": "skipped",
-"source_used": null,
+"status": "failed",
+"source_used": "fast_flights_fork",
 "n_offers": 0,
-"error": "request budget exhausted"
+"error": "error: TypeError: 'int' object is not subscriptable"
 },
 {
 "id": "f5faaa4782c0412f",
