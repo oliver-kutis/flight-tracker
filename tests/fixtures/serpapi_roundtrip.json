@@ -1,0 +1,17 @@
+{"search_metadata": {"status": "Success", "google_flights_url": "https://www.google.com/travel/flights?hl=en&gl=cz"},
+ "best_flights": [{"flights": [
+   {"departure_airport": {"name": "Munich International Airport", "id": "MUC", "time": "2026-12-01 16:05"},
+    "arrival_airport": {"name": "San Diego International Airport", "id": "SAN", "time": "2026-12-01 19:10"},
+    "duration": 725, "airplane": "Airbus A350", "airline": "Lufthansa", "travel_class": "Economy",
+    "flight_number": "LH 466", "extensions": ["Average legroom (31 in)"]}],
+   "layovers": [], "total_duration": 725, "price": 24890, "type": "Round trip",
+   "departure_token": "SANITIZED_DEP_TOKEN", "extensions": ["Checked baggage for a fee"]}],
+ "other_flights": [{"flights": [
+   {"departure_airport": {"name": "Munich", "id": "MUC", "time": "2026-12-01 07:00"},
+    "arrival_airport": {"name": "Frankfurt", "id": "FRA", "time": "2026-12-01 08:05"},
+    "duration": 65, "airplane": "Airbus A321", "airline": "Lufthansa", "flight_number": "LH 99"},
+   {"departure_airport": {"name": "Frankfurt", "id": "FRA", "time": "2026-12-01 10:10"},
+    "arrival_airport": {"name": "San Diego", "id": "SAN", "time": "2026-12-01 13:30"},
+    "duration": 800, "airplane": "Boeing 787", "airline": "Condor", "flight_number": "DE 2048"}],
+   "layovers": [{"duration": 125, "name": "Frankfurt", "id": "FRA"}],
+   "total_duration": 990, "price": 21950, "departure_token": "SANITIZED_DEP_TOKEN_2"}]}

@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "run_meta.schema.json",
+  "title": "Run metadata (schema_version 1.0.0)",
+  "type": "object",
+  "required": ["schema_version", "run_id", "date", "started_at_utc", "finished_at_utc", "stages_run", "plan",
+               "requests", "queries", "sources_used_for_results", "source_chain", "degraded", "capability_report",
+               "bag_filter_effective", "quotas", "fx", "errors", "assumptions"],
+  "properties": {
+    "schema_version": {"type": "string"},
+    "queries": {"type": "object", "required": ["planned", "succeeded", "success_rate"]},
+    "errors": {"type": "array"},
+    "bag_filter_effective": {"type": ["boolean", "null"]}
+  }
+}

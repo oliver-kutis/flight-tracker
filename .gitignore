@@ -2,3 +2,5 @@
 __pycache__/
 local/last-run.log
 .env
+.vendor/
+.pytest_cache/

@@ -1,12 +1,34 @@
 [project]
 name = "flight-tracker"
-version = "0.1.0"
-requires-python = ">=3.12"
+version = "0.2.0"
+requires-python = ">=3.12,<3.13"
 dependencies = [
+    "fast-flights==3.1.0",
+    "primp==2.0.1",
     "requests==2.32.3",
     "PyYAML==6.0.2",
-    "primp==2.0.1",
+    "pydantic==2.12.5",
+    "holidays==0.106",
+    "airportsdata==20260905",
+    "jsonschema==4.26.0",
 ]
 
+[project.scripts]
+tracker = "tracker.main:main"
+
+[dependency-groups]
+dev = ["pytest==9.1.1"]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/tracker"]
+
 [tool.uv]
-package = false
+package = true
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+markers = ["live: hits the real network (set TRACKER_LIVE=1)"]

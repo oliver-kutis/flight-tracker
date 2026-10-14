@@ -1,0 +1,135 @@
+# Flight tracker config – Brno area -> California (final destination San Diego).
+# Every value is editable; validated by src/tracker/config.py (pydantic) at startup.
+# Ground times/costs are ONE-WAY estimates from/to Brno (estimate: true).
+
+traveller: {adults: 1, cabin: economy, checked_bags: 1, carry_on: 1}
+
+window:
+  earliest_leave_home: 2026-11-25
+  latest_home_arrival: 2026-12-20
+  min_calendar_days_away: 14        # inclusive: leave_home_date..home_arrival_date
+
+leave:
+  country: CZ                       # `holidays` lib
+  holiday_overrides_add: []         # extra non-working days (company days off), YYYY-MM-DD
+  holiday_overrides_remove: []      # holidays you must work anyway
+  max_leave_ideal: 12
+  max_leave_hard: 14
+
+flight_limits: {max_stops: 2, max_air_duration_min_per_direction: 1200}
+
+# Flight date planning: origins whose first ground arrival is later than this
+# are queried with outbound flight date D+1 (traveller leaves home D evening).
+planning: {latest_same_day_airport_arrival: "11:00"}
+
+origins:
+  # ---- Tier 1 (daily, all date pairs)
+  - {iata: MUC, enabled: true, tier: 1, notes: "Rail via Vienna/Prague or FlixBus. LH466 MUC-SAN nonstop Tue-Fri+Sun in winter.",
+     ground_out: {mode: "rail/FlixBus", minutes: 330, cost_czk: 1200, first_airport_arrival_local: "10:30"},
+     ground_back: {mode: "rail/FlixBus", minutes: 330, cost_czk: 1200, last_departure_from_airport_local: "18:00"}}
+  - {iata: VIE, enabled: true, tier: 1, notes: "RegioJet bus to terminal; first arrival 04:00, last bus back ~23:00.",
+     ground_out: {mode: "RegioJet bus", minutes: 115, cost_czk: 350, first_airport_arrival_local: "04:00"},
+     ground_back: {mode: "RegioJet bus", minutes: 115, cost_czk: 350, last_departure_from_airport_local: "23:00"}}
+  - {iata: WAW, enabled: true, tier: 1, notes: "Rail via Bohumin. LOT LAX nonstop.",
+     ground_out: {mode: rail, minutes: 450, cost_czk: 1300, first_airport_arrival_local: "12:30"},
+     ground_back: {mode: rail, minutes: 450, cost_czk: 1300, last_departure_from_airport_local: "16:00"}}
+  # ---- Tier 2 (all pairs, 1/3 slice per day)
+  - {iata: PRG, enabled: true, tier: 2,
+     ground_out: {mode: "rail/bus", minutes: 200, cost_czk: 500, first_airport_arrival_local: "08:00"},
+     ground_back: {mode: "rail/bus", minutes: 200, cost_czk: 500, last_departure_from_airport_local: "20:00"}}
+  - {iata: BUD, enabled: true, tier: 2,
+     ground_out: {mode: "rail/bus", minutes: 300, cost_czk: 1300, first_airport_arrival_local: "09:30"},
+     ground_back: {mode: "rail/bus", minutes: 300, cost_czk: 1300, last_departure_from_airport_local: "18:30"}}
+  - {iata: BTS, enabled: true, tier: 2,
+     ground_out: {mode: bus, minutes: 120, cost_czk: 400, first_airport_arrival_local: "06:30"},
+     ground_back: {mode: bus, minutes: 120, cost_czk: 400, last_departure_from_airport_local: "21:30"}}
+  # ---- Tier 3 (longest pair per departure day, each origin every 3rd day)
+  - {iata: BRQ, enabled: true, tier: 3, ground_out: {mode: "bus/taxi", minutes: 30, cost_czk: 50, first_airport_arrival_local: "05:30"}, ground_back: {mode: "bus/taxi", minutes: 30, cost_czk: 50, last_departure_from_airport_local: "23:00"}}
+  - {iata: OSR, enabled: true, tier: 3, ground_out: {mode: rail, minutes: 170, cost_czk: 260, first_airport_arrival_local: "08:00"}, ground_back: {mode: rail, minutes: 170, cost_czk: 260, last_departure_from_airport_local: "21:00"}}
+  - {iata: KTW, enabled: true, tier: 3, ground_out: {mode: "rail/bus", minutes: 255, cost_czk: 800, first_airport_arrival_local: "09:00"}, ground_back: {mode: "rail/bus", minutes: 255, cost_czk: 800, last_departure_from_airport_local: "19:30"}}
+  - {iata: KRK, enabled: true, tier: 3, ground_out: {mode: "rail/bus", minutes: 280, cost_czk: 800, first_airport_arrival_local: "09:30"}, ground_back: {mode: "rail/bus", minutes: 280, cost_czk: 800, last_departure_from_airport_local: "19:00"}}
+  - {iata: WRO, enabled: true, tier: 3, ground_out: {mode: "rail/bus", minutes: 310, cost_czk: 650, first_airport_arrival_local: "10:00"}, ground_back: {mode: "rail/bus", minutes: 310, cost_czk: 650, last_departure_from_airport_local: "18:30"}}
+  - {iata: LNZ, enabled: true, tier: 3, ground_out: {mode: rail, minutes: 225, cost_czk: 900, first_airport_arrival_local: "08:30"}, ground_back: {mode: rail, minutes: 225, cost_czk: 900, last_departure_from_airport_local: "20:00"}}
+  - {iata: GRZ, enabled: true, tier: 3, ground_out: {mode: rail, minutes: 270, cost_czk: 1000, first_airport_arrival_local: "09:00"}, ground_back: {mode: rail, minutes: 270, cost_czk: 1000, last_departure_from_airport_local: "19:30"}}
+  - {iata: SZG, enabled: true, tier: 3, ground_out: {mode: rail, minutes: 285, cost_czk: 1100, first_airport_arrival_local: "09:30"}, ground_back: {mode: rail, minutes: 285, cost_czk: 1100, last_departure_from_airport_local: "19:00"}}
+  - {iata: DRS, enabled: true, tier: 3, ground_out: {mode: "rail/bus", minutes: 300, cost_czk: 1000, first_airport_arrival_local: "10:00"}, ground_back: {mode: "rail/bus", minutes: 300, cost_czk: 1000, last_departure_from_airport_local: "18:30"}}
+  - {iata: LEJ, enabled: true, tier: 3, ground_out: {mode: rail, minutes: 360, cost_czk: 1400, first_airport_arrival_local: "11:00"}, ground_back: {mode: rail, minutes: 360, cost_czk: 1400, last_departure_from_airport_local: "17:30"}}
+  - {iata: NUE, enabled: true, tier: 3, ground_out: {mode: rail, minutes: 390, cost_czk: 1200, first_airport_arrival_local: "11:30"}, ground_back: {mode: rail, minutes: 390, cost_czk: 1200, last_departure_from_airport_local: "17:00"}}
+  - {iata: BER, enabled: true, tier: 3, ground_out: {mode: rail, minutes: 450, cost_czk: 1400, first_airport_arrival_local: "12:30"}, ground_back: {mode: rail, minutes: 450, cost_czk: 1400, last_departure_from_airport_local: "16:00"}}
+  # ---- disabled by default
+  - {iata: FRA, enabled: false, tier: 3, ground_out: {mode: rail, minutes: 510, cost_czk: 2000, first_airport_arrival_local: "13:30"}, ground_back: {mode: rail, minutes: 510, cost_czk: 2000, last_departure_from_airport_local: "15:00"}}
+  - {iata: ZRH, enabled: false, tier: 3, ground_out: {mode: rail, minutes: 570, cost_czk: 2500, first_airport_arrival_local: "14:30"}, ground_back: {mode: rail, minutes: 570, cost_czk: 2500, last_departure_from_airport_local: "14:00"}}
+
+destinations:                       # final leg to/from San Diego
+  SAN: {mode: none, minutes: 0, cost_czk: 0, estimate: false}
+  LAX: {mode: "car (friend)", minutes: 150, minutes_peak: 210, peak_window_local: "14:00-19:30 Mon-Fri", cost_czk: 0, estimate: true}
+  SFO: {mode: "domestic flight incl. bag", minutes: 240, cost_czk: 3000, estimate: true}
+  SJC: {mode: "domestic flight incl. bag", minutes: 240, cost_czk: 3000, estimate: true}
+  OAK: {mode: "domestic flight incl. bag", minutes: 240, cost_czk: 3000, estimate: true}
+primary_destinations: [SAN, LAX]    # searched for every tier
+secondary_destinations: [SFO, SJC, OAK]
+
+hotel_cost_czk_per_night: 2000
+# Used only when the source cannot price the checked bag (bag_certainty = unknown).
+bag_fee_estimate_czk_roundtrip: 3500
+ca_departure_lead_min: 180          # leave San Diego area this long before the CA flight (+ final-leg drive)
+
+buffers:
+  airport_before_longhaul_min: 150
+  airport_before_other_min: 120
+  longhaul_segment_min: 360         # first segment longer than this counts as long-haul
+  min_selfconnect_min: 240
+  min_us_entry_connection_min: 120
+  positioning_slack_min: 150
+  customs_baggage_min: 45
+
+limits:
+  max_requests_per_run: 950
+  delay_s: [3, 6]
+  max_retries: 3
+  backoff_base_s: 30
+  circuit_breaker_consecutive_failures: 8
+  top_offers_per_query: 10
+  min_offers_before_fallback: 3     # fewer offers from a free source = treat as truncated, try next source
+
+load_shedding_order: [tier3, sfo_sjc_oak, tier2, stage_b_openjaw]
+
+stages:
+  stage_a: {tier2_slices: 3, tier3_every_days: 3, secondary_every_days: 2}
+  stage_b: {top_candidates: 40, openjaw_origins: 5, openjaw_pairs: 8, openjaw_cap: 200, return_options_keep: 3}
+  stage_c: {top: 5}
+  stage_d: {max_queries: 30, min_saving_pct: 15}
+
+sources:
+  # Tried in order per query; a source is skipped when unavailable, its circuit
+  # breaker is open, or (paid) its quota is exhausted.
+  chain: [fast_flights, fast_flights_fork, searchapi, serpapi]
+  google_hl: en
+  google_gl: ""                     # e.g. "US" to force the US UI (has the checked-bag filter); "" = Google decides
+  currency: CZK
+  fork_path: .vendor/fast_flights_fork   # `pip install --target` dir for git+https://github.com/Mohamed3on/flights
+  searchapi: {monthly_cap: 200}
+  serpapi: {daily_cap: 8, monthly_cap: 240, hourly_cap: 50}
+
+scoring:
+  weights: {price: 0.3333, stay: 0.3333, time: 0.3334}
+  penalties:
+    leave_13: 0.05
+    leave_14: 0.10
+    separate_tickets: 0.25
+    bag_unknown: 0.10
+    us_entry_connection_risky: 0.10
+    tight_connection: 0.10
+    hotel_needed_per_night: 0.03
+    airport_change: 0.10
+    extra_stop_per_stop: 0.03
+
+fx:
+  url: https://www.cnb.cz/en/financial-markets/foreign-exchange-market/central-bank-exchange-rate-fixing/central-bank-exchange-rate-fixing/daily.txt
+
+storage:
+  raw_retention_days: 30
+  carry_forward_max_stale_days: 6
+  summary_max_bytes: 2000000
+
+esta_note: "ESTA costs USD 40.62 from 2026-10-16; not included in total_trip_cost_czk."

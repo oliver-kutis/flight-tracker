@@ -1,0 +1,11 @@
+{"search_metadata": {"status": "Success"},
+ "best_flights": [{"flights": [
+   {"departure_airport": {"name": "Vienna International Airport", "id": "VIE", "date": "2026-11-26", "time": "06:30"},
+    "arrival_airport": {"name": "London Heathrow", "id": "LHR", "date": "2026-11-26", "time": "08:00"},
+    "duration": 150, "airplane": "Airbus A320", "airline": "British Airways", "flight_number": "BA 703"},
+   {"departure_airport": {"name": "London Heathrow", "id": "LHR", "date": "2026-11-26", "time": "09:40"},
+    "arrival_airport": {"name": "Los Angeles International Airport", "id": "LAX", "date": "2026-11-26", "time": "12:55"},
+    "duration": 675, "airplane": "Airbus A380", "airline": "British Airways", "flight_number": "BA 269"}],
+   "layovers": [{"duration": 100, "name": "London Heathrow", "id": "LHR"}],
+   "total_duration": 925, "price": 19870, "booking_token": "SANITIZED_BOOKING_TOKEN"}],
+ "other_flights": []}

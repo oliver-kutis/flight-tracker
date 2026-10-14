@@ -1,0 +1,38 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "summary.schema.json",
+  "title": "Summary for the interpreting agent (schema_version 1.0.0)",
+  "type": "object",
+  "required": ["schema_version", "run_metadata", "counts", "top_overall", "top_by_price", "top_by_stay", "top_by_time",
+               "pareto_front", "best_per_origin", "best_per_date_pair", "best_per_trip_length", "best_open_jaw",
+               "best_per_california_airport", "flagged_cheaper_separate_tickets", "price_vs_length_matrix", "new_lows_today"],
+  "properties": {
+    "top_overall": {"type": "array", "maxItems": 30, "items": {"$ref": "#/$defs/item"}},
+    "top_by_price": {"type": "array", "maxItems": 15, "items": {"$ref": "#/$defs/item"}},
+    "top_by_stay": {"type": "array", "maxItems": 15, "items": {"$ref": "#/$defs/item"}},
+    "top_by_time": {"type": "array", "maxItems": 15, "items": {"$ref": "#/$defs/item"}},
+    "pareto_front": {"type": "array", "items": {"$ref": "#/$defs/item"}},
+    "best_open_jaw": {"type": "array", "items": {"$ref": "#/$defs/item"}},
+    "flagged_cheaper_separate_tickets": {"type": "array", "items": {"$ref": "#/$defs/item"}},
+    "new_lows_today": {"type": "array", "items": {"$ref": "#/$defs/item"}},
+    "best_per_origin": {"type": "object", "additionalProperties": {"$ref": "#/$defs/ref_or_item"}},
+    "best_per_date_pair": {"type": "object", "additionalProperties": {"$ref": "#/$defs/ref_or_item"}},
+    "best_per_trip_length": {"type": "object", "additionalProperties": {"$ref": "#/$defs/ref_or_item"}},
+    "best_per_california_airport": {"type": "object", "additionalProperties": {"$ref": "#/$defs/item"}},
+    "price_vs_length_matrix": {
+      "type": "object",
+      "additionalProperties": {"type": "object", "additionalProperties": {
+        "type": "object", "required": ["min_total_trip_cost_czk", "itinerary_id"]}}
+    }
+  },
+  "$defs": {
+    "item": {
+      "type": "object",
+      "required": ["itinerary_id", "price", "legs", "totals", "calendar", "scoring", "provenance", "price_history"],
+      "properties": {
+        "price_history": {"type": "object", "required": ["first_seen", "times_seen", "min", "median", "last", "delta_vs_yesterday", "trend_7d"]}
+      }
+    },
+    "ref_or_item": {"type": "object", "required": ["itinerary_id"]}
+  }
+}

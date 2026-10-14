@@ -1,0 +1,68 @@
+name: daily
+
+on:
+  schedule:
+    - cron: "0 7 * * *"
+  workflow_dispatch:
+    inputs:
+      stages:
+        description: "Stages to run: all, or comma list of canary,A,B,C,D"
+        type: string
+        default: all
+      dry_run:
+        description: "Print the query plan only (no requests, no commit)"
+        type: boolean
+        default: false
+      max_requests:
+        description: "Free-source request budget for this run"
+        type: number
+        default: 950
+      source_override:
+        description: "Comma list replacing sources.chain, e.g. fast_flights_fork,serpapi"
+        type: string
+        default: ""
+
+permissions:
+  contents: write
+  issues: write
+
+concurrency:
+  group: flight-tracker-daily
+  cancel-in-progress: false
+
+jobs:
+  run:
+    # Repo variable RUNS_ON switches runners, e.g. '["self-hosted","residential"]' (JSON).
+    runs-on: ${{ fromJSON(vars.RUNS_ON || '"ubuntu-latest"') }}
+    timeout-minutes: 300
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@d0cc045d04ccac9d8b7881df0226f9e82c39688e # v6.8.0
+        with:
+          python-version: "3.12"
+      - run: uv sync --frozen --no-dev
+      - name: Install fast-flights fork (fallback source, isolated dir)
+        run: uv pip install --quiet --target .vendor/fast_flights_fork "git+https://github.com/Mohamed3on/flights@d1620895da9d770efbb7196b67c95c47dc4a3ab1"
+      - name: Track flights
+        env:
+          SERPAPI_KEY: ${{ secrets.SERPAPI_KEY }}
+          SEARCHAPI_KEY: ${{ secrets.SEARCHAPI_KEY }}
+          GH_TOKEN: ${{ github.token }}
+          STAGES: ${{ inputs.stages || 'all' }}
+          MAX_REQUESTS: ${{ inputs.max_requests || 950 }}
+          SOURCE_OVERRIDE: ${{ inputs.source_override || '' }}
+          DRY_RUN: ${{ inputs.dry_run && '--dry-run' || '' }}
+        run: uv run --no-dev tracker --stages "$STAGES" --max-requests "$MAX_REQUESTS" --source-override "$SOURCE_OVERRIDE" $DRY_RUN
+      - name: Commit results
+        if: ${{ !inputs.dry_run }}
+        run: |
+          git config user.name "flight-tracker-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add data
+          git diff --cached --quiet && exit 0
+          git commit -q -m "data: run $(date -u +%F)"
+          for i in 1 2 3 4 5; do
+            git push && exit 0
+            git pull --rebase -X theirs || { git rebase --abort; sleep $((i * 10)); }
+          done
+          exit 1

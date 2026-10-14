@@ -1,0 +1,93 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "itinerary.schema.json",
+  "title": "Normalized itinerary (schema_version 1.0.0)",
+  "type": "object",
+  "required": ["itinerary_id", "trip_type", "origin", "destination", "return_origin", "return_destination",
+               "pair_key", "inbound_known", "price", "legs", "flags", "ground", "final_leg_to_san_diego",
+               "final_leg_from_san_diego", "totals", "calendar", "scoring", "provenance"],
+  "properties": {
+    "itinerary_id": {"type": "string", "pattern": "^[0-9a-f]{16}$"},
+    "trip_type": {"enum": ["round_trip", "open_jaw"]},
+    "origin": {"type": "string", "pattern": "^[A-Z]{3}$"},
+    "destination": {"type": "string", "pattern": "^[A-Z]{3}$"},
+    "return_origin": {"type": "string", "pattern": "^[A-Z]{3}$"},
+    "return_destination": {"type": "string", "pattern": "^[A-Z]{3}$"},
+    "pair_key": {"type": "string"},
+    "inbound_known": {"type": "boolean"},
+    "price": {
+      "type": "object",
+      "required": ["price_total_original", "currency_original", "price_total_czk", "price_total_eur",
+                   "fx_rate_eur_czk", "fx_date", "price_includes_checked_bag", "bag_fee_estimate_czk",
+                   "bag_certainty", "basic_economy", "fare_brand", "separate_tickets", "self_transfer"],
+      "properties": {
+        "price_total_original": {"type": "number"},
+        "currency_original": {"type": "string"},
+        "price_total_czk": {"type": "number"},
+        "flight_price_incl_bag_czk": {"type": "number"},
+        "price_includes_checked_bag": {"enum": [true, false, "unknown"]},
+        "bag_certainty": {"enum": ["filter_applied_in_query", "fee_listed_by_source", "standard_fare_assumed_included", "unknown"]},
+        "basic_economy": {"enum": [true, false, "unknown"]},
+        "separate_tickets": {"enum": [true, false, "unknown"]},
+        "self_transfer": {"type": "boolean"}
+      }
+    },
+    "legs": {
+      "type": "object",
+      "required": ["outbound", "inbound"],
+      "properties": {
+        "outbound": {"$ref": "#/$defs/leg"},
+        "inbound": {"anyOf": [{"$ref": "#/$defs/leg"}, {"type": "null"}]}
+      }
+    },
+    "flags": {
+      "type": "object",
+      "required": ["us_entry_airport", "us_entry_connection_min", "us_entry_connection_risky", "tight_connection",
+                   "overnight_layover", "airport_change", "red_eye", "late_night_pickup", "constraint_violations"],
+      "properties": {"constraint_violations": {"type": "array", "items": {"type": "string"}}}
+    },
+    "ground": {"type": "object", "required": ["ground_out", "ground_back", "hotel_nights", "hotel_cost_czk"]},
+    "final_leg_to_san_diego": {"$ref": "#/$defs/final_leg"},
+    "final_leg_from_san_diego": {"$ref": "#/$defs/final_leg"},
+    "totals": {
+      "type": "object",
+      "required": ["door_to_door_out_min", "door_to_door_back_min", "total_trip_cost_czk"],
+      "properties": {"total_trip_cost_czk": {"type": "number"}}
+    },
+    "calendar": {
+      "type": "object",
+      "required": ["leave_home_date", "home_arrival_date", "leave_days_used", "calendar_days_away",
+                   "nights_in_san_diego_area", "hours_in_san_diego_area"],
+      "properties": {
+        "leave_home_date": {"type": "string", "format": "date"},
+        "home_arrival_date": {"type": "string", "format": "date"},
+        "leave_days_used": {"type": "integer"},
+        "calendar_days_away": {"type": "integer"}
+      }
+    },
+    "scoring": {"type": "object"},
+    "provenance": {
+      "type": "object",
+      "required": ["source", "source_version", "query_params", "fetched_at_utc", "run_id", "stage", "booking_hint", "stale_days"],
+      "properties": {"stale_days": {"type": "integer", "minimum": 0}}
+    }
+  },
+  "$defs": {
+    "segment": {
+      "type": "object",
+      "required": ["marketing_carrier", "operating_carrier", "carrier_name", "flight_number", "from", "to",
+                   "dep_local", "arr_local", "dep_utc", "arr_utc", "duration_min", "aircraft"]
+    },
+    "leg": {
+      "type": "object",
+      "required": ["segments", "layovers", "stops", "air_duration_min"],
+      "properties": {
+        "segments": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/segment"}},
+        "layovers": {"type": "array", "items": {"type": "object", "required": ["airport", "minutes", "overnight", "airport_change"]}},
+        "stops": {"type": "integer", "minimum": 0},
+        "air_duration_min": {"type": "integer"}
+      }
+    },
+    "final_leg": {"type": "object", "required": ["mode", "minutes", "cost_czk", "estimate"]}
+  }
+}
