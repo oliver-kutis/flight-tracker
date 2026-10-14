@@ -1,0 +1,1235 @@
+{
+"date": "2026-10-14",
+"tasks": [
+{
+"id": "5a31f5bcb87a7539",
+"stage": "canary",
+"group": "canary",
+"kind": "roundtrip",
+"origin": "MUC",
+"dest": "SAN",
+"ret_origin": "SAN",
+"ret_dest": "MUC",
+"out_date": "2026-12-01",
+"ret_date": "2026-12-19",
+"pair_key": "2026-12-01_2026-12-20",
+"opts": {
+"checked_bags": 1,
+"hide_separate_and_self_transfer": true,
+"exclude_basic_economy": false
+},
+"status": "done",
+"source_used": null,
+"n_offers": 0,
+"error": null
+},
+{
+"id": "2b2e753f3903bafb",
+"stage": "A",
+"group": "tier1",
+"kind": "roundtrip",
+"origin": "MUC",
+"dest": "SAN",
+"ret_origin": "SAN",
+"ret_dest": "MUC",
+"out_date": "2026-11-25",
+"ret_date": "2026-12-13",
+"pair_key": "2026-11-25_2026-12-14",
+"opts": {
+"checked_bags": 1,
+"hide_separate_and_self_transfer": true,
+"exclude_basic_economy": false
+},
+"status": "done",
+"source_used": "fast_flights",
+"n_offers": 9,
+"error": null
+},
+{
+"id": "d9436ff6e61173ed",
+"stage": "A",
+"group": "tier1",
+"kind": "roundtrip",
+"origin": "MUC",
+"dest": "LAX",
+"ret_origin": "LAX",
+"ret_dest": "MUC",
+"out_date": "2026-11-25",
+"ret_date": "2026-12-13",
+"pair_key": "2026-11-25_2026-12-14",
+"opts": {
+"checked_bags": 1,
+"hide_separate_and_self_transfer": true,
+"exclude_basic_economy": false
+},
+"status": "done",
+"source_used": "fast_flights",
+"n_offers": 8,
+"error": null
+},
+{
+"id": "1bf6d68f1350e834",
+"stage": "A",
+"group": "tier1",
+"kind": "roundtrip",
+"origin": "VIE",
+"dest": "SAN",
+"ret_origin": "SAN",
+"ret_dest": "VIE",
+"out_date": "2026-11-25",
+"ret_date": "2026-12-13",
+"pair_key": "2026-11-25_2026-12-14",
+"opts": {
+"checked_bags": 1,
+"hide_separate_and_self_transfer": true,
+"exclude_basic_economy": false
+},
+"status": "done",
+"source_used": "fast_flights_fork",
+"n_offers": 8,
+"error": null
+},
+{
+"id": "355a9fb83f971d4d",
+"stage": "A",
+"group": "tier1",
+"kind": "roundtrip",
+"origin": "VIE",
+"dest": "LAX",
+"ret_origin": "LAX",
+"ret_dest": "VIE",
+"out_date": "2026-11-25",
+"ret_date": "2026-12-13",
+"pair_key": "2026-11-25_2026-12-14",
+"opts": {
+"checked_bags": 1,
+"hide_separate_and_self_transfer": true,
+"exclude_basic_economy": false
+},
+"status": "done",
+"source_used": "fast_flights",
+"n_offers": 15,
+"error": null
+},
+{
+"id": "08e44e306045e26d",
+"stage": "A",
+"group": "tier1",
+"kind": "roundtrip",
+"origin": "WAW",
+"dest": "SAN",
+"ret_origin": "SAN",
+"ret_dest": "WAW",
+"out_date": "2026-11-26",
+"ret_date": "2026-12-13",
+"pair_key": "2026-11-25_2026-12-14",
+"opts": {
+"checked_bags": 1,
+"hide_separate_and_self_transfer": true,
+"exclude_basic_economy": false
+},
+"status": "done",
+"source_used": "fast_flights",
+"n_offers": 0,
+"error": null
+},
+{
+"id": "bd92294e10e1210e",
+"stage": "A",
+"group": "tier1",
+"kind": "roundtrip",
+"origin": "WAW",
+"dest": "LAX",
+"ret_origin": "LAX",
+"ret_dest": "WAW",
+"out_date": "2026-11-26",
+"ret_date": "2026-12-13",
+"pair_key": "2026-11-25_2026-12-14",
+"opts": {
+"checked_bags": 1,
+"hide_separate_and_self_transfer": true,
+"exclude_basic_economy": false
+},
+"status": "done",
+"source_used": "fast_flights",
+"n_offers": 8,
+"error": null
+},
+{
+"id": "6be9a8b7954da8dc",
+"stage": "A",
+"group": "tier1",
+"kind": "roundtrip",
+"origin": "MUC",
+"dest": "SAN",
+"ret_origin": "SAN",
+"ret_dest": "MUC",
+"out_date": "2026-11-26",
+"ret_date": "2026-12-14",
+"pair_key": "2026-11-26_2026-12-15",
+"opts": {
+"checked_bags": 1,
+"hide_separate_and_self_transfer": true,
+"exclude_basic_economy": false
+},
+"status": "done",
+"source_used": "fast_flights",
+"n_offers": 8,
+"error": null
+},
+{
+"id": "47b692f6e17096e7",
+"stage": "A",
+"group": "tier1",
+"kind": "roundtrip",
+"origin": "MUC",
+"dest": "LAX",
+"ret_origin": "LAX",
+"ret_dest": "MUC",
+"out_date": "2026-11-26",
+"ret_date": "2026-12-14",
+"pair_key": "2026-11-26_2026-12-15",
+"opts": {
+"checked_bags": 1,
+"hide_separate_and_self_transfer": true,
+"exclude_basic_economy": false
+},
+"status": "done",
+"source_used": "fast_flights",
+"n_offers": 8,
+"error": null
+},
+{
+"id": "4d6c4f7a4e832db0",
+"stage": "A",
+"group": "tier1",
+"kind": "roundtrip",
+"origin": "VIE",
+"dest": "SAN",
+"ret_origin": "SAN",
+"ret_dest": "VIE",
+"out_date": "2026-11-26",
+"ret_date": "2026-12-14",
+"pair_key": "2026-11-26_2026-12-15",
+"opts": {
+"checked_bags": 1,
+"hide_separate_and_self_transfer": true,
+"exclude_basic_economy": false
+},
+"status": "done",
+"source_used": "fast_flights",
+"n_offers": 0,
+"error": null
+},
+{
+"id": "ae42cc7e5e6f3ed1",
+"stage": "A",
+"group": "tier1",
+"kind": "roundtrip",
+"origin": "VIE",
+"dest": "LAX",
+"ret_origin": "LAX",
+"ret_dest": "VIE",
+"out_date": "2026-11-26",
+"ret_date": "2026-12-14",
+"pair_key": "2026-11-26_2026-12-15",
+"opts": {
+"checked_bags": 1,
+"hide_separate_and_self_transfer": true,
+"exclude_basic_economy": false
+},
+"status": "done",
+"source_used": "fast_flights",
+"n_offers": 10,
+"error": null
+},
+{
+"id": "79bb27022498559c",
+"stage": "A",
+"group": "tier1",
+"kind": "roundtrip",
+"origin": "WAW",
+"dest": "SAN",
+"ret_origin": "SAN",
+"ret_dest": "WAW",
+"out_date": "2026-11-27",
+"ret_date": "2026-12-14",
+"pair_key": "2026-11-26_2026-12-15",
+"opts": {
+"checked_bags": 1,
+"hide_separate_and_self_transfer": true,
+"exclude_basic_economy": false
+},
+"status": "done",
+"source_used": "fast_flights_fork",
+"n_offers": 6,
+"error": null
+},
+{
+"id": "51dbb03bc04e84db",
+"stage": "A",
+"group": "tier1",
+"kind": "roundtrip",
+"origin": "WAW",
+"dest": "LAX",
+"ret_origin": "LAX",
+"ret_dest": "WAW",
+"out_date": "2026-11-27",
+"ret_date": "2026-12-14",
+"pair_key": "2026-11-26_2026-12-15",
+"opts": {
+"checked_bags": 1,
+"hide_separate_and_self_transfer": true,
+"exclude_basic_economy": false
+},
+"status": "done",
+"source_used": "fast_flights",
+"n_offers": 8,
+"error": null
+},
+{
+"id": "6d3a1bf04666f6ad",
+"stage": "A",
+"group": "tier1",
+"kind": "roundtrip",
+"origin": "MUC",
+"dest": "SAN",
+"ret_origin": "SAN",
+"ret_dest": "MUC",
+"out_date": "2026-11-27",
+"ret_date": "2026-12-15",
+"pair_key": "2026-11-27_2026-12-16",
+"opts": {
+"checked_bags": 1,
+"hide_separate_and_self_transfer": true,
+"exclude_basic_economy": false
+},
+"status": "done",
+"source_used": "fast_flights",
+"n_offers": 8,
+"error": null
+},
+{
+"id": "34ba343e1683826c",
+"stage": "A",
+"group": "tier1",
+"kind": "roundtrip",
+"origin": "MUC",
+"dest": "LAX",
+"ret_origin": "LAX",
+"ret_dest": "MUC",
+"out_date": "2026-11-27",
+"ret_date": "2026-12-15",
+"pair_key": "2026-11-27_2026-12-16",
+"opts": {
+"checked_bags": 1,
+"hide_separate_and_self_transfer": true,
+"exclude_basic_economy": false
+},
+"status": "done",
+"source_used": "fast_flights",
+"n_offers": 9,
+"error": null
+},
+{
+"id": "37e57ebff635e95f",
+"stage": "A",
+"group": "tier1",
+"kind": "roundtrip",
+"origin": "VIE",
+"dest": "SAN",
+"ret_origin": "SAN",
+"ret_dest": "VIE",
+"out_date": "2026-11-27",
+"ret_date": "2026-12-15",
+"pair_key": "2026-11-27_2026-12-16",
+"opts": {
+"checked_bags": 1,
+"hide_separate_and_self_transfer": true,
+"exclude_basic_economy": false
+},
+"status": "done",
+"source_used": "fast_flights_fork",
+"n_offers": 9,
+"error": null
+},
+{
+"id": "0e4d31b511055be5",
+"stage": "A",
+"group": "tier1",
+"kind": "roundtrip",
+"origin": "VIE",
+"dest": "LAX",
+"ret_origin": "LAX",
+"ret_dest": "VIE",
+"out_date": "2026-11-27",
+"ret_date": "2026-12-15",
+"pair_key": "2026-11-27_2026-12-16",
+"opts": {
+"checked_bags": 1,
+"hide_separate_and_self_transfer": true,
+"exclude_basic_economy": false
+},
+"status": "done",
+"source_used": "fast_flights",
+"n_offers": 11,
+"error": null
+},
+{
+"id": "3b09f76f34cae7c2",
+"stage": "A",
+"group": "tier1",
+"kind": "roundtrip",
+"origin": "WAW",
+"dest": "SAN",
+"ret_origin": "SAN",
+"ret_dest": "WAW",
+"out_date": "2026-11-28",
+"ret_date": "2026-12-15",
+"pair_key": "2026-11-27_2026-12-16",
+"opts": {
+"checked_bags": 1,
+"hide_separate_and_self_transfer": true,
+"exclude_basic_economy": false
+},
+"status": "done",
+"source_used": "fast_flights",
+"n_offers": 0,
+"error": null
+},
+{
+"id": "ccc74a54bf5a2e1b",
+"stage": "A",
+"group": "tier1",
+"kind": "roundtrip",
+"origin": "WAW",
+"dest": "LAX",
+"ret_origin": "LAX",
+"ret_dest": "WAW",
+"out_date": "2026-11-28",
+"ret_date": "2026-12-15",
+"pair_key": "2026-11-27_2026-12-16",
+"opts": {
+"checked_bags": 1,
+"hide_separate_and_self_transfer": true,
+"exclude_basic_economy": false
+},
+"status": "done",
+"source_used": "fast_flights_fork",
+"n_offers": 19,
+"error": null
+},
+{
+"id": "2444af8dd13a1545",
+"stage": "A",
+"group": "tier1",
+"kind": "roundtrip",
+"origin": "MUC",
+"dest": "SAN",
+"ret_origin": "SAN",
+"ret_dest": "MUC",
+"out_date": "2026-11-28",
+"ret_date": "2026-12-16",
+"pair_key": "2026-11-28_2026-12-17",
+"opts": {
+"checked_bags": 1,
+"hide_separate_and_self_transfer": true,
+"exclude_basic_economy": false
+},
+"status": "done",
+"source_used": "fast_flights",
+"n_offers": 8,
+"error": null
+},
+{
+"id": "5ee4a1f666a57a7d",
+"stage": "A",
+"group": "tier1",
+"kind": "roundtrip",
+"origin": "MUC",
+"dest": "LAX",
+"ret_origin": "LAX",
+"ret_dest": "MUC",
+"out_date": "2026-11-28",
+"ret_date": "2026-12-16",
+"pair_key": "2026-11-28_2026-12-17",
+"opts": {
+"checked_bags": 1,
+"hide_separate_and_self_transfer": true,
+"exclude_basic_economy": false
+},
+"status": "done",
+"source_used": "fast_flights",
+"n_offers": 8,
+"error": null
+},
+{
+"id": "1ea4e114b8dc7b31",
+"stage": "A",
+"group": "tier1",
+"kind": "roundtrip",
+"origin": "VIE",
+"dest": "SAN",
+"ret_origin": "SAN",
+"ret_dest": "VIE",
+"out_date": "2026-11-28",
+"ret_date": "2026-12-16",
+"pair_key": "2026-11-28_2026-12-17",
+"opts": {
+"checked_bags": 1,
+"hide_separate_and_self_transfer": true,
+"exclude_basic_economy": false
+},
+"status": "done",
+"source_used": "fast_flights",
+"n_offers": 0,
+"error": null
+},
+{
+"id": "1007a6aaa65767f8",
+"stage": "A",
+"group": "tier1",
+"kind": "roundtrip",
+"origin": "VIE",
+"dest": "LAX",
+"ret_origin": "LAX",
+"ret_dest": "VIE",
+"out_date": "2026-11-28",
+"ret_date": "2026-12-16",
+"pair_key": "2026-11-28_2026-12-17",
+"opts": {
+"checked_bags": 1,
+"hide_separate_and_self_transfer": true,
+"exclude_basic_economy": false
+},
+"status": "done",
+"source_used": "fast_flights",
+"n_offers": 12,
+"error": null
+},
+{
+"id": "d3e7d300b495bb0a",
+"stage": "A",
+"group": "tier1",
+"kind": "roundtrip",
+"origin": "WAW",
+"dest": "SAN",
+"ret_origin": "SAN",
+"ret_dest": "WAW",
+"out_date": "2026-11-29",
+"ret_date": "2026-12-16",
+"pair_key": "2026-11-28_2026-12-17",
+"opts": {
+"checked_bags": 1,
+"hide_separate_and_self_transfer": true,
+"exclude_basic_economy": false
+},
+"status": "done",
+"source_used": "fast_flights",
+"n_offers": 0,
+"error": null
+},
+{
+"id": "21eee9f4daf60c44",
+"stage": "A",
+"group": "tier1",
+"kind": "roundtrip",
+"origin": "WAW",
+"dest": "LAX",
+"ret_origin": "LAX",
+"ret_dest": "WAW",
+"out_date": "2026-11-29",
+"ret_date": "2026-12-16",
+"pair_key": "2026-11-28_2026-12-17",
+"opts": {
+"checked_bags": 1,
+"hide_separate_and_self_transfer": true,
+"exclude_basic_economy": false
+},
+"status": "done",
+"source_used": "fast_flights",
+"n_offers": 10,
+"error": null
+},
+{
+"id": "0f9e613e053891ce",
+"stage": "A",
+"group": "tier1",
+"kind": "roundtrip",
+"origin": "MUC",
+"dest": "SAN",
+"ret_origin": "SAN",
+"ret_dest": "MUC",
+"out_date": "2026-11-29",
+"ret_date": "2026-12-16",
+"pair_key": "2026-11-29_2026-12-17",
+"opts": {
+"checked_bags": 1,
+"hide_separate_and_self_transfer": true,
+"exclude_basic_economy": false
+},
+"status": "done",
+"source_used": "fast_flights",
+"n_offers": 0,
+"error": null
+},
+{
+"id": "5fb12853a828bf0c",
+"stage": "A",
+"group": "tier1",
+"kind": "roundtrip",
+"origin": "MUC",
+"dest": "LAX",
+"ret_origin": "LAX",
+"ret_dest": "MUC",
+"out_date": "2026-11-29",
+"ret_date": "2026-12-16",
+"pair_key": "2026-11-29_2026-12-17",
+"opts": {
+"checked_bags": 1,
+"hide_separate_and_self_transfer": true,
+"exclude_basic_economy": false
+},
+"status": "done",
+"source_used": "fast_flights",
+"n_offers": 10,
+"error": null
+},
+{
+"id": "a9cbecaf6a1fb986",
+"stage": "A",
+"group": "tier1",
+"kind": "roundtrip",
+"origin": "VIE",
+"dest": "SAN",
+"ret_origin": "SAN",
+"ret_dest": "VIE",
+"out_date": "2026-11-29",
+"ret_date": "2026-12-16",
+"pair_key": "2026-11-29_2026-12-17",
+"opts": {
+"checked_bags": 1,
+"hide_separate_and_self_transfer": true,
+"exclude_basic_economy": false
+},
+"status": "done",
+"source_used": "fast_flights_fork",
+"n_offers": 11,
+"error": null
+},
+{
+"id": "8236beb3bf37e4dc",
+"stage": "A",
+"group": "tier1",
+"kind": "roundtrip",
+"origin": "VIE",
+"dest": "LAX",
+"ret_origin": "LAX",
+"ret_dest": "VIE",
+"out_date": "2026-11-29",
+"ret_date": "2026-12-16",
+"pair_key": "2026-11-29_2026-12-17",
+"opts": {
+"checked_bags": 1,
+"hide_separate_and_self_transfer": true,
+"exclude_basic_economy": false
+},
+"status": "done",
+"source_used": "fast_flights",
+"n_offers": 8,
+"error": null
+},
+{
+"id": "d2fc2cad05d135d2",
+"stage": "A",
+"group": "tier1",
+"kind": "roundtrip",
+"origin": "WAW",
+"dest": "SAN",
+"ret_origin": "SAN",
+"ret_dest": "WAW",
+"out_date": "2026-11-30",
+"ret_date": "2026-12-16",
+"pair_key": "2026-11-29_2026-12-17",
+"opts": {
+"checked_bags": 1,
+"hide_separate_and_self_transfer": true,
+"exclude_basic_economy": false
+},
+"status": "done",
+"source_used": "fast_flights",
+"n_offers": 8,
+"error": null
+},
+{
+"id": "8f2dd10f16d6b8cf",
+"stage": "A",
+"group": "tier1",
+"kind": "roundtrip",
+"origin": "WAW",
+"dest": "LAX",
+"ret_origin": "LAX",
+"ret_dest": "WAW",
+"out_date": "2026-11-30",
+"ret_date": "2026-12-16",
+"pair_key": "2026-11-29_2026-12-17",
+"opts": {
+"checked_bags": 1,
+"hide_separate_and_self_transfer": true,
+"exclude_basic_economy": false
+},
+"status": "skipped",
+"source_used": null,
+"n_offers": 0,
+"error": "request budget exhausted"
+},
+{
+"id": "ec5aecdb886f9cd7",
+"stage": "B",
+"group": "stage_b_openjaw",
+"kind": "multicity",
+"origin": "VIE",
+"dest": "SAN",
+"ret_origin": "LAX",
+"ret_dest": "VIE",
+"out_date": "2026-11-25",
+"ret_date": "2026-12-13",
+"pair_key": "2026-11-25_2026-12-14",
+"opts": {
+"checked_bags": 1,
+"hide_separate_and_self_transfer": true,
+"exclude_basic_economy": false
+},
+"status": "skipped",
+"source_used": null,
+"n_offers": 0,
+"error": "request budget exhausted"
+},
+{
+"id": "144a227c7ec07ab5",
+"stage": "B",
+"group": "stage_b_openjaw",
+"kind": "multicity",
+"origin": "VIE",
+"dest": "LAX",
+"ret_origin": "SAN",
+"ret_dest": "VIE",
+"out_date": "2026-11-25",
+"ret_date": "2026-12-13",
+"pair_key": "2026-11-25_2026-12-14",
+"opts": {
+"checked_bags": 1,
+"hide_separate_and_self_transfer": true,
+"exclude_basic_economy": false
+},
+"status": "skipped",
+"source_used": null,
+"n_offers": 0,
+"error": "request budget exhausted"
+},
+{
+"id": "2446006c454838ab",
+"stage": "B",
+"group": "stage_b_openjaw",
+"kind": "multicity",
+"origin": "VIE",
+"dest": "SAN",
+"ret_origin": "LAX",
+"ret_dest": "VIE",
+"out_date": "2026-11-27",
+"ret_date": "2026-12-15",
+"pair_key": "2026-11-27_2026-12-16",
+"opts": {
+"checked_bags": 1,
+"hide_separate_and_self_transfer": true,
+"exclude_basic_economy": false
+},
+"status": "skipped",
+"source_used": null,
+"n_offers": 0,
+"error": "request budget exhausted"
+},
+{
+"id": "79c75c2d01694625",
+"stage": "B",
+"group": "stage_b_openjaw",
+"kind": "multicity",
+"origin": "VIE",
+"dest": "LAX",
+"ret_origin": "SAN",
+"ret_dest": "VIE",
+"out_date": "2026-11-27",
+"ret_date": "2026-12-15",
+"pair_key": "2026-11-27_2026-12-16",
+"opts": {
+"checked_bags": 1,
+"hide_separate_and_self_transfer": true,
+"exclude_basic_economy": false
+},
+"status": "skipped",
+"source_used": null,
+"n_offers": 0,
+"error": "request budget exhausted"
+},
+{
+"id": "94ee067a40054fa5",
+"stage": "B",
+"group": "stage_b_openjaw",
+"kind": "multicity",
+"origin": "VIE",
+"dest": "SAN",
+"ret_origin": "LAX",
+"ret_dest": "VIE",
+"out_date": "2026-11-26",
+"ret_date": "2026-12-14",
+"pair_key": "2026-11-26_2026-12-15",
+"opts": {
+"checked_bags": 1,
+"hide_separate_and_self_transfer": true,
+"exclude_basic_economy": false
+},
+"status": "skipped",
+"source_used": null,
+"n_offers": 0,
+"error": "request budget exhausted"
+},
+{
+"id": "d657428da6062fc3",
+"stage": "B",
+"group": "stage_b_openjaw",
+"kind": "multicity",
+"origin": "VIE",
+"dest": "LAX",
+"ret_origin": "SAN",
+"ret_dest": "VIE",
+"out_date": "2026-11-26",
+"ret_date": "2026-12-14",
+"pair_key": "2026-11-26_2026-12-15",
+"opts": {
+"checked_bags": 1,
+"hide_separate_and_self_transfer": true,
+"exclude_basic_economy": false
+},
+"status": "skipped",
+"source_used": null,
+"n_offers": 0,
+"error": "request budget exhausted"
+},
+{
+"id": "4df474d4ff3ee444",
+"stage": "B",
+"group": "stage_b_openjaw",
+"kind": "multicity",
+"origin": "VIE",
+"dest": "SAN",
+"ret_origin": "LAX",
+"ret_dest": "VIE",
+"out_date": "2026-11-28",
+"ret_date": "2026-12-16",
+"pair_key": "2026-11-28_2026-12-17",
+"opts": {
+"checked_bags": 1,
+"hide_separate_and_self_transfer": true,
+"exclude_basic_economy": false
+},
+"status": "skipped",
+"source_used": null,
+"n_offers": 0,
+"error": "request budget exhausted"
+},
+{
+"id": "4ca737a2f6e71fef",
+"stage": "B",
+"group": "stage_b_openjaw",
+"kind": "multicity",
+"origin": "VIE",
+"dest": "LAX",
+"ret_origin": "SAN",
+"ret_dest": "VIE",
+"out_date": "2026-11-28",
+"ret_date": "2026-12-16",
+"pair_key": "2026-11-28_2026-12-17",
+"opts": {
+"checked_bags": 1,
+"hide_separate_and_self_transfer": true,
+"exclude_basic_economy": false
+},
+"status": "skipped",
+"source_used": null,
+"n_offers": 0,
+"error": "request budget exhausted"
+},
+{
+"id": "5e8f109e1f3cdf58",
+"stage": "B",
+"group": "stage_b_openjaw",
+"kind": "multicity",
+"origin": "VIE",
+"dest": "SAN",
+"ret_origin": "LAX",
+"ret_dest": "VIE",
+"out_date": "2026-12-01",
+"ret_date": "2026-12-19",
+"pair_key": "2026-12-01_2026-12-20",
+"opts": {
+"checked_bags": 1,
+"hide_separate_and_self_transfer": true,
+"exclude_basic_economy": false
+},
+"status": "skipped",
+"source_used": null,
+"n_offers": 0,
+"error": "request budget exhausted"
+},
+{
+"id": "f5faaa4782c0412f",
+"stage": "B",
+"group": "stage_b_openjaw",
+"kind": "multicity",
+"origin": "VIE",
+"dest": "LAX",
+"ret_origin": "SAN",
+"ret_dest": "VIE",
+"out_date": "2026-12-01",
+"ret_date": "2026-12-19",
+"pair_key": "2026-12-01_2026-12-20",
+"opts": {
+"checked_bags": 1,
+"hide_separate_and_self_transfer": true,
+"exclude_basic_economy": false
+},
+"status": "skipped",
+"source_used": null,
+"n_offers": 0,
+"error": "request budget exhausted"
+},
+{
+"id": "27bea387810394dc",
+"stage": "B",
+"group": "stage_b_openjaw",
+"kind": "multicity",
+"origin": "VIE",
+"dest": "SAN",
+"ret_origin": "LAX",
+"ret_dest": "VIE",
+"out_date": "2026-11-29",
+"ret_date": "2026-12-16",
+"pair_key": "2026-11-29_2026-12-17",
+"opts": {
+"checked_bags": 1,
+"hide_separate_and_self_transfer": true,
+"exclude_basic_economy": false
+},
+"status": "skipped",
+"source_used": null,
+"n_offers": 0,
+"error": "request budget exhausted"
+},
+{
+"id": "687b8f563125ac0d",
+"stage": "B",
+"group": "return_options",
+"kind": "return_options",
+"origin": "VIE",
+"dest": "SAN",
+"ret_origin": "SAN",
+"ret_dest": "VIE",
+"out_date": "2026-11-25",
+"ret_date": "2026-12-13",
+"pair_key": "2026-11-25_2026-12-14",
+"opts": {
+"checked_bags": 1,
+"hide_separate_and_self_transfer": true,
+"exclude_basic_economy": false,
+"selected": [
+{
+"marketing_carrier": "OS",
+"flight_number": "183",
+"from": "VIE",
+"to": "MUC",
+"dep_local": "2026-11-25T09:25",
+"arr_local": "2026-11-25T10:25",
+"duration_min": 60,
+"operating_carrier": "OS",
+"carrier_name": "Austrian",
+"codeshares": [
+"LH6329",
+"UA9878"
+],
+"aircraft": "Airbus A320"
+},
+{
+"marketing_carrier": "LH",
+"flight_number": "466",
+"from": "MUC",
+"to": "SAN",
+"dep_local": "2026-11-25T12:45",
+"arr_local": "2026-11-25T15:45",
+"duration_min": 720,
+"operating_carrier": "LH",
+"carrier_name": "Lufthansa",
+"codeshares": [
+"UA8918"
+],
+"aircraft": "Airbus A350"
+}
+],
+"outbound": [
+{
+"marketing_carrier": "OS",
+"flight_number": "183",
+"from": "VIE",
+"to": "MUC",
+"dep_local": "2026-11-25T09:25",
+"arr_local": "2026-11-25T10:25",
+"duration_min": 60,
+"operating_carrier": "OS",
+"carrier_name": "Austrian",
+"codeshares": [
+"LH6329",
+"UA9878"
+],
+"aircraft": "Airbus A320"
+},
+{
+"marketing_carrier": "LH",
+"flight_number": "466",
+"from": "MUC",
+"to": "SAN",
+"dep_local": "2026-11-25T12:45",
+"arr_local": "2026-11-25T15:45",
+"duration_min": 720,
+"operating_carrier": "LH",
+"carrier_name": "Lufthansa",
+"codeshares": [
+"UA8918"
+],
+"aircraft": "Airbus A350"
+}
+]
+},
+"status": "skipped",
+"source_used": null,
+"n_offers": 0,
+"error": "request budget exhausted"
+},
+{
+"id": "6d6755b77bdcabb5",
+"stage": "B",
+"group": "return_options",
+"kind": "return_options",
+"origin": "VIE",
+"dest": "SAN",
+"ret_origin": "SAN",
+"ret_dest": "VIE",
+"out_date": "2026-11-27",
+"ret_date": "2026-12-15",
+"pair_key": "2026-11-27_2026-12-16",
+"opts": {
+"checked_bags": 1,
+"hide_separate_and_self_transfer": true,
+"exclude_basic_economy": false,
+"selected": [
+{
+"marketing_carrier": "OS",
+"flight_number": "183",
+"from": "VIE",
+"to": "MUC",
+"dep_local": "2026-11-27T09:25",
+"arr_local": "2026-11-27T10:25",
+"duration_min": 60,
+"operating_carrier": "OS",
+"carrier_name": "Austrian",
+"codeshares": [
+"LH6329",
+"UA9878"
+],
+"aircraft": "Airbus A320"
+},
+{
+"marketing_carrier": "LH",
+"flight_number": "466",
+"from": "MUC",
+"to": "SAN",
+"dep_local": "2026-11-27T12:45",
+"arr_local": "2026-11-27T15:45",
+"duration_min": 720,
+"operating_carrier": "LH",
+"carrier_name": "Lufthansa",
+"codeshares": [
+"UA8918"
+],
+"aircraft": "Airbus A350"
+}
+],
+"outbound": [
+{
+"marketing_carrier": "OS",
+"flight_number": "183",
+"from": "VIE",
+"to": "MUC",
+"dep_local": "2026-11-27T09:25",
+"arr_local": "2026-11-27T10:25",
+"duration_min": 60,
+"operating_carrier": "OS",
+"carrier_name": "Austrian",
+"codeshares": [
+"LH6329",
+"UA9878"
+],
+"aircraft": "Airbus A320"
+},
+{
+"marketing_carrier": "LH",
+"flight_number": "466",
+"from": "MUC",
+"to": "SAN",
+"dep_local": "2026-11-27T12:45",
+"arr_local": "2026-11-27T15:45",
+"duration_min": 720,
+"operating_carrier": "LH",
+"carrier_name": "Lufthansa",
+"codeshares": [
+"UA8918"
+],
+"aircraft": "Airbus A350"
+}
+]
+},
+"status": "skipped",
+"source_used": null,
+"n_offers": 0,
+"error": "request budget exhausted"
+},
+{
+"id": "433f584ac1c98c7a",
+"stage": "B",
+"group": "return_options",
+"kind": "return_options",
+"origin": "VIE",
+"dest": "SAN",
+"ret_origin": "SAN",
+"ret_dest": "VIE",
+"out_date": "2026-11-25",
+"ret_date": "2026-12-13",
+"pair_key": "2026-11-25_2026-12-14",
+"opts": {
+"checked_bags": 1,
+"hide_separate_and_self_transfer": true,
+"exclude_basic_economy": false,
+"selected": [
+{
+"marketing_carrier": "OS",
+"flight_number": "45",
+"from": "VIE",
+"to": "ORD",
+"dep_local": "2026-11-25T10:55",
+"arr_local": "2026-11-25T14:00",
+"duration_min": 605,
+"operating_carrier": "OS",
+"carrier_name": "Austrian",
+"codeshares": [
+"UA9849"
+],
+"aircraft": "Boeing 787"
+},
+{
+"marketing_carrier": "UA",
+"flight_number": "2138",
+"from": "ORD",
+"to": "SAN",
+"dep_local": "2026-11-25T16:00",
+"arr_local": "2026-11-25T18:34",
+"duration_min": 274,
+"operating_carrier": "UA",
+"carrier_name": "United",
+"codeshares": [
+"OS7709"
+],
+"aircraft": "Boeing 737MAX 9 Passenger"
+}
+],
+"outbound": [
+{
+"marketing_carrier": "OS",
+"flight_number": "45",
+"from": "VIE",
+"to": "ORD",
+"dep_local": "2026-11-25T10:55",
+"arr_local": "2026-11-25T14:00",
+"duration_min": 605,
+"operating_carrier": "OS",
+"carrier_name": "Austrian",
+"codeshares": [
+"UA9849"
+],
+"aircraft": "Boeing 787"
+},
+{
+"marketing_carrier": "UA",
+"flight_number": "2138",
+"from": "ORD",
+"to": "SAN",
+"dep_local": "2026-11-25T16:00",
+"arr_local": "2026-11-25T18:34",
+"duration_min": 274,
+"operating_carrier": "UA",
+"carrier_name": "United",
+"codeshares": [
+"OS7709"
+],
+"aircraft": "Boeing 737MAX 9 Passenger"
+}
+]
+},
+"status": "skipped",
+"source_used": null,
+"n_offers": 0,
+"error": "request budget exhausted"
+},
+{
+"id": "573e2bf74178881f",
+"stage": "D",
+"group": "separate_probe",
+"kind": "roundtrip",
+"origin": "VIE",
+"dest": "SAN",
+"ret_origin": "SAN",
+"ret_dest": "VIE",
+"out_date": "2026-11-25",
+"ret_date": "2026-12-13",
+"pair_key": "2026-11-25_2026-12-14",
+"opts": {
+"checked_bags": 1,
+"hide_separate_and_self_transfer": false,
+"exclude_basic_economy": false
+},
+"status": "skipped",
+"source_used": null,
+"n_offers": 0,
+"error": "request budget exhausted"
+},
+{
+"id": "a50c1ba0efa4cf08",
+"stage": "D",
+"group": "separate_probe",
+"kind": "roundtrip",
+"origin": "VIE",
+"dest": "SAN",
+"ret_origin": "SAN",
+"ret_dest": "VIE",
+"out_date": "2026-11-27",
+"ret_date": "2026-12-15",
+"pair_key": "2026-11-27_2026-12-16",
+"opts": {
+"checked_bags": 1,
+"hide_separate_and_self_transfer": false,
+"exclude_basic_economy": false
+},
+"status": "skipped",
+"source_used": null,
+"n_offers": 0,
+"error": "request budget exhausted"
+}
+]
+}

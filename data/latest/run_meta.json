@@ -1,0 +1,209 @@
+{
+ "schema_version": "1.0.0",
+ "run_id": "2026-10-14-db7a0e",
+ "date": "2026-10-14",
+ "started_at_utc": "2026-10-14T13:18:49Z",
+ "finished_at_utc": "2026-10-14T13:38:29Z",
+ "stages_run": [
+  "canary",
+  "A",
+  "B",
+  "C",
+  "D"
+ ],
+ "dry_run": false,
+ "plan": {
+  "date": "2026-10-14",
+  "budget": 50,
+  "date_pairs": 67,
+  "longest_pairs": 13,
+  "stage_a_full": {
+   "A:tier1": 402,
+   "A:tier2": 132,
+   "A:sfo_sjc_oak": 54,
+   "A:tier3": 104
+  },
+  "stage_a_after_shedding": {
+   "A:tier1": 30
+  },
+  "shed": {
+   "tier3": 104,
+   "sfo_sjc_oak": 54,
+   "tier2": 132,
+   "stage_b_openjaw": 200
+  },
+  "reserved_dynamic": {
+   "canary": 1,
+   "return_options": 3,
+   "exclude_basic": 3,
+   "stage_b_openjaw": 11,
+   "separate_probe": 2
+  },
+  "stages": [
+   "canary",
+   "A",
+   "B",
+   "C",
+   "D"
+  ]
+ },
+ "requests": {
+  "free_budget": 50,
+  "free_used": 50,
+  "by_source_and_stage": {
+   "fast_flights": {
+    "canary": 2,
+    "A": 29
+   },
+   "fast_flights_fork": {
+    "A": 19
+   },
+   "searchapi": {
+    "C": 5
+   }
+  },
+  "outcomes_by_source": {
+   "fast_flights": {
+    "ok": 20,
+    "empty": 11
+   },
+   "fast_flights_fork": {
+    "ok": 5,
+    "error": 14
+   },
+   "searchapi": {
+    "ok": 5
+   }
+  }
+ },
+ "queries": {
+  "planned": 46,
+  "succeeded": 29,
+  "success_rate": 0.63
+ },
+ "sources_used_for_results": {
+  "fast_flights": 24,
+  "fast_flights_fork": 5
+ },
+ "source_chain": [
+  "fast_flights",
+  "fast_flights_fork",
+  "searchapi",
+  "serpapi"
+ ],
+ "degraded": {},
+ "circuit_breakers_open": [],
+ "capability_report": {
+  "fast_flights": {
+   "available": true,
+   "reason": "",
+   "checked_bags": true,
+   "carry_on_bags": true,
+   "exclude_basic_economy": true,
+   "hide_separate_and_self_transfer": true,
+   "currency": true,
+   "max_stops": true,
+   "max_duration_minutes": true,
+   "min_layover_minutes": true,
+   "max_layover_minutes": true,
+   "multi_city": true,
+   "return_options": "via tracker tfs extension (FlightData field 4); not native",
+   "date_grid": false,
+   "version": "3.1.0",
+   "eu_consent_cookie": false,
+   "streams_full_results": false,
+   "parser": "tracker parse_payload (both buckets, flight numbers)"
+  },
+  "fast_flights_fork": {
+   "available": true,
+   "reason": "",
+   "checked_bags": true,
+   "carry_on_bags": true,
+   "exclude_basic_economy": true,
+   "hide_separate_and_self_transfer": true,
+   "currency": true,
+   "max_stops": true,
+   "max_duration_minutes": true,
+   "min_layover_minutes": true,
+   "max_layover_minutes": true,
+   "multi_city": true,
+   "return_options": "via tracker tfs extension (FlightData field 4); not native",
+   "date_grid": false,
+   "version": "fork@d162089",
+   "eu_consent_cookie": true,
+   "streams_full_results": true,
+   "parser": "tracker parse_payload"
+  },
+  "searchapi": {
+   "available": true,
+   "reason": "",
+   "checked_bags": "accepted but no price effect observed",
+   "carry_on_bags": true,
+   "exclude_basic_economy": false,
+   "hide_separate_and_self_transfer": false,
+   "currency": true,
+   "max_stops": true,
+   "max_duration_minutes": false,
+   "multi_city": true,
+   "return_options": "departure_token",
+   "date_grid": false
+  },
+  "serpapi": {
+   "available": true,
+   "reason": "",
+   "checked_bags": false,
+   "carry_on_bags": true,
+   "exclude_basic_economy": true,
+   "hide_separate_and_self_transfer": false,
+   "currency": true,
+   "max_stops": true,
+   "max_duration_minutes": true,
+   "multi_city": true,
+   "return_options": "departure_token",
+   "date_grid": false
+  }
+ },
+ "bag_filter_effective": false,
+ "quotas": {
+  "searchapi": {
+   "used": {
+    "hourly_cap": 5,
+    "daily_cap": 12,
+    "monthly_cap": 12
+   },
+   "caps": {
+    "monthly_cap": 200
+   }
+  },
+  "serpapi": {
+   "used": {
+    "hourly_cap": 0,
+    "daily_cap": 5,
+    "monthly_cap": 5
+   },
+   "caps": {
+    "daily_cap": 8,
+    "monthly_cap": 240,
+    "hourly_cap": 50
+   }
+  }
+ },
+ "fx": {
+  "source": "cnb",
+  "fx_date": "2026-10-14",
+  "eur_czk": 24.355,
+  "usd_czk": 21.754,
+  "error": null
+ },
+ "errors": [],
+ "errors_total": 0,
+ "issues": {},
+ "raw_dirs_pruned": 0,
+ "assumptions": {
+  "esta": "ESTA costs USD 40.62 from 2026-10-16; not included in total_trip_cost_czk.",
+  "estimates": "ground legs, hotel costs, final legs to/from San Diego and bag_fee_estimate_czk are estimates (estimate: true)",
+  "inbound_unknown": "records with inbound_known=false use planning assumptions: CA departure ret_date 15:00, home arrival next day 20:00",
+  "bag": "bag_certainty explains whether the checked bag is in the price; see README",
+  "currency": "CZK"
+ }
+}
