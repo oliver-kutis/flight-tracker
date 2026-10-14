@@ -700,10 +700,10 @@
 "hide_separate_and_self_transfer": true,
 "exclude_basic_economy": false
 },
-"status": "failed",
+"status": "skipped",
 "source_used": "fast_flights_fork",
 "n_offers": 0,
-"error": "error: TypeError: 'int' object is not subscriptable"
+"error": "request budget exhausted"
 },
 {
 "id": "144a227c7ec07ab5",
@@ -722,10 +722,10 @@
 "hide_separate_and_self_transfer": true,
 "exclude_basic_economy": false
 },
-"status": "failed",
+"status": "skipped",
 "source_used": "fast_flights_fork",
 "n_offers": 0,
-"error": "error: TypeError: 'int' object is not subscriptable"
+"error": "request budget exhausted"
 },
 {
 "id": "2446006c454838ab",
@@ -744,10 +744,10 @@
 "hide_separate_and_self_transfer": true,
 "exclude_basic_economy": false
 },
-"status": "failed",
+"status": "skipped",
 "source_used": "fast_flights_fork",
 "n_offers": 0,
-"error": "error: truncated: page empty, follow-up results refused"
+"error": "request budget exhausted"
 },
 {
 "id": "79c75c2d01694625",
@@ -766,10 +766,10 @@
 "hide_separate_and_self_transfer": true,
 "exclude_basic_economy": false
 },
-"status": "failed",
+"status": "skipped",
 "source_used": "fast_flights_fork",
 "n_offers": 0,
-"error": "error: TypeError: 'int' object is not subscriptable"
+"error": "request budget exhausted"
 },
 {
 "id": "94ee067a40054fa5",
@@ -788,10 +788,10 @@
 "hide_separate_and_self_transfer": true,
 "exclude_basic_economy": false
 },
-"status": "failed",
+"status": "skipped",
 "source_used": "fast_flights_fork",
 "n_offers": 0,
-"error": "error: TypeError: 'int' object is not subscriptable"
+"error": "request budget exhausted"
 },
 {
 "id": "d657428da6062fc3",
@@ -810,10 +810,10 @@
 "hide_separate_and_self_transfer": true,
 "exclude_basic_economy": false
 },
-"status": "failed",
+"status": "skipped",
 "source_used": "fast_flights_fork",
 "n_offers": 0,
-"error": "error: TypeError: 'int' object is not subscriptable"
+"error": "request budget exhausted"
 },
 {
 "id": "4df474d4ff3ee444",
@@ -832,10 +832,10 @@
 "hide_separate_and_self_transfer": true,
 "exclude_basic_economy": false
 },
-"status": "failed",
+"status": "skipped",
 "source_used": "fast_flights_fork",
 "n_offers": 0,
-"error": "error: TypeError: 'int' object is not subscriptable"
+"error": "request budget exhausted"
 },
 {
 "id": "4ca737a2f6e71fef",
@@ -854,10 +854,10 @@
 "hide_separate_and_self_transfer": true,
 "exclude_basic_economy": false
 },
-"status": "failed",
+"status": "skipped",
 "source_used": "fast_flights_fork",
 "n_offers": 0,
-"error": "error: TypeError: 'int' object is not subscriptable"
+"error": "request budget exhausted"
 },
 {
 "id": "5e8f109e1f3cdf58",
@@ -876,10 +876,10 @@
 "hide_separate_and_self_transfer": true,
 "exclude_basic_economy": false
 },
-"status": "failed",
+"status": "skipped",
 "source_used": "fast_flights_fork",
 "n_offers": 0,
-"error": "error: TypeError: 'int' object is not subscriptable"
+"error": "request budget exhausted"
 },
 {
 "id": "f5faaa4782c0412f",
@@ -1008,9 +1008,9 @@
 }
 ]
 },
-"status": "skipped",
-"source_used": null,
-"n_offers": 0,
+"status": "done",
+"source_used": "fast_flights_fork",
+"n_offers": 7,
 "error": "request budget exhausted"
 },
 {
@@ -1182,9 +1182,9 @@
 }
 ]
 },
-"status": "skipped",
-"source_used": null,
-"n_offers": 0,
+"status": "done",
+"source_used": "fast_flights_fork",
+"n_offers": 7,
 "error": "request budget exhausted"
 },
 {
@@ -1224,6 +1224,710 @@
 "opts": {
 "checked_bags": 1,
 "hide_separate_and_self_transfer": false,
+"exclude_basic_economy": false
+},
+"status": "skipped",
+"source_used": null,
+"n_offers": 0,
+"error": "request budget exhausted"
+},
+{
+"id": "fc3c9e8ec7a0306f",
+"stage": "A",
+"group": "tier1",
+"kind": "roundtrip",
+"origin": "MUC",
+"dest": "SAN",
+"ret_origin": "SAN",
+"ret_dest": "MUC",
+"out_date": "2026-11-30",
+"ret_date": "2026-12-16",
+"pair_key": "2026-11-30_2026-12-17",
+"opts": {
+"checked_bags": 1,
+"hide_separate_and_self_transfer": true,
+"exclude_basic_economy": false
+},
+"status": "failed",
+"source_used": "fast_flights_fork",
+"n_offers": 0,
+"error": "error: TypeError: 'int' object is not subscriptable @ _fetch_deferred_results:109 <- get_flights:72 <- main:66"
+},
+{
+"id": "080bb9f680ee1e35",
+"stage": "A",
+"group": "tier1",
+"kind": "roundtrip",
+"origin": "MUC",
+"dest": "LAX",
+"ret_origin": "LAX",
+"ret_dest": "MUC",
+"out_date": "2026-11-30",
+"ret_date": "2026-12-16",
+"pair_key": "2026-11-30_2026-12-17",
+"opts": {
+"checked_bags": 1,
+"hide_separate_and_self_transfer": true,
+"exclude_basic_economy": false
+},
+"status": "failed",
+"source_used": "fast_flights_fork",
+"n_offers": 0,
+"error": "error: TypeError: 'int' object is not subscriptable @ _fetch_deferred_results:109 <- get_flights:72 <- main:66"
+},
+{
+"id": "e761e8f0fc0ecd8f",
+"stage": "A",
+"group": "tier1",
+"kind": "roundtrip",
+"origin": "VIE",
+"dest": "SAN",
+"ret_origin": "SAN",
+"ret_dest": "VIE",
+"out_date": "2026-11-30",
+"ret_date": "2026-12-16",
+"pair_key": "2026-11-30_2026-12-17",
+"opts": {
+"checked_bags": 1,
+"hide_separate_and_self_transfer": true,
+"exclude_basic_economy": false
+},
+"status": "failed",
+"source_used": "fast_flights_fork",
+"n_offers": 0,
+"error": "error: TypeError: 'int' object is not subscriptable @ _fetch_deferred_results:109 <- get_flights:72 <- main:66"
+},
+{
+"id": "99defe4f06e948c7",
+"stage": "A",
+"group": "tier1",
+"kind": "roundtrip",
+"origin": "VIE",
+"dest": "LAX",
+"ret_origin": "LAX",
+"ret_dest": "VIE",
+"out_date": "2026-11-30",
+"ret_date": "2026-12-16",
+"pair_key": "2026-11-30_2026-12-17",
+"opts": {
+"checked_bags": 1,
+"hide_separate_and_self_transfer": true,
+"exclude_basic_economy": false
+},
+"status": "done",
+"source_used": "fast_flights_fork",
+"n_offers": 30,
+"error": null
+},
+{
+"id": "66fe5efabe0b33bd",
+"stage": "A",
+"group": "tier1",
+"kind": "roundtrip",
+"origin": "WAW",
+"dest": "SAN",
+"ret_origin": "SAN",
+"ret_dest": "WAW",
+"out_date": "2026-12-01",
+"ret_date": "2026-12-16",
+"pair_key": "2026-11-30_2026-12-17",
+"opts": {
+"checked_bags": 1,
+"hide_separate_and_self_transfer": true,
+"exclude_basic_economy": false
+},
+"status": "failed",
+"source_used": "fast_flights_fork",
+"n_offers": 0,
+"error": "error: TypeError: 'int' object is not subscriptable @ _fetch_deferred_results:109 <- get_flights:72 <- main:66"
+},
+{
+"id": "fd3e26daf6b83d42",
+"stage": "A",
+"group": "tier1",
+"kind": "roundtrip",
+"origin": "WAW",
+"dest": "LAX",
+"ret_origin": "LAX",
+"ret_dest": "WAW",
+"out_date": "2026-12-01",
+"ret_date": "2026-12-16",
+"pair_key": "2026-11-30_2026-12-17",
+"opts": {
+"checked_bags": 1,
+"hide_separate_and_self_transfer": true,
+"exclude_basic_economy": false
+},
+"status": "done",
+"source_used": "fast_flights_fork",
+"n_offers": 21,
+"error": null
+},
+{
+"id": "fb9521af54ca7953",
+"stage": "A",
+"group": "tier1",
+"kind": "roundtrip",
+"origin": "MUC",
+"dest": "SAN",
+"ret_origin": "SAN",
+"ret_dest": "MUC",
+"out_date": "2026-12-01",
+"ret_date": "2026-12-19",
+"pair_key": "2026-12-01_2026-12-20",
+"opts": {
+"checked_bags": 1,
+"hide_separate_and_self_transfer": true,
+"exclude_basic_economy": false
+},
+"status": "failed",
+"source_used": "fast_flights_fork",
+"n_offers": 0,
+"error": "error: TypeError: 'int' object is not subscriptable @ _fetch_deferred_results:109 <- get_flights:72 <- main:66"
+},
+{
+"id": "18ff3031931e4aa6",
+"stage": "A",
+"group": "tier1",
+"kind": "roundtrip",
+"origin": "MUC",
+"dest": "LAX",
+"ret_origin": "LAX",
+"ret_dest": "MUC",
+"out_date": "2026-12-01",
+"ret_date": "2026-12-19",
+"pair_key": "2026-12-01_2026-12-20",
+"opts": {
+"checked_bags": 1,
+"hide_separate_and_self_transfer": true,
+"exclude_basic_economy": false
+},
+"status": "done",
+"source_used": "fast_flights_fork",
+"n_offers": 48,
+"error": null
+},
+{
+"id": "b35913c9c50ade9e",
+"stage": "A",
+"group": "tier1",
+"kind": "roundtrip",
+"origin": "VIE",
+"dest": "SAN",
+"ret_origin": "SAN",
+"ret_dest": "VIE",
+"out_date": "2026-12-01",
+"ret_date": "2026-12-19",
+"pair_key": "2026-12-01_2026-12-20",
+"opts": {
+"checked_bags": 1,
+"hide_separate_and_self_transfer": true,
+"exclude_basic_economy": false
+},
+"status": "failed",
+"source_used": "fast_flights_fork",
+"n_offers": 0,
+"error": "error: truncated: page empty, follow-up results refused"
+},
+{
+"id": "6d0f45e1933fb178",
+"stage": "A",
+"group": "tier1",
+"kind": "roundtrip",
+"origin": "VIE",
+"dest": "LAX",
+"ret_origin": "LAX",
+"ret_dest": "VIE",
+"out_date": "2026-12-01",
+"ret_date": "2026-12-19",
+"pair_key": "2026-12-01_2026-12-20",
+"opts": {
+"checked_bags": 1,
+"hide_separate_and_self_transfer": true,
+"exclude_basic_economy": false
+},
+"status": "done",
+"source_used": "fast_flights_fork",
+"n_offers": 25,
+"error": null
+},
+{
+"id": "f0b489b47f249b11",
+"stage": "A",
+"group": "tier1",
+"kind": "roundtrip",
+"origin": "WAW",
+"dest": "SAN",
+"ret_origin": "SAN",
+"ret_dest": "WAW",
+"out_date": "2026-12-02",
+"ret_date": "2026-12-19",
+"pair_key": "2026-12-01_2026-12-20",
+"opts": {
+"checked_bags": 1,
+"hide_separate_and_self_transfer": true,
+"exclude_basic_economy": false
+},
+"status": "failed",
+"source_used": "fast_flights_fork",
+"n_offers": 0,
+"error": "error: truncated: page empty, follow-up results refused"
+},
+{
+"id": "5c92fdaa0ef7a056",
+"stage": "A",
+"group": "tier1",
+"kind": "roundtrip",
+"origin": "WAW",
+"dest": "LAX",
+"ret_origin": "LAX",
+"ret_dest": "WAW",
+"out_date": "2026-12-02",
+"ret_date": "2026-12-19",
+"pair_key": "2026-12-01_2026-12-20",
+"opts": {
+"checked_bags": 1,
+"hide_separate_and_self_transfer": true,
+"exclude_basic_economy": false
+},
+"status": "done",
+"source_used": "fast_flights_fork",
+"n_offers": 19,
+"error": null
+},
+{
+"id": "e5105b1c75421285",
+"stage": "A",
+"group": "tier1",
+"kind": "roundtrip",
+"origin": "MUC",
+"dest": "SAN",
+"ret_origin": "SAN",
+"ret_dest": "MUC",
+"out_date": "2026-12-02",
+"ret_date": "2026-12-19",
+"pair_key": "2026-12-02_2026-12-20",
+"opts": {
+"checked_bags": 1,
+"hide_separate_and_self_transfer": true,
+"exclude_basic_economy": false
+},
+"status": "done",
+"source_used": "fast_flights",
+"n_offers": 9,
+"error": null
+},
+{
+"id": "16e73857acc80abb",
+"stage": "A",
+"group": "tier1",
+"kind": "roundtrip",
+"origin": "MUC",
+"dest": "LAX",
+"ret_origin": "LAX",
+"ret_dest": "MUC",
+"out_date": "2026-12-02",
+"ret_date": "2026-12-19",
+"pair_key": "2026-12-02_2026-12-20",
+"opts": {
+"checked_bags": 1,
+"hide_separate_and_self_transfer": true,
+"exclude_basic_economy": false
+},
+"status": "done",
+"source_used": "fast_flights_fork",
+"n_offers": 49,
+"error": null
+},
+{
+"id": "f71d0b13075e1399",
+"stage": "A",
+"group": "tier1",
+"kind": "roundtrip",
+"origin": "VIE",
+"dest": "SAN",
+"ret_origin": "SAN",
+"ret_dest": "VIE",
+"out_date": "2026-12-02",
+"ret_date": "2026-12-19",
+"pair_key": "2026-12-02_2026-12-20",
+"opts": {
+"checked_bags": 1,
+"hide_separate_and_self_transfer": true,
+"exclude_basic_economy": false
+},
+"status": "failed",
+"source_used": "fast_flights_fork",
+"n_offers": 0,
+"error": "error: TypeError: 'int' object is not subscriptable @ _fetch_deferred_results:109 <- get_flights:72 <- main:66"
+},
+{
+"id": "b0eaeebaf6d9aa4c",
+"stage": "A",
+"group": "tier1",
+"kind": "roundtrip",
+"origin": "VIE",
+"dest": "LAX",
+"ret_origin": "LAX",
+"ret_dest": "VIE",
+"out_date": "2026-12-02",
+"ret_date": "2026-12-19",
+"pair_key": "2026-12-02_2026-12-20",
+"opts": {
+"checked_bags": 1,
+"hide_separate_and_self_transfer": true,
+"exclude_basic_economy": false
+},
+"status": "done",
+"source_used": "fast_flights_fork",
+"n_offers": 27,
+"error": null
+},
+{
+"id": "95927bff34904112",
+"stage": "A",
+"group": "tier1",
+"kind": "roundtrip",
+"origin": "WAW",
+"dest": "SAN",
+"ret_origin": "SAN",
+"ret_dest": "WAW",
+"out_date": "2026-12-03",
+"ret_date": "2026-12-19",
+"pair_key": "2026-12-02_2026-12-20",
+"opts": {
+"checked_bags": 1,
+"hide_separate_and_self_transfer": true,
+"exclude_basic_economy": false
+},
+"status": "failed",
+"source_used": "fast_flights_fork",
+"n_offers": 0,
+"error": "error: TypeError: 'int' object is not subscriptable @ _fetch_deferred_results:109 <- get_flights:72 <- main:66"
+},
+{
+"id": "27fcb7f37716ede4",
+"stage": "A",
+"group": "tier1",
+"kind": "roundtrip",
+"origin": "WAW",
+"dest": "LAX",
+"ret_origin": "LAX",
+"ret_dest": "WAW",
+"out_date": "2026-12-03",
+"ret_date": "2026-12-19",
+"pair_key": "2026-12-02_2026-12-20",
+"opts": {
+"checked_bags": 1,
+"hide_separate_and_self_transfer": true,
+"exclude_basic_economy": false
+},
+"status": "done",
+"source_used": "fast_flights_fork",
+"n_offers": 17,
+"error": null
+},
+{
+"id": "7890f09b5844b6cb",
+"stage": "A",
+"group": "tier1",
+"kind": "roundtrip",
+"origin": "MUC",
+"dest": "SAN",
+"ret_origin": "SAN",
+"ret_dest": "MUC",
+"out_date": "2026-12-03",
+"ret_date": "2026-12-19",
+"pair_key": "2026-12-03_2026-12-20",
+"opts": {
+"checked_bags": 1,
+"hide_separate_and_self_transfer": true,
+"exclude_basic_economy": false
+},
+"status": "done",
+"source_used": "fast_flights_fork",
+"n_offers": 33,
+"error": null
+},
+{
+"id": "eaa82aa32481628b",
+"stage": "A",
+"group": "tier1",
+"kind": "roundtrip",
+"origin": "MUC",
+"dest": "LAX",
+"ret_origin": "LAX",
+"ret_dest": "MUC",
+"out_date": "2026-12-03",
+"ret_date": "2026-12-19",
+"pair_key": "2026-12-03_2026-12-20",
+"opts": {
+"checked_bags": 1,
+"hide_separate_and_self_transfer": true,
+"exclude_basic_economy": false
+},
+"status": "done",
+"source_used": "fast_flights_fork",
+"n_offers": 60,
+"error": null
+},
+{
+"id": "57c407368e9a47b8",
+"stage": "A",
+"group": "tier1",
+"kind": "roundtrip",
+"origin": "VIE",
+"dest": "SAN",
+"ret_origin": "SAN",
+"ret_dest": "VIE",
+"out_date": "2026-12-03",
+"ret_date": "2026-12-19",
+"pair_key": "2026-12-03_2026-12-20",
+"opts": {
+"checked_bags": 1,
+"hide_separate_and_self_transfer": true,
+"exclude_basic_economy": false
+},
+"status": "done",
+"source_used": "fast_flights_fork",
+"n_offers": 24,
+"error": null
+},
+{
+"id": "62a5dd9a73468e25",
+"stage": "A",
+"group": "tier1",
+"kind": "roundtrip",
+"origin": "VIE",
+"dest": "LAX",
+"ret_origin": "LAX",
+"ret_dest": "VIE",
+"out_date": "2026-12-03",
+"ret_date": "2026-12-19",
+"pair_key": "2026-12-03_2026-12-20",
+"opts": {
+"checked_bags": 1,
+"hide_separate_and_self_transfer": true,
+"exclude_basic_economy": false
+},
+"status": "done",
+"source_used": "fast_flights",
+"n_offers": 9,
+"error": null
+},
+{
+"id": "e1a36f481836a6d4",
+"stage": "A",
+"group": "tier1",
+"kind": "roundtrip",
+"origin": "WAW",
+"dest": "SAN",
+"ret_origin": "SAN",
+"ret_dest": "WAW",
+"out_date": "2026-12-04",
+"ret_date": "2026-12-19",
+"pair_key": "2026-12-03_2026-12-20",
+"opts": {
+"checked_bags": 1,
+"hide_separate_and_self_transfer": true,
+"exclude_basic_economy": false
+},
+"status": "done",
+"source_used": "fast_flights_fork",
+"n_offers": 18,
+"error": null
+},
+{
+"id": "6a355f258c7c9269",
+"stage": "A",
+"group": "tier1",
+"kind": "roundtrip",
+"origin": "WAW",
+"dest": "LAX",
+"ret_origin": "LAX",
+"ret_dest": "WAW",
+"out_date": "2026-12-04",
+"ret_date": "2026-12-19",
+"pair_key": "2026-12-03_2026-12-20",
+"opts": {
+"checked_bags": 1,
+"hide_separate_and_self_transfer": true,
+"exclude_basic_economy": false
+},
+"status": "done",
+"source_used": "fast_flights",
+"n_offers": 7,
+"error": null
+},
+{
+"id": "aac1e5bcc0f0610e",
+"stage": "A",
+"group": "tier1",
+"kind": "roundtrip",
+"origin": "MUC",
+"dest": "SAN",
+"ret_origin": "SAN",
+"ret_dest": "MUC",
+"out_date": "2026-12-04",
+"ret_date": "2026-12-19",
+"pair_key": "2026-12-04_2026-12-20",
+"opts": {
+"checked_bags": 1,
+"hide_separate_and_self_transfer": true,
+"exclude_basic_economy": false
+},
+"status": "failed",
+"source_used": "fast_flights_fork",
+"n_offers": 0,
+"error": "error: TypeError: 'int' object is not subscriptable @ _fetch_deferred_results:109 <- get_flights:72 <- main:66"
+},
+{
+"id": "63a4d91fe88044ab",
+"stage": "A",
+"group": "tier1",
+"kind": "roundtrip",
+"origin": "MUC",
+"dest": "LAX",
+"ret_origin": "LAX",
+"ret_dest": "MUC",
+"out_date": "2026-12-04",
+"ret_date": "2026-12-19",
+"pair_key": "2026-12-04_2026-12-20",
+"opts": {
+"checked_bags": 1,
+"hide_separate_and_self_transfer": true,
+"exclude_basic_economy": false
+},
+"status": "done",
+"source_used": "fast_flights_fork",
+"n_offers": 57,
+"error": null
+},
+{
+"id": "476fe095357734e2",
+"stage": "A",
+"group": "tier1",
+"kind": "roundtrip",
+"origin": "VIE",
+"dest": "SAN",
+"ret_origin": "SAN",
+"ret_dest": "VIE",
+"out_date": "2026-12-04",
+"ret_date": "2026-12-19",
+"pair_key": "2026-12-04_2026-12-20",
+"opts": {
+"checked_bags": 1,
+"hide_separate_and_self_transfer": true,
+"exclude_basic_economy": false
+},
+"status": "done",
+"source_used": "fast_flights_fork",
+"n_offers": 19,
+"error": null
+},
+{
+"id": "7278a1ecefa330e2",
+"stage": "A",
+"group": "tier1",
+"kind": "roundtrip",
+"origin": "VIE",
+"dest": "LAX",
+"ret_origin": "LAX",
+"ret_dest": "VIE",
+"out_date": "2026-12-04",
+"ret_date": "2026-12-19",
+"pair_key": "2026-12-04_2026-12-20",
+"opts": {
+"checked_bags": 1,
+"hide_separate_and_self_transfer": true,
+"exclude_basic_economy": false
+},
+"status": "done",
+"source_used": "fast_flights_fork",
+"n_offers": 34,
+"error": null
+},
+{
+"id": "e3e5fdc59fc356bf",
+"stage": "A",
+"group": "tier1",
+"kind": "roundtrip",
+"origin": "WAW",
+"dest": "SAN",
+"ret_origin": "SAN",
+"ret_dest": "WAW",
+"out_date": "2026-12-05",
+"ret_date": "2026-12-19",
+"pair_key": "2026-12-04_2026-12-20",
+"opts": {
+"checked_bags": 1,
+"hide_separate_and_self_transfer": true,
+"exclude_basic_economy": false
+},
+"status": "done",
+"source_used": "fast_flights",
+"n_offers": 7,
+"error": null
+},
+{
+"id": "d6df4e35633dfeac",
+"stage": "A",
+"group": "tier1",
+"kind": "roundtrip",
+"origin": "WAW",
+"dest": "LAX",
+"ret_origin": "LAX",
+"ret_dest": "WAW",
+"out_date": "2026-12-05",
+"ret_date": "2026-12-19",
+"pair_key": "2026-12-04_2026-12-20",
+"opts": {
+"checked_bags": 1,
+"hide_separate_and_self_transfer": true,
+"exclude_basic_economy": false
+},
+"status": "done",
+"source_used": "fast_flights",
+"n_offers": 9,
+"error": null
+},
+{
+"id": "30db7e80643e4b02",
+"stage": "B",
+"group": "exclude_basic",
+"kind": "roundtrip",
+"origin": "VIE",
+"dest": "SAN",
+"ret_origin": "SAN",
+"ret_dest": "VIE",
+"out_date": "2026-11-25",
+"ret_date": "2026-12-13",
+"pair_key": "2026-11-25_2026-12-14",
+"opts": {
+"checked_bags": 1,
+"hide_separate_and_self_transfer": true,
+"exclude_basic_economy": true
+},
+"status": "skipped",
+"source_used": null,
+"n_offers": 0,
+"error": null
+},
+{
+"id": "cd975f1b9c3f4840",
+"stage": "B",
+"group": "stage_b_openjaw",
+"kind": "multicity",
+"origin": "VIE",
+"dest": "SAN",
+"ret_origin": "LAX",
+"ret_dest": "VIE",
+"out_date": "2026-12-02",
+"ret_date": "2026-12-19",
+"pair_key": "2026-12-02_2026-12-20",
+"opts": {
+"checked_bags": 1,
+"hide_separate_and_self_transfer": true,
 "exclude_basic_economy": false
 },
 "status": "skipped",

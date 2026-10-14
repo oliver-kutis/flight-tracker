@@ -1,9 +1,9 @@
 {
  "schema_version": "1.0.0",
- "run_id": "2026-10-14-eff884",
+ "run_id": "2026-10-14-eadc30",
  "date": "2026-10-14",
- "started_at_utc": "2026-10-14T14:29:44Z",
- "finished_at_utc": "2026-10-14T14:40:24Z",
+ "started_at_utc": "2026-10-14T17:41:13Z",
+ "finished_at_utc": "2026-10-14T17:49:30Z",
  "stages_run": [
   "canary",
   "A",
@@ -32,6 +32,7 @@
    "tier2": 132,
    "stage_b_openjaw": 200
   },
+  "already_done_today": 31,
   "reserved_dynamic": {
    "canary": 1,
    "return_options": 3,
@@ -49,15 +50,16 @@
  },
  "requests": {
   "free_budget": 50,
-  "free_used": 26,
+  "free_used": 50,
   "by_source_and_stage": {
    "fast_flights": {
-    "canary": 2,
-    "A": 1,
-    "B": 8
+    "canary": 1,
+    "A": 15
    },
    "fast_flights_fork": {
-    "B": 15
+    "canary": 2,
+    "A": 30,
+    "B": 2
    },
    "searchapi": {
     "C": 5
@@ -65,10 +67,11 @@
   },
   "outcomes_by_source": {
    "fast_flights": {
-    "ok": 2,
-    "empty": 9
+    "empty": 11,
+    "ok": 5
    },
    "fast_flights_fork": {
+    "ok": 19,
     "error": 15
    },
    "searchapi": {
@@ -77,30 +80,29 @@
   }
  },
  "queries": {
-  "planned": 17,
-  "succeeded": 1,
-  "success_rate": 0.059,
-  "runtime_min": 10.7,
-  "runtime_limit_hit": false
+  "planned": 33,
+  "succeeded": 22,
+  "success_rate": 0.667,
+  "runtime_min": 8.3,
+  "runtime_limit_hit": false,
+  "skipped": {
+   "request budget exhausted": 14
+  }
  },
  "sources_used_for_results": {
-  "fast_flights": 1,
-  "fast_flights_fork": 9
+  "fast_flights_fork": 27,
+  "fast_flights": 5
  },
  "source_chain": [
-  "fast_flights",
   "fast_flights_fork",
+  "fast_flights",
   "searchapi",
   "serpapi"
  ],
  "degraded": {
-  "fast_flights": "circuit breaker open after 8 failures",
-  "fast_flights_fork": "circuit breaker open after 8 failures"
+  "fast_flights": "canary failed on fast_flights (fast_flights_fork: ok None)"
  },
- "circuit_breakers_open": [
-  "fast_flights",
-  "fast_flights_fork"
- ],
+ "circuit_breakers_open": [],
  "capability_report": {
   "fast_flights": {
    "available": true,
@@ -171,13 +173,13 @@
    "date_grid": false
   }
  },
- "bag_filter_effective": null,
+ "bag_filter_effective": false,
  "quotas": {
   "searchapi": {
    "used": {
     "hourly_cap": 5,
-    "daily_cap": 17,
-    "monthly_cap": 17
+    "daily_cap": 22,
+    "monthly_cap": 22
    },
    "caps": {
     "monthly_cap": 200
@@ -205,99 +207,109 @@
  },
  "errors": [
   {
-   "task": "ec5aecdb886f9cd7",
-   "stage": "B",
-   "group": "stage_b_openjaw",
-   "route": "VIE-SAN/LAX-VIE",
-   "dates": "2026-11-25/2026-12-13",
+   "task": "fc3c9e8ec7a0306f",
+   "stage": "A",
+   "group": "tier1",
+   "route": "MUC-SAN/SAN-MUC",
+   "dates": "2026-11-30/2026-12-16",
    "source": "fast_flights_fork",
    "status": "error",
-   "error": "TypeError: 'int' object is not subscriptable"
+   "error": "TypeError: 'int' object is not subscriptable @ _fetch_deferred_results:109 <- get_flights:72 <- main:66"
   },
   {
-   "task": "144a227c7ec07ab5",
-   "stage": "B",
-   "group": "stage_b_openjaw",
-   "route": "VIE-LAX/SAN-VIE",
-   "dates": "2026-11-25/2026-12-13",
+   "task": "080bb9f680ee1e35",
+   "stage": "A",
+   "group": "tier1",
+   "route": "MUC-LAX/LAX-MUC",
+   "dates": "2026-11-30/2026-12-16",
    "source": "fast_flights_fork",
    "status": "error",
-   "error": "TypeError: 'int' object is not subscriptable"
+   "error": "TypeError: 'int' object is not subscriptable @ _fetch_deferred_results:109 <- get_flights:72 <- main:66"
   },
   {
-   "task": "2446006c454838ab",
-   "stage": "B",
-   "group": "stage_b_openjaw",
-   "route": "VIE-SAN/LAX-VIE",
-   "dates": "2026-11-27/2026-12-15",
+   "task": "e761e8f0fc0ecd8f",
+   "stage": "A",
+   "group": "tier1",
+   "route": "VIE-SAN/SAN-VIE",
+   "dates": "2026-11-30/2026-12-16",
+   "source": "fast_flights_fork",
+   "status": "error",
+   "error": "TypeError: 'int' object is not subscriptable @ _fetch_deferred_results:109 <- get_flights:72 <- main:66"
+  },
+  {
+   "task": "66fe5efabe0b33bd",
+   "stage": "A",
+   "group": "tier1",
+   "route": "WAW-SAN/SAN-WAW",
+   "dates": "2026-12-01/2026-12-16",
+   "source": "fast_flights_fork",
+   "status": "error",
+   "error": "TypeError: 'int' object is not subscriptable @ _fetch_deferred_results:109 <- get_flights:72 <- main:66"
+  },
+  {
+   "task": "fb9521af54ca7953",
+   "stage": "A",
+   "group": "tier1",
+   "route": "MUC-SAN/SAN-MUC",
+   "dates": "2026-12-01/2026-12-19",
+   "source": "fast_flights_fork",
+   "status": "error",
+   "error": "TypeError: 'int' object is not subscriptable @ _fetch_deferred_results:109 <- get_flights:72 <- main:66"
+  },
+  {
+   "task": "b35913c9c50ade9e",
+   "stage": "A",
+   "group": "tier1",
+   "route": "VIE-SAN/SAN-VIE",
+   "dates": "2026-12-01/2026-12-19",
    "source": "fast_flights_fork",
    "status": "error",
    "error": "truncated: page empty, follow-up results refused"
   },
   {
-   "task": "79c75c2d01694625",
-   "stage": "B",
-   "group": "stage_b_openjaw",
-   "route": "VIE-LAX/SAN-VIE",
-   "dates": "2026-11-27/2026-12-15",
+   "task": "f0b489b47f249b11",
+   "stage": "A",
+   "group": "tier1",
+   "route": "WAW-SAN/SAN-WAW",
+   "dates": "2026-12-02/2026-12-19",
    "source": "fast_flights_fork",
    "status": "error",
-   "error": "TypeError: 'int' object is not subscriptable"
+   "error": "truncated: page empty, follow-up results refused"
   },
   {
-   "task": "94ee067a40054fa5",
-   "stage": "B",
-   "group": "stage_b_openjaw",
-   "route": "VIE-SAN/LAX-VIE",
-   "dates": "2026-11-26/2026-12-14",
+   "task": "f71d0b13075e1399",
+   "stage": "A",
+   "group": "tier1",
+   "route": "VIE-SAN/SAN-VIE",
+   "dates": "2026-12-02/2026-12-19",
    "source": "fast_flights_fork",
    "status": "error",
-   "error": "TypeError: 'int' object is not subscriptable"
+   "error": "TypeError: 'int' object is not subscriptable @ _fetch_deferred_results:109 <- get_flights:72 <- main:66"
   },
   {
-   "task": "d657428da6062fc3",
-   "stage": "B",
-   "group": "stage_b_openjaw",
-   "route": "VIE-LAX/SAN-VIE",
-   "dates": "2026-11-26/2026-12-14",
+   "task": "95927bff34904112",
+   "stage": "A",
+   "group": "tier1",
+   "route": "WAW-SAN/SAN-WAW",
+   "dates": "2026-12-03/2026-12-19",
    "source": "fast_flights_fork",
    "status": "error",
-   "error": "TypeError: 'int' object is not subscriptable"
+   "error": "TypeError: 'int' object is not subscriptable @ _fetch_deferred_results:109 <- get_flights:72 <- main:66"
   },
   {
-   "task": "4df474d4ff3ee444",
-   "stage": "B",
-   "group": "stage_b_openjaw",
-   "route": "VIE-SAN/LAX-VIE",
-   "dates": "2026-11-28/2026-12-16",
+   "task": "aac1e5bcc0f0610e",
+   "stage": "A",
+   "group": "tier1",
+   "route": "MUC-SAN/SAN-MUC",
+   "dates": "2026-12-04/2026-12-19",
    "source": "fast_flights_fork",
    "status": "error",
-   "error": "TypeError: 'int' object is not subscriptable"
-  },
-  {
-   "task": "4ca737a2f6e71fef",
-   "stage": "B",
-   "group": "stage_b_openjaw",
-   "route": "VIE-LAX/SAN-VIE",
-   "dates": "2026-11-28/2026-12-16",
-   "source": "fast_flights_fork",
-   "status": "error",
-   "error": "TypeError: 'int' object is not subscriptable"
-  },
-  {
-   "task": "5e8f109e1f3cdf58",
-   "stage": "B",
-   "group": "stage_b_openjaw",
-   "route": "VIE-SAN/LAX-VIE",
-   "dates": "2026-12-01/2026-12-19",
-   "source": "fast_flights_fork",
-   "status": "error",
-   "error": "TypeError: 'int' object is not subscriptable"
+   "error": "TypeError: 'int' object is not subscriptable @ _fetch_deferred_results:109 <- get_flights:72 <- main:66"
   }
  ],
- "errors_total": 9,
+ "errors_total": 10,
  "issues": {
-  "issue_low_success": "ok"
+  "issue": "ok"
  },
  "raw_dirs_pruned": 0,
  "assumptions": {
