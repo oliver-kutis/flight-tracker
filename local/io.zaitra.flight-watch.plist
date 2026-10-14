@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!-- Install:  cp local/io.zaitra.flight-watch.plist ~/Library/LaunchAgents/ &&
+               launchctl bootstrap gui/$(id -u) ~/Library/LaunchAgents/io.zaitra.flight-watch.plist
+     Run now:  launchctl kickstart gui/$(id -u)/io.zaitra.flight-watch
+     Remove:   launchctl bootout gui/$(id -u)/io.zaitra.flight-watch
+     launchd runs a missed job at next wake if the Mac slept at 06:00. -->
+<plist version="1.0">
+<dict>
+  <key>Label</key><string>io.zaitra.flight-watch</string>
+  <key>ProgramArguments</key>
+  <array><string>/Users/oliver/code/flight-tracker/local/run.sh</string></array>
+  <key>StartCalendarInterval</key>
+  <dict><key>Hour</key><integer>6</integer><key>Minute</key><integer>0</integer></dict>
+  <key>StandardOutPath</key><string>/Users/oliver/code/flight-tracker/local/last-run.log</string>
+  <key>StandardErrorPath</key><string>/Users/oliver/code/flight-tracker/local/last-run.log</string>
+</dict>
+</plist>

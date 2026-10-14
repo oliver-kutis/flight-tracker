@@ -1,18 +1,24 @@
 #!/usr/bin/env python3
-"""Flight watch: round trips Brno area -> California via SerpApi (Google Flights).
+"""Flight watch: round trips Brno area -> California from Google Flights.
 
 Each run picks the date pairs checked least recently (within the daily budget),
 searches them, stores results in data/state.json and writes REPORT.md.
 
 Usage:
-  SERPAPI_KEY=... python flight_watch.py          # normal run
-  python flight_watch.py --dry-run                 # show plan, no API calls
+  uv run flight_watch.py              # normal run (source from config.yaml)
+  uv run flight_watch.py --dry-run    # show plan, no requests
+  uv run flight_watch.py --probe      # 2 test searches against Google
 """
 import argparse
 import datetime as dt
 import json
 import os
+import random
+import re
 import sys
+import time
+from base64 import urlsafe_b64encode
+from functools import lru_cache
 from pathlib import Path
 
 import requests
@@ -147,6 +153,150 @@ def fetch_return(cfg, key, offer, origins):
                                "stops", "via", "airlines", "price")}
 
 
+# -------------------------------------------------------------- Google direct
+
+GF_URL = "https://www.google.com/travel/flights/search"
+# EU consent wall: without this cookie Google answers with consent.google.com.
+CONSENT = {"SOCS": "CAESHAgBEhJnd3NfMjAyNTA1MDYtMF9SQzEaAmVuIAEaBgiA_LyaBg"}
+
+
+def _varint(n):
+    out = bytearray()
+    while True:
+        b = n & 0x7F
+        n >>= 7
+        out.append(b | (0x80 if n else 0))
+        if not n:
+            return bytes(out)
+
+
+def _field(tag_byte, payload):
+    if isinstance(payload, str):
+        payload = payload.encode()
+    return bytes([tag_byte]) + _varint(len(payload)) + payload
+
+
+def gf_tfs(cfg, origins, dests, dep, ret, selected=()):
+    """Google Flights `tfs` protobuf for a round trip, several airports per side.
+
+    Verified against the Google Flights UI (Oct 2026): it shows e.g. "Vienna and
+    4 more to Los Angeles and 4 more", "2 stops or fewer", "Under 20 hr".
+    FlightData: 2 date, 4 selected segment, 5 max stops, 12 max minutes,
+    13 from airport (repeated), 14 to airport (repeated).
+    Info: 3 legs, 8 passengers, 9 seat (1 economy), 19 trip (1 round trip).
+    `selected` = outbound segments (from, date, to, airline, number); Google
+    then lists return flights priced as the round-trip total.
+    """
+    filt = (b"\x28" + _varint(cfg["max_stops"])
+            + b"\x60" + _varint(cfg["max_duration_hours"] * 60))
+
+    def leg(date, fr, to, sel=()):
+        b = _field(0x12, date) + filt
+        b += b"".join(_field(0x22, _field(0x0A, a) + _field(0x12, d) + _field(0x1A, t)
+                             + _field(0x2A, al) + _field(0x32, n)) for a, d, t, al, n in sel)
+        b += b"".join(_field(0x6A, _field(0x12, a)) for a in fr)
+        b += b"".join(_field(0x72, _field(0x12, a)) for a in to)
+        return _field(0x1A, b)
+
+    raw = (leg(dep, origins, dests, selected) + leg(ret, dests, origins)
+           + _field(0x42, bytes([1] * cfg.get("adults", 1))) + b"\x48\x01\x98\x01\x01")
+    return urlsafe_b64encode(raw).decode()
+
+
+def gf_url(tfs):
+    return f"{GF_URL}?tfs={tfs}&hl=en&curr=EUR"
+
+
+@lru_cache(maxsize=1)
+def _client():
+    from primp import Client
+    c = Client(impersonate="chrome_145", impersonate_os="macos", referer=True,
+               cookie_store=True, timeout=60)
+    c.set_cookies("https://www.google.com", CONSENT)
+    return c
+
+
+def _hm(t):
+    t = (t or []) + [None, None]  # Google omits zero components: [8] = 08:00
+    return t[0] or 0, t[1] or 0
+
+
+def _stamp(date, t):
+    return dt.datetime(*date, *_hm(t)).strftime("%Y-%m-%d %H:%M")
+
+
+def gf_fetch(tfs):
+    """Fetch one results page -> list of itinerary dicts (both result buckets)."""
+    html = _client().get(GF_URL, params={"tfs": tfs, "hl": "en", "curr": "EUR"}).text
+    m = re.search(r"<script[^>]*class=\"ds:1\"[^>]*>(.*?)</script>", html, re.S)
+    if not m:
+        raise RuntimeError("consent/captcha page" if "consent" in html[:5000].lower()
+                           else "no ds:1 data in page (layout changed or blocked)")
+    js = m.group(1).split("data:", 1)[1].rsplit(",", 1)[0]
+    if js.rstrip().endswith("errorHasStatus: true"):
+        return []
+    p = json.loads(js)
+    # p[2] = "Top flights", p[3] = "Other flights" (fast-flights only read p[3]).
+    recs = [k for b in (2, 3) if p[b] and p[b][0] for k in p[b][0]]
+    out = {}
+    for k in recs:
+        f, price = k[0], (k[1][0] or [None, None])[1]
+        segs = f[2]
+        if not segs or not price:
+            continue
+        it = {
+            "origin": segs[0][3], "dest": segs[-1][6],
+            "dep_time": _stamp(segs[0][20], segs[0][8]),
+            "arr_time": _stamp(segs[-1][21], segs[-1][10]),
+            "price": price, "duration_min": f[9], "stops": len(segs) - 1,
+            "via": [s[6] for s in segs[:-1]], "airlines": list(dict.fromkeys(f[1])),
+            "segments": [[s[3], "%04d-%02d-%02d" % tuple(s[20]), s[6], s[22][0], s[22][1]]
+                         for s in segs],
+        }
+        key = tuple(map(tuple, it["segments"]))
+        if key not in out or price < out[key]["price"]:
+            out[key] = it
+    return list(out.values())
+
+
+def gf_search(cfg, origins, pair):
+    tfs = gf_tfs(cfg, origins, cfg["destinations"], pair["dep"], pair["ret"])
+    resp = {"search_metadata": {"google_flights_url": gf_url(tfs)}}
+    try:
+        offers = gf_fetch(tfs)
+    except Exception as e:  # network, consent page, changed HTML...
+        resp["error"] = f"{type(e).__name__}: {e}"[:300]
+        return resp, []
+    for o in offers:
+        o.update({k: pair[k] for k in ("dep", "ret", "stay", "away", "leave")})
+    return resp, offers
+
+
+def gf_return(cfg, offer, origins):
+    """Cheapest (then shortest) return flight for a chosen outbound itinerary."""
+    tfs = gf_tfs(cfg, origins, cfg["destinations"], offer["dep"], offer["ret"],
+                 selected=offer["segments"])
+    rets = gf_fetch(tfs)
+    if not rets:
+        return None
+    r = min(rets, key=lambda o: (o["price"], o["duration_min"] or 9999))
+    return {k: r[k] for k in ("origin", "dest", "dep_time", "arr_time", "duration_min",
+                               "stops", "via", "airlines", "price")}
+
+
+def add_bag(o, cfg):
+    """Google can no longer price a checked bag (its Bags filter is carry-on only),
+    so add a configured estimate unless the airline includes one."""
+    bag = cfg.get("bag", {})
+    o.setdefault("price_google", o["price"])
+    incl = set(o["airlines"]) <= set(bag.get("included_airlines", []))
+    fee = 0 if incl else bag.get("fee_eur", 0)
+    o["price"] = o["price_google"] + fee
+    o["bag_info"] = (["batožina v cene (dopravca)"] if incl else
+                     [f"{o['price_google']} € + {fee} € odhad za batožinu"])
+    return o
+
+
 # ------------------------------------------------------------------- scoring
 
 def score(o, cfg, max_stay):
@@ -192,7 +342,13 @@ def fmt_date(iso):
 
 def offer_line(o):
     ret = o.get("return")
-    back = (f"{fmt_dur(ret['duration_min'])}, {ret['stops']} prest." if ret else "neoverené")
+    back = "neoverené"
+    if ret:
+        back = (f"{ret['dep_time'][5:]} {ret['origin']}→{ret['dest']}, {', '.join(ret['airlines'])}, "
+                f"{fmt_dur(ret['duration_min'])}, {ret['stops']} prest. "
+                f"({'/'.join(ret['via']) or 'priamo'})")
+        if ret["price"] != o.get("price_google", o["price"]):
+            back += f" ⚠️ spolu {ret['price']} € bez batožiny"
     bag = "; ".join(o["bag_info"]) if o["bag_info"] else "–"
     return (f"| {o['origin']}→{o['dest']} | {fmt_date(o['dep'])} – {fmt_date(o['ret'])} "
             f"| {o['away']} dní / {o['leave']} dov. | **{o['price']} €** | {', '.join(o['airlines'])} "
@@ -200,33 +356,49 @@ def offer_line(o):
             f"| {back} | {bag} | {o['checked']} |")
 
 
-HEADER = ("| Trasa | Dátumy | Preč / dovolenka | Cena | Dopravca | Tam | Späť | Batožina (Google) | Overené |\n"
+HEADER = ("| Trasa | Dátumy | Preč / dovolenka | Cena | Dopravca | Tam | Späť | Batožina | Overené |\n"
           "|---|---|---|---|---|---|---|---|---|")
+
+
+def ranked(cfg, state, today):
+    """(offer, unit) for every stored offer still ahead of us, best score first."""
+    rows = [(o, u) for u in state["units"].values() if u.get("dep", "") > today.isoformat()
+            for o in u.get("offers", [])]
+    max_stay = max((o["stay"] for o, _ in rows), default=0)
+    return sorted(rows, key=lambda r: score(r[0], cfg, max_stay))
+
+
+def top5(cfg, rows):
+    """Best 5 under the cap (else the 5 closest to it), one per date pair first."""
+    under = [r for r in rows if r[0]["price"] <= cfg["max_price_eur"]]
+    pool = under or sorted(rows, key=lambda r: r[0]["price"])
+    seen, first, rest = set(), [], []
+    for r in pool:
+        pair = (r[0]["dep"], r[0]["ret"])
+        (rest if pair in seen else first).append(r)
+        seen.add(pair)
+    return (first + rest)[:5], bool(under)
 
 
 def write_report(cfg, state, today, left, changes, errors):
     cap = cfg["max_price_eur"]
     today_iso = today.isoformat()
-    all_offers = []
-    for u in state["units"].values():
-        if u.get("dep", "") <= today_iso:
-            continue  # departure already passed
-        for o in u.get("offers", []):
-            all_offers.append({**o, "checked": u["last_checked"], "url": u.get("url")})
-    max_stay = max((o["stay"] for o in all_offers), default=0)
-    for o in all_offers:
-        o["score"] = score(o, cfg, max_stay)
+    rows = ranked(cfg, state, today)
+    all_offers = [{**o, "checked": u["last_checked"], "url": u.get("url")} for o, u in rows]
 
     L = [f"# ✈️ Brno & okolie → Kalifornia · {fmt_date(today_iso)}{today.year}", "",
          f"Strop {cap} € · {cfg.get('adults', 1)} os. · max {cfg['max_stops']} prestupy · "
-         f"max {cfg['max_duration_hours']} h · SerpApi zostáva: {left if left is not None else '?'}", ""]
+         f"max {cfg['max_duration_hours']} h"
+         + (f" · SerpApi zostáva: {left if left is not None else '–'}" if cfg.get("source") == "serpapi" else ""),
+         ""]
     if not all_offers:
         L.append("_Zatiaľ žiadne dáta._")
     else:
+        top, any_under = top5(cfg, rows)
         under = [o for o in all_offers if o["price"] <= cap]
-        pool = under or sorted(all_offers, key=lambda o: o["price"])[:5]
-        L += ["## Top 5 (vyvážene)" if under else f"## Nič pod {cap} € – najbližšie k stropu", "", HEADER]
-        L += [offer_line(o) for o in sorted(pool, key=lambda o: o["score"])[:5]]
+        L += ["## Top 5 (vyvážene)" if any_under else f"## Nič pod {cap} € – najbližšie k stropu",
+              "", HEADER]
+        L += [offer_line({**o, "checked": u["last_checked"]}) for o, u in top]
         cheapest = min(all_offers, key=lambda o: o["price"])
         L += ["", f"**Najlacnejšia:** {cheapest['origin']}→{cheapest['dest']}, "
                   f"{fmt_date(cheapest['dep'])} – {fmt_date(cheapest['ret'])}, {cheapest['price']} €"]
@@ -239,20 +411,45 @@ def write_report(cfg, state, today, left, changes, errors):
     L += [f"- {c}" for c in changes] or ["- žiadne"]
     if errors:
         L += ["", "## Chyby", ""] + [f"- {e}" for e in errors]
-    L += ["", "_Ceny sú z Google Flights pre 1 osobu; odbavenú batožinu over pri rezervácii "
-              "(stĺpec Batožina ukazuje, čo hlási Google). Cesta vlakom na letisko nie je započítaná._"]
-    links = sorted({(o["dep"], o["ret"], o["url"]) for o in all_offers if o.get("url")})
+    bag = cfg.get("bag", {})
+    L += ["", f"_Ceny sú z Google Flights pre 1 osobu, spiatočná letenka spolu. Google už nevie "
+              f"započítať odbavenú batožinu, preto je k cene pripočítaný odhad "
+              f"{bag.get('fee_eur', 0)} € (okrem dopravcov s batožinou v cene); presnú sumu over "
+              f"pri rezervácii. Cesta vlakom na letisko nie je započítaná._"]
+    links = sorted({(u["dep"], u["ret"], u.get("url"), "/".join(cfg["origin_groups"][u["group"]]))
+                    for u in state["units"].values() if u.get("url") and u["dep"] > today_iso})
     if links:
         L += ["", "<details><summary>Odkazy na Google Flights</summary>", ""]
-        L += [f"- [{fmt_date(d)} – {fmt_date(r)}]({u})" for d, r, u in links] + ["", "</details>"]
+        L += [f"- [{fmt_date(d)} – {fmt_date(r)} z {g}]({u})" for d, r, u, g in links]
+        L += ["", "</details>"]
     REPORT_FILE.write_text("\n".join(L) + "\n")
 
 
 # ---------------------------------------------------------------------- main
 
+def probe(cfg, pair):
+    """Quick connectivity check: one single-airport and one multi-airport search."""
+    for label, origins, dests in [("single", ["VIE"], ["LAX"]),
+                                  ("multi", cfg["origin_groups"][0], cfg["destinations"])]:
+        c = {**cfg, "destinations": dests}
+        resp, offers = gf_search(c, origins, pair)
+        cheapest = min(offers, key=lambda o: o["price"]) if offers else None
+        print(f"[{label}] {','.join(origins)} -> {','.join(dests)} {pair['dep']}..{pair['ret']}: "
+              f"{len(offers)} offers, error={resp.get('error')}")
+        if cheapest:
+            print(f"    cheapest: {cheapest['origin']}->{cheapest['dest']} {cheapest['price']} EUR "
+                  f"{', '.join(cheapest['airlines'])}, {fmt_dur(cheapest['duration_min'])}")
+            print(f"    origins seen: {sorted({o['origin'] for o in offers})}, "
+                  f"dests seen: {sorted({o['dest'] for o in offers})}")
+            ret = gf_return(c, cheapest, origins)
+            print(f"    return for cheapest: {ret}")
+        print(f"    {resp['search_metadata']['google_flights_url']}")
+
+
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--dry-run", action="store_true")
+    ap.add_argument("--dry-run", action="store_true", help="show plan, no requests")
+    ap.add_argument("--probe", action="store_true", help="test Google with 2 searches + 2 return lookups")
     ap.add_argument("--today", help="override date (YYYY-MM-DD), for testing")
     args = ap.parse_args()
 
@@ -261,49 +458,78 @@ def main():
     pairs = candidate_pairs(cfg, today)
     state = load_state()
     b = cfg["budget"]
+    source = cfg.get("source", "google")
 
     if not pairs:
         print("No date pairs left in the window – nothing to do.")
         return
+    if args.probe:
+        probe(cfg, pairs[0])
+        return
 
     key = os.environ.get("SERPAPI_KEY")
+    if source == "serpapi":
+        n = b["max_searches_per_day"] - (1 if b.get("fetch_return_for_top") else 0)
+    else:
+        n = cfg["google"]["max_requests_per_day"]
+
     if args.dry_run:
-        print(f"{len(pairs)} date pairs tracked:")
+        print(f"source: {source}; {len(pairs)} date pairs tracked:")
         for p in pairs:
             print(f"  {fmt_date(p['dep'])} – {fmt_date(p['ret'])}: stay {p['stay']} n, "
                   f"away {p['away']} d, leave {p['leave']}")
-        print("Today's plan:")
-        for p, gi in plan(cfg, state, pairs, b["max_searches_per_day"]):
+        print(f"Today's plan ({n} searches max):")
+        for p, gi in plan(cfg, state, pairs, n):
             print(f"  {p['dep']} – {p['ret']}  group {gi}: {','.join(cfg['origin_groups'][gi])}")
         return
-    if not key:
-        sys.exit("SERPAPI_KEY is not set")
 
-    left = searches_left(key)
-    n = b["max_searches_per_day"] - (1 if b.get("fetch_return_for_top") else 0)
-    if left is not None:
-        n = max(0, min(n, left - b["reserve"]))
+    left = None
+    if source == "serpapi":
+        if not key:
+            sys.exit("SERPAPI_KEY is not set")
+        left = searches_left(key)
+        if left is not None:
+            n = max(0, min(n, left - b["reserve"]))
+
     DATA.mkdir(exist_ok=True)
     changes, errors, cap = [], [], cfg["max_price_eur"]
     max_stay = pairs[0]["stay"]
     today_iso = today.isoformat()
+    delay = cfg.get("google", {}).get("delay_seconds", [4, 9])
+    serp_budget = b["max_searches_per_day"] if source == "google" else 0
 
-    for pair, gi in plan(cfg, state, pairs, n):
+    for idx, (pair, gi) in enumerate(plan(cfg, state, pairs, n)):
         origins = cfg["origin_groups"][gi]
-        resp = call(base_params(cfg, key, origins, pair["dep"], pair["ret"]))
+        if source == "serpapi":
+            resp = call(base_params(cfg, key, origins, pair["dep"], pair["ret"]))
+            offers = parse_offers(resp, pair)
+        else:
+            if idx:
+                time.sleep(random.uniform(*delay))  # be gentle with Google
+            resp, offers = gf_search(cfg, origins, pair)
+            if resp.get("error") and key and serp_budget > 0:
+                # Direct Google failed (blocked runner, layout change): same search via SerpApi.
+                serp_budget -= 1
+                errors.append(f"{fmt_date(pair['dep'])} ({'/'.join(origins)}): Google priamo zlyhal "
+                              f"({resp['error'][:80]}), použité SerpApi")
+                resp = call(base_params(cfg, key, origins, pair["dep"], pair["ret"]))
+                offers = parse_offers(resp, pair)
+        offers = [add_bag(o, cfg) for o in offers]
         k = unit_key(pair, gi)
         prev = state["units"].get(k, {})
-        offers = parse_offers(resp, pair)
         with LOG_FILE.open("a") as f:
-            f.write(json.dumps({"date": today_iso, "unit": k, "n_offers": len(offers),
+            f.write(json.dumps({"date": today_iso, "source": source, "unit": k,
+                                "n_offers": len(offers),
                                 "min_price": min((o["price"] for o in offers), default=None),
                                 "error": resp.get("error")}) + "\n")
         label = f"{fmt_date(pair['dep'])} – {fmt_date(pair['ret'])} ({'/'.join(origins)})"
         if resp.get("error") and not offers:
             msg = resp["error"]
-            # "no results" is a normal outcome, not a failure
             if "hasn't returned any results" not in msg:
                 errors.append(f"{label}: {msg}")
+            if prev:  # keep last good data, don't overwrite with an error
+                prev["last_checked"] = today_iso
+                continue
         offers.sort(key=lambda o: score(o, cfg, max_stay))
         best_now = min((o["price"] for o in offers), default=None)
         best_before = prev.get("best_price")
@@ -321,8 +547,8 @@ def main():
             "history": (prev.get("history", []) + [[today_iso, best_now]])[-60:],
         }
 
-    # Return-leg detail for the overall best offer under the cap.
-    if b.get("fetch_return_for_top"):
+    # Return-leg detail (SerpApi only) for the overall best offer under the cap.
+    if source == "serpapi" and b.get("fetch_return_for_top"):
         cands = [(score(o, cfg, max_stay), k, i) for k, u in state["units"].items()
                  for i, o in enumerate(u.get("offers", []))
                  if o["price"] <= cap and o.get("departure_token") and not o.get("return")
@@ -336,10 +562,27 @@ def main():
                     u["offers"][i]["return"] = ret
             except requests.RequestException as e:
                 errors.append(f"return leg lookup failed: {e}")
+    elif source == "google":
+        for o, u in top5(cfg, ranked(cfg, state, today))[0]:
+            if (u["last_checked"] != today_iso or o.get("return_checked") == today_iso
+                    or not o.get("segments")):  # SerpApi fallback offers have no segments
+                continue
+            time.sleep(random.uniform(*delay))
+            try:
+                o["return"] = gf_return(cfg, o, cfg["origin_groups"][u["group"]])
+                o["return_checked"] = today_iso
+            except Exception as e:
+                errors.append(f"spiatočný let {o['origin']}→{o['dest']} {o['dep']}: "
+                              f"{type(e).__name__}: {e}"[:300])
 
     STATE_FILE.write_text(json.dumps(state, indent=1, ensure_ascii=False))
-    write_report(cfg, state, today, searches_left(key), changes, errors)
+    write_report(cfg, state, today, searches_left(key) if source == "serpapi" else None,
+                 changes, errors)
     print(REPORT_FILE.read_text())
+    # Fail the Action if every search errored, so GitHub emails you.
+    if errors and not any(u.get("last_checked") == today_iso and u.get("best_price")
+                          for u in state["units"].values()):
+        sys.exit("All searches failed – see REPORT.md")
 
 
 if __name__ == "__main__":

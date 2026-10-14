@@ -22,9 +22,20 @@ max_price_eur: 600
 max_stops: 2                     # na jeden smer
 max_duration_hours: 20           # na jeden smer
 adults: 1
+# Google Flights už nevie započítať odbavenú batožinu (filter Bags má len príručnú),
+# a najlacnejšie transatlantické tarify (Light/Basic) ju väčšinou nemajú.
+# Preto sa k cene pripočíta odhad. Uprav podľa reálnych cien dopravcov.
+bag:
+  fee_eur: 140                   # odhad tam aj späť (~70 € na smer)
+  included_airlines: [Turkish Airlines, Emirates, Qatar Airways, Etihad]
+
+source: google                   # google (priamo Google Flights, bez kľúča) | serpapi
+google:
+  max_requests_per_day: 28       # 14 dvojíc × 2 skupiny = všetko každý deň (+5 pre spiatočné lety)
+  delay_seconds: [4, 9]          # náhodná pauza medzi dopytmi
 
 budget:
-  max_searches_per_day: 7        # free plán SerpApi = 250/mesiac
+  max_searches_per_day: 7        # free plán SerpApi = 250/mesiac; pri source: google = záloha, keď Google priamo zlyhá
   reserve: 10                    # nechaj rezervu na ručné behy
   max_pairs: 14                  # koľko kombinácií dátumov sledovať (najdlhšie pobyty)
   fetch_return_for_top: true     # +1 dopyt denne: detail spiatočného letu pre top ponuku

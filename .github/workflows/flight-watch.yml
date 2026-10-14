@@ -17,14 +17,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
-        with:
-          python-version: "3.12"
-      - run: pip install -r requirements.txt
+      - uses: astral-sh/setup-uv@d0cc045d04ccac9d8b7881df0226f9e82c39688e # v6.8.0
+      - run: uv sync
       - name: Search flights
         env:
           SERPAPI_KEY: ${{ secrets.SERPAPI_KEY }}
-        run: python flight_watch.py
+        run: uv run flight_watch.py
       - name: Commit results
         run: |
           git config user.name "flight-watch-bot"
