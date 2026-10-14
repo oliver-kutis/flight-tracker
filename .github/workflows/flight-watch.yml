@@ -2,7 +2,7 @@ name: flight-watch
 
 on:
   schedule:
-    - cron: "0 4 * * *"   # 04:00 UTC = 05:00/06:00 Prague
+    - cron: "0 7 * * *"   # 04:00 UTC = 05:00/06:00 Prague
   workflow_dispatch: {}   # "Run workflow" button for manual runs
 
 permissions:
