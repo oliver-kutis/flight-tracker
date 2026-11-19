@@ -1,49 +1,92 @@
-2026-11-18 16:02:07,185 INFO capability report: {"fast_flights": {"available": true, "reason": "", "checked_bags": true, "carry_on_bags": true, "exclude_basic_economy": true, "hide_separate_and_self_transfer": true, "currency": true, "max_stops": true, "max_duration_minutes": true, "min_layover_minutes": true, "max_layover_minutes": true, "multi_city": true, "return_options": "via tracker tfs extension (FlightData field 4); not native", "date_grid": false, "version": "3.1.0", "eu_consent_cookie": false, "streams_full_results": false, "parser": "tracker parse_payload (both buckets, flight numbers)"}, "fast_flights_fork": {"available": true, "reason": "", "checked_bags": true, "carry_on_bags": true, "exclude_basic_economy": true, "hide_separate_and_self_transfer": true, "currency": true, "max_stops": true, "max_duration_minutes": true, "min_layover_minutes": true, "max_layover_minutes": true, "multi_city": true, "return_options": "via tracker tfs extension (FlightData field 4); not native", "date_grid": false, "version": "fork@d162089", "eu_consent_cookie": true, "streams_full_results": true, "parser": "tracker parse_payload"}, "searchapi": {"available": false, "reason": "quota exhausted"}, "serpapi": {"available": true, "reason": "", "checked_bags": false, "carry_on_bags": true, "exclude_basic_economy": true, "hide_separate_and_self_transfer": false, "currency": true, "max_stops": true, "max_duration_minutes": true, "multi_city": true, "return_options": "departure_token", "date_grid": false}}
-2026-11-18 16:02:07,185 INFO plan: {"date": "2026-11-18", "budget": 950, "date_pairs": 67, "longest_pairs": 13, "stage_a_full": {"A:tier1": 402, "A:tier2": 132, "A:sfo_sjc_oak": 63, "A:tier3": 104}, "stage_a_after_shedding": {"A:tier1": 402, "A:tier2": 132, "A:sfo_sjc_oak": 63, "A:tier3": 41}, "shed": {"tier3": 63}, "already_done_today": 0, "reserved_dynamic": {"canary": 2, "return_options": 40, "exclude_basic": 40, "stage_b_openjaw": 200, "separate_probe": 30}, "stages": ["canary", "A", "B", "C", "D"]}
-2026-11-18 16:02:11,499 INFO canary canary MUC-SAN 2026-12-01: fast_flights empty (0 offers); trying next source
-2026-11-18 16:02:16,679 INFO canary canary MUC-SAN 2026-12-01: fast_flights_fork error (0 offers); trying next source
-2026-11-18 16:02:32,942 INFO canary ok via serpapi (6 offers); checked-bag filter effective: False
-2026-11-18 16:02:48,668 INFO A tier1 VIE-SAN 2026-11-25: fast_flights empty (0 offers); trying next source
-2026-11-18 16:02:52,156 INFO A tier1 VIE-SAN 2026-11-25: fast_flights_fork error (0 offers); trying next source
-2026-11-18 16:02:57,198 INFO A tier1 VIE-LAX 2026-11-25: fast_flights empty (0 offers); trying next source
-2026-11-18 16:03:07,060 INFO A tier1 WAW-SAN 2026-11-26: fast_flights empty (0 offers); trying next source
-2026-11-18 16:03:10,519 INFO A tier1 WAW-SAN 2026-11-26: fast_flights_fork error (0 offers); trying next source
-2026-11-18 16:03:15,682 INFO A tier1 WAW-LAX 2026-11-26: fast_flights empty (0 offers); trying next source
-2026-11-18 16:03:26,612 INFO A tier1 MUC-SAN 2026-11-26: fast_flights empty (0 offers); trying next source
-2026-11-18 16:03:31,959 INFO A tier1 MUC-SAN 2026-11-26: fast_flights_fork error (0 offers); trying next source
-2026-11-18 16:03:35,754 INFO A tier1 MUC-LAX 2026-11-26: fast_flights empty (0 offers); trying next source
-2026-11-18 16:03:46,857 INFO A tier1 VIE-SAN 2026-11-26: fast_flights empty (0 offers); trying next source
-2026-11-18 16:03:50,876 INFO A tier1 VIE-SAN 2026-11-26: fast_flights_fork error (0 offers); trying next source
-2026-11-18 16:03:54,889 INFO A tier1 VIE-LAX 2026-11-26: fast_flights empty (0 offers); trying next source
-2026-11-18 16:04:04,871 INFO A tier1 WAW-SAN 2026-11-27: fast_flights empty (0 offers); trying next source
-2026-11-18 16:04:10,106 INFO A tier1 WAW-SAN 2026-11-27: fast_flights_fork error (0 offers); trying next source
-2026-11-18 16:04:20,747 INFO A tier1 MUC-SAN 2026-11-27: fast_flights empty (0 offers); trying next source
-2026-11-18 16:04:24,782 INFO A tier1 MUC-SAN 2026-11-27: fast_flights_fork error (0 offers); trying next source
-2026-11-18 16:04:29,984 INFO A tier1 MUC-LAX 2026-11-27: fast_flights empty (0 offers); trying next source
-2026-11-18 16:04:41,220 INFO A tier1 VIE-SAN 2026-11-27: fast_flights empty (0 offers); trying next source
-2026-11-18 16:04:45,111 INFO A tier1 VIE-SAN 2026-11-27: fast_flights_fork error (0 offers); trying next source
-2026-11-18 16:04:55,872 ERROR circuit breaker open for fast_flights
-2026-11-18 16:04:55,872 INFO A tier1 VIE-LAX 2026-11-27: fast_flights captcha (0 offers); trying next source
-2026-11-18 16:05:08,335 INFO A tier1 VIE-LAX 2026-11-27: fast_flights_fork error (0 offers); trying next source
-2026-11-18 16:05:20,125 INFO A tier1 WAW-SAN 2026-11-28: fast_flights_fork error (0 offers); trying next source
-2026-11-18 16:05:33,185 INFO A tier1 WAW-LAX 2026-11-28: fast_flights_fork error (0 offers); trying next source
-2026-11-18 16:05:43,055 INFO A tier1 MUC-SAN 2026-11-28: fast_flights_fork error (0 offers); trying next source
-2026-11-18 16:05:56,862 INFO A tier1 MUC-LAX 2026-11-28: fast_flights_fork error (0 offers); trying next source
-2026-11-18 16:06:07,838 INFO A tier1 VIE-SAN 2026-11-28: fast_flights_fork error (0 offers); trying next source
-2026-11-18 16:06:21,246 INFO A tier1 VIE-LAX 2026-11-28: fast_flights_fork error (0 offers); trying next source
-2026-11-18 16:06:32,294 ERROR circuit breaker open for fast_flights_fork
-2026-11-18 16:06:32,294 INFO A tier1 WAW-SAN 2026-11-29: fast_flights_fork error (0 offers); trying next source
-2026-11-18 16:07:21,904 INFO stage A done: 139 records, 38 free requests used
-2026-11-18 16:07:32,654 ERROR circuit breaker open for fast_flights:multicity
-2026-11-18 16:07:32,654 INFO B stage_b_openjaw MUC-SAN 2026-12-01: fast_flights captcha (0 offers); trying next source
-2026-11-18 16:07:41,704 INFO B stage_b_openjaw MUC-SAN 2026-12-01: fast_flights_fork error (0 offers); trying next source
-2026-11-18 16:07:52,970 INFO B stage_b_openjaw MUC-LAX 2026-12-01: fast_flights_fork error (0 offers); trying next source
-2026-11-18 16:08:08,413 INFO B stage_b_openjaw MUC-SAN 2026-11-26: fast_flights_fork error (0 offers); trying next source
-2026-11-18 16:08:23,599 INFO B stage_b_openjaw MUC-LAX 2026-11-26: fast_flights_fork error (0 offers); trying next source
-2026-11-18 16:08:36,077 INFO B stage_b_openjaw MUC-SAN 2026-11-25: fast_flights_fork error (0 offers); trying next source
-2026-11-18 16:08:45,267 INFO B stage_b_openjaw MUC-LAX 2026-11-25: fast_flights_fork error (0 offers); trying next source
-2026-11-18 16:08:54,917 INFO B stage_b_openjaw MUC-SAN 2026-11-29: fast_flights_fork error (0 offers); trying next source
-2026-11-18 16:09:05,634 ERROR circuit breaker open for fast_flights_fork:multicity
-2026-11-18 16:09:05,635 INFO B stage_b_openjaw MUC-LAX 2026-11-29: fast_flights_fork error (0 offers); trying next source
-2026-11-18 16:09:05,635 INFO stage C skipped: no paid source available
-2026-11-18 16:09:08,615 INFO done: 14/37 queries ok (38%), 139 records, free requests 47/950
+2026-11-19 16:08:59,962 INFO capability report: {"fast_flights": {"available": true, "reason": "", "checked_bags": true, "carry_on_bags": true, "exclude_basic_economy": true, "hide_separate_and_self_transfer": true, "currency": true, "max_stops": true, "max_duration_minutes": true, "min_layover_minutes": true, "max_layover_minutes": true, "multi_city": true, "return_options": "via tracker tfs extension (FlightData field 4); not native", "date_grid": false, "version": "3.1.0", "eu_consent_cookie": false, "streams_full_results": false, "parser": "tracker parse_payload (both buckets, flight numbers)"}, "fast_flights_fork": {"available": true, "reason": "", "checked_bags": true, "carry_on_bags": true, "exclude_basic_economy": true, "hide_separate_and_self_transfer": true, "currency": true, "max_stops": true, "max_duration_minutes": true, "min_layover_minutes": true, "max_layover_minutes": true, "multi_city": true, "return_options": "via tracker tfs extension (FlightData field 4); not native", "date_grid": false, "version": "fork@d162089", "eu_consent_cookie": true, "streams_full_results": true, "parser": "tracker parse_payload"}, "searchapi": {"available": false, "reason": "quota exhausted"}, "serpapi": {"available": true, "reason": "", "checked_bags": false, "carry_on_bags": true, "exclude_basic_economy": true, "hide_separate_and_self_transfer": false, "currency": true, "max_stops": true, "max_duration_minutes": true, "multi_city": true, "return_options": "departure_token", "date_grid": false}}
+2026-11-19 16:08:59,962 INFO plan: {"date": "2026-11-19", "budget": 950, "date_pairs": 67, "longest_pairs": 13, "stage_a_full": {"A:tier1": 402, "A:tier2": 132, "A:sfo_sjc_oak": 54, "A:tier3": 104}, "stage_a_after_shedding": {"A:tier1": 402, "A:tier2": 132, "A:sfo_sjc_oak": 54, "A:tier3": 50}, "shed": {"tier3": 54}, "already_done_today": 0, "reserved_dynamic": {"canary": 2, "return_options": 40, "exclude_basic": 40, "stage_b_openjaw": 200, "separate_probe": 30}, "stages": ["canary", "A", "B", "C", "D"]}
+2026-11-19 16:09:06,011 INFO canary canary MUC-SAN 2026-12-01: fast_flights empty (0 offers); trying next source
+2026-11-19 16:09:09,809 INFO canary canary MUC-SAN 2026-12-01: fast_flights_fork error (0 offers); trying next source
+2026-11-19 16:09:18,772 INFO canary ok via serpapi (8 offers); checked-bag filter effective: False
+2026-11-19 16:09:24,715 INFO A tier1 MUC-SAN 2026-11-25: fast_flights empty (0 offers); trying next source
+2026-11-19 16:09:30,884 INFO A tier1 MUC-SAN 2026-11-25: fast_flights_fork error (0 offers); trying next source
+2026-11-19 16:09:41,783 INFO A tier1 VIE-SAN 2026-11-25: fast_flights empty (0 offers); trying next source
+2026-11-19 16:09:46,092 INFO A tier1 VIE-SAN 2026-11-25: fast_flights_fork error (0 offers); trying next source
+2026-11-19 16:09:49,768 INFO A tier1 VIE-LAX 2026-11-25: fast_flights empty (0 offers); trying next source
+2026-11-19 16:09:54,415 INFO A tier1 VIE-LAX 2026-11-25: fast_flights_fork error (0 offers); trying next source
+2026-11-19 16:09:58,398 WARNING fast_flights 08e44e306045e26d attempt 1: no ds:1 data in page (layout changed or blocked)
+2026-11-19 16:10:32,123 INFO A tier1 WAW-SAN 2026-11-26: fast_flights empty (0 offers); trying next source
+2026-11-19 16:10:36,633 INFO A tier1 WAW-SAN 2026-11-26: fast_flights_fork error (0 offers); trying next source
+2026-11-19 16:10:49,330 INFO A tier1 MUC-LAX 2026-11-26: fast_flights empty (0 offers); trying next source
+2026-11-19 16:10:58,385 INFO A tier1 VIE-SAN 2026-11-26: fast_flights empty (0 offers); trying next source
+2026-11-19 16:11:03,677 INFO A tier1 VIE-SAN 2026-11-26: fast_flights_fork error (0 offers); trying next source
+2026-11-19 16:11:07,509 INFO A tier1 VIE-LAX 2026-11-26: fast_flights empty (0 offers); trying next source
+2026-11-19 16:11:19,921 INFO A tier1 WAW-SAN 2026-11-27: fast_flights empty (0 offers); trying next source
+2026-11-19 16:11:24,319 INFO A tier1 WAW-SAN 2026-11-27: fast_flights_fork error (0 offers); trying next source
+2026-11-19 16:11:38,981 INFO A tier1 MUC-LAX 2026-11-27: fast_flights empty (0 offers); trying next source
+2026-11-19 16:11:45,065 INFO A tier1 MUC-LAX 2026-11-27: fast_flights_fork error (0 offers); trying next source
+2026-11-19 16:11:51,202 INFO A tier1 VIE-SAN 2026-11-27: fast_flights empty (0 offers); trying next source
+2026-11-19 16:11:57,701 INFO A tier1 VIE-SAN 2026-11-27: fast_flights_fork error (0 offers); trying next source
+2026-11-19 16:12:01,731 INFO A tier1 VIE-LAX 2026-11-27: fast_flights empty (0 offers); trying next source
+2026-11-19 16:12:11,377 INFO A tier1 WAW-SAN 2026-11-28: fast_flights empty (0 offers); trying next source
+2026-11-19 16:12:15,350 INFO A tier1 WAW-SAN 2026-11-28: fast_flights_fork error (0 offers); trying next source
+2026-11-19 16:12:19,429 INFO A tier1 WAW-LAX 2026-11-28: fast_flights empty (0 offers); trying next source
+2026-11-19 16:12:35,372 INFO A tier1 MUC-LAX 2026-11-28: fast_flights empty (0 offers); trying next source
+2026-11-19 16:12:44,458 INFO A tier1 VIE-SAN 2026-11-28: fast_flights empty (0 offers); trying next source
+2026-11-19 16:12:49,736 INFO A tier1 VIE-SAN 2026-11-28: fast_flights_fork error (0 offers); trying next source
+2026-11-19 16:13:00,697 INFO A tier1 WAW-SAN 2026-11-29: fast_flights empty (0 offers); trying next source
+2026-11-19 16:13:06,234 INFO A tier1 WAW-SAN 2026-11-29: fast_flights_fork error (0 offers); trying next source
+2026-11-19 16:13:10,499 WARNING fast_flights 21eee9f4daf60c44 attempt 1: no ds:1 data in page (layout changed or blocked)
+2026-11-19 16:13:44,637 INFO A tier1 WAW-LAX 2026-11-29: fast_flights empty (0 offers); trying next source
+2026-11-19 16:14:16,431 ERROR circuit breaker open for fast_flights
+2026-11-19 16:14:16,431 INFO A tier1 MUC-SAN 2026-11-29: fast_flights captcha (0 offers); trying next source
+2026-11-19 16:14:37,778 INFO A tier1 MUC-LAX 2026-11-29: fast_flights_fork error (0 offers); trying next source
+2026-11-19 16:14:48,086 INFO A tier1 VIE-SAN 2026-11-29: fast_flights_fork error (0 offers); trying next source
+2026-11-19 16:15:13,842 INFO A tier1 WAW-SAN 2026-11-30: fast_flights_fork error (0 offers); trying next source
+2026-11-19 16:15:18,860 INFO A tier1 WAW-LAX 2026-11-30: fast_flights_fork error (0 offers); trying next source
+2026-11-19 16:15:44,606 INFO A tier1 MUC-LAX 2026-11-30: fast_flights_fork error (0 offers); trying next source
+2026-11-19 16:16:20,387 INFO A tier1 VIE-LAX 2026-11-30: fast_flights_fork error (0 offers); trying next source
+2026-11-19 16:16:26,716 INFO A tier1 WAW-SAN 2026-12-01: fast_flights_fork error (0 offers); trying next source
+2026-11-19 16:16:43,932 INFO A tier1 MUC-SAN 2026-12-01: fast_flights_fork error (0 offers); trying next source
+2026-11-19 16:16:49,866 INFO A tier1 MUC-LAX 2026-12-01: fast_flights_fork error (0 offers); trying next source
+2026-11-19 16:17:03,584 INFO A tier1 VIE-SAN 2026-12-01: fast_flights_fork error (0 offers); trying next source
+2026-11-19 16:17:16,066 INFO A tier1 VIE-LAX 2026-12-01: fast_flights_fork error (0 offers); trying next source
+2026-11-19 16:17:29,438 INFO A tier1 WAW-SAN 2026-12-02: fast_flights_fork error (0 offers); trying next source
+2026-11-19 16:17:33,778 INFO A tier1 WAW-LAX 2026-12-02: fast_flights_fork error (0 offers); trying next source
+2026-11-19 16:18:08,098 INFO A tier1 MUC-LAX 2026-12-02: fast_flights_fork error (0 offers); trying next source
+2026-11-19 16:18:23,275 INFO A tier1 VIE-SAN 2026-12-02: fast_flights_fork error (0 offers); trying next source
+2026-11-19 16:18:33,186 INFO A tier1 VIE-LAX 2026-12-02: fast_flights_fork error (0 offers); trying next source
+2026-11-19 16:18:38,455 INFO A tier1 WAW-SAN 2026-12-03: fast_flights_fork error (0 offers); trying next source
+2026-11-19 16:18:43,069 INFO A tier1 WAW-LAX 2026-12-03: fast_flights_fork error (0 offers); trying next source
+2026-11-19 16:18:48,621 INFO A tier1 MUC-SAN 2026-12-03: fast_flights_fork error (0 offers); trying next source
+2026-11-19 16:19:27,183 INFO A tier1 VIE-SAN 2026-12-03: fast_flights_fork error (0 offers); trying next source
+2026-11-19 16:19:36,410 INFO A tier1 VIE-LAX 2026-12-03: fast_flights_fork error (0 offers); trying next source
+2026-11-19 16:19:47,000 INFO A tier1 WAW-SAN 2026-12-04: fast_flights_fork error (0 offers); trying next source
+2026-11-19 16:19:52,519 INFO A tier1 WAW-LAX 2026-12-04: fast_flights_fork error (0 offers); trying next source
+2026-11-19 16:19:58,197 INFO A tier1 MUC-SAN 2026-12-04: fast_flights_fork error (0 offers); trying next source
+2026-11-19 16:20:22,041 INFO A tier1 VIE-SAN 2026-12-04: fast_flights_fork error (0 offers); trying next source
+2026-11-19 16:21:10,578 INFO A tier1 WAW-LAX 2026-12-05: fast_flights_fork error (0 offers); trying next source
+2026-11-19 16:21:24,875 INFO A tier1 MUC-SAN 2026-12-05: fast_flights_fork error (0 offers); trying next source
+2026-11-19 16:21:29,489 INFO A tier1 MUC-LAX 2026-12-05: fast_flights_fork error (0 offers); trying next source
+2026-11-19 16:21:34,608 INFO A tier1 VIE-SAN 2026-12-05: fast_flights_fork error (0 offers); trying next source
+2026-11-19 16:21:48,175 INFO A tier1 VIE-LAX 2026-12-05: fast_flights_fork error (0 offers); trying next source
+2026-11-19 16:21:52,921 INFO A tier1 WAW-SAN 2026-12-06: fast_flights_fork error (0 offers); trying next source
+2026-11-19 16:22:08,579 INFO A tier1 WAW-LAX 2026-12-06: fast_flights_fork error (0 offers); trying next source
+2026-11-19 16:22:21,988 ERROR circuit breaker open for fast_flights_fork
+2026-11-19 16:22:21,988 INFO A tier1 MUC-SAN 2026-12-06: fast_flights_fork error (0 offers); trying next source
+2026-11-19 16:23:08,550 INFO stage A done: 275 records, 89 free requests used
+2026-11-19 16:23:13,515 INFO B stage_b_openjaw MUC-SAN 2026-12-01: fast_flights empty (0 offers); trying next source
+2026-11-19 16:23:24,953 INFO B stage_b_openjaw MUC-SAN 2026-12-01: fast_flights_fork error (0 offers); trying next source
+2026-11-19 16:23:38,539 ERROR circuit breaker open for fast_flights:multicity
+2026-11-19 16:23:38,539 INFO B stage_b_openjaw MUC-LAX 2026-12-01: fast_flights captcha (0 offers); trying next source
+2026-11-19 16:23:44,607 INFO B stage_b_openjaw MUC-LAX 2026-12-01: fast_flights_fork error (0 offers); trying next source
+2026-11-19 16:23:57,344 INFO B stage_b_openjaw MUC-SAN 2026-11-27: fast_flights_fork error (0 offers); trying next source
+2026-11-19 16:24:10,276 INFO B stage_b_openjaw MUC-LAX 2026-11-27: fast_flights_fork error (0 offers); trying next source
+2026-11-19 16:24:39,861 INFO B stage_b_openjaw MUC-SAN 2026-11-26: fast_flights_fork error (0 offers); trying next source
+2026-11-19 16:24:57,787 INFO B stage_b_openjaw MUC-LAX 2026-11-26: fast_flights_fork error (0 offers); trying next source
+2026-11-19 16:25:10,216 INFO B stage_b_openjaw MUC-SAN 2026-11-28: fast_flights_fork error (0 offers); trying next source
+2026-11-19 16:25:38,805 INFO B stage_b_openjaw MUC-LAX 2026-11-28: fast_flights_fork error (0 offers); trying next source
+2026-11-19 16:25:52,159 INFO B stage_b_openjaw MUC-SAN 2026-12-06: fast_flights_fork error (0 offers); trying next source
+2026-11-19 16:26:04,498 INFO B stage_b_openjaw MUC-LAX 2026-12-06: fast_flights_fork error (0 offers); trying next source
+2026-11-19 16:26:24,631 INFO B stage_b_openjaw MUC-SAN 2026-11-25: fast_flights_fork error (0 offers); trying next source
+2026-11-19 16:26:28,016 INFO B stage_b_openjaw MUC-LAX 2026-11-25: fast_flights_fork error (0 offers); trying next source
+2026-11-19 16:26:39,961 INFO B stage_b_openjaw MUC-SAN 2026-12-02: fast_flights_fork error (0 offers); trying next source
+2026-11-19 16:26:49,941 ERROR circuit breaker open for fast_flights_fork:multicity
+2026-11-19 16:26:49,941 INFO B stage_b_openjaw MUC-LAX 2026-12-02: fast_flights_fork error (0 offers); trying next source
+2026-11-19 16:26:49,941 INFO stage C skipped: no paid source available
+2026-11-19 16:26:53,564 INFO done: 29/87 queries ok (33%), 275 records, free requests 105/950
