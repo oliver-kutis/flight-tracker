@@ -1,9 +1,9 @@
 {
  "schema_version": "1.0.0",
- "run_id": "2026-11-20-d58778",
- "date": "2026-11-20",
- "started_at_utc": "2026-11-20T15:49:43Z",
- "finished_at_utc": "2026-11-20T17:32:48Z",
+ "run_id": "2026-11-21-d396ca",
+ "date": "2026-11-21",
+ "started_at_utc": "2026-11-21T14:58:56Z",
+ "finished_at_utc": "2026-11-21T16:51:27Z",
  "stages_run": [
   "canary",
   "A",
@@ -13,24 +13,24 @@
  ],
  "dry_run": false,
  "plan": {
-  "date": "2026-11-20",
+  "date": "2026-11-21",
   "budget": 950,
   "date_pairs": 67,
   "longest_pairs": 13,
   "stage_a_full": {
    "A:tier1": 402,
-   "A:tier2": 138,
-   "A:sfo_sjc_oak": 63,
+   "A:tier2": 132,
+   "A:sfo_sjc_oak": 54,
    "A:tier3": 104
   },
   "stage_a_after_shedding": {
    "A:tier1": 402,
-   "A:tier2": 138,
-   "A:sfo_sjc_oak": 63,
-   "A:tier3": 35
+   "A:tier2": 132,
+   "A:sfo_sjc_oak": 54,
+   "A:tier3": 50
   },
   "shed": {
-   "tier3": 69
+   "tier3": 54
   },
   "already_done_today": 0,
   "reserved_dynamic": {
@@ -53,57 +53,55 @@
   "free_used": 950,
   "by_source_and_stage": {
    "fast_flights": {
-    "canary": 1,
-    "A": 655,
-    "B": 166
+    "canary": 2,
+    "A": 652,
+    "B": 74
    },
    "fast_flights_fork": {
-    "canary": 1,
-    "A": 14,
-    "B": 113
+    "A": 202,
+    "B": 20
    },
    "serpapi": {
-    "canary": 2,
     "C": 5
    }
   },
   "outcomes_by_source": {
    "fast_flights": {
-    "empty": 500,
-    "ok": 304,
-    "error": 18
+    "ok": 376,
+    "empty": 335,
+    "error": 17
    },
    "fast_flights_fork": {
-    "error": 32,
-    "ok": 96
+    "ok": 95,
+    "error": 105,
+    "empty": 22
    },
    "serpapi": {
-    "ok": 7
+    "ok": 5
    }
   }
  },
  "queries": {
-  "planned": 803,
-  "succeeded": 771,
-  "success_rate": 0.96,
-  "runtime_min": 103.1,
+  "planned": 709,
+  "succeeded": 601,
+  "success_rate": 0.848,
+  "runtime_min": 112.5,
   "runtime_limit_hit": false,
   "skipped": {
-   "request budget exhausted": 117
+   "request budget exhausted": 210
   }
  },
  "sources_used_for_results": {
-  "fast_flights": 664,
-  "fast_flights_fork": 127
+  "fast_flights": 498,
+  "fast_flights_fork": 200
  },
  "source_chain": [
-  "serpapi",
   "fast_flights",
   "fast_flights_fork",
-  "searchapi"
+  "searchapi",
+  "serpapi"
  ],
  "degraded": {
-  "fast_flights": "canary failed on fast_flights (serpapi: ok None)",
   "fast_flights_fork": "circuit breaker open after 8 failures"
  },
  "circuit_breakers_open": [
@@ -184,8 +182,8 @@
   "serpapi": {
    "used": {
     "hourly_cap": 5,
-    "daily_cap": 7,
-    "monthly_cap": 47
+    "daily_cap": 5,
+    "monthly_cap": 52
    },
    "caps": {
     "daily_cap": 8,
@@ -203,16 +201,6 @@
  },
  "errors": [
   {
-   "task": "1bf6d68f1350e834",
-   "stage": "A",
-   "group": "tier1",
-   "route": "VIE-SAN/SAN-VIE",
-   "dates": "2026-11-25/2026-12-13",
-   "source": "fast_flights_fork",
-   "status": "error",
-   "error": "JSONDecodeError: Extra data: line 1 column 235 (char 234) @ decode:341 <- loads:346 <- page_payload:45"
-  },
-  {
    "task": "08e44e306045e26d",
    "stage": "A",
    "group": "tier1",
@@ -220,7 +208,7 @@
    "dates": "2026-11-26/2026-12-13",
    "source": "fast_flights_fork",
    "status": "error",
-   "error": "JSONDecodeError: Extra data: line 1 column 235 (char 234) @ decode:341 <- loads:346 <- page_payload:45"
+   "error": "truncated: page empty, follow-up results refused"
   },
   {
    "task": "bd92294e10e1210e",
@@ -230,37 +218,17 @@
    "dates": "2026-11-26/2026-12-13",
    "source": "fast_flights_fork",
    "status": "error",
-   "error": "JSONDecodeError: Extra data: line 1 column 235 (char 234) @ decode:341 <- loads:346 <- page_payload:45"
+   "error": "JSONDecodeError: Extra data: line 1 column 232 (char 231) @ decode:341 <- loads:346 <- page_payload:45"
   },
   {
-   "task": "6be9a8b7954da8dc",
+   "task": "4d6c4f7a4e832db0",
    "stage": "A",
    "group": "tier1",
-   "route": "MUC-SAN/SAN-MUC",
+   "route": "VIE-SAN/SAN-VIE",
    "dates": "2026-11-26/2026-12-14",
    "source": "fast_flights_fork",
    "status": "error",
-   "error": "JSONDecodeError: Extra data: line 1 column 235 (char 234) @ decode:341 <- loads:346 <- page_payload:45"
-  },
-  {
-   "task": "47b692f6e17096e7",
-   "stage": "A",
-   "group": "tier1",
-   "route": "MUC-LAX/LAX-MUC",
-   "dates": "2026-11-26/2026-12-14",
-   "source": "fast_flights_fork",
-   "status": "error",
-   "error": "JSONDecodeError: Extra data: line 1 column 235 (char 234) @ decode:341 <- loads:346 <- page_payload:45"
-  },
-  {
-   "task": "ae42cc7e5e6f3ed1",
-   "stage": "A",
-   "group": "tier1",
-   "route": "VIE-LAX/LAX-VIE",
-   "dates": "2026-11-26/2026-12-14",
-   "source": "fast_flights_fork",
-   "status": "error",
-   "error": "JSONDecodeError: Extra data: line 1 column 235 (char 234) @ decode:341 <- loads:346 <- page_payload:45"
+   "error": "truncated: page empty, follow-up results refused"
   },
   {
    "task": "79bb27022498559c",
@@ -270,23 +238,13 @@
    "dates": "2026-11-27/2026-12-14",
    "source": "fast_flights_fork",
    "status": "error",
-   "error": "JSONDecodeError: Extra data: line 1 column 235 (char 234) @ decode:341 <- loads:346 <- page_payload:45"
+   "error": "truncated: page empty, follow-up results refused"
   },
   {
-   "task": "51dbb03bc04e84db",
+   "task": "34ba343e1683826c",
    "stage": "A",
    "group": "tier1",
-   "route": "WAW-LAX/LAX-WAW",
-   "dates": "2026-11-27/2026-12-14",
-   "source": "fast_flights_fork",
-   "status": "error",
-   "error": "JSONDecodeError: Extra data: line 1 column 235 (char 234) @ decode:341 <- loads:346 <- page_payload:45"
-  },
-  {
-   "task": "6d3a1bf04666f6ad",
-   "stage": "A",
-   "group": "tier1",
-   "route": "MUC-SAN/SAN-MUC",
+   "route": "MUC-LAX/LAX-MUC",
    "dates": "2026-11-27/2026-12-15",
    "source": "fast_flights_fork",
    "status": "error",
@@ -303,16 +261,6 @@
    "error": "JSONDecodeError: Extra data: line 1 column 235 (char 234) @ decode:341 <- loads:346 <- page_payload:45"
   },
   {
-   "task": "0e4d31b511055be5",
-   "stage": "A",
-   "group": "tier1",
-   "route": "VIE-LAX/LAX-VIE",
-   "dates": "2026-11-27/2026-12-15",
-   "source": "fast_flights_fork",
-   "status": "error",
-   "error": "JSONDecodeError: Extra data: line 1 column 235 (char 234) @ decode:341 <- loads:346 <- page_payload:45"
-  },
-  {
    "task": "3b09f76f34cae7c2",
    "stage": "A",
    "group": "tier1",
@@ -320,17 +268,907 @@
    "dates": "2026-11-28/2026-12-15",
    "source": "fast_flights_fork",
    "status": "error",
-   "error": "JSONDecodeError: Extra data: line 1 column 235 (char 234) @ decode:341 <- loads:346 <- page_payload:45"
+   "error": "truncated: page empty, follow-up results refused"
   },
   {
-   "task": "ccc74a54bf5a2e1b",
+   "task": "5ee4a1f666a57a7d",
    "stage": "A",
    "group": "tier1",
-   "route": "WAW-LAX/LAX-WAW",
-   "dates": "2026-11-28/2026-12-15",
+   "route": "MUC-LAX/LAX-MUC",
+   "dates": "2026-11-28/2026-12-16",
    "source": "fast_flights_fork",
    "status": "error",
    "error": "JSONDecodeError: Extra data: line 1 column 235 (char 234) @ decode:341 <- loads:346 <- page_payload:45"
+  },
+  {
+   "task": "1ea4e114b8dc7b31",
+   "stage": "A",
+   "group": "tier1",
+   "route": "VIE-SAN/SAN-VIE",
+   "dates": "2026-11-28/2026-12-16",
+   "source": "fast_flights_fork",
+   "status": "error",
+   "error": "JSONDecodeError: Extra data: line 1 column 235 (char 234) @ decode:341 <- loads:346 <- page_payload:45"
+  },
+  {
+   "task": "1007a6aaa65767f8",
+   "stage": "A",
+   "group": "tier1",
+   "route": "VIE-LAX/LAX-VIE",
+   "dates": "2026-11-28/2026-12-16",
+   "source": "fast_flights_fork",
+   "status": "error",
+   "error": "JSONDecodeError: Extra data: line 1 column 234 (char 233) @ decode:341 <- loads:346 <- page_payload:45"
+  },
+  {
+   "task": "21eee9f4daf60c44",
+   "stage": "A",
+   "group": "tier1",
+   "route": "WAW-LAX/LAX-WAW",
+   "dates": "2026-11-29/2026-12-16",
+   "source": "fast_flights_fork",
+   "status": "error",
+   "error": "JSONDecodeError: Extra data: line 1 column 234 (char 233) @ decode:341 <- loads:346 <- page_payload:45"
+  },
+  {
+   "task": "5fb12853a828bf0c",
+   "stage": "A",
+   "group": "tier1",
+   "route": "MUC-LAX/LAX-MUC",
+   "dates": "2026-11-29/2026-12-16",
+   "source": "fast_flights_fork",
+   "status": "error",
+   "error": "JSONDecodeError: Extra data: line 1 column 235 (char 234) @ decode:341 <- loads:346 <- page_payload:45"
+  },
+  {
+   "task": "a9cbecaf6a1fb986",
+   "stage": "A",
+   "group": "tier1",
+   "route": "VIE-SAN/SAN-VIE",
+   "dates": "2026-11-29/2026-12-16",
+   "source": "fast_flights_fork",
+   "status": "error",
+   "error": "truncated: page empty, follow-up results refused"
+  },
+  {
+   "task": "8f2dd10f16d6b8cf",
+   "stage": "A",
+   "group": "tier1",
+   "route": "WAW-LAX/LAX-WAW",
+   "dates": "2026-11-30/2026-12-16",
+   "source": "fast_flights_fork",
+   "status": "error",
+   "error": "JSONDecodeError: Extra data: line 1 column 234 (char 233) @ decode:341 <- loads:346 <- page_payload:45"
+  },
+  {
+   "task": "e761e8f0fc0ecd8f",
+   "stage": "A",
+   "group": "tier1",
+   "route": "VIE-SAN/SAN-VIE",
+   "dates": "2026-11-30/2026-12-16",
+   "source": "fast_flights_fork",
+   "status": "error",
+   "error": "JSONDecodeError: Extra data: line 1 column 235 (char 234) @ decode:341 <- loads:346 <- page_payload:45"
+  },
+  {
+   "task": "66fe5efabe0b33bd",
+   "stage": "A",
+   "group": "tier1",
+   "route": "WAW-SAN/SAN-WAW",
+   "dates": "2026-12-01/2026-12-16",
+   "source": "fast_flights_fork",
+   "status": "error",
+   "error": "JSONDecodeError: Extra data: line 1 column 235 (char 234) @ decode:341 <- loads:346 <- page_payload:45"
+  },
+  {
+   "task": "f0b489b47f249b11",
+   "stage": "A",
+   "group": "tier1",
+   "route": "WAW-SAN/SAN-WAW",
+   "dates": "2026-12-02/2026-12-19",
+   "source": "fast_flights_fork",
+   "status": "error",
+   "error": "JSONDecodeError: Extra data: line 1 column 236 (char 235) @ decode:341 <- loads:346 <- page_payload:45"
+  },
+  {
+   "task": "f71d0b13075e1399",
+   "stage": "A",
+   "group": "tier1",
+   "route": "VIE-SAN/SAN-VIE",
+   "dates": "2026-12-02/2026-12-19",
+   "source": "fast_flights_fork",
+   "status": "error",
+   "error": "truncated: page empty, follow-up results refused"
+  },
+  {
+   "task": "aac1e5bcc0f0610e",
+   "stage": "A",
+   "group": "tier1",
+   "route": "MUC-SAN/SAN-MUC",
+   "dates": "2026-12-04/2026-12-19",
+   "source": "fast_flights_fork",
+   "status": "error",
+   "error": "JSONDecodeError: Extra data: line 1 column 235 (char 234) @ decode:341 <- loads:346 <- page_payload:45"
+  },
+  {
+   "task": "f6e899acde46f740",
+   "stage": "A",
+   "group": "tier1",
+   "route": "VIE-SAN/SAN-VIE",
+   "dates": "2026-12-05/2026-12-19",
+   "source": "fast_flights_fork",
+   "status": "error",
+   "error": "JSONDecodeError: Extra data: line 1 column 235 (char 234) @ decode:341 <- loads:346 <- page_payload:45"
+  },
+  {
+   "task": "cb63450946487913",
+   "stage": "A",
+   "group": "tier1",
+   "route": "VIE-SAN/SAN-VIE",
+   "dates": "2026-11-25/2026-12-08",
+   "source": "fast_flights_fork",
+   "status": "error",
+   "error": "JSONDecodeError: Extra data: line 1 column 235 (char 234) @ decode:341 <- loads:346 <- page_payload:45"
+  },
+  {
+   "task": "37fd353ede69c3f9",
+   "stage": "A",
+   "group": "tier1",
+   "route": "VIE-SAN/SAN-VIE",
+   "dates": "2026-11-25/2026-12-12",
+   "source": "fast_flights_fork",
+   "status": "error",
+   "error": "truncated: page empty, follow-up results refused"
+  },
+  {
+   "task": "7e48471bce68d3c9",
+   "stage": "A",
+   "group": "tier1",
+   "route": "VIE-LAX/LAX-VIE",
+   "dates": "2026-11-25/2026-12-12",
+   "source": "fast_flights_fork",
+   "status": "error",
+   "error": "JSONDecodeError: Extra data: line 1 column 232 (char 231) @ decode:341 <- loads:346 <- page_payload:45"
+  },
+  {
+   "task": "5f2f68faa50fe8f5",
+   "stage": "A",
+   "group": "tier1",
+   "route": "MUC-SAN/SAN-MUC",
+   "dates": "2026-11-26/2026-12-08",
+   "source": "fast_flights_fork",
+   "status": "error",
+   "error": "RuntimeError: no ds:1 data in page @ page_payload:44 <- get_flights:75 <- main:81"
+  },
+  {
+   "task": "2c24196c86a6fd0c",
+   "stage": "A",
+   "group": "tier1",
+   "route": "MUC-SAN/SAN-MUC",
+   "dates": "2026-11-26/2026-12-10",
+   "source": "fast_flights_fork",
+   "status": "error",
+   "error": "JSONDecodeError: Extra data: line 1 column 235 (char 234) @ decode:341 <- loads:346 <- page_payload:45"
+  },
+  {
+   "task": "e4ab16c77688c5e1",
+   "stage": "A",
+   "group": "tier1",
+   "route": "WAW-LAX/LAX-WAW",
+   "dates": "2026-11-27/2026-12-10",
+   "source": "fast_flights_fork",
+   "status": "error",
+   "error": "JSONDecodeError: Extra data: line 1 column 235 (char 234) @ decode:341 <- loads:346 <- page_payload:45"
+  },
+  {
+   "task": "165191903d699bd8",
+   "stage": "A",
+   "group": "tier1",
+   "route": "VIE-LAX/LAX-VIE",
+   "dates": "2026-11-26/2026-12-11",
+   "source": "fast_flights_fork",
+   "status": "error",
+   "error": "JSONDecodeError: Extra data: line 1 column 235 (char 234) @ decode:341 <- loads:346 <- page_payload:45"
+  },
+  {
+   "task": "da4056d0cd21e932",
+   "stage": "A",
+   "group": "tier1",
+   "route": "WAW-SAN/SAN-WAW",
+   "dates": "2026-11-27/2026-12-12",
+   "source": "fast_flights_fork",
+   "status": "error",
+   "error": "JSONDecodeError: Extra data: line 1 column 235 (char 234) @ decode:341 <- loads:346 <- page_payload:45"
+  },
+  {
+   "task": "66123885c2da86c9",
+   "stage": "A",
+   "group": "tier1",
+   "route": "VIE-LAX/LAX-VIE",
+   "dates": "2026-11-26/2026-12-13",
+   "source": "fast_flights_fork",
+   "status": "error",
+   "error": "RuntimeError: no ds:1 data in page @ page_payload:44 <- get_flights:75 <- main:81"
+  },
+  {
+   "task": "b76faefbada5970f",
+   "stage": "A",
+   "group": "tier1",
+   "route": "VIE-SAN/SAN-VIE",
+   "dates": "2026-11-27/2026-12-09",
+   "source": "fast_flights_fork",
+   "status": "error",
+   "error": "JSONDecodeError: Extra data: line 1 column 236 (char 235) @ decode:341 <- loads:346 <- page_payload:45"
+  },
+  {
+   "task": "8fbbcf9d063e5932",
+   "stage": "A",
+   "group": "tier1",
+   "route": "WAW-SAN/SAN-WAW",
+   "dates": "2026-11-28/2026-12-09",
+   "source": "fast_flights_fork",
+   "status": "error",
+   "error": "JSONDecodeError: Extra data: line 1 column 235 (char 234) @ decode:341 <- loads:346 <- page_payload:45"
+  },
+  {
+   "task": "2b2aaf18291a9e8d",
+   "stage": "A",
+   "group": "tier1",
+   "route": "MUC-SAN/SAN-MUC",
+   "dates": "2026-11-27/2026-12-12",
+   "source": "fast_flights_fork",
+   "status": "error",
+   "error": "JSONDecodeError: Extra data: line 1 column 235 (char 234) @ decode:341 <- loads:346 <- page_payload:45"
+  },
+  {
+   "task": "55baef255c967bc3",
+   "stage": "A",
+   "group": "tier1",
+   "route": "VIE-LAX/LAX-VIE",
+   "dates": "2026-11-27/2026-12-12",
+   "source": "fast_flights_fork",
+   "status": "error",
+   "error": "JSONDecodeError: Extra data: line 1 column 235 (char 234) @ decode:341 <- loads:346 <- page_payload:45"
+  },
+  {
+   "task": "cfae3d43746a71a1",
+   "stage": "A",
+   "group": "tier1",
+   "route": "WAW-LAX/LAX-WAW",
+   "dates": "2026-11-28/2026-12-12",
+   "source": "fast_flights_fork",
+   "status": "error",
+   "error": "JSONDecodeError: Extra data: line 1 column 232 (char 231) @ decode:341 <- loads:346 <- page_payload:45"
+  },
+  {
+   "task": "2c3aca76d46a17a5",
+   "stage": "A",
+   "group": "tier1",
+   "route": "VIE-LAX/LAX-VIE",
+   "dates": "2026-11-27/2026-12-13",
+   "source": "fast_flights_fork",
+   "status": "error",
+   "error": "RuntimeError: no ds:1 data in page @ page_payload:44 <- get_flights:75 <- main:81"
+  },
+  {
+   "task": "31bbb3b1209780de",
+   "stage": "A",
+   "group": "tier1",
+   "route": "WAW-SAN/SAN-WAW",
+   "dates": "2026-11-28/2026-12-13",
+   "source": "fast_flights_fork",
+   "status": "error",
+   "error": "JSONDecodeError: Extra data: line 1 column 235 (char 234) @ decode:341 <- loads:346 <- page_payload:45"
+  },
+  {
+   "task": "d45905a86ee8ebf8",
+   "stage": "A",
+   "group": "tier1",
+   "route": "MUC-SAN/SAN-MUC",
+   "dates": "2026-11-27/2026-12-14",
+   "source": "fast_flights_fork",
+   "status": "error",
+   "error": "JSONDecodeError: Extra data: line 1 column 234 (char 233) @ decode:341 <- loads:346 <- page_payload:45"
+  },
+  {
+   "task": "cfea7ac10890ea56",
+   "stage": "A",
+   "group": "tier1",
+   "route": "MUC-LAX/LAX-MUC",
+   "dates": "2026-11-27/2026-12-14",
+   "source": "fast_flights_fork",
+   "status": "error",
+   "error": "JSONDecodeError: Extra data: line 1 column 235 (char 234) @ decode:341 <- loads:346 <- page_payload:45"
+  },
+  {
+   "task": "7a986db7c5b21ee3",
+   "stage": "A",
+   "group": "tier1",
+   "route": "WAW-LAX/LAX-WAW",
+   "dates": "2026-11-29/2026-12-11",
+   "source": "fast_flights_fork",
+   "status": "error",
+   "error": "JSONDecodeError: Extra data: line 1 column 234 (char 233) @ decode:341 <- loads:346 <- page_payload:45"
+  },
+  {
+   "task": "0ef117be0eea9e2e",
+   "stage": "A",
+   "group": "tier1",
+   "route": "VIE-LAX/LAX-VIE",
+   "dates": "2026-11-28/2026-12-14",
+   "source": "fast_flights_fork",
+   "status": "error",
+   "error": "JSONDecodeError: Extra data: line 1 column 236 (char 235) @ decode:341 <- loads:346 <- page_payload:45"
+  },
+  {
+   "task": "1718c6d2b498b3a0",
+   "stage": "A",
+   "group": "tier1",
+   "route": "VIE-SAN/SAN-VIE",
+   "dates": "2026-11-28/2026-12-15",
+   "source": "fast_flights_fork",
+   "status": "error",
+   "error": "JSONDecodeError: Extra data: line 1 column 234 (char 233) @ decode:341 <- loads:346 <- page_payload:45"
+  },
+  {
+   "task": "880c5dec91f4b59a",
+   "stage": "A",
+   "group": "tier1",
+   "route": "WAW-SAN/SAN-WAW",
+   "dates": "2026-11-30/2026-12-15",
+   "source": "fast_flights_fork",
+   "status": "error",
+   "error": "JSONDecodeError: Extra data: line 1 column 235 (char 234) @ decode:341 <- loads:346 <- page_payload:45"
+  },
+  {
+   "task": "620246f87710645d",
+   "stage": "A",
+   "group": "tier1",
+   "route": "WAW-LAX/LAX-WAW",
+   "dates": "2026-11-30/2026-12-15",
+   "source": "fast_flights_fork",
+   "status": "error",
+   "error": "JSONDecodeError: Extra data: line 1 column 235 (char 234) @ decode:341 <- loads:346 <- page_payload:45"
+  },
+  {
+   "task": "62aee8e843ae6a35",
+   "stage": "A",
+   "group": "tier1",
+   "route": "VIE-SAN/SAN-VIE",
+   "dates": "2026-12-01/2026-12-18",
+   "source": "fast_flights_fork",
+   "status": "error",
+   "error": "JSONDecodeError: Extra data: line 1 column 235 (char 234) @ decode:341 <- loads:346 <- page_payload:45"
+  },
+  {
+   "task": "5a53ed2b9d8fdca1",
+   "stage": "A",
+   "group": "tier1",
+   "route": "MUC-SAN/SAN-MUC",
+   "dates": "2026-12-02/2026-12-14",
+   "source": "fast_flights_fork",
+   "status": "error",
+   "error": "JSONDecodeError: Extra data: line 1 column 234 (char 233) @ decode:341 <- loads:346 <- page_payload:45"
+  },
+  {
+   "task": "808fef419893beac",
+   "stage": "A",
+   "group": "tier1",
+   "route": "WAW-SAN/SAN-WAW",
+   "dates": "2026-12-03/2026-12-14",
+   "source": "fast_flights_fork",
+   "status": "error",
+   "error": "JSONDecodeError: Extra data: line 1 column 235 (char 234) @ decode:341 <- loads:346 <- page_payload:45"
+  },
+  {
+   "task": "95429b1561fc7163",
+   "stage": "A",
+   "group": "tier1",
+   "route": "WAW-LAX/LAX-WAW",
+   "dates": "2026-12-03/2026-12-14",
+   "source": "fast_flights_fork",
+   "status": "error",
+   "error": "JSONDecodeError: Extra data: line 1 column 232 (char 231) @ decode:341 <- loads:346 <- page_payload:45"
+  },
+  {
+   "task": "6590da519e83b250",
+   "stage": "A",
+   "group": "tier1",
+   "route": "MUC-LAX/LAX-MUC",
+   "dates": "2026-12-02/2026-12-15",
+   "source": "fast_flights_fork",
+   "status": "error",
+   "error": "JSONDecodeError: Extra data: line 1 column 234 (char 233) @ decode:341 <- loads:346 <- page_payload:45"
+  },
+  {
+   "task": "57c9ea080813497c",
+   "stage": "A",
+   "group": "tier1",
+   "route": "VIE-SAN/SAN-VIE",
+   "dates": "2026-12-02/2026-12-15",
+   "source": "fast_flights_fork",
+   "status": "error",
+   "error": "JSONDecodeError: Extra data: line 1 column 232 (char 231) @ decode:341 <- loads:346 <- page_payload:45"
+  },
+  {
+   "task": "a56a7556173ad3d6",
+   "stage": "A",
+   "group": "tier1",
+   "route": "VIE-LAX/LAX-VIE",
+   "dates": "2026-12-02/2026-12-15",
+   "source": "fast_flights_fork",
+   "status": "error",
+   "error": "JSONDecodeError: Extra data: line 1 column 235 (char 234) @ decode:341 <- loads:346 <- page_payload:45"
+  },
+  {
+   "task": "69f6256a4bb3d3db",
+   "stage": "A",
+   "group": "tier1",
+   "route": "MUC-LAX/LAX-MUC",
+   "dates": "2026-12-02/2026-12-16",
+   "source": "fast_flights_fork",
+   "status": "error",
+   "error": "JSONDecodeError: Extra data: line 1 column 234 (char 233) @ decode:341 <- loads:346 <- page_payload:45"
+  },
+  {
+   "task": "f75e6507789987b4",
+   "stage": "A",
+   "group": "tier1",
+   "route": "VIE-LAX/LAX-VIE",
+   "dates": "2026-12-02/2026-12-16",
+   "source": "fast_flights_fork",
+   "status": "error",
+   "error": "JSONDecodeError: Extra data: line 1 column 234 (char 233) @ decode:341 <- loads:346 <- page_payload:45"
+  },
+  {
+   "task": "40dee5369e270faa",
+   "stage": "A",
+   "group": "tier1",
+   "route": "WAW-SAN/SAN-WAW",
+   "dates": "2026-12-03/2026-12-16",
+   "source": "fast_flights_fork",
+   "status": "error",
+   "error": "RuntimeError: no ds:1 data in page @ page_payload:44 <- get_flights:75 <- main:81"
+  },
+  {
+   "task": "46928f0d9b3005e4",
+   "stage": "A",
+   "group": "tier2",
+   "route": "PRG-SAN/SAN-PRG",
+   "dates": "2026-11-26/2026-12-14",
+   "source": "fast_flights_fork",
+   "status": "error",
+   "error": "RuntimeError: no ds:1 data in page @ page_payload:44 <- get_flights:75 <- main:81"
+  },
+  {
+   "task": "8de52e36b936444f",
+   "stage": "A",
+   "group": "tier2",
+   "route": "BUD-LAX/LAX-BUD",
+   "dates": "2026-11-26/2026-12-14",
+   "source": "fast_flights_fork",
+   "status": "error",
+   "error": "JSONDecodeError: Extra data: line 1 column 235 (char 234) @ decode:341 <- loads:346 <- page_payload:45"
+  },
+  {
+   "task": "b0c94d4879828a70",
+   "stage": "A",
+   "group": "tier2",
+   "route": "PRG-SAN/SAN-PRG",
+   "dates": "2026-11-25/2026-12-11",
+   "source": "fast_flights_fork",
+   "status": "error",
+   "error": "JSONDecodeError: Extra data: line 1 column 232 (char 231) @ decode:341 <- loads:346 <- page_payload:45"
+  },
+  {
+   "task": "271528014a4a4240",
+   "stage": "A",
+   "group": "tier2",
+   "route": "BUD-SAN/SAN-BUD",
+   "dates": "2026-11-25/2026-12-11",
+   "source": "fast_flights_fork",
+   "status": "error",
+   "error": "JSONDecodeError: Extra data: line 1 column 235 (char 234) @ decode:341 <- loads:346 <- page_payload:45"
+  },
+  {
+   "task": "a51e519c39fd4aae",
+   "stage": "A",
+   "group": "tier2",
+   "route": "PRG-SAN/SAN-PRG",
+   "dates": "2026-11-26/2026-12-08",
+   "source": "fast_flights_fork",
+   "status": "error",
+   "error": "truncated: page empty, follow-up results refused"
+  },
+  {
+   "task": "7b03c500722d4737",
+   "stage": "A",
+   "group": "tier2",
+   "route": "BTS-SAN/SAN-BTS",
+   "dates": "2026-11-26/2026-12-08",
+   "source": "fast_flights_fork",
+   "status": "error",
+   "error": "JSONDecodeError: Extra data: line 1 column 232 (char 231) @ decode:341 <- loads:346 <- page_payload:45"
+  },
+  {
+   "task": "b24b0fe6f98a1288",
+   "stage": "A",
+   "group": "tier2",
+   "route": "BTS-LAX/LAX-BTS",
+   "dates": "2026-11-26/2026-12-08",
+   "source": "fast_flights_fork",
+   "status": "error",
+   "error": "JSONDecodeError: Extra data: line 1 column 232 (char 231) @ decode:341 <- loads:346 <- page_payload:45"
+  },
+  {
+   "task": "8aa2bb85c10c0dae",
+   "stage": "A",
+   "group": "tier2",
+   "route": "BTS-LAX/LAX-BTS",
+   "dates": "2026-11-26/2026-12-11",
+   "source": "fast_flights_fork",
+   "status": "error",
+   "error": "RuntimeError: no ds:1 data in page @ page_payload:44 <- get_flights:75 <- main:81"
+  },
+  {
+   "task": "2411359d92b195d8",
+   "stage": "A",
+   "group": "tier2",
+   "route": "PRG-SAN/SAN-PRG",
+   "dates": "2026-11-27/2026-12-11",
+   "source": "fast_flights_fork",
+   "status": "error",
+   "error": "truncated: page empty, follow-up results refused"
+  },
+  {
+   "task": "34df045af1a174fe",
+   "stage": "A",
+   "group": "tier2",
+   "route": "BUD-SAN/SAN-BUD",
+   "dates": "2026-11-27/2026-12-11",
+   "source": "fast_flights_fork",
+   "status": "error",
+   "error": "JSONDecodeError: Extra data: line 1 column 232 (char 231) @ decode:341 <- loads:346 <- page_payload:45"
+  },
+  {
+   "task": "c9624f58ba63adfb",
+   "stage": "A",
+   "group": "tier2",
+   "route": "BTS-LAX/LAX-BTS",
+   "dates": "2026-11-27/2026-12-11",
+   "source": "fast_flights_fork",
+   "status": "error",
+   "error": "JSONDecodeError: Extra data: line 1 column 234 (char 233) @ decode:341 <- loads:346 <- page_payload:45"
+  },
+  {
+   "task": "6d3e2d4fb1fec57d",
+   "stage": "A",
+   "group": "tier2",
+   "route": "PRG-SAN/SAN-PRG",
+   "dates": "2026-11-27/2026-12-14",
+   "source": "fast_flights_fork",
+   "status": "error",
+   "error": "JSONDecodeError: Extra data: line 1 column 235 (char 234) @ decode:341 <- loads:346 <- page_payload:45"
+  },
+  {
+   "task": "46fd30b5aa690b2a",
+   "stage": "A",
+   "group": "tier2",
+   "route": "BUD-SAN/SAN-BUD",
+   "dates": "2026-11-27/2026-12-14",
+   "source": "fast_flights_fork",
+   "status": "error",
+   "error": "JSONDecodeError: Extra data: line 1 column 234 (char 233) @ decode:341 <- loads:346 <- page_payload:45"
+  },
+  {
+   "task": "383d9ba90b7d6267",
+   "stage": "A",
+   "group": "tier2",
+   "route": "PRG-SAN/SAN-PRG",
+   "dates": "2026-11-28/2026-12-11",
+   "source": "fast_flights_fork",
+   "status": "error",
+   "error": "JSONDecodeError: Extra data: line 1 column 236 (char 235) @ decode:341 <- loads:346 <- page_payload:45"
+  },
+  {
+   "task": "cfaf7343c122e448",
+   "stage": "A",
+   "group": "tier2",
+   "route": "BTS-SAN/SAN-BTS",
+   "dates": "2026-11-28/2026-12-11",
+   "source": "fast_flights_fork",
+   "status": "error",
+   "error": "JSONDecodeError: Extra data: line 1 column 235 (char 234) @ decode:341 <- loads:346 <- page_payload:45"
+  },
+  {
+   "task": "11ee2431f42731f6",
+   "stage": "A",
+   "group": "tier2",
+   "route": "PRG-LAX/LAX-PRG",
+   "dates": "2026-11-28/2026-12-14",
+   "source": "fast_flights_fork",
+   "status": "error",
+   "error": "JSONDecodeError: Extra data: line 1 column 232 (char 231) @ decode:341 <- loads:346 <- page_payload:45"
+  },
+  {
+   "task": "fab7561c0c52666c",
+   "stage": "A",
+   "group": "tier2",
+   "route": "BUD-SAN/SAN-BUD",
+   "dates": "2026-11-28/2026-12-14",
+   "source": "fast_flights_fork",
+   "status": "error",
+   "error": "truncated: page empty, follow-up results refused"
+  },
+  {
+   "task": "ba3cd646a4457a91",
+   "stage": "A",
+   "group": "tier2",
+   "route": "BTS-SAN/SAN-BTS",
+   "dates": "2026-11-28/2026-12-14",
+   "source": "fast_flights_fork",
+   "status": "error",
+   "error": "truncated: page empty, follow-up results refused"
+  },
+  {
+   "task": "099102eb489ab1e1",
+   "stage": "A",
+   "group": "tier2",
+   "route": "BTS-LAX/LAX-BTS",
+   "dates": "2026-11-29/2026-12-14",
+   "source": "fast_flights_fork",
+   "status": "error",
+   "error": "JSONDecodeError: Extra data: line 1 column 235 (char 234) @ decode:341 <- loads:346 <- page_payload:45"
+  },
+  {
+   "task": "9b1854b879625a0f",
+   "stage": "A",
+   "group": "tier2",
+   "route": "PRG-SAN/SAN-PRG",
+   "dates": "2026-11-30/2026-12-12",
+   "source": "fast_flights_fork",
+   "status": "error",
+   "error": "truncated: page empty, follow-up results refused"
+  },
+  {
+   "task": "7ef266c0402ddf57",
+   "stage": "A",
+   "group": "tier2",
+   "route": "PRG-SAN/SAN-PRG",
+   "dates": "2026-11-30/2026-12-15",
+   "source": "fast_flights_fork",
+   "status": "error",
+   "error": "truncated: page empty, follow-up results refused"
+  },
+  {
+   "task": "65bd961c222e315a",
+   "stage": "A",
+   "group": "tier2",
+   "route": "BTS-SAN/SAN-BTS",
+   "dates": "2026-11-30/2026-12-15",
+   "source": "fast_flights_fork",
+   "status": "error",
+   "error": "JSONDecodeError: Extra data: line 1 column 234 (char 233) @ decode:341 <- loads:346 <- page_payload:45"
+  },
+  {
+   "task": "1d80001e0914ac95",
+   "stage": "A",
+   "group": "tier2",
+   "route": "BTS-LAX/LAX-BTS",
+   "dates": "2026-11-30/2026-12-15",
+   "source": "fast_flights_fork",
+   "status": "error",
+   "error": "JSONDecodeError: Extra data: line 1 column 232 (char 231) @ decode:341 <- loads:346 <- page_payload:45"
+  },
+  {
+   "task": "29aab202a045a8e9",
+   "stage": "A",
+   "group": "tier2",
+   "route": "PRG-SAN/SAN-PRG",
+   "dates": "2026-12-01/2026-12-14",
+   "source": "fast_flights_fork",
+   "status": "error",
+   "error": "JSONDecodeError: Extra data: line 1 column 235 (char 234) @ decode:341 <- loads:346 <- page_payload:45"
+  },
+  {
+   "task": "ac3d80af9e429a61",
+   "stage": "A",
+   "group": "tier2",
+   "route": "BTS-SAN/SAN-BTS",
+   "dates": "2026-12-01/2026-12-14",
+   "source": "fast_flights_fork",
+   "status": "error",
+   "error": "JSONDecodeError: Extra data: line 1 column 236 (char 235) @ decode:341 <- loads:346 <- page_payload:45"
+  },
+  {
+   "task": "402c5d3e42df1565",
+   "stage": "A",
+   "group": "tier2",
+   "route": "PRG-SAN/SAN-PRG",
+   "dates": "2026-12-01/2026-12-17",
+   "source": "fast_flights_fork",
+   "status": "error",
+   "error": "truncated: page empty, follow-up results refused"
+  },
+  {
+   "task": "01eba43828d03b7f",
+   "stage": "A",
+   "group": "tier2",
+   "route": "PRG-LAX/LAX-PRG",
+   "dates": "2026-12-01/2026-12-17",
+   "source": "fast_flights_fork",
+   "status": "error",
+   "error": "JSONDecodeError: Extra data: line 1 column 235 (char 234) @ decode:341 <- loads:346 <- page_payload:45"
+  },
+  {
+   "task": "d4c09c2717929829",
+   "stage": "A",
+   "group": "tier2",
+   "route": "BUD-SAN/SAN-BUD",
+   "dates": "2026-12-01/2026-12-17",
+   "source": "fast_flights_fork",
+   "status": "error",
+   "error": "JSONDecodeError: Extra data: line 1 column 234 (char 233) @ decode:341 <- loads:346 <- page_payload:45"
+  },
+  {
+   "task": "3eae53253074cb5a",
+   "stage": "A",
+   "group": "tier2",
+   "route": "BTS-SAN/SAN-BTS",
+   "dates": "2026-12-01/2026-12-17",
+   "source": "fast_flights_fork",
+   "status": "error",
+   "error": "JSONDecodeError: Extra data: line 1 column 234 (char 233) @ decode:341 <- loads:346 <- page_payload:45"
+  },
+  {
+   "task": "971bf4ce4b4327cb",
+   "stage": "A",
+   "group": "tier2",
+   "route": "PRG-SAN/SAN-PRG",
+   "dates": "2026-12-02/2026-12-14",
+   "source": "fast_flights_fork",
+   "status": "error",
+   "error": "truncated: page empty, follow-up results refused"
+  },
+  {
+   "task": "d6546befff5f38fc",
+   "stage": "A",
+   "group": "tier2",
+   "route": "BTS-SAN/SAN-BTS",
+   "dates": "2026-12-02/2026-12-14",
+   "source": "fast_flights_fork",
+   "status": "error",
+   "error": "JSONDecodeError: Extra data: line 1 column 235 (char 234) @ decode:341 <- loads:346 <- page_payload:45"
+  },
+  {
+   "task": "6178db581ad96d59",
+   "stage": "A",
+   "group": "tier2",
+   "route": "PRG-SAN/SAN-PRG",
+   "dates": "2026-12-02/2026-12-17",
+   "source": "fast_flights_fork",
+   "status": "error",
+   "error": "JSONDecodeError: Extra data: line 1 column 234 (char 233) @ decode:341 <- loads:346 <- page_payload:45"
+  },
+  {
+   "task": "634ee693500681e2",
+   "stage": "A",
+   "group": "tier2",
+   "route": "BUD-LAX/LAX-BUD",
+   "dates": "2026-12-02/2026-12-17",
+   "source": "fast_flights_fork",
+   "status": "error",
+   "error": "JSONDecodeError: Extra data: line 1 column 235 (char 234) @ decode:341 <- loads:346 <- page_payload:45"
+  },
+  {
+   "task": "0774c1f781293b77",
+   "stage": "A",
+   "group": "tier2",
+   "route": "BTS-SAN/SAN-BTS",
+   "dates": "2026-12-02/2026-12-17",
+   "source": "fast_flights_fork",
+   "status": "error",
+   "error": "JSONDecodeError: Extra data: line 1 column 234 (char 233) @ decode:341 <- loads:346 <- page_payload:45"
+  },
+  {
+   "task": "cf927cbe8ef1872a",
+   "stage": "A",
+   "group": "tier2",
+   "route": "PRG-SAN/SAN-PRG",
+   "dates": "2026-12-03/2026-12-15",
+   "source": "fast_flights_fork",
+   "status": "error",
+   "error": "JSONDecodeError: Extra data: line 1 column 234 (char 233) @ decode:341 <- loads:346 <- page_payload:45"
+  },
+  {
+   "task": "884441f431b6d748",
+   "stage": "A",
+   "group": "tier2",
+   "route": "BTS-LAX/LAX-BTS",
+   "dates": "2026-12-03/2026-12-15",
+   "source": "fast_flights_fork",
+   "status": "error",
+   "error": "JSONDecodeError: Extra data: line 1 column 236 (char 235) @ decode:341 <- loads:346 <- page_payload:45"
+  },
+  {
+   "task": "828f380e861a9c68",
+   "stage": "A",
+   "group": "tier2",
+   "route": "PRG-SAN/SAN-PRG",
+   "dates": "2026-12-03/2026-12-18",
+   "source": "fast_flights_fork",
+   "status": "error",
+   "error": "JSONDecodeError: Extra data: line 1 column 236 (char 235) @ decode:341 <- loads:346 <- page_payload:45"
+  },
+  {
+   "task": "deb8176a5a00be6b",
+   "stage": "A",
+   "group": "tier2",
+   "route": "BTS-SAN/SAN-BTS",
+   "dates": "2026-12-03/2026-12-18",
+   "source": "fast_flights_fork",
+   "status": "error",
+   "error": "JSONDecodeError: Extra data: line 1 column 234 (char 233) @ decode:341 <- loads:346 <- page_payload:45"
+  },
+  {
+   "task": "15f0093551d2a5dc",
+   "stage": "B",
+   "group": "stage_b_openjaw",
+   "route": "VIE-SAN/LAX-VIE",
+   "dates": "2026-11-28/2026-12-14",
+   "source": "fast_flights_fork",
+   "status": "error",
+   "error": "truncated: page empty, follow-up results refused"
+  },
+  {
+   "task": "2993c5331d01fa6b",
+   "stage": "B",
+   "group": "stage_b_openjaw",
+   "route": "VIE-LAX/SAN-VIE",
+   "dates": "2026-11-28/2026-12-14",
+   "source": "fast_flights_fork",
+   "status": "error",
+   "error": "truncated: page empty, follow-up results refused"
+  },
+  {
+   "task": "ec5aecdb886f9cd7",
+   "stage": "B",
+   "group": "stage_b_openjaw",
+   "route": "VIE-SAN/LAX-VIE",
+   "dates": "2026-11-25/2026-12-13",
+   "source": "fast_flights_fork",
+   "status": "error",
+   "error": "truncated: page empty, follow-up results refused"
+  },
+  {
+   "task": "144a227c7ec07ab5",
+   "stage": "B",
+   "group": "stage_b_openjaw",
+   "route": "VIE-LAX/SAN-VIE",
+   "dates": "2026-11-25/2026-12-13",
+   "source": "fast_flights_fork",
+   "status": "error",
+   "error": "truncated: page empty, follow-up results refused"
+  },
+  {
+   "task": "2446006c454838ab",
+   "stage": "B",
+   "group": "stage_b_openjaw",
+   "route": "VIE-SAN/LAX-VIE",
+   "dates": "2026-11-27/2026-12-15",
+   "source": "fast_flights_fork",
+   "status": "error",
+   "error": "truncated: page empty, follow-up results refused"
+  },
+  {
+   "task": "c005223436dc1b8e",
+   "stage": "B",
+   "group": "stage_b_openjaw",
+   "route": "VIE-SAN/LAX-VIE",
+   "dates": "2026-11-28/2026-12-15",
+   "source": "fast_flights_fork",
+   "status": "error",
+   "error": "truncated: page empty, follow-up results refused"
   },
   {
    "task": "cd975f1b9c3f4840",
@@ -343,180 +1181,78 @@
    "error": "truncated: page empty, follow-up results refused"
   },
   {
-   "task": "a63d4695686fa78e",
+   "task": "d0c4e862bf6347dc",
    "stage": "B",
    "group": "stage_b_openjaw",
    "route": "VIE-LAX/SAN-VIE",
-   "dates": "2026-11-28/2026-12-13",
-   "source": "fast_flights_fork",
-   "status": "error",
-   "error": "JSONDecodeError: Extra data: line 1 column 235 (char 234) @ decode:341 <- loads:346 <- page_payload:45"
-  },
-  {
-   "task": "8a77ebedee56a4ce",
-   "stage": "B",
-   "group": "stage_b_openjaw",
-   "route": "VIE-SAN/SAN-MUC",
-   "dates": "2026-11-27/2026-12-14",
-   "source": "fast_flights_fork",
-   "status": "error",
-   "error": "RuntimeError: no ds:1 data in page @ page_payload:44 <- get_flights:75 <- main:81"
-  },
-  {
-   "task": "29f68f0eda1ac21c",
-   "stage": "B",
-   "group": "stage_b_openjaw",
-   "route": "MUC-LAX/SAN-VIE",
    "dates": "2026-12-02/2026-12-19",
    "source": "fast_flights_fork",
    "status": "error",
    "error": "truncated: page empty, follow-up results refused"
   },
   {
-   "task": "74b80bfaf6a545b3",
+   "task": "b201970f408a1d1f",
    "stage": "B",
    "group": "stage_b_openjaw",
-   "route": "VIE-SAN/LAX-MUC",
-   "dates": "2026-11-28/2026-12-13",
-   "source": "fast_flights_fork",
-   "status": "error",
-   "error": "RuntimeError: no ds:1 data in page @ page_payload:44 <- get_flights:75 <- main:81"
-  },
-  {
-   "task": "44cbfd9db1449909",
-   "stage": "B",
-   "group": "stage_b_openjaw",
-   "route": "VIE-LAX/LAX-MUC",
-   "dates": "2026-11-28/2026-12-15",
-   "source": "fast_flights_fork",
-   "status": "error",
-   "error": "JSONDecodeError: Extra data: line 1 column 235 (char 234) @ decode:341 <- loads:346 <- page_payload:45"
-  },
-  {
-   "task": "f64120c5595ae546",
-   "stage": "B",
-   "group": "stage_b_openjaw",
-   "route": "MUC-SAN/LAX-MUC",
-   "dates": "2026-11-25/2026-12-12",
+   "route": "VIE-SAN/LAX-VIE",
+   "dates": "2026-11-27/2026-12-13",
    "source": "fast_flights_fork",
    "status": "error",
    "error": "truncated: page empty, follow-up results refused"
   },
   {
-   "task": "1d13270c9da66bc9",
+   "task": "d23a57674387a0cd",
    "stage": "B",
    "group": "stage_b_openjaw",
-   "route": "PRG-SAN/LAX-VIE",
-   "dates": "2026-11-25/2026-12-12",
+   "route": "VIE-LAX/SAN-VIE",
+   "dates": "2026-11-27/2026-12-13",
    "source": "fast_flights_fork",
    "status": "error",
-   "error": "JSONDecodeError: Extra data: line 1 column 235 (char 234) @ decode:341 <- loads:346 <- page_payload:45"
+   "error": "truncated: page empty, follow-up results refused"
   },
   {
-   "task": "b7981e2bfa53fb82",
+   "task": "2f964fcd7ef75ca0",
    "stage": "B",
    "group": "stage_b_openjaw",
-   "route": "VIE-LAX/SAN-PRG",
-   "dates": "2026-11-25/2026-12-12",
+   "route": "VIE-SAN/SAN-MUC",
+   "dates": "2026-11-26/2026-12-12",
    "source": "fast_flights_fork",
    "status": "error",
-   "error": "JSONDecodeError: Extra data: line 1 column 235 (char 234) @ decode:341 <- loads:346 <- page_payload:45"
+   "error": "truncated: page empty, follow-up results refused"
   },
   {
-   "task": "d2f7c230b271855e",
+   "task": "7734579bea8d90dc",
    "stage": "B",
    "group": "stage_b_openjaw",
-   "route": "VIE-SAN/SAN-PRG",
-   "dates": "2026-11-25/2026-12-13",
+   "route": "MUC-SAN/SAN-VIE",
+   "dates": "2026-11-26/2026-12-12",
    "source": "fast_flights_fork",
    "status": "error",
-   "error": "JSONDecodeError: Extra data: line 1 column 235 (char 234) @ decode:341 <- loads:346 <- page_payload:45"
+   "error": "truncated: page empty, follow-up results refused"
   },
   {
-   "task": "1db8560f2e82df3a",
+   "task": "1a9348b459f02a69",
    "stage": "B",
    "group": "stage_b_openjaw",
-   "route": "MUC-SAN/LAX-MUC",
-   "dates": "2026-11-25/2026-12-13",
+   "route": "VIE-SAN/LAX-MUC",
+   "dates": "2026-11-26/2026-12-12",
    "source": "fast_flights_fork",
    "status": "error",
-   "error": "JSONDecodeError: Extra data: line 1 column 235 (char 234) @ decode:341 <- loads:346 <- page_payload:45"
+   "error": "truncated: page empty, follow-up results refused"
   },
   {
-   "task": "76adf811dceef7f7",
+   "task": "97d09d9ef45079fa",
    "stage": "B",
    "group": "stage_b_openjaw",
-   "route": "PRG-SAN/LAX-VIE",
-   "dates": "2026-11-25/2026-12-13",
+   "route": "MUC-SAN/LAX-VIE",
+   "dates": "2026-11-26/2026-12-12",
    "source": "fast_flights_fork",
    "status": "error",
-   "error": "JSONDecodeError: Extra data: line 1 column 235 (char 234) @ decode:341 <- loads:346 <- page_payload:45"
-  },
-  {
-   "task": "c052931d7bf04926",
-   "stage": "B",
-   "group": "stage_b_openjaw",
-   "route": "MUC-LAX/SAN-MUC",
-   "dates": "2026-11-25/2026-12-13",
-   "source": "fast_flights_fork",
-   "status": "error",
-   "error": "JSONDecodeError: Extra data: line 1 column 235 (char 234) @ decode:341 <- loads:346 <- page_payload:45"
-  },
-  {
-   "task": "671c383388c014db",
-   "stage": "B",
-   "group": "stage_b_openjaw",
-   "route": "PRG-LAX/SAN-VIE",
-   "dates": "2026-11-25/2026-12-13",
-   "source": "fast_flights_fork",
-   "status": "error",
-   "error": "JSONDecodeError: Extra data: line 1 column 235 (char 234) @ decode:341 <- loads:346 <- page_payload:45"
-  },
-  {
-   "task": "3cedf56574f5994b",
-   "stage": "B",
-   "group": "stage_b_openjaw",
-   "route": "PRG-LAX/LAX-VIE",
-   "dates": "2026-11-25/2026-12-13",
-   "source": "fast_flights_fork",
-   "status": "error",
-   "error": "JSONDecodeError: Extra data: line 1 column 235 (char 234) @ decode:341 <- loads:346 <- page_payload:45"
-  },
-  {
-   "task": "8bfd72b767a32df3",
-   "stage": "B",
-   "group": "stage_b_openjaw",
-   "route": "VIE-SAN/SAN-PRG",
-   "dates": "2026-11-27/2026-12-14",
-   "source": "fast_flights_fork",
-   "status": "error",
-   "error": "JSONDecodeError: Extra data: line 1 column 235 (char 234) @ decode:341 <- loads:346 <- page_payload:45"
-  },
-  {
-   "task": "42910d2bf817f05b",
-   "stage": "B",
-   "group": "stage_b_openjaw",
-   "route": "PRG-SAN/SAN-VIE",
-   "dates": "2026-11-27/2026-12-14",
-   "source": "fast_flights_fork",
-   "status": "error",
-   "error": "JSONDecodeError: Extra data: line 1 column 235 (char 234) @ decode:341 <- loads:346 <- page_payload:45"
-  },
-  {
-   "task": "cf4f13f3ab9d9941",
-   "stage": "B",
-   "group": "stage_b_openjaw",
-   "route": "VIE-SAN/LAX-PRG",
-   "dates": "2026-11-27/2026-12-14",
-   "source": "fast_flights_fork",
-   "status": "error",
-   "error": "JSONDecodeError: Extra data: line 1 column 235 (char 234) @ decode:341 <- loads:346 <- page_payload:45"
+   "error": "truncated: page empty, follow-up results refused"
   }
  ],
- "errors_total": 31,
- "issues": {
-  "issue": "ok"
- },
+ "errors_total": 105,
+ "issues": {},
  "raw_dirs_pruned": 1,
  "assumptions": {
   "esta": "ESTA costs USD 40.62 from 2026-10-16; not included in total_trip_cost_czk.",
